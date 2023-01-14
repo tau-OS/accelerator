@@ -27,11 +27,14 @@ public class Terminal.Application : He.Application {
     //  { "quit", on_app_quit },
   };
 
+  private He.ApplicationWindow window;
+
   public Application () {
     Object (
       application_id: "com.fyralabs.Accelerator",
       flags: ApplicationFlags.HANDLES_COMMAND_LINE
     );
+
 
     Intl.setlocale (LocaleCategory.ALL, "");
     Intl.textdomain (GETTEXT_PACKAGE);
@@ -69,12 +72,15 @@ public class Terminal.Application : He.Application {
       );
     }
     else {
-      new Window (
+      this.window = new Window (
         this,
         options.command,
         options.current_working_dir,
         false
-      ).show ();
+      );
+      this.window.show ();
+
+
     }
     this.release ();
     return 0;
@@ -86,7 +92,8 @@ public class Terminal.Application : He.Application {
   //  }
 
   private void on_about () {
-    var win = create_about_dialog () as Gtk.Window;
+    var win = create_about_dialog (this.window);
+    win.set_modal (true);
     win.set_transient_for (this.get_active_window ());
     win.show ();
   }

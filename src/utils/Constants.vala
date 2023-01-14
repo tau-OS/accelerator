@@ -37,19 +37,19 @@ namespace Terminal.Constants {
 
   public string get_user_schemes_dir () {
     return Path.build_path(
-      Path.DIR_SEPARATOR_S, Environment.get_user_data_dir (), "blackbox", "schemes"
+      Path.DIR_SEPARATOR_S, Environment.get_user_data_dir (), "accelerator", "schemes"
     );
   }
 
   public string get_user_keybindings_path () {
     return Path.build_path(
-      Path.DIR_SEPARATOR_S, Environment.get_user_data_dir (), "blackbox", "user-keymap.json"
+      Path.DIR_SEPARATOR_S, Environment.get_user_data_dir (), "accelerator", "user-keymap.json"
     );
   }
 
   public string get_app_schemes_dir () {
     return Path.build_path (
-      Path.DIR_SEPARATOR_S, DATADIR, "blackbox", "schemes"
+      Path.DIR_SEPARATOR_S, DATADIR, "accelerator", "schemes"
     );
   }
 }

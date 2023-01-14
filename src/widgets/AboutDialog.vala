@@ -19,43 +19,37 @@
  */
 
 namespace Terminal {
-  public Adw.AboutWindow create_about_dialog () {
-    var window = new Adw.AboutWindow () {
-      developer_name = "Paulo Queiroz",
-      copyright = "© 2022 Paulo Queiroz",
-      license_type = Gtk.License.GPL_3_0,
-      application_icon = APP_ID,
-      application_name = APP_NAME,
-      version = VERSION,
-      website = "https://gitlab.gnome.org/raggesilver/blackbox",
-      issue_url = "https://gitlab.gnome.org/raggesilver/blackbox/-/issues",
-      debug_info = get_debug_information (),
-      release_notes = """
-        <p>First 0.13 patch release.</p>
-        <p>Features</p>
-        <ul>
-          <li>New Scrollback Mode allows you to set scrollback to a fixed number of lines, unlimited lines, or disable scrollback altogether</li>
-        </ul>
-        <p>Bug fixes</p>
-        <ul>
-          <li>Style improvements</li>
-          <li>Allow setting font style (regular, light, bold, etc)</li>
-        </ul>
-      """
+  public He.AboutWindow create_about_dialog (Gtk.Window parent) {
+    string[] developers = {
+      "Cappy Ishihara"
     };
+    string[] translators = {
+    };
+    var window = new He.AboutWindow (parent,
+                                     APP_NAME,
+                                     APP_ID,
+                                     VERSION,
+                                     APP_ID,
+                                     null,
+                                     "https://github.com/tau-OS/accelerator/issues",
+                                     "https://github.com/tau-OS/accelerator",
+                                     translators,
+                                     developers,
+                                     2023,
+                                     He.AboutWindow.Licenses.GPLv3, He.Colors.NONE);
 
     if (DEVEL) {
       window.add_css_class ("devel");
     }
 
-    window.add_link (_("Donate"), "https://www.patreon.com/raggesilver");
-    window.add_link (_("Full Changelog"), "https://gitlab.gnome.org/raggesilver/blackbox/-/blob/main/CHANGELOG.md");
+    // window.add_link (_("Donate"), "https://www.patreon.com/raggesilver");
+    // window.add_link (_("Full Changelog"), "https://gitlab.gnome.org/raggesilver/blackbox/-/blob/main/CHANGELOG.md");
 
     return window;
   }
 
   private string get_debug_information () {
-    var app = "Black Box: %s\n".printf (VERSION);
+    var app = "Accelerator: %s\n".printf (VERSION);
     var backend = "Backend: %s\n".printf (get_gtk_backend ());
     var renderer = "Renderer: %s\n".printf (get_renderer ());
     var flatpak = get_flatpak_info ();
@@ -68,12 +62,12 @@ namespace Terminal {
   private string get_gtk_backend () {
     var display = Gdk.Display.get_default ();
     switch (display.get_class ().get_name ()) {
-      case "GdkX11Display": return "X11";
-      case "GdkWaylandDisplay": return "Wayland";
-      case "GdkBroadwayDisplay": return "Broadway";
-      case "GdkWin32Display": return "Windows";
-      case "GdkMacosDisplay": return "macOS";
-      default: return display.get_class ().get_name ();
+    case "GdkX11Display": return "X11";
+    case "GdkWaylandDisplay": return "Wayland";
+    case "GdkBroadwayDisplay": return "Broadway";
+    case "GdkWin32Display": return "Windows";
+    case "GdkMacosDisplay": return "macOS";
+    default: return display.get_class ().get_name ();
     }
   }
 
@@ -86,24 +80,23 @@ namespace Terminal {
     renderer.unrealize ();
 
     switch (name) {
-      case "GskVulkanRenderer": return "Vulkan";
-      case "GskGLRenderer": return "GL";
-      case "GskCairoRenderer": return "Cairo";
-      default: return name;
+    case "GskVulkanRenderer": return "Vulkan";
+    case "GskGLRenderer": return "GL";
+    case "GskCairoRenderer": return "Cairo";
+    default: return name;
     }
   }
 
   static KeyFile? flatpak_keyfile = null;
 
-  private string? get_flatpak_value (string group, string key) {
+  private string ? get_flatpak_value (string group, string key) {
     try {
       if (flatpak_keyfile == null) {
         flatpak_keyfile = new KeyFile ();
         flatpak_keyfile.load_from_file ("/.flatpak-info", 0);
       }
       return flatpak_keyfile.get_string (group, key);
-    }
-    catch (Error e) {
+    } catch (Error e) {
       warning ("%s", e.message);
       return null;
     }

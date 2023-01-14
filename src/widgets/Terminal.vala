@@ -29,7 +29,7 @@ public class Terminal.Terminal : Vte.Terminal {
     TEXT,
   }
 
-  static string[] blackbox_envv = {
+  static string[] accel_envv = {
     "TERM=xterm-256color",
     "COLORTERM=truecolor",
     "TERM_PROGRAM=%s".printf (APP_NAME),
@@ -367,7 +367,7 @@ public class Terminal.Terminal : Vte.Terminal {
 
       envv = fp_get_env () ?? Environ.get ();
 
-      foreach (unowned string env in Terminal.blackbox_envv) {
+      foreach (unowned string env in Terminal.accel_envv) {
         argv += @"--env=$(env)";
       }
 
@@ -378,7 +378,7 @@ public class Terminal.Terminal : Vte.Terminal {
     else {
       envv = Environ.get ();
 
-      foreach (unowned string env in Terminal.blackbox_envv) {
+      foreach (unowned string env in Terminal.accel_envv) {
         envv += env;
       }
 

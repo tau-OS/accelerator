@@ -79,11 +79,12 @@ public struct Terminal.Padding {
   }
 }
 
-public class Terminal.Window : Adw.ApplicationWindow {
+public class Terminal.Window : He.ApplicationWindow {
 
   public ThemeProvider theme_provider        { get; private set; }
-  public Adw.TabView tab_view              { get; private set; }
-  public Adw.TabBar tab_bar               { get; private set; }
+  public He.TabPage tab_view              { get; private set; }
+  public unowned He.TabSwitcher tab_bar;
+  public He.Bin active_terminal_container    { get; private set; }
   public Terminal active_terminal       { get; private set; }
   public string? active_terminal_title { get; private set; }
 
@@ -114,19 +115,15 @@ public class Terminal.Window : Adw.ApplicationWindow {
 
     var layout_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 
-    this.tab_view = new Adw.TabView ();
+    //  this.tab_view = new He.TabPage (null);
 
-    this.tab_bar = new Adw.TabBar () {
-      autohide = false,
-      view = this.tab_view,
-
+    var tabbar = new He.TabSwitcher () {
+      allow_new_window = true,
       hexpand = true,
       halign = Gtk.Align.FILL,
-
-      css_classes = { "inline" },
-
-      can_focus = false,
     };
+    this.tab_bar = tabbar;
+
 
     this.header_bar = new HeaderBar (this);
 
@@ -137,12 +134,12 @@ public class Terminal.Window : Adw.ApplicationWindow {
 
     // Floating controls bar  ===============
 
-    this.fullscreen_button = new Gtk.Button.from_icon_name (
-                                                            "com.fyralabs.Accelerator-fullscreen-symbolic"
-      ) { tooltip_text = _("Fullscreen") };
-    this.show_headerbar_button = new Gtk.Button.from_icon_name (
-                                                                "com.fyralabs.Accelerator-show-headerbar-symbolic"
-      ) { tooltip_text = _("Show headerbar") };
+    this.fullscreen_button = new Gtk.Button.from_icon_name ("view-fullscreen-symbolic") {
+      tooltip_text = _("Fullscreen")
+    };
+    this.show_headerbar_button = new Gtk.Button.from_icon_name ("view-top-pane-symbolic") {
+      tooltip_text = _("Show headerbar")
+    };
     this.floating_btns = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
       css_classes = { "floating-btn-box" },
       overflow = Gtk.Overflow.HIDDEN,
@@ -180,15 +177,21 @@ public class Terminal.Window : Adw.ApplicationWindow {
     this.on_decoration_layout_changed ();
 
     layout_box.append (this.header_bar_revealer);
-    layout_box.append (this.tab_view);
+
+    active_terminal_container = new He.Bin ();
+    active_terminal_container.set_name ("accelerator-bin");
+    //  active_terminal_container.child = this.tab_view;
+    layout_box.append (active_terminal_container);
+    layout_box.set_name ("accelerator-layout-box");
 
     var overlay = new Gtk.Overlay ();
     overlay.child = layout_box;
+    overlay.set_name ("accelerator-overlay");
     overlay.add_overlay (this.floating_header_bar_revealer);
 
-    this.content = overlay;
+    this.child = overlay;
 
-    this.set_name ("blackbox-main-window");
+    this.set_name ("accelerator-main-window");
   }
 
   public Window (Gtk.Application app,
@@ -261,22 +264,28 @@ public class Terminal.Window : Adw.ApplicationWindow {
     });
     set_css_class (this, "with-borders", settings.window_show_borders);
 
-    this.tab_view.create_window.connect (() => {
-      var w = this.new_window (null, true);
-      return w.tab_view;
+    this.tab_bar.tab_added.connect (() => {
+      //  print ("tab added");
+      //  this.new_tab (null, null);
+      print("tab added");
     });
 
-    this.tab_view.close_page.connect ((page) => {
-      (page.child as TerminalTab) ? .destroy ();
-      return false;
-    });
+    // this.tab_view.create_window.connect (() => {
+    // var w = this.new_window (null, true);
+    // return w.tab_view;
+    // });
+
+    // this.tab_view.close_page.connect ((page) => {
+    // (page.child as TerminalTab) ? .destroy ();
+    // return false;
+    // });
 
     // Close the window if all tabs were closed
-    this.tab_view.notify["n-pages"].connect (() => {
-      if (this.tab_view.n_pages < 1) {
-        this.close ();
-      }
-    });
+    // this.tab_view.notify["n-pages"].connect (() => {
+    // if (this.tab_view.n_pages < 1) {
+    // this.close ();
+    // }
+    // });
 
     this.tab_view.notify["selected-page"].connect (() => {
       this.on_tab_selected ();
@@ -431,49 +440,58 @@ public class Terminal.Window : Adw.ApplicationWindow {
   }
 
   public void search () {
-    (this.tab_view.selected_page ? .child as TerminalTab) ? .search ();
+    // (this.tab_view.selected_page ? .child as TerminalTab) ? .search ();
   }
 
   public void zoom_in () {
-    (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal
-     .zoom_in ();
+    (this.tab_bar.current ? .child as TerminalTab) ? .terminal
+    .zoom_in ();
   }
 
   public void zoom_out () {
-    (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal
-     .zoom_out ();
+    (this.tab_bar.current ? .child as TerminalTab) ? .terminal
+    .zoom_out ();
   }
 
   public void zoom_default () {
-    (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal
-     .zoom_default ();
+    (this.tab_bar.current ? .child as TerminalTab) ? .terminal
+    .zoom_default ();
   }
 
   public void close_active_tab () {
-    (this.tab_view.selected_page ? .child as TerminalTab) ? .close_request ();
+    // (this.tab_view.selected_page ? .child as TerminalTab) ? .close_request ();
   }
 
   public void new_tab (string? command, string? cwd) {
     var tab = new TerminalTab (this, command, cwd);
-    var page = this.tab_view.add_page (tab, null);
 
-    page.title = command ?? @"tab $(this.tab_view.n_pages)";
+    //  if (this.tab_view == null) {
+    //    this.tab_view = new He.TabPage(tab);
+    //  }
+
+    //  this.tab_bar.insert_tab (tab, -1);
+    //  this.active_terminal = tab.terminal;
+    //  this.active_terminal_container.child = this.active_terminal;
+
+    tab.label = command ?? @"tab $(this.tab_bar.n_tabs)";
     tab.notify["title"].connect (() => {
-      page.title = tab.title;
+      tab.label = tab.title;
     });
     tab.close_request.connect (() => {
-      this.tab_view.close_page (page);
+      // this.tab_bar.close_page (page);
+      this.tab_bar.remove_tab (tab);
     });
-    this.tab_view.set_selected_page (page);
+    //  this.tab_bar.current = tab;
+    //  this.tab_bar.child = tab;
   }
 
   private void on_paste_activated () {
-    (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal
+    (this.tab_bar.current ? .child as TerminalTab) ? .terminal
      .do_paste_clipboard ();
   }
 
   private void on_copy_activated () {
-    (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal
+    (this.tab_bar.current ? .child as TerminalTab) ? .terminal
      .do_copy_clipboard ();
   }
 
@@ -487,7 +505,7 @@ public class Terminal.Window : Adw.ApplicationWindow {
                                                          this.active_terminal_signal_handlers.length
       );
     }
-    var terminal = (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal;
+    var terminal = (this.tab_bar.current ? .child as TerminalTab) ? .terminal;
     this.active_terminal = terminal;
     terminal?.grab_focus ();
   }
@@ -565,33 +583,34 @@ public class Terminal.Window : Adw.ApplicationWindow {
   }
 
   public void focus_next_tab () {
-    if (!this.tab_view.select_next_page ()) {
-      this.tab_view.set_selected_page (this.tab_view.get_nth_page (0));
-    }
+    //  if (!this.tab_bar.tabs.next) {
+
+    //    this.tab_bar.current = this.tab_bar.tabs.nth (0);
+    //  }
   }
 
   public void focus_previous_tab () {
-    if (!this.tab_view.select_previous_page ()) {
-      this.tab_view.set_selected_page (this.tab_view.get_nth_page (this.tab_view.n_pages - 1));
-    }
+    //  if (!this.tab_view.select_previous_page ()) {
+    //    this.tab_view.set_selected_page (this.tab_view.get_nth_page (this.tab_view.n_pages - 1));
+    //  }
   }
 
   public void focus_nth_tab (int index) {
-    if (this.tab_view.n_pages <= 1) {
-      return;
-    }
-    if (index < 0) {
-      // Go to last tab
-      this.tab_view.set_selected_page (
-                                       this.tab_view.get_nth_page (this.tab_view.n_pages - 1)
-      );
-      return;
-    }
-    if (index > this.tab_view.n_pages) {
-      return;
-    } else {
-      this.tab_view.set_selected_page (this.tab_view.get_nth_page (index - 1));
-      return;
-    }
+    //  if (this.tab_view.n_pages <= 1) {
+    //    return;
+    //  }
+    //  if (index < 0) {
+    //    // Go to last tab
+    //    this.tab_view.set_selected_page (
+    //                                     this.tab_view.get_nth_page (this.tab_view.n_pages - 1)
+    //    );
+    //    return;
+    //  }
+    //  if (index > this.tab_view.n_pages) {
+    //    return;
+    //  } else {
+    //    this.tab_view.set_selected_page (this.tab_view.get_nth_page (index - 1));
+    //    return;
+    //  }
   }
 }

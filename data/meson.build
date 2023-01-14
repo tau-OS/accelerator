@@ -2,7 +2,7 @@ subdir('icons')
 
 install_subdir(
     'schemes',
-    install_dir: join_paths(get_option('datadir'), 'blackbox'),
+    install_dir: join_paths(get_option('datadir'), 'accelerator'),
 )
 
 desktop_file = i18n.merge_file(

@@ -42,11 +42,11 @@ namespace Terminal {
 }
 
 public abstract class Terminal.BaseHeaderBar : Gtk.Box {
-  public virtual Gtk.MenuButton  menu_button     { get; protected set; }
-  public virtual Gtk.Button      new_tab_button  { get; protected set; }
+  public virtual Gtk.MenuButton menu_button     { get; protected set; }
+  public virtual Gtk.Button new_tab_button  { get; protected set; }
 
-  protected Adw.TabBar  tab_bar;
-  protected Window      window;
+  protected He.TabSwitcher tab_bar;
+  protected Window window;
 
   construct {
     // Menu button
@@ -61,10 +61,10 @@ public abstract class Terminal.BaseHeaderBar : Gtk.Box {
     };
 
     Settings.get_default ().schema.bind (
-      "show-menu-button",
-      this.menu_button,
-      "visible",
-      SettingsBindFlags.GET
+                                         "show-menu-button",
+                                         this.menu_button,
+                                         "visible",
+                                         SettingsBindFlags.GET
     );
 
     // New tab button
@@ -90,16 +90,16 @@ public class Terminal.HeaderBar : BaseHeaderBar {
     get {
       var settings = Settings.get_default ();
       return (
-        this.window.tab_view.n_pages <= 1 &&
-        settings.fill_tabs &&
-        settings.hide_single_tab
+              this.window.tab_bar.n_tabs <= 1 &&
+              settings.fill_tabs &&
+              settings.hide_single_tab
       );
     }
   }
 
-  private Gtk.WindowControls  left_controls;
-  private Gtk.WindowControls  right_controls;
-  private Gtk.Label           title_label;
+  private Gtk.WindowControls left_controls;
+  private Gtk.WindowControls right_controls;
+  private Gtk.Label title_label;
 
   private Gtk.Button unfullscreen_button;
 
@@ -118,9 +118,11 @@ public class Terminal.HeaderBar : BaseHeaderBar {
   public HeaderBar (Window window) {
     base (window);
 
-    var hb = new Adw.HeaderBar ();
-    hb.show_start_title_buttons = false;
-    hb.show_end_title_buttons = false;
+    var hb = new He.AppBar ();
+    // hb.show_start_title_buttons = false;
+    // hb.show_end_title_buttons = false;
+    hb.show_buttons = true;
+    hb.show_back = false;
     hb.add_css_class ("flat");
     hb.halign = Gtk.Align.FILL;
     hb.hexpand = true;
@@ -137,8 +139,8 @@ public class Terminal.HeaderBar : BaseHeaderBar {
     this.left_controls = new Gtk.WindowControls (Gtk.PackType.START);
     this.right_controls = new Gtk.WindowControls (Gtk.PackType.END);
 
-    //  this.left_controls.bind_property ("empty", this.left_controls, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN, null, null);
-    //  this.right_controls.bind_property ("empty", this.right_controls, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN, null, null);
+    // this.left_controls.bind_property ("empty", this.left_controls, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN, null, null);
+    // this.right_controls.bind_property ("empty", this.right_controls, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN, null, null);
 
     this.title_label = new Gtk.Label (null) {
       halign = Gtk.Align.FILL,
@@ -161,12 +163,13 @@ public class Terminal.HeaderBar : BaseHeaderBar {
     layout.hexpand = true;
 
     layout.append (this.left_controls);
+    // ? doesn't load
     layout.append (this.tab_bar);
     layout.append (this.title_label);
     layout.append (button_box);
     layout.append (this.right_controls);
 
-    hb.title_widget = layout;
+    hb.child = layout;
     this.append (hb);
     this.add_css_class ("custom-headerbar");
 
@@ -178,66 +181,66 @@ public class Terminal.HeaderBar : BaseHeaderBar {
 
     // window.fullscreened -> unfullscreen_button visibility
     this.window.bind_property (
-      "fullscreened",
-      this.unfullscreen_button,
-      "visible",
-      GLib.BindingFlags.SYNC_CREATE,
-      null,
-      null
+                               "fullscreened",
+                               this.unfullscreen_button,
+                               "visible",
+                               GLib.BindingFlags.SYNC_CREATE,
+                               null,
+                               null
     );
     // !window.fullscreened -> left_controls visibility
     this.window.bind_property (
-      "fullscreened",
-      this.left_controls,
-      "visible",
-      GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN,
-      null,
-      null
+                               "fullscreened",
+                               this.left_controls,
+                               "visible",
+                               GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN,
+                               null,
+                               null
     );
     // !window.fullscreened -> right_controls visibility
     this.window.bind_property (
-      "fullscreened",
-      this.right_controls,
-      "visible",
-      GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN,
-      null,
-      null
+                               "fullscreened",
+                               this.right_controls,
+                               "visible",
+                               GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN,
+                               null,
+                               null
     );
     // window.active_terminal_title -> title_label label
     this.window.bind_property (
-      "active-terminal-title",
-      this.title_label,
-      "label",
-      GLib.BindingFlags.SYNC_CREATE,
-      null,
-      null
+                               "active-terminal-title",
+                               this.title_label,
+                               "label",
+                               GLib.BindingFlags.SYNC_CREATE,
+                               null,
+                               null
     );
     // window.active_terminal_title -> title_label tooltip-text
     this.window.bind_property (
-      "active-terminal-title",
-      this.title_label,
-      "tooltip-text",
-      GLib.BindingFlags.SYNC_CREATE,
-      null,
-      null
+                               "active-terminal-title",
+                               this.title_label,
+                               "tooltip-text",
+                               GLib.BindingFlags.SYNC_CREATE,
+                               null,
+                               null
     );
 
-    this.window.tab_view.notify ["n-pages"].connect (notify_single_tab_mode);
-    settings.notify ["fill-tabs"].connect (this.notify_single_tab_mode);
-    settings.notify ["hide-single-tab"].connect (this.notify_single_tab_mode);
-    settings.notify ["stealth-single-tab"].connect (this.notify_single_tab_mode);
+    this.window.tab_view.notify["n-pages"].connect (notify_single_tab_mode);
+    settings.notify["fill-tabs"].connect (this.notify_single_tab_mode);
+    settings.notify["hide-single-tab"].connect (this.notify_single_tab_mode);
+    settings.notify["stealth-single-tab"].connect (this.notify_single_tab_mode);
 
-    settings.notify ["headerbar-draw-line-single-tab"].connect (
-      this.on_draw_line_singe_tab_changed
+    settings.notify["headerbar-draw-line-single-tab"].connect (
+                                                               this.on_draw_line_singe_tab_changed
     );
     this.on_draw_line_singe_tab_changed ();
 
-    settings.notify ["headerbar-drag-area"].connect (
-      this.on_drag_area_changed
+    settings.notify["headerbar-drag-area"].connect (
+                                                    this.on_drag_area_changed
     );
     this.on_drag_area_changed ();
 
-    this.notify ["single-tab-mode"].connect (this.on_single_tab_mode_changed);
+    this.notify["single-tab-mode"].connect (this.on_single_tab_mode_changed);
     this.on_single_tab_mode_changed ();
 
     this.unfullscreen_button.clicked.connect (this.on_unmaximize);

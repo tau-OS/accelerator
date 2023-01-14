@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-public class Terminal.TerminalTab : Gtk.Box {
+public class Terminal.TerminalTab : He.Tab {
 
   public signal void close_request ();
 
@@ -27,36 +27,28 @@ public class Terminal.TerminalTab : Gtk.Box {
   private SearchToolbar     search_toolbar;
   public  Window            window;
 
-  public TerminalTab (Window window, string? command, string? cwd) {
-    Object (
-      orientation: Gtk.Orientation.VERTICAL,
-      spacing: 0
-    );
+  private Gtk.Box box;
 
+  public TerminalTab (Window window, string? command, string? cwd) {
+    this.box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
     this.window = window;
     this.terminal = new Terminal (this.window, command, cwd);
-
-    // Hack to stop vala-language-server from complaining
-    var twig = this.terminal as Gtk.Widget;
-    //  this.set_child(twig);
     this.scrolled = new Gtk.ScrolledWindow ();
-    this.scrolled.child = twig;
-
-    this.append (this.scrolled);
-    twig.grab_focus ();
-
+    this.scrolled.set_child (this.terminal);
     this.search_toolbar = new SearchToolbar (this.terminal);
-    this.append (this.search_toolbar);
+    this.box.append (this.search_toolbar);
+    this.box.append (this.scrolled);
+    this.box.set_parent (this);
 
     var click = new Gtk.GestureClick () {
       button = Gdk.BUTTON_SECONDARY,
     };
-
     click.pressed.connect (this.show_menu);
 
     this.terminal.add_controller (click);
 
-    this.connect_signals ();
+    //  this.connect_signals ();
+
   }
 
   private void connect_signals () {
@@ -75,14 +67,14 @@ public class Terminal.TerminalTab : Gtk.Box {
       var is_scrollbar_being_used = this.scrolled.child == this.terminal;
 
       if (show_scrollbars && !is_scrollbar_being_used) {
-        this.remove (this.terminal);
+        this.box.remove (this.terminal);
         this.scrolled.child = this.terminal;
-        this.append (this.scrolled);
+        this.box.append (this.scrolled);
       }
       else if (!show_scrollbars && is_scrollbar_being_used) {
-        this.remove (this.scrolled);
+        this.box.remove (this.scrolled);
         this.scrolled.child = null;
-        this.append (this.terminal);
+        this.box.append (this.terminal);
       }
     });
     settings.notify_property ("show-scrollbars");

@@ -43,7 +43,7 @@ blackbox_deps = [
   # Black Box actually depends on libadwaita >= 1.2.alpha, but I'm keeping this
   # at 1.1 to make it easier for translators to work on Black Box
   dependency('libadwaita-1', version: '>= 1.1'),
-  dependency('libhelium-1', version: '>= 1.2'),
+  dependency('libhelium-1', version: '>= 1.2.25'),
   dependency('marble', version: '>= 42'),
   dependency('vte-2.91-gtk4', version: '>= 0.69.0'),
   dependency('json-glib-1.0', version: '>= 1.4.4'),
@@ -72,12 +72,16 @@ blackbox_sources += gnome.compile_resources('blackbox-resources',
 executable('accel', blackbox_sources, config_header,
   vala_args: '--target-glib=2.50',  dependencies: blackbox_deps,
   install: true,
+
 )
+
+# symlink as accelerator
+
 
 if get_option('devel')
   custom_target ('flatpak-exe',
-                 input: 'blackbox-link-system-fonts',
-                 output: ['blackbox-link-system-fonts'],
+                 input: 'accel-link-system-fonts',
+                 output: ['accel-link-system-fonts'],
                  command: ['cp', '@INPUT@', '@OUTPUT@'],
                  install: true,
                  install_dir: 'bin')

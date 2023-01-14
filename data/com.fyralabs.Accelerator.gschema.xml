@@ -93,11 +93,11 @@
       <summary>Delay time before showing floating controls</summary>
     </key>
     <key name="theme-light" type="s">
-      <default>'Tomorrow'</default>
+      <default>'Helium Light'</default>
       <summary>The light color scheme for the terminal</summary>
     </key>
     <key name="theme-dark" type="s">
-      <default>'Tommorow Night'</default>
+      <default>'Helium Dark'</default>
       <summary>The dark color scheme for the terminal</summary>
     </key>
     <key name="style-preference" type="u">
