@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-public class Terminal.Application : Adw.Application {
+public class Terminal.Application : He.Application {
   private ActionEntry[] ACTIONS = {
     { "focus-next-tab", on_focus_next_tab },
     { "focus-previous-tab", on_focus_previous_tab },
@@ -29,7 +29,7 @@ public class Terminal.Application : Adw.Application {
 
   public Application () {
     Object (
-      application_id: "com.raggesilver.BlackBox",
+      application_id: "com.fyralabs.Accelerator",
       flags: ApplicationFlags.HANDLES_COMMAND_LINE
     );
 

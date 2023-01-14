@@ -17,183 +17,183 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/com.raggesilver.BlackBox.desktop.in:3
+#: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Black Box"
 msgstr "Black Box"
 
-#: data/com.raggesilver.BlackBox.desktop.in:9
+#: data/com.fyralabs.Accelerator.desktop.in:9
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:6
+#: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
 msgstr "窗口宽度"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:10
+#: data/com.fyralabs.Accelerator.gschema.xml:10
 msgid "Window height"
 msgstr "窗口高度"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:14
+#: data/com.fyralabs.Accelerator.gschema.xml:14
 #, fuzzy
 msgid "Whether or not to display borders around the window and tabs"
 msgstr "在否在标题栏上显示菜单按钮"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:18
+#: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
 msgstr "是否记住窗口大小"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:28
+#: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
 msgstr "字体及字体大小"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:32
+#: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
 msgstr "是否将终端主题的配色集成到应用窗口"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:36
+#: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:40
+#: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
 msgstr "是否将标签页扩充至整个标题栏"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:44
+#: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
 msgstr "是否显示标题栏"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:48
+#: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
 msgstr "在否在标题栏上显示菜单按钮"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:52
+#: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:56
+#: data/com.fyralabs.Accelerator.gschema.xml:56
 #, fuzzy
 msgid "Whether or not to reserve an area for dragging the header bar"
 msgstr "在否在标题栏上显示菜单按钮"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:60
+#: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
 msgstr "是否显示滚动条"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:64
+#: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
 msgstr "是否启用叠加滚动条"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:68
+#: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
 msgstr "启用后，终端将按像素滚动，而非按行滚动"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:72
+#: data/com.fyralabs.Accelerator.gschema.xml:72
 #, fuzzy
 msgid "If enabled, terminals will render sixel escape sequences"
 msgstr "启用后，终端将按像素滚动，而非按行滚动"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:76
+#: data/com.fyralabs.Accelerator.gschema.xml:76
 msgid "Enable to limit terminal scrollback"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:80
+#: data/com.fyralabs.Accelerator.gschema.xml:80
 msgid "Number of lines stored in scrollback"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:84
+#: data/com.fyralabs.Accelerator.gschema.xml:84
 msgid "If enabled, floating controls will be shown in headerless mode"
 msgstr "启用后，隐藏标题栏时将显示浮动控件"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:88
+#: data/com.fyralabs.Accelerator.gschema.xml:88
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
 msgstr "窗口顶部的触发区域（以像素为单位），鼠标进入此区域时将显示浮动控件"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:92
+#: data/com.fyralabs.Accelerator.gschema.xml:92
 msgid "Delay time before showing floating controls"
 msgstr "显示浮动控件之前的延迟时间"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:96
+#: data/com.fyralabs.Accelerator.gschema.xml:96
 #, fuzzy
 msgid "The light color scheme for the terminal"
 msgstr "终端配色方案"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:100
+#: data/com.fyralabs.Accelerator.gschema.xml:100
 #, fuzzy
 msgid "The dark color scheme for the terminal"
 msgstr "终端配色方案"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
-#: data/com.raggesilver.BlackBox.gschema.xml:105
+#: data/com.fyralabs.Accelerator.gschema.xml:105
 #, fuzzy
 msgid "Style preference"
 msgstr "重置设置"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:109
+#: data/com.fyralabs.Accelerator.gschema.xml:109
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr "终端部件的（上、下、左、右）内边距"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:113
+#: data/com.fyralabs.Accelerator.gschema.xml:113
 msgid "Terminal cell width"
 msgstr "单元格宽度"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:117
+#: data/com.fyralabs.Accelerator.gschema.xml:117
 msgid "Terminal cell height"
 msgstr "单元格高度"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:121
+#: data/com.fyralabs.Accelerator.gschema.xml:121
 msgid "Cursor shape"
 msgstr "光标形状"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:125
+#: data/com.fyralabs.Accelerator.gschema.xml:125
 #, fuzzy
 msgid "Whether or not the cursor should blink"
 msgstr "是否显示滚动条"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:129
+#: data/com.fyralabs.Accelerator.gschema.xml:129
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr "启用后，使用 ctrl + c 和 ctrl + v 来复制/粘贴"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:133
+#: data/com.fyralabs.Accelerator.gschema.xml:133
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
 msgstr "启用后，在只有一个标签页打开时，将标签替换成标题栏文本"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:137
+#: data/com.fyralabs.Accelerator.gschema.xml:137
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr "启用后，单个打开的标签页将与标题栏颜色混合"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:141
+#: data/com.fyralabs.Accelerator.gschema.xml:141
 msgid "Whether to spawn shell in login mode"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:145
+#: data/com.fyralabs.Accelerator.gschema.xml:145
 msgid "Whether to use a custom command instead of the user's shell"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:149
+#: data/com.fyralabs.Accelerator.gschema.xml:149
 msgid "Custom command to use instead of the user's shell"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:156
+#: data/com.fyralabs.Accelerator.gschema.xml:156
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:160
+#: data/com.fyralabs.Accelerator.gschema.xml:160
 #, fuzzy
 msgid "Whether search should be case sensitive"
 msgstr "是否显示标题栏"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:164
+#: data/com.fyralabs.Accelerator.gschema.xml:164
 msgid "Whether search should only match entire words"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:168
+#: data/com.fyralabs.Accelerator.gschema.xml:168
 msgid "Whether search should be performed using regular expressions"
 msgstr ""
 

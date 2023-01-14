@@ -17,98 +17,98 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Gtranslator 42.0\n"
 
-#: data/com.raggesilver.BlackBox.desktop.in:3
+#: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Black Box"
 msgstr "Black Box"
 
-#: data/com.raggesilver.BlackBox.desktop.in:9
+#: data/com.fyralabs.Accelerator.desktop.in:9
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr "Terminal;terminal;shell;prompt;kommando;kommandozeile;cmd;box;"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:6
+#: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
 msgstr "Fensterbreite"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:10
+#: data/com.fyralabs.Accelerator.gschema.xml:10
 msgid "Window height"
 msgstr "Fensterhöhe"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:14
+#: data/com.fyralabs.Accelerator.gschema.xml:14
 #, fuzzy
 msgid "Whether or not to display borders around the window and tabs"
 msgstr "Ob der Menüknopf in der Fensterleiste angezeigt wird oder nicht"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:18
+#: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
 msgstr "Ob die Fenstergröße wiederhergestellt wird oder nicht"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:28
+#: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
 msgstr "Schriftfamilie und Größe"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:32
+#: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
 msgstr "Ob das Fenster die Farben des Terminal-Themas übernimmt oder nicht"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:36
+#: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:40
+#: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
 msgstr "Ob Tabs die Tableiste ausfüllen oder nicht"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:44
+#: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
 msgstr "Ob die Fensterleiste angezeigt wird oder nicht"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:48
+#: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
 msgstr "Ob der Menüknopf in der Fensterleiste angezeigt wird oder nicht"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:52
+#: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:56
+#: data/com.fyralabs.Accelerator.gschema.xml:56
 #, fuzzy
 msgid "Whether or not to reserve an area for dragging the header bar"
 msgstr "Ob der Menüknopf in der Fensterleiste angezeigt wird oder nicht"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:60
+#: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
 msgstr "Ob die Bildlaufleiste angezeigt wird oder nicht"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:64
+#: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
 msgstr "Ob Overlay Bildlauf eingeschaltet ist oder nicht"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:68
+#: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
 msgstr "Wenn eingeschaltet, wird nach Pixel und nicht nach Zeilen gescrollt"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:72
+#: data/com.fyralabs.Accelerator.gschema.xml:72
 #, fuzzy
 msgid "If enabled, terminals will render sixel escape sequences"
 msgstr "Wenn eingeschaltet, wird nach Pixel und nicht nach Zeilen gescrollt"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:76
+#: data/com.fyralabs.Accelerator.gschema.xml:76
 msgid "Enable to limit terminal scrollback"
 msgstr "Schalte das limitieren der Terminal Bildlaufleiste ein"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:80
+#: data/com.fyralabs.Accelerator.gschema.xml:80
 msgid "Number of lines stored in scrollback"
 msgstr "Anzahl der Zeilen, die für den Bildlauf gespeichert werden"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:84
+#: data/com.fyralabs.Accelerator.gschema.xml:84
 msgid "If enabled, floating controls will be shown in headerless mode"
 msgstr ""
 "Wenn eingeschaltet, wird die Schwebesteuerung des Fensters auch ohne "
 "Fensterleiste angezeigt"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:88
+#: data/com.fyralabs.Accelerator.gschema.xml:88
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
@@ -116,50 +116,50 @@ msgstr ""
 "Kontaktfläche (in Pixeln) am inneren oberen Rand des Fensters um die "
 "Schwebesteuerung des Fensters anzuzeigen"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:92
+#: data/com.fyralabs.Accelerator.gschema.xml:92
 msgid "Delay time before showing floating controls"
 msgstr "Verzögerung vor dem Anzeigen der Schwebesteuerung des Fensters"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:96
+#: data/com.fyralabs.Accelerator.gschema.xml:96
 msgid "The light color scheme for the terminal"
 msgstr "Das helle Farbschema des Terminals"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:100
+#: data/com.fyralabs.Accelerator.gschema.xml:100
 msgid "The dark color scheme for the terminal"
 msgstr "Das dunkle Farbschema des Terminals"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
-#: data/com.raggesilver.BlackBox.gschema.xml:105
+#: data/com.fyralabs.Accelerator.gschema.xml:105
 msgid "Style preference"
 msgstr "Stil"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:109
+#: data/com.fyralabs.Accelerator.gschema.xml:109
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr "Menge des Randes um Terminal Widgets (oben, rechts, unten, links)"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:113
+#: data/com.fyralabs.Accelerator.gschema.xml:113
 msgid "Terminal cell width"
 msgstr "Terminal Buchstabenbreite"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:117
+#: data/com.fyralabs.Accelerator.gschema.xml:117
 msgid "Terminal cell height"
 msgstr "Terminal Buchstabenhöhe"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:121
+#: data/com.fyralabs.Accelerator.gschema.xml:121
 msgid "Cursor shape"
 msgstr "Cursorform"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:125
+#: data/com.fyralabs.Accelerator.gschema.xml:125
 #, fuzzy
 msgid "Whether or not the cursor should blink"
 msgstr "Ob die Bildlaufleiste angezeigt wird oder nicht"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:129
+#: data/com.fyralabs.Accelerator.gschema.xml:129
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr ""
 "Wenn eingeschaltet, werden STRG+C und STRG+V für Kopieren/Einfügen genutzt"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:133
+#: data/com.fyralabs.Accelerator.gschema.xml:133
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
@@ -167,43 +167,43 @@ msgstr ""
 "Wenn eingeschaltet, wird wenn nur ein Tab geöffnet ist, die Tableiste durch "
 "den Fenstertitel ersetzt"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:137
+#: data/com.fyralabs.Accelerator.gschema.xml:137
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr ""
 "Wenn eingeschaltet, wird, wenn nur ein einzelner Tab geöffnet ist, dieser "
 "mit der Farbe der Fensterleiste harmonieren"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:141
+#: data/com.fyralabs.Accelerator.gschema.xml:141
 msgid "Whether to spawn shell in login mode"
 msgstr "Ob die Kommandozeile im Hellen Modus gestartet wird"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:145
+#: data/com.fyralabs.Accelerator.gschema.xml:145
 msgid "Whether to use a custom command instead of the user's shell"
 msgstr ""
 "Ob ein benutzerdefiniertes Kommando statt der Nutzerkommandozeile genutzt "
 "wird"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:149
+#: data/com.fyralabs.Accelerator.gschema.xml:149
 msgid "Custom command to use instead of the user's shell"
 msgstr ""
 "Benutzerdefiniertes Kommando um die Kommandozeile des Benutzers zu ersetzen"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:156
+#: data/com.fyralabs.Accelerator.gschema.xml:156
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
 "Ob, wenn das letzte Suchergebnis ausgewählt ist, nach dem wechseln zum "
 "nächsten Ergebnis zum ersten Ergebnis gewechselt wird"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:160
+#: data/com.fyralabs.Accelerator.gschema.xml:160
 msgid "Whether search should be case sensitive"
 msgstr "Ob die Suche Groß-/Kleinschreibung beachtet"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:164
+#: data/com.fyralabs.Accelerator.gschema.xml:164
 msgid "Whether search should only match entire words"
 msgstr "Ob die Suche nur auf ganze Wörter zutrifft"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:168
+#: data/com.fyralabs.Accelerator.gschema.xml:168
 msgid "Whether search should be performed using regular expressions"
 msgstr "Ob die Suche nur regular Expressions nutzen sollte"
 

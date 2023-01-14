@@ -24,11 +24,11 @@ public struct Terminal.Padding {
 
   public Variant to_variant () {
     return new Variant (
-      "(uuuu)",
-      this.top,
-      this.right,
-      this.bottom,
-      this.left
+                        "(uuuu)",
+                        this.top,
+                        this.right,
+                        this.bottom,
+                        this.left
     );
   }
 
@@ -38,8 +38,8 @@ public struct Terminal.Padding {
 
   public static Padding from_variant (Variant vari) {
     return_val_if_fail (
-      vari.check_format_string ("(uuuu)", false),
-      Padding.zero ()
+                        vari.check_format_string ("(uuuu)", false),
+                        Padding.zero ()
     );
 
     var iter = vari.iterator ();
@@ -51,19 +51,19 @@ public struct Terminal.Padding {
     iter.next ("u", &left);
 
     return Padding () {
-      top = top,
-      right = right,
-      bottom = bottom,
-      left = left,
+             top = top,
+             right = right,
+             bottom = bottom,
+             left = left,
     };
   }
 
   public string to_string () {
     return "Padding { %u, %u, %u, %u }".printf (
-      this.top,
-      this.right,
-      this.bottom,
-      this.left
+                                                this.top,
+                                                this.right,
+                                                this.bottom,
+                                                this.left
     );
   }
 
@@ -72,32 +72,32 @@ public struct Terminal.Padding {
    */
   public bool is_equilateral () {
     return (
-      this.top == this.right &&
-      this.right == this.bottom &&
-      this.bottom == this.left
+            this.top == this.right &&
+            this.right == this.bottom &&
+            this.bottom == this.left
     );
   }
 }
 
 public class Terminal.Window : Adw.ApplicationWindow {
 
-  public ThemeProvider  theme_provider        { get; private set; }
-  public Adw.TabView    tab_view              { get; private set; }
-  public Adw.TabBar     tab_bar               { get; private set; }
-  public Terminal       active_terminal       { get; private set; }
-  public string?        active_terminal_title { get; private set; }
+  public ThemeProvider theme_provider        { get; private set; }
+  public Adw.TabView tab_view              { get; private set; }
+  public Adw.TabBar tab_bar               { get; private set; }
+  public Terminal active_terminal       { get; private set; }
+  public string? active_terminal_title { get; private set; }
 
-  BaseHeaderBar   header_bar;
-  Gtk.Revealer    header_bar_revealer;
+  BaseHeaderBar header_bar;
+  Gtk.Revealer header_bar_revealer;
 
-  Gtk.HeaderBar   floating_bar;
-  Gtk.Box         floating_btns;
-  Gtk.MenuButton  floating_menu_btn;
-  Gtk.Button      show_headerbar_button;
-  Gtk.Button      fullscreen_button;
-  Gtk.Revealer    floating_header_bar_revealer;
+  Gtk.HeaderBar floating_bar;
+  Gtk.Box floating_btns;
+  Gtk.MenuButton floating_menu_btn;
+  Gtk.Button show_headerbar_button;
+  Gtk.Button fullscreen_button;
+  Gtk.Revealer floating_header_bar_revealer;
 
-  Settings        settings = Settings.get_default ();
+  Settings settings = Settings.get_default ();
 
   const uint header_bar_revealer_duration_ms = 250;
   private uint waiting_for_floating_hb_animation = 0;
@@ -138,18 +138,18 @@ public class Terminal.Window : Adw.ApplicationWindow {
     // Floating controls bar  ===============
 
     this.fullscreen_button = new Gtk.Button.from_icon_name (
-      "com.raggesilver.BlackBox-fullscreen-symbolic"
-    ) { tooltip_text = _("Fullscreen") };
+                                                            "com.fyralabs.Accelerator-fullscreen-symbolic"
+      ) { tooltip_text = _("Fullscreen") };
     this.show_headerbar_button = new Gtk.Button.from_icon_name (
-      "com.raggesilver.BlackBox-show-headerbar-symbolic"
-    ) { tooltip_text = _("Show headerbar") };
+                                                                "com.fyralabs.Accelerator-show-headerbar-symbolic"
+      ) { tooltip_text = _("Show headerbar") };
     this.floating_btns = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
       css_classes = { "floating-btn-box" },
       overflow = Gtk.Overflow.HIDDEN,
       valign = Gtk.Align.CENTER,
     };
     this.floating_btns.append (this.fullscreen_button);
-    this.floating_btns.append (new Gtk.Separator(Gtk.Orientation.VERTICAL));
+    this.floating_btns.append (new Gtk.Separator (Gtk.Orientation.VERTICAL));
     this.floating_btns.append (this.show_headerbar_button);
 
     this.floating_menu_btn = new Gtk.MenuButton () {
@@ -162,7 +162,7 @@ public class Terminal.Window : Adw.ApplicationWindow {
     };
 
     this.floating_bar = new Gtk.HeaderBar () {
-      css_classes = {"flat" },
+      css_classes = { "flat" },
       title_widget = new Gtk.Label ("") { hexpand = true },
     };
 
@@ -191,26 +191,24 @@ public class Terminal.Window : Adw.ApplicationWindow {
     this.set_name ("blackbox-main-window");
   }
 
-  public Window (
-    Gtk.Application app,
+  public Window (Gtk.Application app,
     string? command = null,
     string? cwd = null,
-    bool skip_initial_tab = false
-  ) {
+    bool skip_initial_tab = false) {
     var sett = Settings.get_default ();
     var wwidth = (int) (sett.remember_window_size ? sett.window_width : 700);
     var wheight = (int) (sett.remember_window_size ? sett.window_height : 450);
 
     Object (
-      application: app,
-      default_width: wwidth,
-      default_height: wheight,
-      fullscreened: sett.remember_window_size && sett.was_fullscreened,
-      maximized: sett.remember_window_size && sett.was_maximized
+            application: app,
+            default_width: wwidth,
+            default_height: wheight,
+            fullscreened: sett.remember_window_size && sett.was_fullscreened,
+            maximized: sett.remember_window_size && sett.was_maximized
     );
 
     Marble.add_css_provider_from_resource (
-      "/com/raggesilver/BlackBox/resources/style.css"
+                                           "/com/fyralabs/Accelerator/resources/style.css"
     );
 
     this.theme_provider = ThemeProvider.get_default ();
@@ -229,36 +227,36 @@ public class Terminal.Window : Adw.ApplicationWindow {
 
   private void connect_signals () {
     this.settings.schema.bind (
-      "fill-tabs",
-      this.tab_bar,
-      "expand-tabs",
-      SettingsBindFlags.GET
+                               "fill-tabs",
+                               this.tab_bar,
+                               "expand-tabs",
+                               SettingsBindFlags.GET
     );
 
     this.settings.schema.bind (
-      "show-headerbar",
-      this.header_bar_revealer,
-      "reveal-child",
-      SettingsBindFlags.GET
+                               "show-headerbar",
+                               this.header_bar_revealer,
+                               "reveal-child",
+                               SettingsBindFlags.GET
     );
 
     this.settings.notify["show-menu-button"].connect (
-      this.on_decoration_layout_changed
+                                                      this.on_decoration_layout_changed
     );
 
-    settings.notify["floating-controls"].connect(() => {
+    settings.notify["floating-controls"].connect (() => {
       if (!settings.floating_controls) {
         this.floating_header_bar_revealer.reveal_child = false;
       }
     });
 
-    settings.notify["show-headerbar"].connect(() => {
+    settings.notify["show-headerbar"].connect (() => {
       if (settings.show_headerbar) {
         this.floating_header_bar_revealer.reveal_child = false;
       }
     });
 
-    settings.notify ["window-show-borders"].connect (() => {
+    settings.notify["window-show-borders"].connect (() => {
       set_css_class (this, "with-borders", settings.window_show_borders);
     });
     set_css_class (this, "with-borders", settings.window_show_borders);
@@ -269,7 +267,7 @@ public class Terminal.Window : Adw.ApplicationWindow {
     });
 
     this.tab_view.close_page.connect ((page) => {
-      (page.child as TerminalTab)?.destroy ();
+      (page.child as TerminalTab) ? .destroy ();
       return false;
     });
 
@@ -300,7 +298,7 @@ public class Terminal.Window : Adw.ApplicationWindow {
     });
 
     var s = Gtk.Settings.get_default ();
-    s.notify["gtk-decoration-layout"].connect(this.on_decoration_layout_changed);
+    s.notify["gtk-decoration-layout"].connect (this.on_decoration_layout_changed);
 
     this.notify["active-terminal"].connect (this.on_active_terminal_changed);
 
@@ -325,18 +323,16 @@ public class Terminal.Window : Adw.ApplicationWindow {
         if (this.waiting_for_floating_hb_animation == 0) {
           // Wait for delay to show floating controls
           this.waiting_for_floating_hb_animation = Timeout.add (
-            settings.delay_before_showing_floating_controls,
-            () => {
-              this.floating_header_bar_revealer.reveal_child = true;
-              this.waiting_for_floating_hb_animation = 0;
-              return false;
-            }
-          );
+                                                                settings.delay_before_showing_floating_controls,
+                                                                () => {
+            this.floating_header_bar_revealer.reveal_child = true;
+            this.waiting_for_floating_hb_animation = 0;
+            return false;
+          });
         }
-      }
-      else if (
-        !is_hovering_trigger_area &&
-        (is_shown || this.waiting_for_floating_hb_animation != 0)
+      } else if (
+                 !is_hovering_trigger_area &&
+                 (is_shown || this.waiting_for_floating_hb_animation != 0)
       ) {
         if (this.waiting_for_floating_hb_animation != 0) {
           Source.remove (this.waiting_for_floating_hb_animation);
@@ -346,7 +342,7 @@ public class Terminal.Window : Adw.ApplicationWindow {
       }
     });
 
-    (this as Gtk.Widget)?.add_controller (c);
+    (this as Gtk.Widget) ? .add_controller (c);
 
     this.close_request.connect (() => {
       Settings.get_default ().was_fullscreened = this.fullscreened;
@@ -435,26 +431,26 @@ public class Terminal.Window : Adw.ApplicationWindow {
   }
 
   public void search () {
-    (this.tab_view.selected_page?.child as TerminalTab)?.search ();
+    (this.tab_view.selected_page ? .child as TerminalTab) ? .search ();
   }
 
   public void zoom_in () {
-    (this.tab_view.selected_page?.child as TerminalTab)?.terminal
-      .zoom_in ();
+    (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal
+     .zoom_in ();
   }
 
   public void zoom_out () {
-    (this.tab_view.selected_page?.child as TerminalTab)?.terminal
-      .zoom_out ();
+    (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal
+     .zoom_out ();
   }
 
   public void zoom_default () {
-    (this.tab_view.selected_page?.child as TerminalTab)?.terminal
-      .zoom_default ();
+    (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal
+     .zoom_default ();
   }
 
   public void close_active_tab () {
-    (this.tab_view.selected_page?.child as TerminalTab)?.close_request ();
+    (this.tab_view.selected_page ? .child as TerminalTab) ? .close_request ();
   }
 
   public void new_tab (string? command, string? cwd) {
@@ -472,13 +468,13 @@ public class Terminal.Window : Adw.ApplicationWindow {
   }
 
   private void on_paste_activated () {
-    (this.tab_view.selected_page?.child as TerminalTab)?.terminal
-      .do_paste_clipboard ();
+    (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal
+     .do_paste_clipboard ();
   }
 
   private void on_copy_activated () {
-    (this.tab_view.selected_page?.child as TerminalTab)?.terminal
-      .do_copy_clipboard ();
+    (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal
+     .do_copy_clipboard ();
   }
 
   private void on_tab_selected () {
@@ -487,11 +483,11 @@ public class Terminal.Window : Adw.ApplicationWindow {
         this.active_terminal.disconnect (id);
       }
       this.active_terminal_signal_handlers.remove_range (
-        0,
-        this.active_terminal_signal_handlers.length
+                                                         0,
+                                                         this.active_terminal_signal_handlers.length
       );
     }
-    var terminal = (this.tab_view.selected_page?.child as TerminalTab)?.terminal;
+    var terminal = (this.tab_view.selected_page ? .child as TerminalTab) ? .terminal;
     this.active_terminal = terminal;
     terminal?.grab_focus ();
   }
@@ -505,15 +501,15 @@ public class Terminal.Window : Adw.ApplicationWindow {
 
     this.on_active_terminal_selection_changed ();
     handler = this.active_terminal
-      .selection_changed
-      .connect (this.on_active_terminal_selection_changed);
+       .selection_changed
+       .connect (this.on_active_terminal_selection_changed);
 
     this.active_terminal_signal_handlers.append_val (handler);
 
     this.on_active_terminal_title_changed ();
     handler = this.active_terminal
-      .window_title_changed
-      .connect (this.on_active_terminal_title_changed);
+       .window_title_changed
+       .connect (this.on_active_terminal_title_changed);
 
     this.active_terminal_signal_handlers.append_val (handler);
   }
@@ -524,7 +520,7 @@ public class Terminal.Window : Adw.ApplicationWindow {
 
   private void on_active_terminal_selection_changed () {
     bool enabled = false;
-    if (this.active_terminal?.get_has_selection ()) {
+    if (this.active_terminal ? .get_has_selection ()) {
       enabled = true;
     }
     this.copy_action.set_enabled (enabled);
@@ -558,10 +554,8 @@ public class Terminal.Window : Adw.ApplicationWindow {
     }
   }
 
-  public Window new_window (
-    string? cwd = null,
-    bool skip_initial_tab = false
-  ) {
+  public Window new_window (string? cwd = null,
+                            bool skip_initial_tab = false) {
     var w = new Window (this.application, null, cwd, skip_initial_tab);
     w.show ();
     w.close_request.connect (() => {
@@ -589,14 +583,13 @@ public class Terminal.Window : Adw.ApplicationWindow {
     if (index < 0) {
       // Go to last tab
       this.tab_view.set_selected_page (
-        this.tab_view.get_nth_page (this.tab_view.n_pages - 1)
+                                       this.tab_view.get_nth_page (this.tab_view.n_pages - 1)
       );
       return;
     }
     if (index > this.tab_view.n_pages) {
       return;
-    }
-    else {
+    } else {
       this.tab_view.set_selected_page (this.tab_view.get_nth_page (index - 1));
       return;
     }

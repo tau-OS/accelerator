@@ -20,55 +20,55 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.1\n"
 
-#: data/com.raggesilver.BlackBox.desktop.in:3
+#: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Black Box"
 msgstr "Чёрный Ящик"
 
-#: data/com.raggesilver.BlackBox.desktop.in:9
+#: data/com.fyralabs.Accelerator.desktop.in:9
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr "Терминал;терминал;оболочка;строка;команда;командная строка;cmd;box;"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:6
+#: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
 msgstr "Ширина окна"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:10
+#: data/com.fyralabs.Accelerator.gschema.xml:10
 msgid "Window height"
 msgstr "Высота окна"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:14
+#: data/com.fyralabs.Accelerator.gschema.xml:14
 msgid "Whether or not to display borders around the window and tabs"
 msgstr "Должны ли отображаться границы вокруг окна и вкладок"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:18
+#: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
 msgstr "Запоминать ли размер окна"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:28
+#: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
 msgstr "Семейство и размер шрифта"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:32
+#: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
 msgstr "Должно ли окно использовать цвета темы терминала"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:36
+#: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:40
+#: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
 msgstr "Должны ли вкладки расширяться для заполнения панели вкладок"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:44
+#: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
 msgstr "Должна ли отображаться панель заголовка"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:48
+#: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
 msgstr "Должна ли отображаться кнопка меню на панели заголовка"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:52
+#: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
@@ -76,44 +76,44 @@ msgstr ""
 "Отображать ли однопиксельную линию под панелью заголовка когда открыта одна "
 "вкладка"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:56
+#: data/com.fyralabs.Accelerator.gschema.xml:56
 msgid "Whether or not to reserve an area for dragging the header bar"
 msgstr "Резервировать ли область для перетаскивания панели заголовка"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:60
+#: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
 msgstr "Отображать ли полосы прокрутки"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:64
+#: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
 msgstr "Включить ли оверлейную прокрутку"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:68
+#: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
 msgstr ""
 "Если включено, прокрутка будет происходить по пикселям, а не по строкам"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:72
+#: data/com.fyralabs.Accelerator.gschema.xml:72
 #, fuzzy
 msgid "If enabled, terminals will render sixel escape sequences"
 msgstr ""
 "Если включено, прокрутка будет происходить по пикселям, а не по строкам"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:76
+#: data/com.fyralabs.Accelerator.gschema.xml:76
 msgid "Enable to limit terminal scrollback"
 msgstr "Включите для ограничения буфера прокрутки терминала"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:80
+#: data/com.fyralabs.Accelerator.gschema.xml:80
 msgid "Number of lines stored in scrollback"
 msgstr "Количество строк в буфере прокрутки"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:84
+#: data/com.fyralabs.Accelerator.gschema.xml:84
 msgid "If enabled, floating controls will be shown in headerless mode"
 msgstr ""
 "Если включено, плавающие элементы управления будут отображаться в режиме без "
 "панели заголовка"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:88
+#: data/com.fyralabs.Accelerator.gschema.xml:88
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
@@ -121,50 +121,50 @@ msgstr ""
 "Наводимая область (в пикселях) в верхней части окна для вызова плавающих "
 "элементов управления"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:92
+#: data/com.fyralabs.Accelerator.gschema.xml:92
 msgid "Delay time before showing floating controls"
 msgstr "Время задержки отображения плавающих элементов управления"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:96
+#: data/com.fyralabs.Accelerator.gschema.xml:96
 msgid "The light color scheme for the terminal"
 msgstr "Светлая цветовая схема"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:100
+#: data/com.fyralabs.Accelerator.gschema.xml:100
 msgid "The dark color scheme for the terminal"
 msgstr "Тёмная цветовая схема"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
-#: data/com.raggesilver.BlackBox.gschema.xml:105
+#: data/com.fyralabs.Accelerator.gschema.xml:105
 msgid "Style preference"
 msgstr "Параметры стиля"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:109
+#: data/com.fyralabs.Accelerator.gschema.xml:109
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr ""
 "Размер отступов вокруг виджетов терминала (сверху, справа, снизу, слева)"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:113
+#: data/com.fyralabs.Accelerator.gschema.xml:113
 msgid "Terminal cell width"
 msgstr "Ширина письма"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:117
+#: data/com.fyralabs.Accelerator.gschema.xml:117
 msgid "Terminal cell height"
 msgstr "Высота письма"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:121
+#: data/com.fyralabs.Accelerator.gschema.xml:121
 msgid "Cursor shape"
 msgstr "Форма курсора"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:125
+#: data/com.fyralabs.Accelerator.gschema.xml:125
 #, fuzzy
 msgid "Whether or not the cursor should blink"
 msgstr "Отображать ли полосы прокрутки"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:129
+#: data/com.fyralabs.Accelerator.gschema.xml:129
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr "Если включено, Сtrl+С и Сtrl+V будут работать для копирования/вставки"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:133
+#: data/com.fyralabs.Accelerator.gschema.xml:133
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
@@ -172,38 +172,38 @@ msgstr ""
 "Если включено, панель вкладок будет заменена заголовком с одной открытой "
 "вкладкой"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:137
+#: data/com.fyralabs.Accelerator.gschema.xml:137
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr "Если включено, единственная вкладка примет цвет панели заголовка"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:141
+#: data/com.fyralabs.Accelerator.gschema.xml:141
 msgid "Whether to spawn shell in login mode"
 msgstr "Запускать ли оболочку в режиме входа"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:145
+#: data/com.fyralabs.Accelerator.gschema.xml:145
 msgid "Whether to use a custom command instead of the user's shell"
 msgstr "Использовать ли другую команду вместо оболочки пользователя"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:149
+#: data/com.fyralabs.Accelerator.gschema.xml:149
 msgid "Custom command to use instead of the user's shell"
 msgstr "Другая команда для использования вместо оболочки пользователя"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:156
+#: data/com.fyralabs.Accelerator.gschema.xml:156
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
 "Должно ли нажатие кнопки \"Далее\" на последнем результате поиска возвращать "
 "к первому"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:160
+#: data/com.fyralabs.Accelerator.gschema.xml:160
 msgid "Whether search should be case sensitive"
 msgstr "Должен ли поиск учитывать регистр символов"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:164
+#: data/com.fyralabs.Accelerator.gschema.xml:164
 msgid "Whether search should only match entire words"
 msgstr "Должен ли поиск учитывать только целые слова"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:168
+#: data/com.fyralabs.Accelerator.gschema.xml:168
 msgid "Whether search should be performed using regular expressions"
 msgstr "Должен ли поиск выполняться с использованием регулярных выражений"
 

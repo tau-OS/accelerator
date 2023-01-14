@@ -1,5 +1,5 @@
 <div align="center">
-  <h1><img src="./data/icons/hicolor/scalable/apps/com.raggesilver.BlackBox.svg" height="64"/>Accelerator</h1>
+  <h1><img src="./data/icons/hicolor/scalable/apps/com.fyralabs.Accelerator.svg" height="64"/>Accelerator</h1>
   <h4>A certain terminal emulator.</h4>
   <p>
     <a href="#features">Features</a> •
@@ -40,10 +40,10 @@ It is meant to be a successor to Fermion.
 
 **Flathub**
 
-<a href='https://flathub.org/apps/details/com.raggesilver.BlackBox'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
+<a href='https://flathub.org/apps/details/com.fyralabs.Accelerator'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
 
 ```bash
-flatpak install flathub com.raggesilver.BlackBox
+flatpak install flathub com.fyralabs.Accelerator
 ```
 
 **Download**

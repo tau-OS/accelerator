@@ -18,17 +18,17 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-[GtkTemplate (ui = "/com/raggesilver/BlackBox/gtk/search-toolbar.ui")]
+[GtkTemplate (ui = "/com/fyralabs/Accelerator/gtk/search-toolbar.ui")]
 public class Terminal.SearchToolbar : Gtk.Widget {
 
-  [GtkChild] private unowned Gtk.Button       next_button;
-  [GtkChild] private unowned Gtk.Button       previous_button;
-  [GtkChild] private unowned Gtk.CheckButton  match_case_sensitive_check_button;
-  [GtkChild] private unowned Gtk.CheckButton  match_regex_check_button;
-  [GtkChild] private unowned Gtk.CheckButton  match_whole_words_check_button;
-  [GtkChild] private unowned Gtk.CheckButton  wrap_around_check_button;
-  [GtkChild] private unowned Gtk.Revealer     revealer;
-  [GtkChild] private unowned Gtk.SearchEntry  search_entry;
+  [GtkChild] private unowned Gtk.Button next_button;
+  [GtkChild] private unowned Gtk.Button previous_button;
+  [GtkChild] private unowned Gtk.CheckButton match_case_sensitive_check_button;
+  [GtkChild] private unowned Gtk.CheckButton match_regex_check_button;
+  [GtkChild] private unowned Gtk.CheckButton match_whole_words_check_button;
+  [GtkChild] private unowned Gtk.CheckButton wrap_around_check_button;
+  [GtkChild] private unowned Gtk.Revealer revealer;
+  [GtkChild] private unowned Gtk.SearchEntry search_entry;
 
   public weak Terminal terminal { get; set; }
 
@@ -49,7 +49,7 @@ public class Terminal.SearchToolbar : Gtk.Widget {
 
     if (this.terminal.get_has_selection ()) {
       var text = this.terminal.get_text_selected (
-        Vte.Format.TEXT
+                                                  Vte.Format.TEXT
       );
       this.terminal.unselect_all ();
       this.search_entry.text = text;
@@ -76,31 +76,31 @@ public class Terminal.SearchToolbar : Gtk.Widget {
     var ssetings = SearchSettings.get_default ();
 
     ssetings.schema.bind (
-      "wrap-around",
-      this.wrap_around_check_button,
-      "active",
-      SettingsBindFlags.DEFAULT
+                          "wrap-around",
+                          this.wrap_around_check_button,
+                          "active",
+                          SettingsBindFlags.DEFAULT
     );
 
     ssetings.schema.bind (
-      "match-whole-words",
-      this.match_whole_words_check_button,
-      "active",
-      SettingsBindFlags.DEFAULT
+                          "match-whole-words",
+                          this.match_whole_words_check_button,
+                          "active",
+                          SettingsBindFlags.DEFAULT
     );
 
     ssetings.schema.bind (
-      "match-case-sensitive",
-      this.match_case_sensitive_check_button,
-      "active",
-      SettingsBindFlags.DEFAULT
+                          "match-case-sensitive",
+                          this.match_case_sensitive_check_button,
+                          "active",
+                          SettingsBindFlags.DEFAULT
     );
 
     ssetings.schema.bind (
-      "match-regex",
-      this.match_regex_check_button,
-      "active",
-      SettingsBindFlags.DEFAULT
+                          "match-regex",
+                          this.match_regex_check_button,
+                          "active",
+                          SettingsBindFlags.DEFAULT
     );
   }
 
@@ -119,9 +119,9 @@ public class Terminal.SearchToolbar : Gtk.Widget {
     this.next_button.clicked.connect (this.search_next);
 
     this.terminal.search_set_wrap_around (this.wrap_around_check_button.active);
-    this.wrap_around_check_button.notify ["active"].connect (() => {
+    this.wrap_around_check_button.notify["active"].connect (() => {
       this.terminal.search_set_wrap_around (
-        this.wrap_around_check_button.active
+                                            this.wrap_around_check_button.active
       );
     });
 
@@ -131,7 +131,7 @@ public class Terminal.SearchToolbar : Gtk.Widget {
 
     kpc = new Gtk.EventControllerKey ();
     kpc.key_pressed.connect (this.on_key_pressed);
-    (this as Gtk.Widget)?.add_controller (kpc);
+    (this as Gtk.Widget) ? .add_controller (kpc);
 
     ssettings.notify.connect ((spec) => {
       // If any search match related properties changed call search again
@@ -163,8 +163,7 @@ public class Terminal.SearchToolbar : Gtk.Widget {
 
     if (ssettings.match_regex) {
       search_string = text;
-    }
-    else {
+    } else {
       search_string = Regex.escape_string (text);
     }
 
@@ -178,14 +177,13 @@ public class Terminal.SearchToolbar : Gtk.Widget {
 
     try {
       this.terminal.search_set_regex (
-        new Vte.Regex.for_search (search_string, -1, search_flags),
-        0
+                                      new Vte.Regex.for_search (search_string, -1, search_flags),
+                                      0
       );
 
       // Auto-select the last (most recent) result
       this.terminal.search_find_previous ();
-    }
-    catch (Error e) {
+    } catch (Error e) {
       warning ("%s", e.message);
     }
   }

@@ -18,32 +18,32 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-[GtkTemplate (ui = "/com/raggesilver/BlackBox/gtk/shortcut-dialog.ui")]
+[GtkTemplate (ui = "/com/fyralabs/Accelerator/gtk/shortcut-dialog.ui")]
 public class Terminal.ShortcutDialog : Adw.Window {
 
   static Gtk.KeyvalTrigger JUST_ESCAPE = new Gtk.KeyvalTrigger (
-    Gdk.Key.Escape,
-    0
+                                                                Gdk.Key.Escape,
+                                                                0
   );
 
   static Gtk.KeyvalTrigger JUST_BACKSPACE = new Gtk.KeyvalTrigger (
-    Gdk.Key.BackSpace,
-    0
+                                                                   Gdk.Key.BackSpace,
+                                                                   0
   );
 
   public signal void response (Gtk.ResponseType response);
   public signal void shortcut_set (string? shortcut);
 
-  public string?  shortcut_name   { get; set; default = null; }
-  public string?  current_accel   { get; set; default = null; }
-  public string?  new_accel       { get; private set; default = null; }
-  public bool     is_in_use       { get; private set; default = false; }
-  public bool     is_shortcut_set { get; protected set; default = false; }
+  public string? shortcut_name   { get; set; default = null; }
+  public string? current_accel   { get; set; default = null; }
+  public string? new_accel       { get; private set; default = null; }
+  public bool is_in_use       { get; private set; default = false; }
+  public bool is_shortcut_set { get; protected set; default = false; }
 
-  public string   heading_text {
+  public string heading_text {
     owned get {
       return this.shortcut_name == null
-        ? _("Enter new shortcut")
+        ? _ ("Enter new shortcut")
         : _("Enter new shortcut for \"%s\"").printf (this.shortcut_name);
     }
   }
@@ -57,23 +57,23 @@ public class Terminal.ShortcutDialog : Adw.Window {
 
     this.response.connect_after (this.close);
 
-    this.notify ["shortcut-name"].connect (() => {
+    this.notify["shortcut-name"].connect (() => {
       this.notify_property ("heading-text");
     });
 
     // bind this.current-accel -> this.shortcut_label.accelerator
     this.bind_property (
-      "current-accel",
-      this.shortcut_label,
-      "accelerator",
-      BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-      // current-accel -> accelerator
-      (_binding, from_value, ref to_value_ref) => {
-        string? current = from_value.get_string ();
-        to_value_ref = current ?? "";
-        return true;
-      },
-      null
+                        "current-accel",
+                        this.shortcut_label,
+                        "accelerator",
+                        BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+                        // current-accel -> accelerator
+                        (_binding, from_value, ref to_value_ref) => {
+      string? current = from_value.get_string ();
+      to_value_ref = current ?? "";
+      return true;
+    },
+                        null
     );
 
     this.setup_key_controller ();
@@ -102,8 +102,7 @@ public class Terminal.ShortcutDialog : Adw.Window {
       if (k.compare (JUST_ESCAPE) == 0) {
         this.cancel ();
         return false;
-      }
-      else if (k.compare (JUST_BACKSPACE) == 0) {
+      } else if (k.compare (JUST_BACKSPACE) == 0) {
         this.shortcut_set (null);
         this.apply ();
         return true;
@@ -116,9 +115,9 @@ public class Terminal.ShortcutDialog : Adw.Window {
         // Unless keyval is one of the Function keys, shortcuts need either
         // Control or Alt.
         (
-          (keyval >= Gdk.Key.F1 && keyval <= Gdk.Key.F35) ||
-          (real_modifiers & Gdk.ModifierType.CONTROL_MASK) != 0 ||
-          (real_modifiers & Gdk.ModifierType.ALT_MASK) != 0
+         (keyval >= Gdk.Key.F1 && keyval <= Gdk.Key.F35) ||
+         (real_modifiers & Gdk.ModifierType.CONTROL_MASK) != 0 ||
+         (real_modifiers & Gdk.ModifierType.ALT_MASK) != 0
         );
 
       this.shortcut_label.set_accelerator (k.to_string ());
@@ -128,8 +127,8 @@ public class Terminal.ShortcutDialog : Adw.Window {
       //
       // E.g.: This shortcut is currently assigned to "Reset Zoom"
       this.is_in_use = Keymap
-        .get_default ()
-        .get_action_for_shortcut (k.to_string ()) != null;
+         .get_default ()
+         .get_action_for_shortcut (k.to_string ()) != null;
 
       this.is_shortcut_set = is_valid && !this.is_in_use;
       this.shortcut_set (this.is_shortcut_set ? k.to_string () : null);
@@ -137,7 +136,7 @@ public class Terminal.ShortcutDialog : Adw.Window {
       return true;
     });
 
-    (this as Gtk.Widget)?.add_controller (kpc);
+    (this as Gtk.Widget) ? .add_controller (kpc);
   }
 
   [GtkCallback]

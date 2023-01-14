@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2022 Paulo Queiroz -->
 <component type="desktop">
-  <id>com.raggesilver.BlackBox</id>
+  <id>com.fyralabs.Accelerator</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
@@ -42,7 +42,7 @@
     </screenshot>
   </screenshots>
 
-  <launchable type="desktop-id">com.raggesilver.BlackBox.desktop</launchable>
+  <launchable type="desktop-id">com.fyralabs.Accelerator.desktop</launchable>
 
   <categories>
     <category>Utility</category>
@@ -204,7 +204,7 @@
           <li>Users can now set a terminal color scheme for dark style and another for light style</li>
           <li>Black Box now uses the new libadwaita about window</li>
           <li>New themes included with Black Box: one-dark, pencil-dark, pencil-light, tomorrow, and tommorrow-night</li>
-          <li>Black Box will also load themes from `~/.var/app/com.raggesilver.BlackBox/schemes`</li>
+          <li>Black Box will also load themes from `~/.var/app/com.fyralabs.Accelerator/schemes`</li>
           <li>You can customize which and how your shell is spawned in Black Box</li>
         </ul>
         <p>Deprecations:</p>

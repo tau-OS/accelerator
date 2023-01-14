@@ -1,5 +1,5 @@
-data/com.raggesilver.BlackBox.desktop.in
-data/com.raggesilver.BlackBox.gschema.xml
+data/com.fyralabs.Accelerator.desktop.in
+data/com.fyralabs.Accelerator.gschema.xml
 src/gtk/search-toolbar.ui
 src/gtk/help-overlay.ui
 src/gtk/shortcut-dialog.ui

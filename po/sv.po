@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1\n"
 
-#: data/com.raggesilver.BlackBox.desktop.in:3
+#: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Black Box"
 msgstr "Black Box"
 
-#: data/com.raggesilver.BlackBox.desktop.in:9
+#: data/com.fyralabs.Accelerator.desktop.in:9
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr "Terminal;terminal;skal;prompt;kommando;kommandorad;cmd;box;"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:6
+#: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
 msgstr "Fönster bredd"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:10
+#: data/com.fyralabs.Accelerator.gschema.xml:10
 msgid "Window height"
 msgstr "Fönsterhöjd"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:14
+#: data/com.fyralabs.Accelerator.gschema.xml:14
 msgid "Whether or not to display borders around the window and tabs"
 msgstr "Om du vill visa ramar runt fönstret och flikarna eller inte"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:18
+#: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
 msgstr "Om fönsterstorleken ska kommas ihåg eller inte"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:28
+#: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
 msgstr "Teckensnittsfamilj och storlek"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:32
+#: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
 msgstr "Om fönstret ska ärva terminaltemats färger"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:36
+#: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:40
+#: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
 msgstr "Om flikar ska expanderas för att fylla flikfältet"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:44
+#: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
 msgstr "Om fönsterlisten ska visas eller inte"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:48
+#: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
 msgstr "Om en menyknapp ska visas i rubrikfältet eller inte"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:52
+#: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
@@ -73,42 +73,42 @@ msgstr ""
 "Huruvida en 1px linje ska ritas under rubrikfältet när det finns en enda "
 "flik öppen"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:56
+#: data/com.fyralabs.Accelerator.gschema.xml:56
 msgid "Whether or not to reserve an area for dragging the header bar"
 msgstr "Om du vill reservera ett område för att dra i rubrikfältet eller inte"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:60
+#: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
 msgstr "Om rullningslister ska visas eller inte"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:64
+#: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
 msgstr "Om överlagringsrullning ska aktiveras"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:68
+#: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
 msgstr ""
 "Om det är aktiverat rullar terminalerna efter pixlar istället för rader"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:72
+#: data/com.fyralabs.Accelerator.gschema.xml:72
 #, fuzzy
 msgid "If enabled, terminals will render sixel escape sequences"
 msgstr ""
 "Om det är aktiverat rullar terminalerna efter pixlar istället för rader"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:76
+#: data/com.fyralabs.Accelerator.gschema.xml:76
 msgid "Enable to limit terminal scrollback"
 msgstr "Aktivera för att begränsa terminal rulla tillbaka"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:80
+#: data/com.fyralabs.Accelerator.gschema.xml:80
 msgid "Number of lines stored in scrollback"
 msgstr "Antal rader lagrade i rulla tillbaka"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:84
+#: data/com.fyralabs.Accelerator.gschema.xml:84
 msgid "If enabled, floating controls will be shown in headerless mode"
 msgstr "Om aktiverat, så kommer flytande kontroller visas i fönsterlöst läge"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:88
+#: data/com.fyralabs.Accelerator.gschema.xml:88
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
@@ -116,52 +116,52 @@ msgstr ""
 "Svävbart område (i pixlar) överst i fönstret för att utlösa flytande "
 "kontroller"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:92
+#: data/com.fyralabs.Accelerator.gschema.xml:92
 msgid "Delay time before showing floating controls"
 msgstr "Fördröjning innan flytande kontroller visas"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:96
+#: data/com.fyralabs.Accelerator.gschema.xml:96
 msgid "The light color scheme for the terminal"
 msgstr "Det ljusa färgschemat för terminalen"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:100
+#: data/com.fyralabs.Accelerator.gschema.xml:100
 msgid "The dark color scheme for the terminal"
 msgstr "Det mörka färgschemat för terminalen"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
-#: data/com.raggesilver.BlackBox.gschema.xml:105
+#: data/com.fyralabs.Accelerator.gschema.xml:105
 msgid "Style preference"
 msgstr "Stil inställningar"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:109
+#: data/com.fyralabs.Accelerator.gschema.xml:109
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr ""
 "Mängden utfyllnad runt terminalwidgets (överst, höger, botten, vänster)"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:113
+#: data/com.fyralabs.Accelerator.gschema.xml:113
 msgid "Terminal cell width"
 msgstr "Terminal cellbredd"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:117
+#: data/com.fyralabs.Accelerator.gschema.xml:117
 msgid "Terminal cell height"
 msgstr "Terminal cell höjd"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:121
+#: data/com.fyralabs.Accelerator.gschema.xml:121
 msgid "Cursor shape"
 msgstr "Markör form"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:125
+#: data/com.fyralabs.Accelerator.gschema.xml:125
 #, fuzzy
 msgid "Whether or not the cursor should blink"
 msgstr "Om rullningslister ska visas eller inte"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:129
+#: data/com.fyralabs.Accelerator.gschema.xml:129
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr ""
 "Om det är aktiverat kommer ctrl+c och ctrl+v att fungera för kopiera/klistra "
 "in"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:133
+#: data/com.fyralabs.Accelerator.gschema.xml:133
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
@@ -169,39 +169,39 @@ msgstr ""
 "Om det är aktiverat kommer flikfältet att ersättas med en titeletikett när "
 "det finns en enda öppen flik"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:137
+#: data/com.fyralabs.Accelerator.gschema.xml:137
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr ""
 "Om det är aktiverat kommer en enda öppen flik att blandas med rubrikfältets "
 "färg"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:141
+#: data/com.fyralabs.Accelerator.gschema.xml:141
 msgid "Whether to spawn shell in login mode"
 msgstr "Om skalet ska skapas i inloggningsläge"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:145
+#: data/com.fyralabs.Accelerator.gschema.xml:145
 msgid "Whether to use a custom command instead of the user's shell"
 msgstr "Om ett anpassat kommando ska användas istället för användarens skal"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:149
+#: data/com.fyralabs.Accelerator.gschema.xml:149
 msgid "Custom command to use instead of the user's shell"
 msgstr "Anpassat kommando att använda istället för användarens skal"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:156
+#: data/com.fyralabs.Accelerator.gschema.xml:156
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
 "Om du klickar på nästa på det sista sökresultatet bör återgå till det första"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:160
+#: data/com.fyralabs.Accelerator.gschema.xml:160
 msgid "Whether search should be case sensitive"
 msgstr "Om sökning ska vara skiftlägeskänslig"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:164
+#: data/com.fyralabs.Accelerator.gschema.xml:164
 msgid "Whether search should only match entire words"
 msgstr "Om sökningen bara ska matcha hela ord"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:168
+#: data/com.fyralabs.Accelerator.gschema.xml:168
 msgid "Whether search should be performed using regular expressions"
 msgstr "Om sökning ska utföras med reguljära uttryck"
 

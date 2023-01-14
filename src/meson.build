@@ -43,6 +43,7 @@ blackbox_deps = [
   # Black Box actually depends on libadwaita >= 1.2.alpha, but I'm keeping this
   # at 1.1 to make it easier for translators to work on Black Box
   dependency('libadwaita-1', version: '>= 1.1'),
+  dependency('libhelium-1', version: '>= 1.2'),
   dependency('marble', version: '>= 42'),
   dependency('vte-2.91-gtk4', version: '>= 0.69.0'),
   dependency('json-glib-1.0', version: '>= 1.4.4'),
@@ -64,11 +65,11 @@ add_project_arguments('--disable-since-check', language: 'vala')
 gnome = import('gnome')
 
 blackbox_sources += gnome.compile_resources('blackbox-resources',
-  'blackbox.gresource.xml',
-  c_name: 'blackbox'
+  'accelerator.gresource.xml',
+  c_name: 'accelerator'
 )
 
-executable('blackbox', blackbox_sources, config_header,
+executable('accel', blackbox_sources, config_header,
   vala_args: '--target-glib=2.50',  dependencies: blackbox_deps,
   install: true,
 )

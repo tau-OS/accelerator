@@ -16,96 +16,96 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.4.2\n"
 
-#: data/com.raggesilver.BlackBox.desktop.in:3
+#: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Black Box"
 msgstr "Black Box"
 
-#: data/com.raggesilver.BlackBox.desktop.in:9
+#: data/com.fyralabs.Accelerator.desktop.in:9
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr ""
 "Terminal;terminal;shell;prompt;command;commandline;cmd;box;příkazový řádek;"
 "terminál;"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:6
+#: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
 msgstr "Šířka okna"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:10
+#: data/com.fyralabs.Accelerator.gschema.xml:10
 msgid "Window height"
 msgstr "Výška okna"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:14
+#: data/com.fyralabs.Accelerator.gschema.xml:14
 msgid "Whether or not to display borders around the window and tabs"
 msgstr "Zobrazovat okraje okolo oken a karet"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:18
+#: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
 msgstr "Pamatovat si velikost okna"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:28
+#: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
 msgstr "Rodina písem a velikost"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:32
+#: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
 msgstr "Má okno použít motiv stejný jako terminál"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:36
+#: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
 msgstr ""
 
-#: data/com.raggesilver.BlackBox.gschema.xml:40
+#: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
 msgstr "Mají karty vyplnit celou šířku záhlaví"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:44
+#: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
 msgstr "Má být záhlaví zobrazeno"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:48
+#: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
 msgstr "Zobrazovat tlačítko menu v záhlaví"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:52
+#: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
 msgstr "Zobrazovat 1px linku pod záhlavím když je otevřena pouze jedna karta"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:56
+#: data/com.fyralabs.Accelerator.gschema.xml:56
 msgid "Whether or not to reserve an area for dragging the header bar"
 msgstr "Rezervovat místo pro přetahování okna"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:60
+#: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
 msgstr "Zobrazovat posuvníky"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:64
+#: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
 msgstr "Použít posuvníky co překrývají obsah"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:68
+#: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
 msgstr "Pokud povoleno terminál bude skrolovat na základě pixelů místo řádků"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:72
+#: data/com.fyralabs.Accelerator.gschema.xml:72
 #, fuzzy
 msgid "If enabled, terminals will render sixel escape sequences"
 msgstr "Pokud povoleno terminál bude skrolovat na základě pixelů místo řádků"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:76
+#: data/com.fyralabs.Accelerator.gschema.xml:76
 msgid "Enable to limit terminal scrollback"
 msgstr "Povolte pro omezení skrolování terminálu"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:80
+#: data/com.fyralabs.Accelerator.gschema.xml:80
 msgid "Number of lines stored in scrollback"
 msgstr "Počet linek uložených ke skrolování"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:84
+#: data/com.fyralabs.Accelerator.gschema.xml:84
 msgid "If enabled, floating controls will be shown in headerless mode"
 msgstr "Pokud zapnuto, plovoucí ovládací panel bude zobrazen v bezešvém režimu"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:88
+#: data/com.fyralabs.Accelerator.gschema.xml:88
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
@@ -113,50 +113,50 @@ msgstr ""
 "Oblast (v pixelech) na vršku okna na kterou když najedete tak se zobrazí "
 "panel"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:92
+#: data/com.fyralabs.Accelerator.gschema.xml:92
 msgid "Delay time before showing floating controls"
 msgstr "Prodleva než se zobrazí plovoucí panel"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:96
+#: data/com.fyralabs.Accelerator.gschema.xml:96
 msgid "The light color scheme for the terminal"
 msgstr "Světlý motiv terminálu"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:100
+#: data/com.fyralabs.Accelerator.gschema.xml:100
 msgid "The dark color scheme for the terminal"
 msgstr "Tmavý motiv terminálu"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
-#: data/com.raggesilver.BlackBox.gschema.xml:105
+#: data/com.fyralabs.Accelerator.gschema.xml:105
 msgid "Style preference"
 msgstr "Preference motivu"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:109
+#: data/com.fyralabs.Accelerator.gschema.xml:109
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr "Odsazení okolo terminálu (nahoře, vpravo, dole, vlevo)"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:113
+#: data/com.fyralabs.Accelerator.gschema.xml:113
 msgid "Terminal cell width"
 msgstr "Šířka buňky terminálu"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:117
+#: data/com.fyralabs.Accelerator.gschema.xml:117
 msgid "Terminal cell height"
 msgstr "Výška buňky terminálu"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:121
+#: data/com.fyralabs.Accelerator.gschema.xml:121
 msgid "Cursor shape"
 msgstr "Tvar kurzoru"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:125
+#: data/com.fyralabs.Accelerator.gschema.xml:125
 #, fuzzy
 msgid "Whether or not the cursor should blink"
 msgstr "Zobrazovat posuvníky"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:129
+#: data/com.fyralabs.Accelerator.gschema.xml:129
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr ""
 "Pokud zapnuto, ctrl+c a ctrl+v bude možno použít pro kopírování/vkládání"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:133
+#: data/com.fyralabs.Accelerator.gschema.xml:133
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
@@ -164,38 +164,38 @@ msgstr ""
 "Pokud povoleno, lišta karet bude nahrazena titulkem, pokud je otevřená jedna "
 "karta"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:137
+#: data/com.fyralabs.Accelerator.gschema.xml:137
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr ""
 "Pokud zapnuto a je otevřená pouze jedna karta tak splyne s barvou záhlaví"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:141
+#: data/com.fyralabs.Accelerator.gschema.xml:141
 msgid "Whether to spawn shell in login mode"
 msgstr "Spouštět shell v přihlašovacím režimu"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:145
+#: data/com.fyralabs.Accelerator.gschema.xml:145
 msgid "Whether to use a custom command instead of the user's shell"
 msgstr "Použít vlastní příkaz místo uživatelova shellu"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:149
+#: data/com.fyralabs.Accelerator.gschema.xml:149
 msgid "Custom command to use instead of the user's shell"
 msgstr "Vlastní příkaz který bude použit místo uživatelského shellu"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:156
+#: data/com.fyralabs.Accelerator.gschema.xml:156
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
 "Zda se má kliknutím na další na poslední výsledek vyhledávání vrátit na první"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:160
+#: data/com.fyralabs.Accelerator.gschema.xml:160
 msgid "Whether search should be case sensitive"
 msgstr "Má být hledání citlivé na velikost písmen (case sensitive)"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:164
+#: data/com.fyralabs.Accelerator.gschema.xml:164
 msgid "Whether search should only match entire words"
 msgstr "Má hledání odpovídat pouze celým slovům"
 
-#: data/com.raggesilver.BlackBox.gschema.xml:168
+#: data/com.fyralabs.Accelerator.gschema.xml:168
 msgid "Whether search should be performed using regular expressions"
 msgstr "Má hledání být prováděno regulárními výrazy"
 

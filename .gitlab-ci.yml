@@ -10,11 +10,11 @@ flatpak:
     GIT_SUBMODULE_STRATEGY: normal
 
     # Replace with your manifest path
-    MANIFEST_PATH: "com.raggesilver.BlackBox.json"
+    MANIFEST_PATH: "com.fyralabs.Accelerator.json"
     RUNTIME_REPO: "https://flathub.org/repo/flathub.flatpakrepo"
     # Replace with your application name, as written in the manifest
     FLATPAK_MODULE: "blackbox"
-    APP_ID: "com.raggesilver.BlackBox"
+    APP_ID: "com.fyralabs.Accelerator"
     BUNDLE: ${BUNDLE_NAME}
   before_script:
     - flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

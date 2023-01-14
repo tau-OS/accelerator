@@ -18,9 +18,9 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
- class Terminal.Action : Object {
-  public string    name;
-  public string?   label;
+class Terminal.Action : Object {
+  public string name;
+  public string? label;
   public string[]  accelerators;
 
   public Action () {
@@ -40,45 +40,45 @@ class Terminal.ShortcutRow : Gtk.Box {
     this.add_css_class ("shortcut-row");
 
     var title_label = new Gtk.Label (this.title) {
-      css_classes = {"title"},
+      css_classes = { "title" },
       halign = Gtk.Align.START,
     };
 
     var subtitle_label = new Gtk.Label (this.subtitle) {
-      css_classes = {"subtitle"},
+      css_classes = { "subtitle" },
       halign = Gtk.Align.START,
     };
 
     this.bind_property (
-      "title",
-      title_label,
-      "label",
-      BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-      null,
-      null
+                        "title",
+                        title_label,
+                        "label",
+                        BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+                        null,
+                        null
     );
 
     this.bind_property (
-      "subtitle",
-      subtitle_label,
-      "label",
-      BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-      null,
-      null
+                        "subtitle",
+                        subtitle_label,
+                        "label",
+                        BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+                        null,
+                        null
     );
 
     this.bind_property (
-      "subtitle",
-      subtitle_label,
-      "visible",
-      BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-      // subtitle -> visible
-      (_, from_value, ref to_value) => {
-        var sub = from_value.get_string ();
-        to_value = sub != null && sub != "";
-        return true;
-      },
-      null
+                        "subtitle",
+                        subtitle_label,
+                        "visible",
+                        BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+                        // subtitle -> visible
+                        (_, from_value, ref to_value) => {
+      var sub = from_value.get_string ();
+      to_value = sub != null && sub != "";
+      return true;
+    },
+                        null
     );
 
     var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0) {
@@ -100,19 +100,19 @@ class Terminal.ShortcutRow : Gtk.Box {
 
     this.append (this.accelerators_box);
 
-    this.notify ["action"].connect (this.update_ui);
+    this.notify["action"].connect (this.update_ui);
   }
 
   public ShortcutRow () {
     Object (
-      orientation: Gtk.Orientation.HORIZONTAL,
-      spacing: 6
+            orientation: Gtk.Orientation.HORIZONTAL,
+            spacing: 6
     );
   }
 
   public void update_ui () {
-    this.title = this.action?.label ?? this.action?.name ?? "";
-    //  this.subtitle = this.action?.label != null ? this.action?.name : "";
+    this.title = this.action ? .label ?? this.action ? .name ?? "";
+    // this.subtitle = this.action?.label != null ? this.action?.name : "";
 
     var c = this.accelerators_box.get_first_child ();
 
@@ -122,11 +122,11 @@ class Terminal.ShortcutRow : Gtk.Box {
     }
 
     if (
-      this.action != null &&
-      (
-        this.action.accelerators.length == 0 ||
-        this.action.accelerators [0] == null
-      )
+        this.action != null &&
+        (
+         this.action.accelerators.length == 0 ||
+         this.action.accelerators[0] == null
+        )
     ) {
       this.accelerators_box.append (new Gtk.Label (_("Disabled")) {
         css_classes = { "dim-label" },
@@ -139,7 +139,7 @@ class Terminal.ShortcutRow : Gtk.Box {
   }
 }
 
-[GtkTemplate (ui = "/com/raggesilver/BlackBox/gtk/shortcut-editor.ui")]
+[GtkTemplate (ui = "/com/fyralabs/Accelerator/gtk/shortcut-editor.ui")]
 public class Terminal.ShortcutEditor : Adw.PreferencesPage {
   public Gtk.Application app { get; construct set; }
 
@@ -194,7 +194,7 @@ public class Terminal.ShortcutEditor : Adw.PreferencesPage {
 
     var w = new ShortcutDialog () {
       shortcut_name = action.label ?? action.name,
-      current_accel = action.accelerators [0],
+      current_accel = action.accelerators[0],
       transient_for = this.app.get_active_window (),
     };
 
@@ -260,7 +260,7 @@ public class Terminal.ShortcutEditor : Adw.PreferencesPage {
       var a = new Action ();
 
       a.name = action;
-      a.label = action_map [action];
+      a.label = action_map[action];
       a.accelerators = keymap.get_accelerators_for_action (action);
 
       store.append (a);

@@ -122,7 +122,7 @@ Features:
 - Black Box now uses the new libadwaita about window
 - New themes included with Black Box: one-dark, pencil-dark, pencil-light,
   tomorrow, and tommorrow-night
-- Black Box will also load themes from `~/.var/app/com.raggesilver.BlackBox/schemes` - #54
+- Black Box will also load themes from `~/.var/app/com.fyralabs.Accelerator/schemes` - #54
 - You can customize which and how your shell is spawned in Black Box - #43
   - Run command as login shell
   - Set custom command instead of the default shell

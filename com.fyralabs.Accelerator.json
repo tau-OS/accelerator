@@ -1,5 +1,5 @@
 {
-  "app-id": "com.raggesilver.BlackBox",
+  "app-id": "com.fyralabs.Accelerator",
   "runtime": "org.gnome.Platform",
   "runtime-version": "master",
   "sdk": "org.gnome.Sdk",
@@ -28,7 +28,11 @@
     {
       "name": "vte",
       "buildsystem": "meson",
-      "config-opts": ["-Dgtk4=true", "-Dgtk3=false", "-Dsixel=true"],
+      "config-opts": [
+        "-Dgtk4=true",
+        "-Dgtk3=false",
+        "-Dsixel=true"
+      ],
       "sources": [
         {
           "type": "archive",
@@ -63,7 +67,9 @@
       "name": "blackbox",
       "builddir": true,
       "buildsystem": "meson",
-      "config-opts": ["-Ddevel=true"],
+      "config-opts": [
+        "-Ddevel=true"
+      ],
       "sources": [
         {
           "type": "git",
