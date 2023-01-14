@@ -1,6 +1,6 @@
 <div align="center">
-  <h1><img src="./data/icons/hicolor/scalable/apps/com.raggesilver.BlackBox.svg" height="64"/>Black Box</h1>
-  <h4>A beautiful GTK 4 terminal.</h4>
+  <h1><img src="./data/icons/hicolor/scalable/apps/com.raggesilver.BlackBox.svg" height="64"/>Accelerator</h1>
+  <h4>A certain terminal emulator.</h4>
   <p>
     <a href="#features">Features</a> •
     <a href="#install">Install</a> •
@@ -21,8 +21,9 @@
 > This is work in progress. Feel free to use Black Box and report any bugs you
 > find.
 
-I created this project so that I could use a decent-looking terminal app on
-Linux. There are more featureful alternatives out there.
+Accelerator is a terminal emulator based on [Black Box](https://gitlab.gnome.org/raggesilver/blackbox) made for the Kiri Desktop. It is a fork of Black Box with libhelium as the UI library.
+
+It is meant to be a successor to Fermion.
 
 ## Features
 
