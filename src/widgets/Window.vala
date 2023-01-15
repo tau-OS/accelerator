@@ -114,14 +114,20 @@ public class Terminal.Window : He.ApplicationWindow {
     }
 
     var layout_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-
-    //  this.tab_view = new He.TabPage (null);
+    var tabview = new He.TabPage (this.blank_tab ());
+    tabview.name = "tabview";
+    tabview.visible = true;
+    tabview.show ();
+    this.tab_view = tabview;
 
     var tabbar = new He.TabSwitcher () {
       allow_new_window = true,
       hexpand = true,
       halign = Gtk.Align.FILL,
+      focus_on_click = false,
     };
+    tabbar.set_hexpand (true);
+    tabbar.set_halign (Gtk.Align.FILL);
     this.tab_bar = tabbar;
 
 
@@ -177,11 +183,7 @@ public class Terminal.Window : He.ApplicationWindow {
     this.on_decoration_layout_changed ();
 
     layout_box.append (this.header_bar_revealer);
-
-    active_terminal_container = new He.Bin ();
-    active_terminal_container.set_name ("accelerator-bin");
-    //  active_terminal_container.child = this.tab_view;
-    layout_box.append (active_terminal_container);
+    layout_box.append (this.tab_view);
     layout_box.set_name ("accelerator-layout-box");
 
     var overlay = new Gtk.Overlay ();
@@ -192,6 +194,27 @@ public class Terminal.Window : He.ApplicationWindow {
     this.child = overlay;
 
     this.set_name ("accelerator-main-window");
+  }
+
+  public He.Tab blank_tab() {
+    var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+    box.set_name ("accelerator-blank-tab-box");
+    var label = new Gtk.Label (_("No tabs open")) {
+      halign = Gtk.Align.CENTER,
+      valign = Gtk.Align.CENTER,
+      hexpand = true,
+      vexpand = true,
+      selectable = false,
+      use_markup = true,
+      wrap = true,
+      wrap_mode = Pango.WrapMode.WORD_CHAR,
+      css_classes = { "dim-label" }
+    };
+    box.append (label);
+    var tab = new He.Tab ("Blank Tab", box);
+    tab.set_name ("accelerator-blank-tab");
+    tab.set_id ("placeholder-tab");
+    return tab;
   }
 
   public Window (Gtk.Application app,
@@ -229,12 +252,12 @@ public class Terminal.Window : He.ApplicationWindow {
   }
 
   private void connect_signals () {
-    this.settings.schema.bind (
-                               "fill-tabs",
-                               this.tab_bar,
-                               "expand-tabs",
-                               SettingsBindFlags.GET
-    );
+    //  this.settings.schema.bind (
+    //                             "fill-tabs",
+    //                             this.tab_bar,
+    //                             "expand-tabs",
+    //                             SettingsBindFlags.GET
+    //  );
 
     this.settings.schema.bind (
                                "show-headerbar",
@@ -274,6 +297,25 @@ public class Terminal.Window : He.ApplicationWindow {
     // var w = this.new_window (null, true);
     // return w.tab_view;
     // });
+
+    this.tab_bar.new_tab_requested.connect (() => {
+      this.new_tab (null, null);
+    });
+
+
+    this.tab_bar.close_tab_requested.connect ((tab) => {
+      print ("close tab requested");
+      this.tab_bar.remove_tab (tab);
+
+      // if there are no more tabs, close the window
+      if (this.tab_bar.n_tabs < 1) {
+        this.close ();
+      }
+
+      return false;
+    });
+
+    
 
     // this.tab_view.close_page.connect ((page) => {
     // (page.child as TerminalTab) ? .destroy ();
@@ -465,13 +507,19 @@ public class Terminal.Window : He.ApplicationWindow {
   public void new_tab (string? command, string? cwd) {
     var tab = new TerminalTab (this, command, cwd);
 
+    //  this.tab_view.child = tab.box;
+
     //  if (this.tab_view == null) {
     //    this.tab_view = new He.TabPage(tab);
     //  }
 
-    //  this.tab_bar.insert_tab (tab, -1);
-    //  this.active_terminal = tab.terminal;
-    //  this.active_terminal_container.child = this.active_terminal;
+    this.tab_bar.insert_tab (tab, -1);
+    this.active_terminal = tab.terminal;
+    //  if (this.tab_view.name == "accelerator-blank-tab") {
+    //    this.tab_view.name = "tab-view";
+    //    this.tab_view.tab.child = this.active_terminal;
+    //  }
+
 
     tab.label = command ?? @"tab $(this.tab_bar.n_tabs)";
     tab.notify["title"].connect (() => {
@@ -481,8 +529,10 @@ public class Terminal.Window : He.ApplicationWindow {
       // this.tab_bar.close_page (page);
       this.tab_bar.remove_tab (tab);
     });
-    //  this.tab_bar.current = tab;
+    this.tab_bar.current = tab;
     //  this.tab_bar.child = tab;
+    this.tab_view = this.tab_bar.current.child as He.TabPage;
+    //  this.tab_view.child = tab.box;
   }
 
   private void on_paste_activated () {

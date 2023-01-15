@@ -27,9 +27,10 @@ public class Terminal.TerminalTab : He.Tab {
   private SearchToolbar     search_toolbar;
   public  Window            window;
 
-  private Gtk.Box box;
+  public Gtk.Box box;
 
   public TerminalTab (Window window, string? command, string? cwd) {
+    this.set_name ("terminal-tab");
     this.box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
     this.window = window;
     this.terminal = new Terminal (this.window, command, cwd);
@@ -47,7 +48,7 @@ public class Terminal.TerminalTab : He.Tab {
 
     this.terminal.add_controller (click);
 
-    //  this.connect_signals ();
+    this.connect_signals ();
 
   }
 

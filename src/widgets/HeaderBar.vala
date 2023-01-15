@@ -118,11 +118,12 @@ public class Terminal.HeaderBar : BaseHeaderBar {
   public HeaderBar (Window window) {
     base (window);
 
-    var hb = new He.AppBar ();
-    // hb.show_start_title_buttons = false;
-    // hb.show_end_title_buttons = false;
-    hb.show_buttons = true;
-    hb.show_back = false;
+    var hb = new Gtk.HeaderBar ();
+    //  hb.show_start_title_buttons = false;
+    //  hb.show_end_title_buttons = false;
+    hb.show_title_buttons = false;
+    //  hb.show_buttons = true;
+    //  hb.show_back = false;
     hb.add_css_class ("flat");
     hb.halign = Gtk.Align.FILL;
     hb.hexpand = true;
@@ -169,7 +170,8 @@ public class Terminal.HeaderBar : BaseHeaderBar {
     layout.append (button_box);
     layout.append (this.right_controls);
 
-    hb.child = layout;
+    //  hb.child = layout;
+    hb.set_title_widget (layout);
     this.append (hb);
     this.add_css_class ("custom-headerbar");
 
@@ -278,7 +280,7 @@ public class Terminal.HeaderBar : BaseHeaderBar {
     bool single_tab_enabled = this.single_tab_mode;
     bool stealth_enabled = Settings.get_default ().stealth_single_tab;
 
-    this.tab_bar.visible = !single_tab_enabled;
+    //  this.tab_bar.visible = !single_tab_enabled;
     this.title_label.visible = single_tab_enabled;
 
     set_css_class (this, "single-tab-mode", single_tab_enabled);
