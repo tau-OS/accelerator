@@ -117,6 +117,10 @@ public class Terminal.Window : He.ApplicationWindow {
     var tabview = new He.TabPage (this.blank_tab ());
     tabview.name = "tabview";
     tabview.visible = true;
+    tabview.hexpand = true;
+    tabview.halign = Gtk.Align.FILL;
+    tabview.vexpand = true;
+    tabview.valign = Gtk.Align.FILL;
     tabview.show ();
     this.tab_view = tabview;
 
@@ -308,10 +312,18 @@ public class Terminal.Window : He.ApplicationWindow {
 
     this.tab_bar.close_tab_requested.connect ((tab) => {
       print ("close tab requested");
-      tab.destroy ();
       this.tab_bar.remove_tab (tab);
-      (tab.child as TerminalTab) ? .close_request ();
-
+      tab.unrealize ();
+      tab.dispose ();
+      //  (tab.child as TerminalTab) ? .terminal.exit ();
+      //  (tab.child as TerminalTab) ? .terminal.dispose ();
+      (tab as TerminalTab) ? .close_request ();
+      //  (tab.child as TerminalTab) ? .box.unrealize ();
+      //  (tab as TerminalTab) ? .box.dispose ();
+      (tab as TerminalTab) ? .box.unparent ();
+      (tab as TerminalTab) ? .box.unref ();
+      tab.unparent ();
+      tab.unref ();
 
       // if there are no more tabs, close the window
       if (this.tab_bar.n_tabs < 1) {
@@ -538,9 +550,10 @@ public class Terminal.Window : He.ApplicationWindow {
     });
     tab.close_request.connect (() => {
       // this.tab_bar.close_page (page);
+      print ("close request\n");
       this.tab_bar.close_tab_requested (tab);
       // this.tab_bar.remove_tab (tab);
-      (this.tab_view.tab as TerminalTab) ? .destroy ();
+      //  (this.tab_view.tab as TerminalTab) ? .dispose ();
     });
     this.tab_bar.current = tab;
     // this.tab_bar.child = tab;
@@ -658,7 +671,6 @@ public class Terminal.Window : He.ApplicationWindow {
 
     // this.tab_bar.current = this.tab_bar.tabs.nth (0);
     // }
-
   }
 
   public void focus_previous_tab () {
