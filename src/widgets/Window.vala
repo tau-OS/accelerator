@@ -112,6 +112,7 @@ public class Terminal.Window : He.ApplicationWindow {
     if (DEVEL) {
       this.add_css_class ("devel");
     }
+    this.title = APP_NAME;
 
     var layout_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
     var tabview = new He.TabPage (this.blank_tab ());
@@ -134,6 +135,7 @@ public class Terminal.Window : He.ApplicationWindow {
     tabbar.set_focusable (false);
     tabbar.set_hexpand (true);
     tabbar.set_halign (Gtk.Align.FILL);
+    tabbar.allow_drag = true;
     this.tab_bar = tabbar;
 
 
@@ -239,9 +241,9 @@ public class Terminal.Window : He.ApplicationWindow {
             maximized: sett.remember_window_size && sett.was_maximized
     );
 
-    Marble.add_css_provider_from_resource (
+/*      Marble.add_css_provider_from_resource (
                                            "/com/fyralabs/Accelerator/resources/style.css"
-    );
+    );  */
 
     this.theme_provider = ThemeProvider.get_default ();
 
@@ -297,9 +299,7 @@ public class Terminal.Window : He.ApplicationWindow {
     set_css_class (this, "with-borders", settings.window_show_borders);
 
     this.tab_bar.tab_added.connect (() => {
-      // print ("tab added");
-      // this.new_tab (null, null);
-      print ("tab added");
+      this.active_terminal.grab_focus ();
     });
 
     // this.tab_view.create_window.connect (() => {
@@ -313,7 +313,7 @@ public class Terminal.Window : He.ApplicationWindow {
 
 
     this.tab_bar.close_tab_requested.connect ((tab) => {
-      print ("close tab requested");
+      debug ("close tab requested");
       this.tab_bar.remove_tab (tab);
       tab.unrealize ();
       tab.dispose ();
@@ -344,6 +344,7 @@ public class Terminal.Window : He.ApplicationWindow {
       new_tab.add_css_class ("active");
       (new_tab as TerminalTab) ? .box.set_parent (this.tab_view);
       (new_tab as TerminalTab) ? .terminal.grab_focus ();
+      this.active_terminal = (new_tab as TerminalTab) ? .terminal;
     });
 
     // this.tab_view.close_page.connect ((page) => {
@@ -558,17 +559,15 @@ public class Terminal.Window : He.ApplicationWindow {
     tab.label = command ?? @"tab $(this.tab_bar.n_tabs)";
     tab.notify["title"].connect (() => {
       tab.label = tab.title;
+      tab.set_name (tab.title);
     });
     tab.close_request.connect (() => {
-      // this.tab_bar.close_page (page);
-      print ("close request\n");
+      debug ("close request");
       this.tab_bar.close_tab_requested (tab);
       // this.tab_bar.remove_tab (tab);
       //  (this.tab_view.tab as TerminalTab) ? .dispose ();
     });
     this.tab_bar.current = tab;
-    // this.tab_bar.child = tab;
-    // this.tab_view = this.tab_bar.current.child as He.TabPage;
     this.tab_view.tab = this.tab_bar.current as TerminalTab;
     this.tab_view.show ();
     // this.tab_view.child = tab.box;

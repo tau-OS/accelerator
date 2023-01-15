@@ -74,6 +74,13 @@ public class Terminal.Terminal : Vte.Terminal {
 
   Settings settings;
 
+
+  private void on_exit () {
+    this.parent.unparent ();
+    this.dispose ();
+    this.unref ();
+  }
+
   public Terminal (Window window, string? command = null, string? cwd = null) {
     Object (
       allow_hyperlink: true,
@@ -91,6 +98,7 @@ public class Terminal.Terminal : Vte.Terminal {
     this.valign = Gtk.Align.FILL;
 
     this.child_exited.connect (this.on_child_exited);
+    this.exit.connect (this.on_exit);
 
     this.settings = Settings.get_default ();
     ThemeProvider.get_default ().notify ["current-theme"].connect (this.on_theme_changed);

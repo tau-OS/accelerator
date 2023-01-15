@@ -38,6 +38,8 @@ namespace Terminal {
                                      2023,
                                      He.AboutWindow.Licenses.GPLv3, He.Colors.NONE);
 
+    window.set_modal (true);
+    window.set_transient_for (parent);
     if (DEVEL) {
       window.add_css_class ("devel");
     }
