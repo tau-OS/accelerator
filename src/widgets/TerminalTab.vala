@@ -32,15 +32,22 @@ public class Terminal.TerminalTab : He.Tab {
   public TerminalTab (Window window, string? command, string? cwd) {
     this.set_name ("terminal-tab");
     this.box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+    this.box.hexpand = true;
+    this.box.vexpand = true;
     this.window = window;
     this.terminal = new Terminal (this.window, command, cwd);
+    this.terminal.hexpand = true;
+    this.terminal.vexpand = true;
+
     this.scrolled = new Gtk.ScrolledWindow ();
     this.scrolled.set_child (this.terminal);
+    this.scrolled.hexpand = true;
+    this.scrolled.vexpand = true;
     this.search_toolbar = new SearchToolbar (this.terminal);
     this.box.append (this.search_toolbar);
     this.box.append (this.scrolled);
     // ! This makes it display in the tab widget, but we want it below and in the main view
-    this.box.set_parent (this);
+    //  this.box.set_parent (this.window.tab_view);
 
     var click = new Gtk.GestureClick () {
       button = Gdk.BUTTON_SECONDARY,
@@ -50,7 +57,14 @@ public class Terminal.TerminalTab : He.Tab {
     this.terminal.add_controller (click);
 
     this.connect_signals ();
+  }
 
+
+  // function to set the current tab
+  public void set_tab() {
+    this.window.tab_bar.current = this;
+    this.window.tab_view.child = this.box;
+    //  this.box.set_parent (this.window.tab_view);
   }
 
   private void connect_signals () {

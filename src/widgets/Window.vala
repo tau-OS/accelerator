@@ -196,7 +196,7 @@ public class Terminal.Window : He.ApplicationWindow {
     this.set_name ("accelerator-main-window");
   }
 
-  public He.Tab blank_tab() {
+  public He.Tab blank_tab () {
     var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
     box.set_name ("accelerator-blank-tab-box");
     var label = new Gtk.Label (_("No tabs open")) {
@@ -249,15 +249,18 @@ public class Terminal.Window : He.ApplicationWindow {
     if (!skip_initial_tab) {
       this.new_tab (command, cwd);
     }
+
+    // remove the blank tab
+    this.tab_view.get_first_child ().destroy ();
   }
 
   private void connect_signals () {
-    //  this.settings.schema.bind (
-    //                             "fill-tabs",
-    //                             this.tab_bar,
-    //                             "expand-tabs",
-    //                             SettingsBindFlags.GET
-    //  );
+    // this.settings.schema.bind (
+    // "fill-tabs",
+    // this.tab_bar,
+    // "expand-tabs",
+    // SettingsBindFlags.GET
+    // );
 
     this.settings.schema.bind (
                                "show-headerbar",
@@ -288,9 +291,9 @@ public class Terminal.Window : He.ApplicationWindow {
     set_css_class (this, "with-borders", settings.window_show_borders);
 
     this.tab_bar.tab_added.connect (() => {
-      //  print ("tab added");
-      //  this.new_tab (null, null);
-      print("tab added");
+      // print ("tab added");
+      // this.new_tab (null, null);
+      print ("tab added");
     });
 
     // this.tab_view.create_window.connect (() => {
@@ -305,7 +308,10 @@ public class Terminal.Window : He.ApplicationWindow {
 
     this.tab_bar.close_tab_requested.connect ((tab) => {
       print ("close tab requested");
+      tab.destroy ();
       this.tab_bar.remove_tab (tab);
+      (tab.child as TerminalTab) ? .close_request ();
+
 
       // if there are no more tabs, close the window
       if (this.tab_bar.n_tabs < 1) {
@@ -487,40 +493,44 @@ public class Terminal.Window : He.ApplicationWindow {
 
   public void zoom_in () {
     (this.tab_bar.current ? .child as TerminalTab) ? .terminal
-    .zoom_in ();
+     .zoom_in ();
   }
 
   public void zoom_out () {
     (this.tab_bar.current ? .child as TerminalTab) ? .terminal
-    .zoom_out ();
+     .zoom_out ();
   }
 
   public void zoom_default () {
     (this.tab_bar.current ? .child as TerminalTab) ? .terminal
-    .zoom_default ();
+     .zoom_default ();
   }
 
   public void close_active_tab () {
-    // (this.tab_view.selected_page ? .child as TerminalTab) ? .close_request ();
+    (this.tab_bar.current ? .child as TerminalTab) ? .close_request ();
   }
 
   public void new_tab (string? command, string? cwd) {
     var tab = new TerminalTab (this, command, cwd);
 
-    //  this.tab_view.child = tab.box;
+    // this.tab_view.child = tab.box;
 
-    //  if (this.tab_view == null) {
-    //    this.tab_view = new He.TabPage(tab);
-    //  }
+    // if (this.tab_view == null) {
+    // this.tab_view = new He.TabPage(tab);
+    // }
 
-    this.tab_bar.insert_tab (tab, -1);
+    var pos = this.tab_bar.insert_tab (tab, -1);
     this.active_terminal = tab.terminal;
-    //  if (this.tab_view.name == "accelerator-blank-tab") {
-    //    this.tab_view.name = "tab-view";
-    //    this.tab_view.tab.child = this.active_terminal;
-    //  }
+    // if (this.tab_view.name == "accelerator-blank-tab") {
+    // this.tab_view.name = "tab-view";
+    // this.tab_view.tab.child = this.active_terminal;
+    // }
 
 
+    // check for children in tab_view, and turn them invisible
+    if (this.tab_view.tab != null) {
+      this.tab_view.tab.visible = false;
+    }
 
     tab.label = command ?? @"tab $(this.tab_bar.n_tabs)";
     tab.notify["title"].connect (() => {
@@ -528,13 +538,22 @@ public class Terminal.Window : He.ApplicationWindow {
     });
     tab.close_request.connect (() => {
       // this.tab_bar.close_page (page);
-      this.tab_bar.remove_tab (tab);
+      this.tab_bar.close_tab_requested (tab);
+      // this.tab_bar.remove_tab (tab);
+      (this.tab_view.tab as TerminalTab) ? .destroy ();
     });
     this.tab_bar.current = tab;
-    //  this.tab_bar.child = tab;
-    this.tab_view = this.tab_bar.current.child as He.TabPage;
-    //  this.tab_view.child = tab.box;
-    tab.box.set_parent (this.tab_view.tab.child);
+    // this.tab_bar.child = tab;
+    // this.tab_view = this.tab_bar.current.child as He.TabPage;
+    this.tab_view.tab = this.tab_bar.current as TerminalTab;
+    this.tab_view.show ();
+    // this.tab_view.child = tab.box;
+
+    // todo: once tab is closed, remove the terminal session from the tab_view\
+    // if it is switched, then make all other tabs invisible
+    // CC: @lainsce @lleyton send help
+    (this.tab_view.tab as TerminalTab) ? .box.set_parent (this.tab_view);
+    // tab.box.set_parent (this.tab_view.tab.child);
   }
 
   private void on_paste_activated () {
@@ -635,34 +654,35 @@ public class Terminal.Window : He.ApplicationWindow {
   }
 
   public void focus_next_tab () {
-    //  if (!this.tab_bar.tabs.next) {
+    // if (!this.tab_bar.tabs.next) {
 
-    //    this.tab_bar.current = this.tab_bar.tabs.nth (0);
-    //  }
+    // this.tab_bar.current = this.tab_bar.tabs.nth (0);
+    // }
+
   }
 
   public void focus_previous_tab () {
-    //  if (!this.tab_view.select_previous_page ()) {
-    //    this.tab_view.set_selected_page (this.tab_view.get_nth_page (this.tab_view.n_pages - 1));
-    //  }
+    // if (!this.tab_view.select_previous_page ()) {
+    // this.tab_view.set_selected_page (this.tab_view.get_nth_page (this.tab_view.n_pages - 1));
+    // }
   }
 
   public void focus_nth_tab (int index) {
-    //  if (this.tab_view.n_pages <= 1) {
-    //    return;
-    //  }
-    //  if (index < 0) {
-    //    // Go to last tab
-    //    this.tab_view.set_selected_page (
-    //                                     this.tab_view.get_nth_page (this.tab_view.n_pages - 1)
-    //    );
-    //    return;
-    //  }
-    //  if (index > this.tab_view.n_pages) {
-    //    return;
-    //  } else {
-    //    this.tab_view.set_selected_page (this.tab_view.get_nth_page (index - 1));
-    //    return;
-    //  }
+    // if (this.tab_view.n_pages <= 1) {
+    // return;
+    // }
+    // if (index < 0) {
+    //// Go to last tab
+    // this.tab_view.set_selected_page (
+    // this.tab_view.get_nth_page (this.tab_view.n_pages - 1)
+    // );
+    // return;
+    // }
+    // if (index > this.tab_view.n_pages) {
+    // return;
+    // } else {
+    // this.tab_view.set_selected_page (this.tab_view.get_nth_page (index - 1));
+    // return;
+    // }
   }
 }
