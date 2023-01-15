@@ -43,7 +43,7 @@ namespace Terminal {
 
 public abstract class Terminal.BaseHeaderBar : Gtk.Box {
   public virtual Gtk.MenuButton menu_button     { get; protected set; }
-  public virtual Gtk.Button new_tab_button  { get; protected set; }
+  //  public virtual Gtk.Button new_tab_button  { get; protected set; }
 
   protected He.TabSwitcher tab_bar;
   protected Window window;
@@ -69,11 +69,11 @@ public abstract class Terminal.BaseHeaderBar : Gtk.Box {
 
     // New tab button
     // FIXME: bundle a new tab icon
-    this.new_tab_button = new Gtk.Button () {
-      can_focus = false,
-      icon_name = "list-add-symbolic",
-      tooltip_text = _("New Tab"),
-    };
+    //  this.new_tab_button = new Gtk.Button () {
+    //    can_focus = false,
+    //    icon_name = "list-add-symbolic",
+    //    tooltip_text = _("New Tab"),
+    //  };
   }
 
   protected BaseHeaderBar (Window window) {
@@ -139,13 +139,14 @@ public class Terminal.HeaderBar : BaseHeaderBar {
 
     this.left_controls = new Gtk.WindowControls (Gtk.PackType.START);
     this.right_controls = new Gtk.WindowControls (Gtk.PackType.END);
+    
 
     // this.left_controls.bind_property ("empty", this.left_controls, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN, null, null);
     // this.right_controls.bind_property ("empty", this.right_controls, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN, null, null);
 
     this.title_label = new Gtk.Label (null) {
       halign = Gtk.Align.FILL,
-      hexpand = true,
+      hexpand = false,
       xalign = 0.5f,
       css_classes = { "title-label" },
       ellipsize = Pango.EllipsizeMode.END,
@@ -155,7 +156,7 @@ public class Terminal.HeaderBar : BaseHeaderBar {
       margin_start = 6,
       margin_end = 0,
     };
-    button_box.append (this.new_tab_button);
+    //  button_box.append (this.new_tab_button);
     button_box.append (this.unfullscreen_button);
     button_box.append (this.menu_button);
 

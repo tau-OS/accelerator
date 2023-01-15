@@ -243,9 +243,9 @@ public class Terminal.Window : He.ApplicationWindow {
 
     this.theme_provider = ThemeProvider.get_default ();
 
-    this.header_bar.new_tab_button.clicked.connect (() => {
-      this.new_tab (null, null);
-    });
+    //  this.header_bar.new_tab_button.clicked.connect (() => {
+    //    this.new_tab (null, null);
+    //  });
 
     this.add_actions ();
     this.connect_signals ();
@@ -598,6 +598,8 @@ public class Terminal.Window : He.ApplicationWindow {
     if (this.active_terminal == null) {
       return;
     }
+
+    print ("active terminal changed\n");
 
     ulong handler;
 
