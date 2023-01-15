@@ -99,7 +99,7 @@ public class Terminal.HeaderBar : BaseHeaderBar {
 
   private Gtk.WindowControls left_controls;
   private Gtk.WindowControls right_controls;
-  private Gtk.Label title_label;
+  //  private Gtk.Label title_label;
 
   private Gtk.Button unfullscreen_button;
 
@@ -139,18 +139,18 @@ public class Terminal.HeaderBar : BaseHeaderBar {
 
     this.left_controls = new Gtk.WindowControls (Gtk.PackType.START);
     this.right_controls = new Gtk.WindowControls (Gtk.PackType.END);
-    
+
 
     // this.left_controls.bind_property ("empty", this.left_controls, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN, null, null);
     // this.right_controls.bind_property ("empty", this.right_controls, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN, null, null);
 
-    this.title_label = new Gtk.Label (null) {
-      halign = Gtk.Align.FILL,
-      hexpand = false,
-      xalign = 0.5f,
-      css_classes = { "title-label" },
-      ellipsize = Pango.EllipsizeMode.END,
-    };
+    //  this.title_label = new Gtk.Label (null) {
+    //    halign = Gtk.Align.FILL,
+    //    hexpand = false,
+    //    xalign = 0.5f,
+    //    css_classes = { "title-label" },
+    //    ellipsize = Pango.EllipsizeMode.END,
+    //  };
 
     var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
       margin_start = 6,
@@ -167,7 +167,7 @@ public class Terminal.HeaderBar : BaseHeaderBar {
     layout.append (this.left_controls);
     // ? doesn't load
     layout.append (this.tab_bar);
-    layout.append (this.title_label);
+    //  layout.append (this.title_label);
     layout.append (button_box);
     layout.append (this.right_controls);
 
@@ -210,23 +210,23 @@ public class Terminal.HeaderBar : BaseHeaderBar {
                                null
     );
     // window.active_terminal_title -> title_label label
-    this.window.bind_property (
-                               "active-terminal-title",
-                               this.title_label,
-                               "label",
-                               GLib.BindingFlags.SYNC_CREATE,
-                               null,
-                               null
-    );
-    // window.active_terminal_title -> title_label tooltip-text
-    this.window.bind_property (
-                               "active-terminal-title",
-                               this.title_label,
-                               "tooltip-text",
-                               GLib.BindingFlags.SYNC_CREATE,
-                               null,
-                               null
-    );
+    //  this.window.bind_property (
+    //                             "active-terminal-title",
+    //                             this.title_label,
+    //                             "label",
+    //                             GLib.BindingFlags.SYNC_CREATE,
+    //                             null,
+    //                             null
+    //  );
+    //  // window.active_terminal_title -> title_label tooltip-text
+    //  this.window.bind_property (
+    //                             "active-terminal-title",
+    //                             this.title_label,
+    //                             "tooltip-text",
+    //                             GLib.BindingFlags.SYNC_CREATE,
+    //                             null,
+    //                             null
+    //  );
 
     this.window.tab_view.notify["n-pages"].connect (notify_single_tab_mode);
     settings.notify["fill-tabs"].connect (this.notify_single_tab_mode);
@@ -282,7 +282,7 @@ public class Terminal.HeaderBar : BaseHeaderBar {
     bool stealth_enabled = Settings.get_default ().stealth_single_tab;
 
     //  this.tab_bar.visible = !single_tab_enabled;
-    this.title_label.visible = single_tab_enabled;
+    //  this.title_label.visible = single_tab_enabled;
 
     set_css_class (this, "single-tab-mode", single_tab_enabled);
     set_css_class (this, "stealth", single_tab_enabled && stealth_enabled);

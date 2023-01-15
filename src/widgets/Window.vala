@@ -125,11 +125,13 @@ public class Terminal.Window : He.ApplicationWindow {
     this.tab_view = tabview;
 
     var tabbar = new He.TabSwitcher () {
-      allow_new_window = true,
+      allow_new_window = false,
       hexpand = true,
       halign = Gtk.Align.FILL,
       focus_on_click = false,
     };
+    tabbar.allow_new_window = false;
+    tabbar.set_focusable (false);
     tabbar.set_hexpand (true);
     tabbar.set_halign (Gtk.Align.FILL);
     this.tab_bar = tabbar;
@@ -334,6 +336,15 @@ public class Terminal.Window : He.ApplicationWindow {
     });
 
 
+    this.tab_bar.tab_switched.connect ((old_tab, new_tab) => {
+      // make invisible
+      print ("tab switched\n");
+      old_tab.remove_css_class ("active");
+      (old_tab as TerminalTab) ? .box.unparent ();
+      new_tab.add_css_class ("active");
+      (new_tab as TerminalTab) ? .box.set_parent (this.tab_view);
+      (new_tab as TerminalTab) ? .terminal.grab_focus ();
+    });
 
     // this.tab_view.close_page.connect ((page) => {
     // (page.child as TerminalTab) ? .destroy ();
@@ -504,17 +515,17 @@ public class Terminal.Window : He.ApplicationWindow {
   }
 
   public void zoom_in () {
-    (this.tab_bar.current ? .child as TerminalTab) ? .terminal
+    (this.tab_bar.current as TerminalTab) ? .terminal
      .zoom_in ();
   }
 
   public void zoom_out () {
-    (this.tab_bar.current ? .child as TerminalTab) ? .terminal
+    (this.tab_bar.current as TerminalTab) ? .terminal
      .zoom_out ();
   }
 
   public void zoom_default () {
-    (this.tab_bar.current ? .child as TerminalTab) ? .terminal
+    (this.tab_bar.current as TerminalTab) ? .terminal
      .zoom_default ();
   }
 

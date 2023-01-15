@@ -38,6 +38,9 @@ public class Terminal.TerminalTab : He.Tab {
     this.terminal = new Terminal (this.window, command, cwd);
     this.terminal.hexpand = true;
     this.terminal.vexpand = true;
+    this.focusable = false;
+    this.terminal.focusable = true;
+    this.focus_on_click = false;
 
     this.scrolled = new Gtk.ScrolledWindow ();
     this.scrolled.set_child (this.terminal);
