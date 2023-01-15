@@ -39,6 +39,7 @@ public class Terminal.TerminalTab : He.Tab {
     this.search_toolbar = new SearchToolbar (this.terminal);
     this.box.append (this.search_toolbar);
     this.box.append (this.scrolled);
+    // ! This makes it display in the tab widget, but we want it below and in the main view
     this.box.set_parent (this);
 
     var click = new Gtk.GestureClick () {

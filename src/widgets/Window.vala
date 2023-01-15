@@ -315,7 +315,7 @@ public class Terminal.Window : He.ApplicationWindow {
       return false;
     });
 
-    
+
 
     // this.tab_view.close_page.connect ((page) => {
     // (page.child as TerminalTab) ? .destroy ();
@@ -521,6 +521,7 @@ public class Terminal.Window : He.ApplicationWindow {
     //  }
 
 
+
     tab.label = command ?? @"tab $(this.tab_bar.n_tabs)";
     tab.notify["title"].connect (() => {
       tab.label = tab.title;
@@ -533,6 +534,7 @@ public class Terminal.Window : He.ApplicationWindow {
     //  this.tab_bar.child = tab;
     this.tab_view = this.tab_bar.current.child as He.TabPage;
     //  this.tab_view.child = tab.box;
+    tab.box.set_parent (this.tab_view.tab.child);
   }
 
   private void on_paste_activated () {
