@@ -1,4 +1,4 @@
-blackbox_sources = files(
+accelerator_sources = files(
   'Application.vala',
   'CommandLine.vala',
   'main.vala',
@@ -23,27 +23,10 @@ config_header = configure_file(
     configuration: conf_data
     )
 
-# blackbox_deps = [
-#   dependency('gio-2.0', version: '>= 2.73'),
-#   dependency('gtk4', version: '>= 4.8'),
-#   dependency('libadwaita-1', version: '>= 1.2'),
-#   dependency('marble', version: '>= 42'),
-#   dependency('vte-2.91-gtk4', version: '>= 0.71'),
-#   dependency('json-glib-1.0', version: '>= 1.6'),
-#   dependency('libpcre2-8', version: '>= 10.40'),
-#   dependency('libxml-2.0', version: '>= 2.10'),
-#   dependency('librsvg-2.0', version: '>= 2.55'),
-#   dependency('gee-0.8', version: '>=0.20'),
-#   dependency('graphene-gobject-1.0', version: '>= 1.11'),
-# ]
-
-blackbox_deps = [
+accelerator_deps = [
   dependency('gio-2.0', version: '>= 2.50'),
   dependency('gtk4', version: '>= 4.6.2'),
-  # Black Box actually depends on libadwaita >= 1.2.alpha, but I'm keeping this
-  # at 1.1 to make it easier for translators to work on Black Box
-  dependency('libadwaita-1', version: '>= 1.1'),
-  dependency('libhelium-1', version: '>= 1.2.25'),
+  dependency('libhelium-1'),
   dependency('marble', version: '>= 42'),
   dependency('vte-2.91-gtk4', version: '>= 0.69.0'),
   dependency('json-glib-1.0', version: '>= 1.4.4'),
@@ -63,32 +46,26 @@ add_project_arguments('-DPCRE2_CODE_UNIT_WIDTH=0', language: 'c')
 add_project_arguments('--disable-since-check', language: 'vala')
 
 gnome = import('gnome')
-blueprints = custom_target('blueprints',
-  input: files(
-    'gtk/help-overlay.blp',
-    'gtk/search-toolbar.blp',
-    'gtk/shortcut-editor.blp',
-  ),
-  output: '.',
-  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
-)
 
-blackbox_sources += gnome.compile_resources('blackbox-resources',
+subdir('gtk')
+
+accelerator_sources += gnome.compile_resources(
+  'asresources',
   'accelerator.gresource.xml',
-  dependencies: [blueprints],
-  c_name: 'accelerator'
+  source_dir: meson.current_build_dir(),
+  dependencies: blueprints,
+  c_name: 'as',
+  install_dir: get_option('datadir') / meson.project_name(),
 )
 
 
-executable('accel', blackbox_sources, config_header,
-  vala_args: '--target-glib=2.50',  dependencies: blackbox_deps,
+executable('accel', accelerator_sources, config_header,
+  vala_args: '--target-glib=2.50',  dependencies: accelerator_deps,
   install: true,
 
 )
 
 # symlink as accelerator
-
-
 if get_option('devel')
   custom_target ('flatpak-exe',
                  input: 'accel-link-system-fonts',

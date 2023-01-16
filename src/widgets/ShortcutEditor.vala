@@ -139,19 +139,23 @@ class Terminal.ShortcutRow : Gtk.Box {
   }
 }
 
-[GtkTemplate (ui = "/com/fyralabs/Accelerator/gtk/shortcut-editor.ui")]
-public class Terminal.ShortcutEditor : Adw.PreferencesPage {
+[GtkTemplate (ui = "/com/fyralabs/Accelerator/shortcut-editor.ui")]
+public class Terminal.ShortcutEditor : He.SettingsPage {
   public Gtk.Application app { get; construct set; }
 
-  [GtkChild] unowned Adw.PreferencesGroup shortcuts_group;
+  [GtkChild] unowned He.ContentList shortcuts_group;
 
   static Gee.HashMap<string, string> action_map;
 
   // We keep track of all action rows we insert into the preferences group to
   // alow us to remove them on UI refresh later.
-  Gee.ArrayList<unowned Adw.ActionRow> action_rows;
+  Gee.ArrayList<unowned He.MiniContentBlock> action_rows;
 
   ListStore store = new ListStore (typeof (Action));
+
+  public ShortcutEditor (string title) {
+    base (title);
+  }
 
   static construct {
     action_map = new Gee.HashMap<string, string> ();
@@ -185,7 +189,7 @@ public class Terminal.ShortcutEditor : Adw.PreferencesPage {
   }
 
   construct {
-    this.action_rows = new Gee.ArrayList<unowned Adw.ActionRow> ();
+    this.action_rows = new Gee.ArrayList<unowned He.MiniContentBlock> ();
     this.build_ui ();
   }
 

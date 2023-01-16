@@ -33,6 +33,6 @@ namespace Terminal {
   }
 
   public bool is_dark_style_active () {
-    return Adw.StyleManager.get_default ().dark;
+    return false;
   }
 }

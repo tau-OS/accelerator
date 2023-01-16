@@ -9,6 +9,14 @@ i18n = import('i18n')
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
+# Blueprint
+subproject('blueprint-compiler')
+add_project_arguments(
+    '--gresourcesdir', meson.current_build_dir() / 'src',
+    language: ['vala']
+)
+#
+
 subdir('data')
 subdir('src')
 subdir('po')

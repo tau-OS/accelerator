@@ -1,4 +1,4 @@
-blackbox_sources += files(
+accelerator_sources += files(
   'AboutDialog.vala',
   'ColorSchemeThumbnail.vala',
   'HeaderBar.vala',

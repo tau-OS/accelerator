@@ -1,4 +1,4 @@
-blackbox_sources += files([
+accelerator_sources += files([
     'ThemeProvider.vala',
     'Scheme.vala',
     'Settings.vala',

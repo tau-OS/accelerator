@@ -1,11 +1,11 @@
 using Gtk 4.0;
-using Adw 1;
+using He 1;
 
-template TerminalShortcutEditor : Adw.PreferencesPage {
+template TerminalShortcutEditor : He.SettingsPage {
   title: _("Keyboard");
   icon-name: "input-keyboard-symbolic";
 
-  Adw.PreferencesGroup shortcuts_group {
+  He.ContentList shortcuts_group {
     title: _("Shortcuts");
   }
 }

@@ -1,4 +1,4 @@
-blackbox_sources += files(
+accelerator_sources += files(
   'Constants.vala',
   'Css.vala',
   'File.vala',

@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-[GtkTemplate (ui = "/com/fyralabs/Accelerator/gtk/shortcut-dialog.ui")]
+[GtkTemplate (ui = "/com/fyralabs/Accelerator/shortcut-dialog.ui")]
 public class Terminal.ShortcutDialog : He.Window {
 
   static Gtk.KeyvalTrigger JUST_ESCAPE = new Gtk.KeyvalTrigger (

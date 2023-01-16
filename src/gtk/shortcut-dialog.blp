@@ -1,0 +1,81 @@
+using Gtk 4.0;
+using He 1;
+
+template TerminalShortcutDialog : He.Window {
+  title: _("Edit Shortcut");
+  modal: true;
+  destroy-with-parent: true;
+  resizable: false;
+
+  Box {
+    orientation: vertical;
+
+    Box {
+      orientation: vertical;
+      margin-top: 12;
+      margin-bottom: 12;
+      margin-start: 18;
+      margin-end: 18;
+      spacing: 12;
+
+      Label {
+        label: bind TerminalShortcutDialog.heading-text;
+
+        styles [
+          "heading",
+        ]
+      }
+
+      ShortcutLabel shortcut_label {
+        halign: center;
+      }
+
+      Label {
+        label: _("This shortcut is already in use");
+        wrap: true;
+        width-chars: 20;
+        max-width-chars: 20;
+        visible: bind TerminalShortcutDialog.is-in-use;
+
+        styles [
+          "meson-red",
+        ]
+      }
+
+      Label {
+        label: _("Press Escape to cancel or Backspace to disable shortcut");
+        wrap: true;
+        width-chars: 20;
+        max-width-chars: 20;
+        visible: bind TerminalShortcutDialog.is-in-use inverted;
+
+        styles [
+          "dim-label",
+        ]
+      }
+    }
+
+    Box {
+      margin-top: 12;
+      margin-bottom: 12;
+      margin-start: 18;
+      margin-end: 18;
+      spacing: 12;
+      homogeneous: true;
+
+      Button {
+        label: _("Cancel");
+        clicked => cancel();
+      }
+
+      Button {
+        label: _("Apply");
+        clicked => apply();
+
+        styles [
+          "suggested-action",
+        ]
+      }
+    }
+  }
+}

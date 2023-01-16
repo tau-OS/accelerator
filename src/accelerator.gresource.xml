@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/fyralabs/Accelerator">
-    <file>gtk/help-overlay.ui</file>
-    <file>gtk/preferences-window.ui</file>
-    <file>gtk/search-toolbar.ui</file>
-    <file>gtk/shortcut-dialog.ui</file>
-    <file>gtk/shortcut-editor.ui</file>
-    <file>resources/style.css</file>
+    <file alias="help-overlay.ui">gtk/help-overlay.ui</file>
+    <file alias="preferences-window.ui">gtk/preferences-window.ui</file>
+    <file alias="search-toolbar.ui">gtk/search-toolbar.ui</file>
+    <file alias="shortcut-dialog.ui">gtk/shortcut-dialog.ui</file>
+    <file alias="shortcut-editor.ui">gtk/shortcut-editor.ui</file>
+    <file alias="style.css">resources/style.css</file>
     <file>resources/svg/color-scheme-thumbnail.svg</file>
   </gresource>
 </gresources>

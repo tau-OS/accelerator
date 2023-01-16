@@ -125,7 +125,7 @@ namespace Terminal {
 
     res += " - Gtk: %d.%d.%d\n".printf (Gtk.MAJOR_VERSION, Gtk.MINOR_VERSION, Gtk.MICRO_VERSION);
     res += " - VTE: %d.%d.%d\n".printf (Vte.MAJOR_VERSION, Vte.MINOR_VERSION, Vte.MICRO_VERSION);
-    res += " - Libadwaita: %s\n".printf (Adw.VERSION_S);
+    res += " - Helium: 1.0\n";
     res += " - JSON-glib: %s\n".printf (Json.VERSION_S);
 
     return res;

@@ -28,13 +28,13 @@ bool light_themes_filter_func (Gtk.FlowBoxChild child) {
   return !thumbnail.scheme.is_dark;
 }
 
-[GtkTemplate (ui = "/com/fyralabs/Accelerator/gtk/preferences-window.ui")]
-public class Terminal.PreferencesWindow : Adw.PreferencesWindow {
-  [GtkChild] unowned Gtk.ComboBoxText cursor_shape_combo_row;
-  [GtkChild] unowned Adw.ComboRow cursor_blink_mode_combo_row;
-  [GtkChild] unowned Adw.ComboRow scrollback_mode_combo_row;
-  [GtkChild] unowned Adw.ComboRow style_preference_combo_row;
-  [GtkChild] unowned Adw.EntryRow custom_command_entry_row;
+[GtkTemplate (ui = "/com/fyralabs/Accelerator/preferences-window.ui")]
+public class Terminal.PreferencesWindow : He.SettingsWindow {
+  [GtkChild] unowned He.MiniContentBlock cursor_shape_combo_row;
+  [GtkChild] unowned He.MiniContentBlock cursor_blink_mode_combo_row;
+  [GtkChild] unowned He.MiniContentBlock scrollback_mode_combo_row;
+  [GtkChild] unowned He.MiniContentBlock style_preference_combo_row;
+  [GtkChild] unowned Gtk.Entry custom_command_entry;
   [GtkChild] unowned Gtk.Adjustment cell_height_spacing_adjustment;
   [GtkChild] unowned Gtk.Adjustment cell_width_spacing_adjustment;
   [GtkChild] unowned Gtk.Adjustment custom_scrollback_adjustment;
@@ -107,6 +107,7 @@ public class Terminal.PreferencesWindow : Adw.PreferencesWindow {
 
     this.build_ui ();
     this.bind_data ();
+    this.set_size_request (550,720);
   }
 
   // Build UI
@@ -166,14 +167,14 @@ public class Terminal.PreferencesWindow : Adw.PreferencesWindow {
 
     settings.schema.bind (
                           "custom-shell-command",
-                          this.custom_command_entry_row,
+                          this.custom_command_entry,
                           "text",
                           SettingsBindFlags.DEFAULT
     );
 
     settings.schema.bind (
                           "use-custom-command",
-                          this.custom_command_entry_row,
+                          this.custom_command_entry,
                           "sensitive",
                           SettingsBindFlags.DEFAULT
     );
@@ -499,7 +500,7 @@ public class Terminal.PreferencesWindow : Adw.PreferencesWindow {
 
   // Callbacks
 
-  [GtkCallback]
+  //[GtkCallback]
   private void on_font_row_activated () {
     var fc = new Gtk.FontChooserDialog (_("Terminal Font"), this) {
       level = Gtk.FontChooserLevel.FAMILY | Gtk.FontChooserLevel.SIZE | Gtk.FontChooserLevel.STYLE,

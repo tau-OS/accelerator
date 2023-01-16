@@ -83,11 +83,6 @@ public class Terminal.ThemeProvider : Object {
       warning (e.message);
     }
 
-    this.is_dark_style_active = Adw.StyleManager.get_default ().dark;
-    Adw.StyleManager.get_default ().notify ["dark"].connect (() => {
-      this.is_dark_style_active = Adw.StyleManager.get_default ().dark;
-    });
-
     this.notify ["current-theme"].connect (() => {
       this.apply_theming ();
     });
@@ -108,28 +103,6 @@ public class Terminal.ThemeProvider : Object {
         this.notify_property ("current-theme");
       }
     });
-
-    // React to style-preference changes
-    this.settings.schema.bind_with_mapping (
-      "style-preference",
-      Adw.StyleManager.get_default (),
-      "color-scheme",
-      SettingsBindFlags.GET,
-      // From settings to Adw.StyleManager
-      (to_val, settings_vari) => {
-        var style_pref = settings_vari.get_uint32 ();
-        to_val = style_pref == 0
-          ? Adw.ColorScheme.DEFAULT
-          : style_pref == 1
-            ? Adw.ColorScheme.FORCE_LIGHT
-            : Adw.ColorScheme.FORCE_DARK;
-        return true;
-      },
-      // This function will never get called as this property is only GET
-      () => { return false; },
-      null,
-      null
-    );
 
     this.apply_theming ();
   }

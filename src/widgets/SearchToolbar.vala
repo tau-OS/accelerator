@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-[GtkTemplate (ui = "/com/fyralabs/Accelerator/gtk/search-toolbar.ui")]
+[GtkTemplate (ui = "/com/fyralabs/Accelerator/search-toolbar.ui")]
 public class Terminal.SearchToolbar : Gtk.Widget {
 
   [GtkChild] private unowned Gtk.Button next_button;

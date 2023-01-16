@@ -1,0 +1,626 @@
+using Gtk 4.0;
+using He 1;
+
+template TerminalPreferencesWindow : He.SettingsWindow {
+  default-width: 550;
+  default-height: 720;
+  resizable: false;
+  modal: false;
+
+  He.SettingsPage {
+    title: _("General");
+    vexpand: true;
+
+    ScrolledWindow {
+      vexpand: true;
+      hexpand: true;
+      margin-top: 12;
+      hscrollbar-policy: never;
+
+      Box {
+        orientation: vertical;
+        spacing: 12;
+
+        He.ContentList {
+          title: _("Window");
+
+          He.MiniContentBlock remember_window_size_row {
+            title: _("Remember Window Size");
+
+            Switch remember_window_size_switch {
+              valign: center;
+            }
+          }
+
+          He.MiniContentBlock {
+            title: _("Show Borders");
+            subtitle: _("Enable to draw a border around the window and the active tab.");
+
+            Switch show_window_borders_switch {
+              valign: center;
+            }
+          }
+
+          He.MiniContentBlock {
+            title: _("Theme Integration");
+            subtitle: _("Style window with terminal theme colors.");
+
+            Switch pretty_switch {
+              valign: center;
+            }
+          }
+
+          He.MiniContentBlock style_preference_combo_row {
+            title: _("Style Preference");
+
+            Box {
+              spacing: 12;
+              ToggleButton style_preference_light_theme_toggle {
+                label: _("Light Theme");
+              }
+
+              ToggleButton style_preference_dark_theme_toggle {
+                label: _("Dark Theme");
+                group: style_preference_light_theme_toggle;
+              }
+            }
+          }
+        }
+
+        He.ContentList {
+          title: _("Tabs");
+
+          He.MiniContentBlock {
+            title: _("Expand Tabs");
+
+            Switch fill_tabs_switch {
+              valign: center;
+            }
+          }
+
+          Gtk.Label {
+            label: _("Single Tab Mode");
+            xalign: 0;
+            sensitive: bind fill_tabs_switch.active;
+
+            styles [
+              "heading",
+            ]
+          }
+
+          Box {
+            spacing: 6;
+            orientation: vertical;
+
+            He.MiniContentBlock {
+              title: _("Hide Single Tab");
+              subtitle: _("Replace tab bar with a title label when a single tab is open. Easier to drag the window.");
+              sensitive: bind fill_tabs_switch.active;
+
+              Switch hide_single_tab_switch {
+                valign: center;
+              }
+            }
+
+            He.MiniContentBlock {
+              title: _("Stealth Single Tab");
+              subtitle: _("Blend single tab with header bar.");
+              sensitive: bind fill_tabs_switch.active;
+
+              Switch stealth_single_tab_switch {
+                valign: center;
+              }
+            }
+          }
+        }
+
+        He.ContentList {
+          title: _("Header Bar");
+
+          He.MiniContentBlock {
+            title: _("Show Header Bar");
+
+            Switch show_headerbar_switch {
+              valign: center;
+            }
+          }
+
+          He.MiniContentBlock show_menu_button_action_row {
+            title: _("Show Menu Button");
+
+            Switch show_menu_button_switch {
+              valign: center;
+            }
+          }
+
+          He.MiniContentBlock {
+            title: _("Drag Area");
+            subtitle: _("Enable to reserve some space on the left side to drag the window.");
+
+            Switch drag_area_switch {
+              valign: center;
+            }
+          }
+
+          He.MiniContentBlock {
+            sensitive: bind show_window_borders_switch.active;
+            title: _("Draw Line Under Header Bar");
+            subtitle: _("Enable to draw a line under the header bar when a single tab is open. Requires \"Show Borders\".");
+
+            Switch draw_line_single_tab_switch {
+              valign: center;
+            }
+          }
+
+          He.ContentBlock floating_controls_expander_row {
+            title: _("Floating Controls");
+
+            Box {
+              orientation: vertical;
+              spacing: 12;
+
+              He.MiniContentBlock {
+                title: _("Show Floating Controls");
+                subtitle: _("Show floating controls when header bar is hidden.");
+
+                Switch floating_controls_switch {
+                  valign: center;
+                }
+              }
+
+              He.MiniContentBlock {
+                sensitive: bind floating_controls_switch.active;
+                title: _("Floating Controls Hover Area");
+                subtitle: _("Hoverable area (in pixels) at the top of the window to trigger floating controls.");
+
+                SpinButton {
+                  valign: center;
+                  adjustment: floating_controls_hover_area_adjustment;
+                }
+              }
+
+              He.MiniContentBlock {
+                sensitive: bind floating_controls_switch.active;
+                title: _("Delay Before Show Floating Controls");
+                subtitle: _("Delay time (ms) before show floating controls.");
+
+                SpinButton {
+                  valign: center;
+                  adjustment: floating_controls_delay_adjustment;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  He.SettingsPage {
+    title: _("Terminal");
+    vexpand: true;
+
+    ScrolledWindow {
+      vexpand: true;
+      hexpand: true;
+      margin-top: 12;
+      hscrollbar-policy: never;
+
+      Box {
+        orientation: vertical;
+        spacing: 12;
+
+        He.ContentList {
+          title: _("Text");
+
+          He.MiniContentBlock {
+            title: _("Font");
+            //activated => on_font_row_activated ();
+
+            Label font_label {
+              valign: center;
+              label: "Monospace 10";
+            }
+          }
+
+          He.ContentBlock cell_spacing_expander_row {
+            title: _("Cell Spacing");
+
+            Box {
+              orientation: vertical;
+              spacing: 12;
+
+              He.MiniContentBlock {
+                title: _("Width");
+
+                SpinButton {
+                  valign: center;
+                  digits: 2;
+                  adjustment: cell_width_spacing_adjustment;
+                }
+              }
+
+              He.MiniContentBlock {
+                title: _("Height");
+
+                SpinButton {
+                  valign: center;
+                  digits: 2;
+                  adjustment: cell_height_spacing_adjustment;
+                }
+              }
+            }
+          }
+
+          He.MiniContentBlock easy_copy_paste_action_row {
+            title: _("Easy Copy & Paste");
+            subtitle: _("Use ctrl+c/ctrl+v for copy/paste.");
+
+            Switch easy_copy_paste_switch {
+              valign: center;
+            }
+          }
+        }
+
+        He.ContentList {
+          He.MiniContentBlock cursor_shape_combo_row {
+            title: _("Cursor Shape");
+
+            Box {
+              spacing: 12;
+
+              ToggleButton block_toggle {
+                label: _("Block");
+              }
+
+              ToggleButton ibeam_toggle {
+                label: _("IBeam");
+                group: block_toggle;
+              }
+
+              ToggleButton underline_toggle {
+                label: _("Underline");
+                group: block_toggle;
+              }
+            }
+          }
+
+          He.MiniContentBlock cursor_blink_mode_combo_row {
+            title: _("Cursor Blinking");
+            subtitle: _("Whether or not the cursor should blink.");
+
+            Box {
+              spacing: 12;
+
+              ToggleButton follow_sys_cursor_toggle {
+                label: _("Follow System");
+                active: true;
+              }
+
+              ToggleButton on_cursor_toggle {
+                label: _("On");
+                group: follow_sys_cursor_toggle;
+              }
+
+              ToggleButton off_cursor_toggle {
+                label: _("Off");
+                group: follow_sys_cursor_toggle;
+              }
+            }
+          }
+
+          He.MiniContentBlock {
+            title: _("Padding");
+
+            SpinButton padding_spin_button {
+              adjustment: padding_spin_button_adjustment;
+              climb-rate: 1;
+              numeric: true;
+              snap-to-ticks: true;
+              valign: center;
+            }
+          }
+
+          He.MiniContentBlock {
+            title: _("Opacity");
+            subtitle: _("Terminal background opacity.");
+
+            SpinButton opacity_spin_button {
+              adjustment: opacity_spin_button_adjustment;
+              climb-rate: 1;
+              numeric: true;
+              snap-to-ticks: false;
+              valign: center;
+            }
+          }
+        }
+
+        He.ContentList {
+          title: _("Scrolling");
+
+          He.ContentBlock scrollbars_expander_row {
+            title: _("Scrollbars");
+
+            Box {
+              orientation: vertical;
+              spacing: 12;
+
+              He.MiniContentBlock {
+                title: _("Show Scrollbars");
+
+                Switch show_scrollbars_switch {
+                  valign: center;
+                }
+              }
+
+              He.MiniContentBlock use_overlay_scrolling_action_row {
+                title: _("Use Overlay Scrolling");
+                sensitive: bind show_scrollbars_switch.active;
+
+                Switch use_overlay_scrolling_switch {
+                  valign: center;
+                }
+              }
+            }
+          }
+
+          He.MiniContentBlock scrollback_mode_combo_row {
+            title: _("Scrollback mode");
+
+            Box {
+              spacing: 12;
+
+              ToggleButton fixed_size_scroll_toggle {
+                label: _("Fixed Size");
+                active: true;
+              }
+
+              ToggleButton unlimited_scroll_toggle {
+                label: _("Unlimited");
+                group: fixed_size_scroll_toggle;
+              }
+
+              ToggleButton disabled_scroll_toggle {
+                label: _("Disabled");
+                group: fixed_size_scroll_toggle;
+              }
+            }
+          }
+
+          He.MiniContentBlock {
+            title: _("Scrollback Lines");
+            visible: bind TerminalPreferencesWindow.show-custom-scrollback-row;
+
+            SpinButton custom_scrollback_spin_button {
+              valign: center;
+              width-chars: 6;
+              adjustment: custom_scrollback_adjustment;
+            }
+          }
+        }
+
+        He.ContentList {
+          title: _("Command");
+
+          Box {
+              orientation: vertical;
+              spacing: 12;
+
+            He.MiniContentBlock {
+              title: _("Run Command as Login Shell");
+
+              Switch run_command_as_login_switch {
+                valign: center;
+              }
+            }
+
+            He.MiniContentBlock {
+              title: _("Use Custom Command");
+
+              Switch use_custom_shell_command_switch {
+                valign: center;
+              }
+            }
+
+            He.MiniContentBlock custom_command_entry_row {
+              title: _("Custom Command");
+              
+              Entry custom_command_entry {
+
+              }
+            }
+          }
+        }
+
+        He.ContentList theme_scheme_group {
+          title: _("Theme");
+
+          Box {
+              orientation: vertical;
+              spacing: 12;
+            Box {
+              valign: center;
+              halign: end;
+
+              styles [
+                "linked"
+              ]
+
+              Button {
+                label: _("Open folder");
+                clicked => on_open_themes_folder();
+
+                styles [
+                  "proton-blue"
+                ]
+              }
+
+              Button {
+                icon-name: "external-link-symbolic";
+                tooltip-text: _("Get more themes online");
+                clicked => on_get_more_themes_online();
+
+                styles [
+                  "proton-blue"
+                ]
+              }
+            }
+
+            Box {
+              orientation: vertical;
+              spacing: 15;
+
+              Label {
+                xalign: 0;
+                label: _("Set your preferred theme for light and dark styles.");
+
+                styles [
+                  "dim-label",
+                ]
+              }
+
+              Box {
+                hexpand: true;
+                homogeneous: true;
+
+                styles [
+                  "linked",
+                ]
+
+                ToggleButton light_theme_toggle {
+                  label: _("Light Theme");
+                  active: true;
+                }
+
+                ToggleButton dark_theme_toggle {
+                  label: _("Dark Theme");
+                  group: light_theme_toggle;
+                }
+              }
+
+              CheckButton filter_themes_check_button {
+                label: _("Only display themes for the current style");
+                active: true;
+                halign: start;
+              }
+
+              Label {
+                xalign: 0;
+                label: _("To ensure readability, \"Theme Integration\" will be disabled if you select a light color scheme while using the dark app style or a dark color scheme while using the light app style.");
+                wrap: true;
+                visible: bind filter_themes_check_button.active inverted;
+
+                styles [
+                  "lepton-orange",
+                ]
+              }
+
+              FlowBox preview_flow_box {
+                hexpand: true;
+                column-spacing: 12;
+                row-spacing: 12;
+                max-children-per-line: 4;
+                selection-mode: none;
+                homogeneous: true;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .TerminalShortcutEditor {
+    app: bind TerminalPreferencesWindow.application no-sync-create;
+  }
+
+  He.SettingsPage {
+    title: _("Advanced");
+    vexpand: true;
+
+    ScrolledWindow {
+      vexpand: true;
+      hexpand: true;
+      margin-top: 12;
+      hscrollbar-policy: never;
+
+      Box {
+        orientation: vertical;
+        spacing: 12;
+
+        He.ContentList {
+          title: _("Experimental");
+          description: _("Features in this section are known to be unstable!");
+
+          He.MiniContentBlock use_sixel_action_row {
+            title: _("Sixel Support");
+            subtitle: _("Render sixel escape sequences.");
+
+            Switch use_sixel_switch {
+              valign: center;
+            }
+          }
+        }
+
+        He.ContentList {
+          title: _("Danger Zone");
+
+          He.MiniContentBlock {
+            title: _("Reset Preferences");
+            subtitle: _("This will revert all settings back to default. Your extra themes will not be removed.");
+
+            Button reset_all_button {
+              valign: center;
+              halign: end;
+              label: _("Reset preferences");
+              clicked => on_reset_request();
+
+              styles [
+                "meson-red",
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+Adjustment floating_controls_hover_area_adjustment {
+  lower: 2;
+  upper: 100;
+  step-increment: 1;
+}
+
+Adjustment floating_controls_delay_adjustment {
+  lower: 100;
+  upper: 5000;
+  step-increment: 50;
+}
+
+Adjustment cell_width_spacing_adjustment {
+  lower: 1;
+  upper: 2;
+  step-increment: 0.05;
+}
+
+Adjustment cell_height_spacing_adjustment {
+  lower: 1;
+  upper: 2;
+  step-increment: 0.05;
+}
+
+Adjustment padding_spin_button_adjustment {
+  upper: 100;
+  step-increment: 1;
+}
+
+Adjustment opacity_spin_button_adjustment {
+  lower: 0;
+  upper: 100;
+  step-increment: 1;
+}
+
+Adjustment custom_scrollback_adjustment {
+  step-increment: 1;
+}

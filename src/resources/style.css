@@ -1,12 +1,9 @@
-/* libadwaita does 0.85, but 0.8 looks better */
-@define-color fixed-borders mix(@window_fg_color, @window_bg_color, 0.8);
-
-window:not(.about) headerbar:not(.background), .custom-headerbar {
-  background: @headerbar_bg_color;
+.custom-headerbar {
+  background: @window_bg_color;
 }
 
 #accelerator-main-window.with-borders:not(.fullscreen):not(.maximized):not(.tiled-left):not(.tiled-right) {
-  border: 1px solid @fixed-borders;
+  border: 1px solid @borders;
 }
 
 /* #accelerator-main-window.with-borders:not(.fullscreen):backdrop {
@@ -20,7 +17,7 @@ window:not(.about) headerbar:not(.background), .custom-headerbar {
 #accelerator-main-window.with-borders .custom-headerbar:not(.single-tab-mode) headerbar,
 #accelerator-main-window.with-borders .custom-headerbar.single-tab-mode.draw-line-in-single-tab headerbar {
   background-color: transparent;
-  background-image: image(@fixed-borders);
+  background-image: image(@borders);
   background-size: 100% 1px;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -47,11 +44,11 @@ window:not(.about) headerbar:not(.background), .custom-headerbar {
 .custom-headerbar:backdrop > * { filter: opacity(0.5); }
 
 tab {
-  background: transparent;
   border-radius: 0;   /* libadwaita 1.2 workaround */
   border: 0;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
+  margin-top: 0;
 }
 
 /**
@@ -76,13 +73,13 @@ tabboxchild  {
 }
 
 tab:selected {
-  background: @window_bg_color;
+  background: @card_bg_color;
 }
 
 #accelerator-main-window.with-borders tab:selected,
 #accelerator-main-window.with-borders .custom-headerbar.single-tab-mode:not(.stealth) headerbar .title-label {
-  border-left-color: @fixed-borders;
-  border-right-color: @fixed-borders;
+  border-left-color: @borders;
+  border-right-color: @borders;
 }
 
 .custom-headerbar windowcontrols.end.empty {
@@ -129,7 +126,7 @@ tab:selected {
  * Make header bar darker when "Draw Line" is on and there is a single tab open.
  */
 .with-borders .custom-headerbar.single-tab-mode.stealth.draw-line-in-single-tab headerbar {
-  background-color: @headerbar_bg_color;
+  background-color: @window_bg_color;
 }
 
 tabbox background {
@@ -137,7 +134,7 @@ tabbox background {
 }
 
 .toolbar {
-  background-color: @headerbar_bg_color;
+  background-color: @window_bg_color;
 }
 
 .toolbar > * {
@@ -177,13 +174,13 @@ window:not(.about) .floating-revealer > headerbar {
 .floating-revealer menubutton button,
 .floating-btn-box,
 .floating-revealer windowcontrols image {
-  background: @headerbar_bg_color;
+  background: @window_bg_color;
 }
 
 .floating-revealer menubutton button:hover,
 .floating-btn-box button:hover,
 .floating-revealer windowcontrols image:hover {
-  background: lighter(@headerbar_bg_color);
+  background: lighter(@window_bg_color);
 }
 
 .floating-btn-box button {
