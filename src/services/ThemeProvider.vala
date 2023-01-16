@@ -58,6 +58,7 @@ public class Terminal.ThemeProvider : Object {
   private Settings                    settings;
   private Gtk.CssProvider?            theme_provider = null;
   public  HashTable<string, Scheme?>  themes;
+  private He.Desktop                  desktop        = new He.Desktop ();
 
   public bool is_dark_style_active { get; private set; }
 
@@ -82,6 +83,11 @@ public class Terminal.ThemeProvider : Object {
     catch (Error e) {
       warning (e.message);
     }
+
+    this.is_dark_style_active = He.Desktop.ColorScheme.DARK == desktop.prefers_color_scheme ? true : false;
+    desktop.notify ["prefers-color-scheme"].connect (() => {
+      this.is_dark_style_active = He.Desktop.ColorScheme.DARK == desktop.prefers_color_scheme ? true : false;
+    });
 
     this.notify ["current-theme"].connect (() => {
       this.apply_theming ();
