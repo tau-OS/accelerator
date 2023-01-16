@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: blackbox\n"
+"Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-13 20:34-0300\n"
+"POT-Creation-Date: 2023-01-16 10:37+0700\n"
 "PO-Revision-Date: 2022-08-18 05:51+0300\n"
 "Last-Translator: acephale <acephaleee@protonmail.com>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
@@ -21,10 +21,15 @@ msgstr ""
 "X-Generator: Poedit 3.1\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
-msgid "Black Box"
-msgstr "Чёрный Ящик"
+msgid "Accelerator"
+msgstr ""
 
-#: data/com.fyralabs.Accelerator.desktop.in:9
+#: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
+#: src/gtk/preferences-window.ui:278
+msgid "Terminal"
+msgstr "Терминал"
+
+#: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr "Терминал;терминал;оболочка;строка;команда;командная строка;cmd;box;"
 
@@ -99,21 +104,24 @@ msgid "If enabled, terminals will render sixel escape sequences"
 msgstr ""
 "Если включено, прокрутка будет происходить по пикселям, а не по строкам"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:76
-msgid "Enable to limit terminal scrollback"
-msgstr "Включите для ограничения буфера прокрутки терминала"
+#. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
+#: data/com.fyralabs.Accelerator.gschema.xml:77
+#: src/gtk/preferences-window.ui:373
+#, fuzzy
+msgid "Scrollback mode"
+msgstr "Количество строк"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:80
+#: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
 msgstr "Количество строк в буфере прокрутки"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:84
+#: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
 msgstr ""
 "Если включено, плавающие элементы управления будут отображаться в режиме без "
 "панели заголовка"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:88
+#: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
@@ -121,50 +129,50 @@ msgstr ""
 "Наводимая область (в пикселях) в верхней части окна для вызова плавающих "
 "элементов управления"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:92
+#: data/com.fyralabs.Accelerator.gschema.xml:93
 msgid "Delay time before showing floating controls"
 msgstr "Время задержки отображения плавающих элементов управления"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:96
+#: data/com.fyralabs.Accelerator.gschema.xml:97
 msgid "The light color scheme for the terminal"
 msgstr "Светлая цветовая схема"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:100
+#: data/com.fyralabs.Accelerator.gschema.xml:101
 msgid "The dark color scheme for the terminal"
 msgstr "Тёмная цветовая схема"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
-#: data/com.fyralabs.Accelerator.gschema.xml:105
+#: data/com.fyralabs.Accelerator.gschema.xml:106
 msgid "Style preference"
 msgstr "Параметры стиля"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:109
+#: data/com.fyralabs.Accelerator.gschema.xml:110
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr ""
 "Размер отступов вокруг виджетов терминала (сверху, справа, снизу, слева)"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:113
+#: data/com.fyralabs.Accelerator.gschema.xml:114
 msgid "Terminal cell width"
 msgstr "Ширина письма"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:117
+#: data/com.fyralabs.Accelerator.gschema.xml:118
 msgid "Terminal cell height"
 msgstr "Высота письма"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:121
+#: data/com.fyralabs.Accelerator.gschema.xml:122
 msgid "Cursor shape"
 msgstr "Форма курсора"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:125
+#: data/com.fyralabs.Accelerator.gschema.xml:126
 #, fuzzy
 msgid "Whether or not the cursor should blink"
 msgstr "Отображать ли полосы прокрутки"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:129
+#: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr "Если включено, Сtrl+С и Сtrl+V будут работать для копирования/вставки"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:133
+#: data/com.fyralabs.Accelerator.gschema.xml:134
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
@@ -172,38 +180,38 @@ msgstr ""
 "Если включено, панель вкладок будет заменена заголовком с одной открытой "
 "вкладкой"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:137
+#: data/com.fyralabs.Accelerator.gschema.xml:138
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr "Если включено, единственная вкладка примет цвет панели заголовка"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:141
+#: data/com.fyralabs.Accelerator.gschema.xml:142
 msgid "Whether to spawn shell in login mode"
 msgstr "Запускать ли оболочку в режиме входа"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:145
+#: data/com.fyralabs.Accelerator.gschema.xml:146
 msgid "Whether to use a custom command instead of the user's shell"
 msgstr "Использовать ли другую команду вместо оболочки пользователя"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:149
+#: data/com.fyralabs.Accelerator.gschema.xml:150
 msgid "Custom command to use instead of the user's shell"
 msgstr "Другая команда для использования вместо оболочки пользователя"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:156
+#: data/com.fyralabs.Accelerator.gschema.xml:157
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
 "Должно ли нажатие кнопки \"Далее\" на последнем результате поиска возвращать "
 "к первому"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:160
+#: data/com.fyralabs.Accelerator.gschema.xml:161
 msgid "Whether search should be case sensitive"
 msgstr "Должен ли поиск учитывать регистр символов"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:164
+#: data/com.fyralabs.Accelerator.gschema.xml:165
 msgid "Whether search should only match entire words"
 msgstr "Должен ли поиск учитывать только целые слова"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:168
+#: data/com.fyralabs.Accelerator.gschema.xml:169
 msgid "Whether search should be performed using regular expressions"
 msgstr "Должен ли поиск выполняться с использованием регулярных выражений"
 
@@ -551,10 +559,6 @@ msgstr "Задержка отображения"
 msgid "Delay time (ms) before show floating controls."
 msgstr "Время задержки (мс) отображения плавающих элементов управления."
 
-#: src/gtk/preferences-window.ui:214 src/gtk/preferences-window.ui:278
-msgid "Terminal"
-msgstr "Терминал"
-
 #: src/gtk/preferences-window.ui:219
 msgid "Text"
 msgstr "Текст"
@@ -645,59 +649,67 @@ msgstr "Отображать полосы прокрутки"
 msgid "Use Overlay Scrolling"
 msgstr "Использовать оверлейную прокрутку"
 
-#: src/gtk/preferences-window.ui:372
-msgid "Set Scrollback Limit"
-msgstr "Установить лимит буфера прокрутки"
+#: src/gtk/preferences-window.ui:377
+msgid "Fixed Size"
+msgstr ""
 
-#: src/gtk/preferences-window.ui:383
+#: src/gtk/preferences-window.ui:378
+msgid "Unlimited"
+msgstr ""
+
+#: src/gtk/preferences-window.ui:379 src/widgets/ShortcutEditor.vala:131
+msgid "Disabled"
+msgstr ""
+
+#: src/gtk/preferences-window.ui:388
 msgid "Scrollback Lines"
 msgstr "Количество строк"
 
-#: src/gtk/preferences-window.ui:399
+#: src/gtk/preferences-window.ui:405
 msgid "Command"
 msgstr "Команда"
 
-#: src/gtk/preferences-window.ui:403
+#: src/gtk/preferences-window.ui:409
 msgid "Run Command as Login Shell"
 msgstr "Выполнять команду как оболочку входа"
 
-#: src/gtk/preferences-window.ui:414
+#: src/gtk/preferences-window.ui:420
 msgid "Use Custom Command"
 msgstr "Использовать другую команду"
 
-#: src/gtk/preferences-window.ui:424
+#: src/gtk/preferences-window.ui:430
 msgid "Custom Command"
 msgstr "Другая команда"
 
-#: src/gtk/preferences-window.ui:431
+#: src/gtk/preferences-window.ui:437
 msgid "Theme"
 msgstr "Тема"
 
-#: src/gtk/preferences-window.ui:442
+#: src/gtk/preferences-window.ui:448
 msgid "Open folder"
 msgstr "Открыть папку"
 
-#: src/gtk/preferences-window.ui:450
+#: src/gtk/preferences-window.ui:456
 msgid "Get more themes online"
 msgstr "Больше тем онлайн"
 
-#: src/gtk/preferences-window.ui:464
+#: src/gtk/preferences-window.ui:470
 msgid "Set your preferred theme for light and dark styles."
 msgstr "Предпочитаемая тема для каждого стиля."
 
-#: src/gtk/preferences-window.ui:479
+#: src/gtk/preferences-window.ui:485
 msgid "Light Theme"
 msgstr "Светлая"
 
-#: src/gtk/preferences-window.ui:485
+#: src/gtk/preferences-window.ui:491
 msgid "Dark Theme"
 msgstr "Тёмная"
 
-#: src/gtk/preferences-window.ui:493
+#: src/gtk/preferences-window.ui:499
 msgid "Only display themes for the current style"
 msgstr "Отображать темы только для выбранного стиля"
 
-#: src/gtk/preferences-window.ui:501
+#: src/gtk/preferences-window.ui:507
 msgid ""
 "To ensure readability, \"Theme Integration\" will be disabled if you select "
 "a light color scheme while using the dark app style or a dark color scheme "
@@ -707,15 +719,15 @@ msgstr ""
 "если выбрана светлая цветовая схема при использовании темного стиля или "
 "темная цветовая схема при использовании светлого стиля."
 
-#: src/gtk/preferences-window.ui:533
+#: src/gtk/preferences-window.ui:539
 msgid "Advanced"
 msgstr "Расширенные"
 
-#: src/gtk/preferences-window.ui:537
+#: src/gtk/preferences-window.ui:543
 msgid "Experimental"
 msgstr "Экспериментальные 🧪"
 
-#: src/gtk/preferences-window.ui:538
+#: src/gtk/preferences-window.ui:544
 msgid ""
 "Features in this section are known to be wonky. Please feel free to test and "
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">report "
@@ -725,23 +737,23 @@ msgstr ""
 "href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">сообщать об "
 "ошибках</a>."
 
-#: src/gtk/preferences-window.ui:542
+#: src/gtk/preferences-window.ui:548
 msgid "Sixel Support"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:543
+#: src/gtk/preferences-window.ui:549
 msgid "Render sixel escape sequences."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:555
+#: src/gtk/preferences-window.ui:561
 msgid "Danger Zone"
 msgstr "Опасная зона"
 
-#: src/gtk/preferences-window.ui:558
+#: src/gtk/preferences-window.ui:564
 msgid "Reset Preferences"
 msgstr "Сброс настроек"
 
-#: src/gtk/preferences-window.ui:559
+#: src/gtk/preferences-window.ui:565
 msgid ""
 "This will revert all settings back to default. Your extra themes will not be "
 "removed."
@@ -749,7 +761,7 @@ msgstr ""
 "Все настройки вернутся к значениям по умолчанию. Персональные темы не будут "
 "удалены."
 
-#: src/gtk/preferences-window.ui:564
+#: src/gtk/preferences-window.ui:570
 msgid "Reset preferences"
 msgstr "Сбросить настройки"
 
@@ -768,38 +780,29 @@ msgstr ""
 "серьёзный прогресс был достигнут в развитии порта, копирование текста в %s "
 "пока не поддерживается."
 
-#: src/widgets/AboutDialog.vala:59
-msgid "Donate"
-msgstr ""
-
 #: src/widgets/HeaderBar.vala:30 src/widgets/ShortcutEditor.vala:168
-#: src/widgets/Window.vala:142
+#: src/widgets/Window.vala:153
 msgid "Fullscreen"
 msgstr "Полноэкранный режим"
 
 #: src/widgets/HeaderBar.vala:31 src/widgets/ShortcutEditor.vala:164
-#: src/widgets/TerminalTab.vala:119
+#: src/widgets/TerminalTab.vala:129
 msgid "Preferences"
 msgstr "Параметры"
 
 #: src/widgets/HeaderBar.vala:32 src/widgets/ShortcutEditor.vala:169
-#: src/widgets/TerminalTab.vala:122
+#: src/widgets/TerminalTab.vala:132
 #, fuzzy
 msgid "Keyboard Shortcuts"
 msgstr "Комбинации клавиш"
 
-#: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:123
+#: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:133
 msgid "About"
 msgstr "О приложении"
 
-#: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:161
+#: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:173
 msgid "Menu"
 msgstr "Меню"
-
-#: src/widgets/HeaderBar.vala:75 src/widgets/ShortcutEditor.vala:163
-#: src/widgets/TerminalTab.vala:111
-msgid "New Tab"
-msgstr "Новая вкладка"
 
 #: src/widgets/ShortcutDialog.vala:46
 msgid "Enter new shortcut"
@@ -808,10 +811,6 @@ msgstr ""
 #: src/widgets/ShortcutDialog.vala:47
 #, c-format
 msgid "Enter new shortcut for \"%s\""
-msgstr ""
-
-#: src/widgets/ShortcutEditor.vala:131
-msgid "Disabled"
 msgstr ""
 
 #: src/widgets/ShortcutEditor.vala:159
@@ -824,7 +823,7 @@ msgstr "Следующая вкладка"
 msgid "Focus Previous Tab"
 msgstr "Предыдущая вкладка"
 
-#: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:112
+#: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:122
 msgid "New Window"
 msgstr "Новое окно"
 
@@ -833,11 +832,15 @@ msgstr "Новое окно"
 msgid "Toggle Header Bar"
 msgstr "Отображать панель заголовка"
 
-#: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:114
+#: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
+msgid "New Tab"
+msgstr "Новая вкладка"
+
+#: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:124
 msgid "Copy"
 msgstr "Копировать"
 
-#: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:115
+#: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:125
 msgid "Paste"
 msgstr "Вставить"
 
@@ -878,11 +881,15 @@ msgstr "Переключиться на вкладку (номер)"
 msgid "Switch to Last Tab"
 msgstr "Последняя вкладка"
 
-#: src/widgets/Window.vala:145
+#: src/widgets/Window.vala:156
 msgid "Show headerbar"
 msgstr "Отображать панель заголовка"
 
-#: src/widgets/PreferencesWindow.vala:496
+#: src/widgets/Window.vala:211
+msgid "No tabs open"
+msgstr ""
+
+#: src/widgets/PreferencesWindow.vala:504
 msgid "Terminal Font"
 msgstr "Шрифт терминала"
 
@@ -906,6 +913,15 @@ msgstr "Отобразить справку"
 #, c-format
 msgid "Run %s --help to get help\n"
 msgstr "Выполните %s --help для получения справки\n"
+
+#~ msgid "Black Box"
+#~ msgstr "Чёрный Ящик"
+
+#~ msgid "Enable to limit terminal scrollback"
+#~ msgstr "Включите для ограничения буфера прокрутки терминала"
+
+#~ msgid "Set Scrollback Limit"
+#~ msgstr "Установить лимит буфера прокрутки"
 
 #~ msgid "Cursor"
 #~ msgstr "Курсор"

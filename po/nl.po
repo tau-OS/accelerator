@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blackbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-13 20:34-0300\n"
+"POT-Creation-Date: 2023-01-16 10:37+0700\n"
 "PO-Revision-Date: 2022-07-03 14:21+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -18,10 +18,15 @@ msgstr ""
 "X-Generator: Lokalize 22.04.2\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
-msgid "Black Box"
-msgstr "Black Box"
+msgid "Accelerator"
+msgstr ""
 
-#: data/com.fyralabs.Accelerator.desktop.in:9
+#: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
+#: src/gtk/preferences-window.ui:278
+msgid "Terminal"
+msgstr "Terminalvenster"
+
+#: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr ""
 "Terminal;terminal;shell;prompt;opdracht;commando;opdrachtregel;cmd;box;"
@@ -97,19 +102,22 @@ msgstr "Schakel in om pixel voor pixel te scrollen in plaats van per rij"
 msgid "If enabled, terminals will render sixel escape sequences"
 msgstr "Schakel in om pixel voor pixel te scrollen in plaats van per rij"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:76
-msgid "Enable to limit terminal scrollback"
-msgstr ""
+#. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
+#: data/com.fyralabs.Accelerator.gschema.xml:77
+#: src/gtk/preferences-window.ui:373
+#, fuzzy
+msgid "Scrollback mode"
+msgstr "Schuifbalken"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:80
+#: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:84
+#: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
 msgstr "Schakel in om zwevende bediening te tonen in de kopbalkloze modus"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:88
+#: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
@@ -117,54 +125,54 @@ msgstr ""
 "Het aanwijsgebied (in pixels) bovenaan het vensters waarmee de zwevende "
 "bediening kan worden opgeroepen"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:92
+#: data/com.fyralabs.Accelerator.gschema.xml:93
 msgid "Delay time before showing floating controls"
 msgstr "Wachttijd alvorens zwevende bediening te tonen"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:96
+#: data/com.fyralabs.Accelerator.gschema.xml:97
 #, fuzzy
 msgid "The light color scheme for the terminal"
 msgstr "Het kleurenschema van het terminalvenster"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:100
+#: data/com.fyralabs.Accelerator.gschema.xml:101
 #, fuzzy
 msgid "The dark color scheme for the terminal"
 msgstr "Het kleurenschema van het terminalvenster"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
-#: data/com.fyralabs.Accelerator.gschema.xml:105
+#: data/com.fyralabs.Accelerator.gschema.xml:106
 #, fuzzy
 msgid "Style preference"
 msgstr "Standaardwaarden herstellen"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:109
+#: data/com.fyralabs.Accelerator.gschema.xml:110
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr ""
 "De hoeveelheid opvulling van terminalelementen (bovenaan, rechts, onderaan, "
 "links)"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:113
+#: data/com.fyralabs.Accelerator.gschema.xml:114
 msgid "Terminal cell width"
 msgstr "Celbreedte"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:117
+#: data/com.fyralabs.Accelerator.gschema.xml:118
 msgid "Terminal cell height"
 msgstr "Celhoogte"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:121
+#: data/com.fyralabs.Accelerator.gschema.xml:122
 msgid "Cursor shape"
 msgstr "Cursorvorm"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:125
+#: data/com.fyralabs.Accelerator.gschema.xml:126
 #, fuzzy
 msgid "Whether or not the cursor should blink"
 msgstr "Of er schuifbalken dienen te worden getoond"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:129
+#: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr "Schakel in om Ctrl+C en Ctrl+V te gebruiken om te kopiëren/plakken"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:133
+#: data/com.fyralabs.Accelerator.gschema.xml:134
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
@@ -172,38 +180,38 @@ msgstr ""
 "Schakel in om de tabbladbalk bij slechts één geopend tabblad te vervangen "
 "door een naamlabel"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:137
+#: data/com.fyralabs.Accelerator.gschema.xml:138
 #, fuzzy
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr "Schakel in om zwevende bediening te tonen in de kopbalkloze modus"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:141
+#: data/com.fyralabs.Accelerator.gschema.xml:142
 msgid "Whether to spawn shell in login mode"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:145
+#: data/com.fyralabs.Accelerator.gschema.xml:146
 msgid "Whether to use a custom command instead of the user's shell"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:149
+#: data/com.fyralabs.Accelerator.gschema.xml:150
 msgid "Custom command to use instead of the user's shell"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:156
+#: data/com.fyralabs.Accelerator.gschema.xml:157
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:160
+#: data/com.fyralabs.Accelerator.gschema.xml:161
 #, fuzzy
 msgid "Whether search should be case sensitive"
 msgstr "Of de kopbalk dient te worden getoond"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:164
+#: data/com.fyralabs.Accelerator.gschema.xml:165
 msgid "Whether search should only match entire words"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:168
+#: data/com.fyralabs.Accelerator.gschema.xml:169
 msgid "Whether search should be performed using regular expressions"
 msgstr ""
 
@@ -557,10 +565,6 @@ msgstr "Wachttijd alvorens zwevende bediening te tonen"
 msgid "Delay time (ms) before show floating controls."
 msgstr "De wachttijd (in ms) alvorens de zwevende bediening te tonen."
 
-#: src/gtk/preferences-window.ui:214 src/gtk/preferences-window.ui:278
-msgid "Terminal"
-msgstr "Terminalvenster"
-
 #: src/gtk/preferences-window.ui:219
 msgid "Text"
 msgstr ""
@@ -652,78 +656,86 @@ msgstr "Schuifbalken tonen"
 msgid "Use Overlay Scrolling"
 msgstr "Zwevende schuifbalken tonen"
 
-#: src/gtk/preferences-window.ui:372
-msgid "Set Scrollback Limit"
+#: src/gtk/preferences-window.ui:377
+msgid "Fixed Size"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:383
+#: src/gtk/preferences-window.ui:378
+msgid "Unlimited"
+msgstr ""
+
+#: src/gtk/preferences-window.ui:379 src/widgets/ShortcutEditor.vala:131
+msgid "Disabled"
+msgstr ""
+
+#: src/gtk/preferences-window.ui:388
 #, fuzzy
 msgid "Scrollback Lines"
 msgstr "Schuifbalken"
 
-#: src/gtk/preferences-window.ui:399
+#: src/gtk/preferences-window.ui:405
 msgid "Command"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:403
+#: src/gtk/preferences-window.ui:409
 msgid "Run Command as Login Shell"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:414
+#: src/gtk/preferences-window.ui:420
 msgid "Use Custom Command"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:424
+#: src/gtk/preferences-window.ui:430
 msgid "Custom Command"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:431
+#: src/gtk/preferences-window.ui:437
 msgid "Theme"
 msgstr "Thema"
 
-#: src/gtk/preferences-window.ui:442
+#: src/gtk/preferences-window.ui:448
 msgid "Open folder"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:450
+#: src/gtk/preferences-window.ui:456
 msgid "Get more themes online"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:464
+#: src/gtk/preferences-window.ui:470
 msgid "Set your preferred theme for light and dark styles."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:479
+#: src/gtk/preferences-window.ui:485
 #, fuzzy
 msgid "Light Theme"
 msgstr "Thema"
 
-#: src/gtk/preferences-window.ui:485
+#: src/gtk/preferences-window.ui:491
 #, fuzzy
 msgid "Dark Theme"
 msgstr "Thema"
 
-#: src/gtk/preferences-window.ui:493
+#: src/gtk/preferences-window.ui:499
 msgid "Only display themes for the current style"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:501
+#: src/gtk/preferences-window.ui:507
 msgid ""
 "To ensure readability, \"Theme Integration\" will be disabled if you select "
 "a light color scheme while using the dark app style or a dark color scheme "
 "while using the light app style."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:533
+#: src/gtk/preferences-window.ui:539
 msgid "Advanced"
 msgstr "Geavanceerd"
 
-#: src/gtk/preferences-window.ui:537
+#: src/gtk/preferences-window.ui:543
 #, fuzzy
 msgid "Experimental"
 msgstr "Experimenteel 🧪"
 
-#: src/gtk/preferences-window.ui:538
+#: src/gtk/preferences-window.ui:544
 msgid ""
 "Features in this section are known to be wonky. Please feel free to test and "
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">report "
@@ -733,23 +745,23 @@ msgstr ""
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">bugs "
 "melden</a>."
 
-#: src/gtk/preferences-window.ui:542
+#: src/gtk/preferences-window.ui:548
 msgid "Sixel Support"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:543
+#: src/gtk/preferences-window.ui:549
 msgid "Render sixel escape sequences."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:555
+#: src/gtk/preferences-window.ui:561
 msgid "Danger Zone"
 msgstr "Gevarenzone"
 
-#: src/gtk/preferences-window.ui:558
+#: src/gtk/preferences-window.ui:564
 msgid "Reset Preferences"
 msgstr "Standaardwaarden herstellen"
 
-#: src/gtk/preferences-window.ui:559
+#: src/gtk/preferences-window.ui:565
 msgid ""
 "This will revert all settings back to default. Your extra themes will not be "
 "removed."
@@ -757,7 +769,7 @@ msgstr ""
 "Let op: hierdoor worden alle voorkeuren teruggezet op de standaardwaarden. "
 "Uw thema's worden echter niet verwijderd."
 
-#: src/gtk/preferences-window.ui:564
+#: src/gtk/preferences-window.ui:570
 #, fuzzy
 msgid "Reset preferences"
 msgstr "Standaardwaarden herstellen"
@@ -777,38 +789,29 @@ msgstr ""
 "is al veel werk verricht, maar het kopiëren van tekst ontbreekt nog. Dit "
 "betekent dat er momenteel geen manier is om tekst te kopiëren in %s."
 
-#: src/widgets/AboutDialog.vala:59
-msgid "Donate"
-msgstr ""
-
 #: src/widgets/HeaderBar.vala:30 src/widgets/ShortcutEditor.vala:168
-#: src/widgets/Window.vala:142
+#: src/widgets/Window.vala:153
 msgid "Fullscreen"
 msgstr "Schermvullende weergave"
 
 #: src/widgets/HeaderBar.vala:31 src/widgets/ShortcutEditor.vala:164
-#: src/widgets/TerminalTab.vala:119
+#: src/widgets/TerminalTab.vala:129
 msgid "Preferences"
 msgstr "Voorkeuren"
 
 #: src/widgets/HeaderBar.vala:32 src/widgets/ShortcutEditor.vala:169
-#: src/widgets/TerminalTab.vala:122
+#: src/widgets/TerminalTab.vala:132
 #, fuzzy
 msgid "Keyboard Shortcuts"
 msgstr "Sneltoetsen tonen"
 
-#: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:123
+#: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:133
 msgid "About"
 msgstr "Over"
 
-#: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:161
+#: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:173
 msgid "Menu"
 msgstr "Menu"
-
-#: src/widgets/HeaderBar.vala:75 src/widgets/ShortcutEditor.vala:163
-#: src/widgets/TerminalTab.vala:111
-msgid "New Tab"
-msgstr "Nieuw tabblad"
 
 #: src/widgets/ShortcutDialog.vala:46
 msgid "Enter new shortcut"
@@ -817,10 +820,6 @@ msgstr ""
 #: src/widgets/ShortcutDialog.vala:47
 #, c-format
 msgid "Enter new shortcut for \"%s\""
-msgstr ""
-
-#: src/widgets/ShortcutEditor.vala:131
-msgid "Disabled"
 msgstr ""
 
 #: src/widgets/ShortcutEditor.vala:159
@@ -833,7 +832,7 @@ msgstr "Volgend tabblad focussen"
 msgid "Focus Previous Tab"
 msgstr "Vorig tabblad focussen"
 
-#: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:112
+#: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:122
 msgid "New Window"
 msgstr "Nieuw venster"
 
@@ -842,11 +841,15 @@ msgstr "Nieuw venster"
 msgid "Toggle Header Bar"
 msgstr "Kopbalk tonen"
 
-#: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:114
+#: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
+msgid "New Tab"
+msgstr "Nieuw tabblad"
+
+#: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:124
 msgid "Copy"
 msgstr "Kopiëren"
 
-#: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:115
+#: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:125
 msgid "Paste"
 msgstr "Plakken"
 
@@ -887,11 +890,15 @@ msgstr "Overschakelen naar tabblad"
 msgid "Switch to Last Tab"
 msgstr "Overschakelen naar laatste tabblad"
 
-#: src/widgets/Window.vala:145
+#: src/widgets/Window.vala:156
 msgid "Show headerbar"
 msgstr "Kopbalk tonen"
 
-#: src/widgets/PreferencesWindow.vala:496
+#: src/widgets/Window.vala:211
+msgid "No tabs open"
+msgstr ""
+
+#: src/widgets/PreferencesWindow.vala:504
 msgid "Terminal Font"
 msgstr "Terminallettertype"
 
@@ -915,6 +922,9 @@ msgstr "Hulp tonen"
 #, c-format
 msgid "Run %s --help to get help\n"
 msgstr "Voer %s --help uit om hulp te krijgen\n"
+
+#~ msgid "Black Box"
+#~ msgstr "Black Box"
 
 #~ msgid "Cursor"
 #~ msgstr "Cursor"

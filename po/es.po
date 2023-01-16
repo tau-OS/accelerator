@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: blackbox\n"
+"Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-13 20:34-0300\n"
+"POT-Creation-Date: 2023-01-16 10:37+0700\n"
 "PO-Revision-Date: 2022-08-09 11:31+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,10 +19,15 @@ msgstr ""
 "X-Generator: Poedit 3.1.1\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
-msgid "Black Box"
-msgstr "Black Box"
+msgid "Accelerator"
+msgstr ""
 
-#: data/com.fyralabs.Accelerator.desktop.in:9
+#: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
+#: src/gtk/preferences-window.ui:278
+msgid "Terminal"
+msgstr "Terminal"
+
+#: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr ""
 "Terminal;terminal;shell;prompt;command;commandline;cmd;box;comando;línea;"
@@ -99,20 +104,23 @@ msgid "If enabled, terminals will render sixel escape sequences"
 msgstr ""
 "Si se activa, los terminales se desplazarán por píxeles en lugar de por filas"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:76
-msgid "Enable to limit terminal scrollback"
-msgstr "Activar para limitar el retroceso del terminal"
+#. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
+#: data/com.fyralabs.Accelerator.gschema.xml:77
+#: src/gtk/preferences-window.ui:373
+#, fuzzy
+msgid "Scrollback mode"
+msgstr "Líneas de retroceso"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:80
+#: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
 msgstr "Número de líneas almacenadas en el barrido de la pantalla"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:84
+#: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
 msgstr ""
 "Si se activa, los controles flotantes se mostrarán en modo sin encabezado"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:88
+#: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
@@ -120,51 +128,51 @@ msgstr ""
 "Área de desplazamiento (en píxeles) en la parte superior de la ventana para "
 "activar los controles flotantes"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:92
+#: data/com.fyralabs.Accelerator.gschema.xml:93
 msgid "Delay time before showing floating controls"
 msgstr "Tiempo de retardo antes de mostrar los controles flotantes"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:96
+#: data/com.fyralabs.Accelerator.gschema.xml:97
 msgid "The light color scheme for the terminal"
 msgstr "El esquema de color claro para el terminal"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:100
+#: data/com.fyralabs.Accelerator.gschema.xml:101
 msgid "The dark color scheme for the terminal"
 msgstr "El esquema de color oscuro para el terminal"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
-#: data/com.fyralabs.Accelerator.gschema.xml:105
+#: data/com.fyralabs.Accelerator.gschema.xml:106
 msgid "Style preference"
 msgstr "Preferencia de estilo"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:109
+#: data/com.fyralabs.Accelerator.gschema.xml:110
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr ""
 "Cantidad de relleno alrededor de los widgets del terminal (arriba, derecha, "
 "abajo, izquierda)"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:113
+#: data/com.fyralabs.Accelerator.gschema.xml:114
 msgid "Terminal cell width"
 msgstr "Ancho de celda del terminal"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:117
+#: data/com.fyralabs.Accelerator.gschema.xml:118
 msgid "Terminal cell height"
 msgstr "Alto de celda del terminal"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:121
+#: data/com.fyralabs.Accelerator.gschema.xml:122
 msgid "Cursor shape"
 msgstr "Forma del cursor"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:125
+#: data/com.fyralabs.Accelerator.gschema.xml:126
 #, fuzzy
 msgid "Whether or not the cursor should blink"
 msgstr "Mostrar o no las barras de desplazamiento"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:129
+#: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr "Si se activa, ctrl+c y ctrl+v funcionarán para copiar/pegar"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:133
+#: data/com.fyralabs.Accelerator.gschema.xml:134
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
@@ -172,40 +180,40 @@ msgstr ""
 "Si se activa, la barra de pestañas se sustituirá por una etiqueta de título "
 "cuando haya una sola pestaña abierta"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:137
+#: data/com.fyralabs.Accelerator.gschema.xml:138
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr ""
 "Si se activa, una sola pestaña abierta se mezclará con el color de la barra "
 "de encabezado"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:141
+#: data/com.fyralabs.Accelerator.gschema.xml:142
 msgid "Whether to spawn shell in login mode"
 msgstr "Si se genera el intérprete de comandos en el modo de inicio de sesión"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:145
+#: data/com.fyralabs.Accelerator.gschema.xml:146
 msgid "Whether to use a custom command instead of the user's shell"
 msgstr "Si se usa un comando personalizado en lugar del shell del usuario"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:149
+#: data/com.fyralabs.Accelerator.gschema.xml:150
 msgid "Custom command to use instead of the user's shell"
 msgstr "Comando personalizado para usar en lugar del shell del usuario"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:156
+#: data/com.fyralabs.Accelerator.gschema.xml:157
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
 "Si al hacer clic en siguiente en el último resultado de la búsqueda se debe "
 "volver al primero"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:160
+#: data/com.fyralabs.Accelerator.gschema.xml:161
 msgid "Whether search should be case sensitive"
 msgstr "Si la búsqueda debe distinguir entre mayúsculas y minúsculas"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:164
+#: data/com.fyralabs.Accelerator.gschema.xml:165
 msgid "Whether search should only match entire words"
 msgstr "Si la búsqueda debe coincidir sólo con palabras enteras"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:168
+#: data/com.fyralabs.Accelerator.gschema.xml:169
 msgid "Whether search should be performed using regular expressions"
 msgstr "Si la búsqueda debe realizarse mediante expresiones regulares"
 
@@ -556,10 +564,6 @@ msgstr "Retardo antes de mostrar los controles flotantes"
 msgid "Delay time (ms) before show floating controls."
 msgstr "Tiempo de retardo (ms) antes de mostrar los controles flotantes."
 
-#: src/gtk/preferences-window.ui:214 src/gtk/preferences-window.ui:278
-msgid "Terminal"
-msgstr "Terminal"
-
 #: src/gtk/preferences-window.ui:219
 msgid "Text"
 msgstr "Texto"
@@ -650,59 +654,67 @@ msgstr "Mostrar barras de desplazamiento"
 msgid "Use Overlay Scrolling"
 msgstr "Usar desplazamiento superpuesto"
 
-#: src/gtk/preferences-window.ui:372
-msgid "Set Scrollback Limit"
-msgstr "Establecer límite de retroceso"
+#: src/gtk/preferences-window.ui:377
+msgid "Fixed Size"
+msgstr ""
 
-#: src/gtk/preferences-window.ui:383
+#: src/gtk/preferences-window.ui:378
+msgid "Unlimited"
+msgstr ""
+
+#: src/gtk/preferences-window.ui:379 src/widgets/ShortcutEditor.vala:131
+msgid "Disabled"
+msgstr ""
+
+#: src/gtk/preferences-window.ui:388
 msgid "Scrollback Lines"
 msgstr "Líneas de retroceso"
 
-#: src/gtk/preferences-window.ui:399
+#: src/gtk/preferences-window.ui:405
 msgid "Command"
 msgstr "Comando"
 
-#: src/gtk/preferences-window.ui:403
+#: src/gtk/preferences-window.ui:409
 msgid "Run Command as Login Shell"
 msgstr "Ejecutar el comando como shell de inicio de sesión"
 
-#: src/gtk/preferences-window.ui:414
+#: src/gtk/preferences-window.ui:420
 msgid "Use Custom Command"
 msgstr "Usar comando personalizado"
 
-#: src/gtk/preferences-window.ui:424
+#: src/gtk/preferences-window.ui:430
 msgid "Custom Command"
 msgstr "Comando personalizado"
 
-#: src/gtk/preferences-window.ui:431
+#: src/gtk/preferences-window.ui:437
 msgid "Theme"
 msgstr "Tema"
 
-#: src/gtk/preferences-window.ui:442
+#: src/gtk/preferences-window.ui:448
 msgid "Open folder"
 msgstr "Abrir carpeta"
 
-#: src/gtk/preferences-window.ui:450
+#: src/gtk/preferences-window.ui:456
 msgid "Get more themes online"
 msgstr "Obtener más temas en línea"
 
-#: src/gtk/preferences-window.ui:464
+#: src/gtk/preferences-window.ui:470
 msgid "Set your preferred theme for light and dark styles."
 msgstr "Configure su tema preferido para los estilos claro y oscuro."
 
-#: src/gtk/preferences-window.ui:479
+#: src/gtk/preferences-window.ui:485
 msgid "Light Theme"
 msgstr "Tema claro"
 
-#: src/gtk/preferences-window.ui:485
+#: src/gtk/preferences-window.ui:491
 msgid "Dark Theme"
 msgstr "Tema oscuro"
 
-#: src/gtk/preferences-window.ui:493
+#: src/gtk/preferences-window.ui:499
 msgid "Only display themes for the current style"
 msgstr "Mostrar sólo los temas del estilo actual"
 
-#: src/gtk/preferences-window.ui:501
+#: src/gtk/preferences-window.ui:507
 msgid ""
 "To ensure readability, \"Theme Integration\" will be disabled if you select "
 "a light color scheme while using the dark app style or a dark color scheme "
@@ -713,15 +725,15 @@ msgstr ""
 "oscuro o un esquema de color oscuro mientras usa el estilo de aplicación "
 "claro."
 
-#: src/gtk/preferences-window.ui:533
+#: src/gtk/preferences-window.ui:539
 msgid "Advanced"
 msgstr "Avanzado"
 
-#: src/gtk/preferences-window.ui:537
+#: src/gtk/preferences-window.ui:543
 msgid "Experimental"
 msgstr "Experimental"
 
-#: src/gtk/preferences-window.ui:538
+#: src/gtk/preferences-window.ui:544
 msgid ""
 "Features in this section are known to be wonky. Please feel free to test and "
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">report "
@@ -731,23 +743,23 @@ msgstr ""
 "Por favor, no dude en probar y <a href=\"https://gitlab.gnome.org/"
 "raggesilver/blackbox/-/issues\">reportar los errores</a>."
 
-#: src/gtk/preferences-window.ui:542
+#: src/gtk/preferences-window.ui:548
 msgid "Sixel Support"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:543
+#: src/gtk/preferences-window.ui:549
 msgid "Render sixel escape sequences."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:555
+#: src/gtk/preferences-window.ui:561
 msgid "Danger Zone"
 msgstr "Zona de peligro"
 
-#: src/gtk/preferences-window.ui:558
+#: src/gtk/preferences-window.ui:564
 msgid "Reset Preferences"
 msgstr "Restablecer preferencias"
 
-#: src/gtk/preferences-window.ui:559
+#: src/gtk/preferences-window.ui:565
 msgid ""
 "This will revert all settings back to default. Your extra themes will not be "
 "removed."
@@ -755,7 +767,7 @@ msgstr ""
 "Esto revertirá todos los ajustes a los valores predeterminados. Sus temas "
 "adicionales no se eliminarán."
 
-#: src/gtk/preferences-window.ui:564
+#: src/gtk/preferences-window.ui:570
 msgid "Reset preferences"
 msgstr "Restablecer preferencias"
 
@@ -776,38 +788,29 @@ msgstr ""
 "han hecho muchos progresos en este port, todavía no se ha implementado el "
 "copiado. Esto significa que actualmente no hay forma de copiar texto en %s."
 
-#: src/widgets/AboutDialog.vala:59
-msgid "Donate"
-msgstr ""
-
 #: src/widgets/HeaderBar.vala:30 src/widgets/ShortcutEditor.vala:168
-#: src/widgets/Window.vala:142
+#: src/widgets/Window.vala:153
 msgid "Fullscreen"
 msgstr "Pantalla completa"
 
 #: src/widgets/HeaderBar.vala:31 src/widgets/ShortcutEditor.vala:164
-#: src/widgets/TerminalTab.vala:119
+#: src/widgets/TerminalTab.vala:129
 msgid "Preferences"
 msgstr "Preferencias"
 
 #: src/widgets/HeaderBar.vala:32 src/widgets/ShortcutEditor.vala:169
-#: src/widgets/TerminalTab.vala:122
+#: src/widgets/TerminalTab.vala:132
 #, fuzzy
 msgid "Keyboard Shortcuts"
 msgstr "Mostrar atajos"
 
-#: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:123
+#: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:133
 msgid "About"
 msgstr "Acerca de"
 
-#: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:161
+#: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:173
 msgid "Menu"
 msgstr "Menú"
-
-#: src/widgets/HeaderBar.vala:75 src/widgets/ShortcutEditor.vala:163
-#: src/widgets/TerminalTab.vala:111
-msgid "New Tab"
-msgstr "Pestaña nueva"
 
 #: src/widgets/ShortcutDialog.vala:46
 msgid "Enter new shortcut"
@@ -816,10 +819,6 @@ msgstr ""
 #: src/widgets/ShortcutDialog.vala:47
 #, c-format
 msgid "Enter new shortcut for \"%s\""
-msgstr ""
-
-#: src/widgets/ShortcutEditor.vala:131
-msgid "Disabled"
 msgstr ""
 
 #: src/widgets/ShortcutEditor.vala:159
@@ -832,7 +831,7 @@ msgstr "Enfocar la pestaña siguiente"
 msgid "Focus Previous Tab"
 msgstr "Enfocar la pestaña anterior"
 
-#: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:112
+#: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:122
 msgid "New Window"
 msgstr "Ventana nueva"
 
@@ -841,11 +840,15 @@ msgstr "Ventana nueva"
 msgid "Toggle Header Bar"
 msgstr "Mostrar barra de encabezado"
 
-#: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:114
+#: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
+msgid "New Tab"
+msgstr "Pestaña nueva"
+
+#: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:124
 msgid "Copy"
 msgstr "Copiar"
 
-#: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:115
+#: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:125
 msgid "Paste"
 msgstr "Pegar"
 
@@ -887,11 +890,15 @@ msgstr "Cambiar a pestaña"
 msgid "Switch to Last Tab"
 msgstr "Cambiar a la última pestaña"
 
-#: src/widgets/Window.vala:145
+#: src/widgets/Window.vala:156
 msgid "Show headerbar"
 msgstr "Mostrar barra de encabezado"
 
-#: src/widgets/PreferencesWindow.vala:496
+#: src/widgets/Window.vala:211
+msgid "No tabs open"
+msgstr ""
+
+#: src/widgets/PreferencesWindow.vala:504
 msgid "Terminal Font"
 msgstr "Tipografía de la terminal"
 
@@ -915,6 +922,15 @@ msgstr "Mostrar ayuda"
 #, c-format
 msgid "Run %s --help to get help\n"
 msgstr "Ejecute %s --help para obtener ayuda\n"
+
+#~ msgid "Black Box"
+#~ msgstr "Black Box"
+
+#~ msgid "Enable to limit terminal scrollback"
+#~ msgstr "Activar para limitar el retroceso del terminal"
+
+#~ msgid "Set Scrollback Limit"
+#~ msgstr "Establecer límite de retroceso"
 
 #~ msgid "Cursor"
 #~ msgstr "Cursor"

@@ -3,9 +3,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: blackbox\n"
+"Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-13 20:34-0300\n"
+"POT-Creation-Date: 2023-01-16 10:37+0700\n"
 "PO-Revision-Date: 2022-08-20 00:05+0200\n"
 "Last-Translator: panmourovaty <dominikhejl@yahoo.com>\n"
 "Language-Team: Czech <>\n"
@@ -17,10 +17,15 @@ msgstr ""
 "X-Generator: Poedit 2.4.2\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
-msgid "Black Box"
-msgstr "Black Box"
+msgid "Accelerator"
+msgstr ""
 
-#: data/com.fyralabs.Accelerator.desktop.in:9
+#: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
+#: src/gtk/preferences-window.ui:278
+msgid "Terminal"
+msgstr "Terminál"
+
+#: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr ""
 "Terminal;terminal;shell;prompt;command;commandline;cmd;box;příkazový řádek;"
@@ -93,19 +98,22 @@ msgstr "Pokud povoleno terminál bude skrolovat na základě pixelů místo řá
 msgid "If enabled, terminals will render sixel escape sequences"
 msgstr "Pokud povoleno terminál bude skrolovat na základě pixelů místo řádků"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:76
-msgid "Enable to limit terminal scrollback"
-msgstr "Povolte pro omezení skrolování terminálu"
+#. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
+#: data/com.fyralabs.Accelerator.gschema.xml:77
+#: src/gtk/preferences-window.ui:373
+#, fuzzy
+msgid "Scrollback mode"
+msgstr "Skrolovací čáry"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:80
+#: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
 msgstr "Počet linek uložených ke skrolování"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:84
+#: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
 msgstr "Pokud zapnuto, plovoucí ovládací panel bude zobrazen v bezešvém režimu"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:88
+#: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
@@ -113,50 +121,50 @@ msgstr ""
 "Oblast (v pixelech) na vršku okna na kterou když najedete tak se zobrazí "
 "panel"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:92
+#: data/com.fyralabs.Accelerator.gschema.xml:93
 msgid "Delay time before showing floating controls"
 msgstr "Prodleva než se zobrazí plovoucí panel"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:96
+#: data/com.fyralabs.Accelerator.gschema.xml:97
 msgid "The light color scheme for the terminal"
 msgstr "Světlý motiv terminálu"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:100
+#: data/com.fyralabs.Accelerator.gschema.xml:101
 msgid "The dark color scheme for the terminal"
 msgstr "Tmavý motiv terminálu"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
-#: data/com.fyralabs.Accelerator.gschema.xml:105
+#: data/com.fyralabs.Accelerator.gschema.xml:106
 msgid "Style preference"
 msgstr "Preference motivu"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:109
+#: data/com.fyralabs.Accelerator.gschema.xml:110
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr "Odsazení okolo terminálu (nahoře, vpravo, dole, vlevo)"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:113
+#: data/com.fyralabs.Accelerator.gschema.xml:114
 msgid "Terminal cell width"
 msgstr "Šířka buňky terminálu"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:117
+#: data/com.fyralabs.Accelerator.gschema.xml:118
 msgid "Terminal cell height"
 msgstr "Výška buňky terminálu"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:121
+#: data/com.fyralabs.Accelerator.gschema.xml:122
 msgid "Cursor shape"
 msgstr "Tvar kurzoru"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:125
+#: data/com.fyralabs.Accelerator.gschema.xml:126
 #, fuzzy
 msgid "Whether or not the cursor should blink"
 msgstr "Zobrazovat posuvníky"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:129
+#: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr ""
 "Pokud zapnuto, ctrl+c a ctrl+v bude možno použít pro kopírování/vkládání"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:133
+#: data/com.fyralabs.Accelerator.gschema.xml:134
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
@@ -164,38 +172,38 @@ msgstr ""
 "Pokud povoleno, lišta karet bude nahrazena titulkem, pokud je otevřená jedna "
 "karta"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:137
+#: data/com.fyralabs.Accelerator.gschema.xml:138
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr ""
 "Pokud zapnuto a je otevřená pouze jedna karta tak splyne s barvou záhlaví"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:141
+#: data/com.fyralabs.Accelerator.gschema.xml:142
 msgid "Whether to spawn shell in login mode"
 msgstr "Spouštět shell v přihlašovacím režimu"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:145
+#: data/com.fyralabs.Accelerator.gschema.xml:146
 msgid "Whether to use a custom command instead of the user's shell"
 msgstr "Použít vlastní příkaz místo uživatelova shellu"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:149
+#: data/com.fyralabs.Accelerator.gschema.xml:150
 msgid "Custom command to use instead of the user's shell"
 msgstr "Vlastní příkaz který bude použit místo uživatelského shellu"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:156
+#: data/com.fyralabs.Accelerator.gschema.xml:157
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
 "Zda se má kliknutím na další na poslední výsledek vyhledávání vrátit na první"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:160
+#: data/com.fyralabs.Accelerator.gschema.xml:161
 msgid "Whether search should be case sensitive"
 msgstr "Má být hledání citlivé na velikost písmen (case sensitive)"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:164
+#: data/com.fyralabs.Accelerator.gschema.xml:165
 msgid "Whether search should only match entire words"
 msgstr "Má hledání odpovídat pouze celým slovům"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:168
+#: data/com.fyralabs.Accelerator.gschema.xml:169
 msgid "Whether search should be performed using regular expressions"
 msgstr "Má hledání být prováděno regulárními výrazy"
 
@@ -543,10 +551,6 @@ msgstr "Prodleva před zobrazením plovoucího panelu"
 msgid "Delay time (ms) before show floating controls."
 msgstr "Prodleva (v ms) před zobrazením plovoucího ovládání."
 
-#: src/gtk/preferences-window.ui:214 src/gtk/preferences-window.ui:278
-msgid "Terminal"
-msgstr "Terminál"
-
 #: src/gtk/preferences-window.ui:219
 msgid "Text"
 msgstr "Text"
@@ -637,59 +641,67 @@ msgstr "Zobrazit Posuvníky"
 msgid "Use Overlay Scrolling"
 msgstr "Použít překrývající Posuvníky"
 
-#: src/gtk/preferences-window.ui:372
-msgid "Set Scrollback Limit"
-msgstr "Nastavit limit skrolování"
+#: src/gtk/preferences-window.ui:377
+msgid "Fixed Size"
+msgstr ""
 
-#: src/gtk/preferences-window.ui:383
+#: src/gtk/preferences-window.ui:378
+msgid "Unlimited"
+msgstr ""
+
+#: src/gtk/preferences-window.ui:379 src/widgets/ShortcutEditor.vala:131
+msgid "Disabled"
+msgstr ""
+
+#: src/gtk/preferences-window.ui:388
 msgid "Scrollback Lines"
 msgstr "Skrolovací čáry"
 
-#: src/gtk/preferences-window.ui:399
+#: src/gtk/preferences-window.ui:405
 msgid "Command"
 msgstr "Příkaz"
 
-#: src/gtk/preferences-window.ui:403
+#: src/gtk/preferences-window.ui:409
 msgid "Run Command as Login Shell"
 msgstr "Spustit příkaz jako přihlašovací shell"
 
-#: src/gtk/preferences-window.ui:414
+#: src/gtk/preferences-window.ui:420
 msgid "Use Custom Command"
 msgstr "Použít vlastní příkaz"
 
-#: src/gtk/preferences-window.ui:424
+#: src/gtk/preferences-window.ui:430
 msgid "Custom Command"
 msgstr "Vlastní příkaz"
 
-#: src/gtk/preferences-window.ui:431
+#: src/gtk/preferences-window.ui:437
 msgid "Theme"
 msgstr "Motiv"
 
-#: src/gtk/preferences-window.ui:442
+#: src/gtk/preferences-window.ui:448
 msgid "Open folder"
 msgstr "Otevřít složku"
 
-#: src/gtk/preferences-window.ui:450
+#: src/gtk/preferences-window.ui:456
 msgid "Get more themes online"
 msgstr "Získat více motivů online"
 
-#: src/gtk/preferences-window.ui:464
+#: src/gtk/preferences-window.ui:470
 msgid "Set your preferred theme for light and dark styles."
 msgstr "Zvolte svůj světlý a tmavý motiv."
 
-#: src/gtk/preferences-window.ui:479
+#: src/gtk/preferences-window.ui:485
 msgid "Light Theme"
 msgstr "Světlý Motiv"
 
-#: src/gtk/preferences-window.ui:485
+#: src/gtk/preferences-window.ui:491
 msgid "Dark Theme"
 msgstr "Tmavý Motiv"
 
-#: src/gtk/preferences-window.ui:493
+#: src/gtk/preferences-window.ui:499
 msgid "Only display themes for the current style"
 msgstr "Zobrazovat motivy pouze pro současný styl"
 
-#: src/gtk/preferences-window.ui:501
+#: src/gtk/preferences-window.ui:507
 msgid ""
 "To ensure readability, \"Theme Integration\" will be disabled if you select "
 "a light color scheme while using the dark app style or a dark color scheme "
@@ -699,15 +711,15 @@ msgstr ""
 "vyberete světlé barevné schéma při použití tmavého stylu aplikace nebo tmavé "
 "barevné schéma při použití světlého stylu aplikace."
 
-#: src/gtk/preferences-window.ui:533
+#: src/gtk/preferences-window.ui:539
 msgid "Advanced"
 msgstr "Pokročilé"
 
-#: src/gtk/preferences-window.ui:537
+#: src/gtk/preferences-window.ui:543
 msgid "Experimental"
 msgstr "Experimentální"
 
-#: src/gtk/preferences-window.ui:538
+#: src/gtk/preferences-window.ui:544
 msgid ""
 "Features in this section are known to be wonky. Please feel free to test and "
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">report "
@@ -717,23 +729,23 @@ msgstr ""
 "href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">nahlaste "
 "zde</a>."
 
-#: src/gtk/preferences-window.ui:542
+#: src/gtk/preferences-window.ui:548
 msgid "Sixel Support"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:543
+#: src/gtk/preferences-window.ui:549
 msgid "Render sixel escape sequences."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:555
+#: src/gtk/preferences-window.ui:561
 msgid "Danger Zone"
 msgstr "Nebezpečná zóna"
 
-#: src/gtk/preferences-window.ui:558
+#: src/gtk/preferences-window.ui:564
 msgid "Reset Preferences"
 msgstr "Resetovat nastavení"
 
-#: src/gtk/preferences-window.ui:559
+#: src/gtk/preferences-window.ui:565
 msgid ""
 "This will revert all settings back to default. Your extra themes will not be "
 "removed."
@@ -741,7 +753,7 @@ msgstr ""
 "Toto vrátí všechna nastavení do výchozích hodnot. Vaše motivy nebudou "
 "odstraněny."
 
-#: src/gtk/preferences-window.ui:564
+#: src/gtk/preferences-window.ui:570
 msgid "Reset preferences"
 msgstr "Resetovat nastavení"
 
@@ -758,38 +770,29 @@ msgid ""
 "means there's currently no way to copy text in %s."
 msgstr ""
 
-#: src/widgets/AboutDialog.vala:59
-msgid "Donate"
-msgstr ""
-
 #: src/widgets/HeaderBar.vala:30 src/widgets/ShortcutEditor.vala:168
-#: src/widgets/Window.vala:142
+#: src/widgets/Window.vala:153
 msgid "Fullscreen"
 msgstr "Celá obrazovka"
 
 #: src/widgets/HeaderBar.vala:31 src/widgets/ShortcutEditor.vala:164
-#: src/widgets/TerminalTab.vala:119
+#: src/widgets/TerminalTab.vala:129
 msgid "Preferences"
 msgstr "Nastavení"
 
 #: src/widgets/HeaderBar.vala:32 src/widgets/ShortcutEditor.vala:169
-#: src/widgets/TerminalTab.vala:122
+#: src/widgets/TerminalTab.vala:132
 #, fuzzy
 msgid "Keyboard Shortcuts"
 msgstr "Zobrazit Zkratky"
 
-#: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:123
+#: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:133
 msgid "About"
 msgstr "O Aplikaci"
 
-#: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:161
+#: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:173
 msgid "Menu"
 msgstr "Menu"
-
-#: src/widgets/HeaderBar.vala:75 src/widgets/ShortcutEditor.vala:163
-#: src/widgets/TerminalTab.vala:111
-msgid "New Tab"
-msgstr "Nová Karta"
 
 #: src/widgets/ShortcutDialog.vala:46
 msgid "Enter new shortcut"
@@ -798,10 +801,6 @@ msgstr ""
 #: src/widgets/ShortcutDialog.vala:47
 #, c-format
 msgid "Enter new shortcut for \"%s\""
-msgstr ""
-
-#: src/widgets/ShortcutEditor.vala:131
-msgid "Disabled"
 msgstr ""
 
 #: src/widgets/ShortcutEditor.vala:159
@@ -814,7 +813,7 @@ msgstr "Zaměřit se na další Kartu"
 msgid "Focus Previous Tab"
 msgstr "Zaměřit se na předchozí Kartu"
 
-#: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:112
+#: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:122
 msgid "New Window"
 msgstr "Nové Okno"
 
@@ -823,11 +822,15 @@ msgstr "Nové Okno"
 msgid "Toggle Header Bar"
 msgstr "Zobrazit záhlaví"
 
-#: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:114
+#: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
+msgid "New Tab"
+msgstr "Nová Karta"
+
+#: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:124
 msgid "Copy"
 msgstr "Kopírovat"
 
-#: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:115
+#: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:125
 msgid "Paste"
 msgstr "Vložit"
 
@@ -869,11 +872,15 @@ msgstr "Přepnout na Kartu"
 msgid "Switch to Last Tab"
 msgstr "Přepnout na poslední Kartu"
 
-#: src/widgets/Window.vala:145
+#: src/widgets/Window.vala:156
 msgid "Show headerbar"
 msgstr "Zobrazit záhlaví"
 
-#: src/widgets/PreferencesWindow.vala:496
+#: src/widgets/Window.vala:211
+msgid "No tabs open"
+msgstr ""
+
+#: src/widgets/PreferencesWindow.vala:504
 msgid "Terminal Font"
 msgstr "Font Terminálu"
 
@@ -897,6 +904,15 @@ msgstr "Zobrazit nápovědu"
 #, c-format
 msgid "Run %s --help to get help\n"
 msgstr "Spusť %s --pro získání nápovědy\n"
+
+#~ msgid "Black Box"
+#~ msgstr "Black Box"
+
+#~ msgid "Enable to limit terminal scrollback"
+#~ msgstr "Povolte pro omezení skrolování terminálu"
+
+#~ msgid "Set Scrollback Limit"
+#~ msgstr "Nastavit limit skrolování"
 
 #~ msgid "Cursor"
 #~ msgstr "Kurzor"

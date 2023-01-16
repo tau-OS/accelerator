@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Black Box\n"
+"Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-13 20:34-0300\n"
+"POT-Creation-Date: 2023-01-16 10:37+0700\n"
 "PO-Revision-Date: 2022-08-24 10:10+0200\n"
 "Last-Translator: Luna Jernberg <lunajernberg@gnome.org>\n"
 "Language-Team: Swedish <>\n"
@@ -18,10 +18,15 @@ msgstr ""
 "X-Generator: Poedit 3.1\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
-msgid "Black Box"
-msgstr "Black Box"
+msgid "Accelerator"
+msgstr ""
 
-#: data/com.fyralabs.Accelerator.desktop.in:9
+#: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
+#: src/gtk/preferences-window.ui:278
+msgid "Terminal"
+msgstr "Terminal"
+
+#: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr "Terminal;terminal;skal;prompt;kommando;kommandorad;cmd;box;"
 
@@ -96,19 +101,22 @@ msgid "If enabled, terminals will render sixel escape sequences"
 msgstr ""
 "Om det är aktiverat rullar terminalerna efter pixlar istället för rader"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:76
-msgid "Enable to limit terminal scrollback"
-msgstr "Aktivera för att begränsa terminal rulla tillbaka"
+#. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
+#: data/com.fyralabs.Accelerator.gschema.xml:77
+#: src/gtk/preferences-window.ui:373
+#, fuzzy
+msgid "Scrollback mode"
+msgstr "Rulla tillbaka rader"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:80
+#: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
 msgstr "Antal rader lagrade i rulla tillbaka"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:84
+#: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
 msgstr "Om aktiverat, så kommer flytande kontroller visas i fönsterlöst läge"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:88
+#: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
@@ -116,52 +124,52 @@ msgstr ""
 "Svävbart område (i pixlar) överst i fönstret för att utlösa flytande "
 "kontroller"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:92
+#: data/com.fyralabs.Accelerator.gschema.xml:93
 msgid "Delay time before showing floating controls"
 msgstr "Fördröjning innan flytande kontroller visas"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:96
+#: data/com.fyralabs.Accelerator.gschema.xml:97
 msgid "The light color scheme for the terminal"
 msgstr "Det ljusa färgschemat för terminalen"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:100
+#: data/com.fyralabs.Accelerator.gschema.xml:101
 msgid "The dark color scheme for the terminal"
 msgstr "Det mörka färgschemat för terminalen"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
-#: data/com.fyralabs.Accelerator.gschema.xml:105
+#: data/com.fyralabs.Accelerator.gschema.xml:106
 msgid "Style preference"
 msgstr "Stil inställningar"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:109
+#: data/com.fyralabs.Accelerator.gschema.xml:110
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr ""
 "Mängden utfyllnad runt terminalwidgets (överst, höger, botten, vänster)"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:113
+#: data/com.fyralabs.Accelerator.gschema.xml:114
 msgid "Terminal cell width"
 msgstr "Terminal cellbredd"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:117
+#: data/com.fyralabs.Accelerator.gschema.xml:118
 msgid "Terminal cell height"
 msgstr "Terminal cell höjd"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:121
+#: data/com.fyralabs.Accelerator.gschema.xml:122
 msgid "Cursor shape"
 msgstr "Markör form"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:125
+#: data/com.fyralabs.Accelerator.gschema.xml:126
 #, fuzzy
 msgid "Whether or not the cursor should blink"
 msgstr "Om rullningslister ska visas eller inte"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:129
+#: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr ""
 "Om det är aktiverat kommer ctrl+c och ctrl+v att fungera för kopiera/klistra "
 "in"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:133
+#: data/com.fyralabs.Accelerator.gschema.xml:134
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
@@ -169,39 +177,39 @@ msgstr ""
 "Om det är aktiverat kommer flikfältet att ersättas med en titeletikett när "
 "det finns en enda öppen flik"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:137
+#: data/com.fyralabs.Accelerator.gschema.xml:138
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr ""
 "Om det är aktiverat kommer en enda öppen flik att blandas med rubrikfältets "
 "färg"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:141
+#: data/com.fyralabs.Accelerator.gschema.xml:142
 msgid "Whether to spawn shell in login mode"
 msgstr "Om skalet ska skapas i inloggningsläge"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:145
+#: data/com.fyralabs.Accelerator.gschema.xml:146
 msgid "Whether to use a custom command instead of the user's shell"
 msgstr "Om ett anpassat kommando ska användas istället för användarens skal"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:149
+#: data/com.fyralabs.Accelerator.gschema.xml:150
 msgid "Custom command to use instead of the user's shell"
 msgstr "Anpassat kommando att använda istället för användarens skal"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:156
+#: data/com.fyralabs.Accelerator.gschema.xml:157
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
 "Om du klickar på nästa på det sista sökresultatet bör återgå till det första"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:160
+#: data/com.fyralabs.Accelerator.gschema.xml:161
 msgid "Whether search should be case sensitive"
 msgstr "Om sökning ska vara skiftlägeskänslig"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:164
+#: data/com.fyralabs.Accelerator.gschema.xml:165
 msgid "Whether search should only match entire words"
 msgstr "Om sökningen bara ska matcha hela ord"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:168
+#: data/com.fyralabs.Accelerator.gschema.xml:169
 msgid "Whether search should be performed using regular expressions"
 msgstr "Om sökning ska utföras med reguljära uttryck"
 
@@ -550,10 +558,6 @@ msgstr "Fördröjning före visning av flytande kontroller"
 msgid "Delay time (ms) before show floating controls."
 msgstr "Fördröjningstid (ms) före visande av flytande kontroller."
 
-#: src/gtk/preferences-window.ui:214 src/gtk/preferences-window.ui:278
-msgid "Terminal"
-msgstr "Terminal"
-
 #: src/gtk/preferences-window.ui:219
 msgid "Text"
 msgstr "Text"
@@ -644,59 +648,67 @@ msgstr "Visa rullningslister"
 msgid "Use Overlay Scrolling"
 msgstr "Använd överläggsrullning"
 
-#: src/gtk/preferences-window.ui:372
-msgid "Set Scrollback Limit"
-msgstr "Ställ in Rulla tillbaka gräns"
+#: src/gtk/preferences-window.ui:377
+msgid "Fixed Size"
+msgstr ""
 
-#: src/gtk/preferences-window.ui:383
+#: src/gtk/preferences-window.ui:378
+msgid "Unlimited"
+msgstr ""
+
+#: src/gtk/preferences-window.ui:379 src/widgets/ShortcutEditor.vala:131
+msgid "Disabled"
+msgstr ""
+
+#: src/gtk/preferences-window.ui:388
 msgid "Scrollback Lines"
 msgstr "Rulla tillbaka rader"
 
-#: src/gtk/preferences-window.ui:399
+#: src/gtk/preferences-window.ui:405
 msgid "Command"
 msgstr "Kommando"
 
-#: src/gtk/preferences-window.ui:403
+#: src/gtk/preferences-window.ui:409
 msgid "Run Command as Login Shell"
 msgstr "Kör kommando som inloggningsskal"
 
-#: src/gtk/preferences-window.ui:414
+#: src/gtk/preferences-window.ui:420
 msgid "Use Custom Command"
 msgstr "Använd anpassat kommando"
 
-#: src/gtk/preferences-window.ui:424
+#: src/gtk/preferences-window.ui:430
 msgid "Custom Command"
 msgstr "Anpassat kommando"
 
-#: src/gtk/preferences-window.ui:431
+#: src/gtk/preferences-window.ui:437
 msgid "Theme"
 msgstr "Tema"
 
-#: src/gtk/preferences-window.ui:442
+#: src/gtk/preferences-window.ui:448
 msgid "Open folder"
 msgstr "Öppna mapp"
 
-#: src/gtk/preferences-window.ui:450
+#: src/gtk/preferences-window.ui:456
 msgid "Get more themes online"
 msgstr "Skaffa fler teman online"
 
-#: src/gtk/preferences-window.ui:464
+#: src/gtk/preferences-window.ui:470
 msgid "Set your preferred theme for light and dark styles."
 msgstr "Ställ in ditt föredragna tema för ljusa och mörka stilar."
 
-#: src/gtk/preferences-window.ui:479
+#: src/gtk/preferences-window.ui:485
 msgid "Light Theme"
 msgstr "Ljust tema"
 
-#: src/gtk/preferences-window.ui:485
+#: src/gtk/preferences-window.ui:491
 msgid "Dark Theme"
 msgstr "Mörkt tema"
 
-#: src/gtk/preferences-window.ui:493
+#: src/gtk/preferences-window.ui:499
 msgid "Only display themes for the current style"
 msgstr "Visa endast teman för den aktuella stilen"
 
-#: src/gtk/preferences-window.ui:501
+#: src/gtk/preferences-window.ui:507
 msgid ""
 "To ensure readability, \"Theme Integration\" will be disabled if you select "
 "a light color scheme while using the dark app style or a dark color scheme "
@@ -706,15 +718,15 @@ msgstr ""
 "om du väljer ett ljust färgschema medan du använder den mörka program stilen "
 "eller ett mörkt färgschema medan du använder den ljusa program stilen."
 
-#: src/gtk/preferences-window.ui:533
+#: src/gtk/preferences-window.ui:539
 msgid "Advanced"
 msgstr "Avancerat"
 
-#: src/gtk/preferences-window.ui:537
+#: src/gtk/preferences-window.ui:543
 msgid "Experimental"
 msgstr "Experimentell"
 
-#: src/gtk/preferences-window.ui:538
+#: src/gtk/preferences-window.ui:544
 msgid ""
 "Features in this section are known to be wonky. Please feel free to test and "
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">report "
@@ -724,23 +736,23 @@ msgstr ""
 "ska. Testa och <a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/"
 "issues\">rapportera buggar</a>."
 
-#: src/gtk/preferences-window.ui:542
+#: src/gtk/preferences-window.ui:548
 msgid "Sixel Support"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:543
+#: src/gtk/preferences-window.ui:549
 msgid "Render sixel escape sequences."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:555
+#: src/gtk/preferences-window.ui:561
 msgid "Danger Zone"
 msgstr "Farozon"
 
-#: src/gtk/preferences-window.ui:558
+#: src/gtk/preferences-window.ui:564
 msgid "Reset Preferences"
 msgstr "Återställ inställningar"
 
-#: src/gtk/preferences-window.ui:559
+#: src/gtk/preferences-window.ui:565
 msgid ""
 "This will revert all settings back to default. Your extra themes will not be "
 "removed."
@@ -748,7 +760,7 @@ msgstr ""
 "Detta kommer att återställa alla inställningar till standardinställningarna. "
 "Dina extra teman kommer inte att tas bort."
 
-#: src/gtk/preferences-window.ui:564
+#: src/gtk/preferences-window.ui:570
 msgid "Reset preferences"
 msgstr "Återställ inställningar"
 
@@ -769,38 +781,29 @@ msgstr ""
 "Det betyder att det för närvarande inte finns något sätt att kopiera text i "
 "%s."
 
-#: src/widgets/AboutDialog.vala:59
-msgid "Donate"
-msgstr ""
-
 #: src/widgets/HeaderBar.vala:30 src/widgets/ShortcutEditor.vala:168
-#: src/widgets/Window.vala:142
+#: src/widgets/Window.vala:153
 msgid "Fullscreen"
 msgstr "Helskärmsläge"
 
 #: src/widgets/HeaderBar.vala:31 src/widgets/ShortcutEditor.vala:164
-#: src/widgets/TerminalTab.vala:119
+#: src/widgets/TerminalTab.vala:129
 msgid "Preferences"
 msgstr "Inställningar"
 
 #: src/widgets/HeaderBar.vala:32 src/widgets/ShortcutEditor.vala:169
-#: src/widgets/TerminalTab.vala:122
+#: src/widgets/TerminalTab.vala:132
 #, fuzzy
 msgid "Keyboard Shortcuts"
 msgstr "Visa genvägar"
 
-#: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:123
+#: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:133
 msgid "About"
 msgstr "Om"
 
-#: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:161
+#: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:173
 msgid "Menu"
 msgstr "Meny"
-
-#: src/widgets/HeaderBar.vala:75 src/widgets/ShortcutEditor.vala:163
-#: src/widgets/TerminalTab.vala:111
-msgid "New Tab"
-msgstr "Ny flik"
 
 #: src/widgets/ShortcutDialog.vala:46
 msgid "Enter new shortcut"
@@ -809,10 +812,6 @@ msgstr ""
 #: src/widgets/ShortcutDialog.vala:47
 #, c-format
 msgid "Enter new shortcut for \"%s\""
-msgstr ""
-
-#: src/widgets/ShortcutEditor.vala:131
-msgid "Disabled"
 msgstr ""
 
 #: src/widgets/ShortcutEditor.vala:159
@@ -825,7 +824,7 @@ msgstr "Fokusera på nästa flik"
 msgid "Focus Previous Tab"
 msgstr "Fokusera på föregående flik"
 
-#: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:112
+#: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:122
 msgid "New Window"
 msgstr "Nytt fönster"
 
@@ -834,11 +833,15 @@ msgstr "Nytt fönster"
 msgid "Toggle Header Bar"
 msgstr "Visa Fönsterlist"
 
-#: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:114
+#: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
+msgid "New Tab"
+msgstr "Ny flik"
+
+#: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:124
 msgid "Copy"
 msgstr "Kopiera"
 
-#: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:115
+#: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:125
 msgid "Paste"
 msgstr "Klistra in"
 
@@ -880,11 +883,15 @@ msgstr "Byt till flik"
 msgid "Switch to Last Tab"
 msgstr "Byt till sista flik"
 
-#: src/widgets/Window.vala:145
+#: src/widgets/Window.vala:156
 msgid "Show headerbar"
 msgstr "Visa fönsterlista"
 
-#: src/widgets/PreferencesWindow.vala:496
+#: src/widgets/Window.vala:211
+msgid "No tabs open"
+msgstr ""
+
+#: src/widgets/PreferencesWindow.vala:504
 msgid "Terminal Font"
 msgstr "Terminal Teckensnitt"
 
@@ -908,6 +915,15 @@ msgstr "Visa hjälp"
 #, c-format
 msgid "Run %s --help to get help\n"
 msgstr "Kör %s --help för att få hjälp\n"
+
+#~ msgid "Black Box"
+#~ msgstr "Black Box"
+
+#~ msgid "Enable to limit terminal scrollback"
+#~ msgstr "Aktivera för att begränsa terminal rulla tillbaka"
+
+#~ msgid "Set Scrollback Limit"
+#~ msgstr "Ställ in Rulla tillbaka gräns"
 
 #~ msgid "Cursor"
 #~ msgstr "Markör"
