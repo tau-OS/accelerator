@@ -47,11 +47,6 @@ public class Terminal.Application : He.Application {
     // load CSS provider
     css_provider = new Gtk.CssProvider ();
     css_provider.load_from_resource (resource_base_path + "/resources/style.css");
-    Gtk.StyleContext.add_provider_for_display (
-                                               Gdk.Display.get_default (),
-                                               css_provider,
-                                               Gtk.STYLE_PROVIDER_PRIORITY_USER
-    );
 
     this.add_action_entries (ACTIONS, this);
 

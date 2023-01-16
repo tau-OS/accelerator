@@ -205,10 +205,13 @@ public class Terminal.Window : He.ApplicationWindow {
     this.child = overlay;
 
     this.set_name ("accelerator-main-window");
-    var provider = (this.application as Application) ? .css_provider;
-
+    var css_provider = new Gtk.CssProvider ();
+    css_provider.load_from_resource ("/com/fyralabs/Accelerator/resources/style.css");
     // add style provider from application
-    Gtk.StyleContext.add_provider_for_display (this.get_style_context ().display,  provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+    //  Gtk.StyleContext.add_provider_for_display (this.get_style_context ().display,  provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+
+    var ctx = this.get_style_context ();
+    ctx.add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
   }
 
   public He.Tab blank_tab () {
