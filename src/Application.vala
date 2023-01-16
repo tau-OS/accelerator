@@ -36,7 +36,7 @@ public class Terminal.Application : He.Application {
     );
 
 
-    Intl.setlocale (LocaleCategory.ALL, "");
+    //  Intl.setlocale (LocaleCategory.ALL, "");
     Intl.textdomain (GETTEXT_PACKAGE);
     Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
     Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
