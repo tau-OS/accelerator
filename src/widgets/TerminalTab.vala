@@ -196,7 +196,6 @@ public class Terminal.TerminalTab : He.Tab {
     pop.set_parent (this);
     pop.set_has_arrow (false);
     pop.set_pointing_to (r);
-    pop.set_position (Gtk.PositionType.BOTTOM);
     pop.popup ();
   }
 

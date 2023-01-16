@@ -76,9 +76,7 @@ public class Terminal.Terminal : Vte.Terminal {
 
 
   private void on_exit () {
-    this.parent.unparent ();
-    this.dispose ();
-    this.unref ();
+    this.unparent ();
   }
 
   public Terminal (Window window, string? command = null, string? cwd = null) {

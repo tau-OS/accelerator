@@ -113,6 +113,7 @@ public class Terminal.Window : He.ApplicationWindow {
       this.add_css_class ("devel");
     }
     this.title = APP_NAME;
+    this.icon_name = APP_ID;
 
     var layout_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
     var tabview = new He.TabPage (this.blank_tab ());

@@ -35,7 +35,7 @@ public class Terminal.ColorSchemeThumbnailProvider {
 
         svg_content = (string) data;
       } catch (Error e) {
-        error ("%s", e.message);
+        warning ("%s", e.message);
       }
     }
   }
@@ -115,7 +115,7 @@ public class Terminal.ColorSchemePreviewPaintable : GLib.Object, Gdk.Paintable {
     } catch (Error e) {
       // TODO: should we make this a warning? It seems a bit overkill to crash
       // the app because we can't render a thumbnail
-      error ("%s", e.message);
+      warning ("%s", e.message);
     }
   }
 
@@ -128,7 +128,7 @@ public class Terminal.ColorSchemePreviewPaintable : GLib.Object, Gdk.Paintable {
     try {
       this.handler = new Rsvg.Handle.from_data (file_content);
     } catch (Error e) {
-      error ("%s", e.message);
+      warning ("%s", e.message);
     }
   }
 }
