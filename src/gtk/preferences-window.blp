@@ -152,43 +152,34 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             }
           }
 
-          He.ContentBlock floating_controls_expander_row {
-            title: _("Floating Controls");
+          He.MiniContentBlock {
+            title: _("Show Floating Controls");
+            subtitle: _("Show floating controls when header bar is hidden.");
 
-            Box {
-              orientation: vertical;
-              spacing: 12;
+            Switch floating_controls_switch {
+              valign: center;
+            }
+          }
 
-              He.MiniContentBlock {
-                title: _("Show Floating Controls");
-                subtitle: _("Show floating controls when header bar is hidden.");
+          He.MiniContentBlock {
+            sensitive: bind floating_controls_switch.active;
+            title: _("Floating Controls Hover Area");
+            subtitle: _("Hoverable area (in pixels) at the top of the window to trigger floating controls.");
 
-                Switch floating_controls_switch {
-                  valign: center;
-                }
-              }
+            SpinButton {
+              valign: center;
+              adjustment: floating_controls_hover_area_adjustment;
+            }
+          }
 
-              He.MiniContentBlock {
-                sensitive: bind floating_controls_switch.active;
-                title: _("Floating Controls Hover Area");
-                subtitle: _("Hoverable area (in pixels) at the top of the window to trigger floating controls.");
+          He.MiniContentBlock {
+            sensitive: bind floating_controls_switch.active;
+            title: _("Delay Before Show Floating Controls");
+            subtitle: _("Delay time (ms) before show floating controls.");
 
-                SpinButton {
-                  valign: center;
-                  adjustment: floating_controls_hover_area_adjustment;
-                }
-              }
-
-              He.MiniContentBlock {
-                sensitive: bind floating_controls_switch.active;
-                title: _("Delay Before Show Floating Controls");
-                subtitle: _("Delay time (ms) before show floating controls.");
-
-                SpinButton {
-                  valign: center;
-                  adjustment: floating_controls_delay_adjustment;
-                }
-              }
+            SpinButton {
+              valign: center;
+              adjustment: floating_controls_delay_adjustment;
             }
           }
         }
@@ -223,32 +214,23 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             }
           }
 
-          He.ContentBlock cell_spacing_expander_row {
-            title: _("Cell Spacing");
+          He.MiniContentBlock {
+            title: _("Width");
 
-            Box {
-              orientation: vertical;
-              spacing: 12;
+            SpinButton {
+              valign: center;
+              digits: 2;
+              adjustment: cell_width_spacing_adjustment;
+            }
+          }
 
-              He.MiniContentBlock {
-                title: _("Width");
+          He.MiniContentBlock {
+            title: _("Height");
 
-                SpinButton {
-                  valign: center;
-                  digits: 2;
-                  adjustment: cell_width_spacing_adjustment;
-                }
-              }
-
-              He.MiniContentBlock {
-                title: _("Height");
-
-                SpinButton {
-                  valign: center;
-                  digits: 2;
-                  adjustment: cell_height_spacing_adjustment;
-                }
-              }
+            SpinButton {
+              valign: center;
+              digits: 2;
+              adjustment: cell_height_spacing_adjustment;
             }
           }
 
@@ -263,6 +245,8 @@ template TerminalPreferencesWindow : He.SettingsWindow {
         }
 
         He.ContentList {
+          title: _("Terminal");
+
           He.MiniContentBlock cursor_shape_combo_row {
             title: _("Cursor Shape");
 
@@ -338,29 +322,20 @@ template TerminalPreferencesWindow : He.SettingsWindow {
         He.ContentList {
           title: _("Scrolling");
 
-          He.ContentBlock scrollbars_expander_row {
-            title: _("Scrollbars");
+          He.MiniContentBlock {
+            title: _("Show Scrollbars");
 
-            Box {
-              orientation: vertical;
-              spacing: 12;
+            Switch show_scrollbars_switch {
+              valign: center;
+            }
+          }
 
-              He.MiniContentBlock {
-                title: _("Show Scrollbars");
+          He.MiniContentBlock use_overlay_scrolling_action_row {
+            title: _("Use Overlay Scrolling");
+            sensitive: bind show_scrollbars_switch.active;
 
-                Switch show_scrollbars_switch {
-                  valign: center;
-                }
-              }
-
-              He.MiniContentBlock use_overlay_scrolling_action_row {
-                title: _("Use Overlay Scrolling");
-                sensitive: bind show_scrollbars_switch.active;
-
-                Switch use_overlay_scrolling_switch {
-                  valign: center;
-                }
-              }
+            Switch use_overlay_scrolling_switch {
+              valign: center;
             }
           }
 
