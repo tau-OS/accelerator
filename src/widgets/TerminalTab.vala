@@ -20,12 +20,12 @@ public class Terminal.TerminalTab : He.Tab {
 
   public signal void close_request ();
 
-  public string             title     { get; protected set; }
-  public Terminal           terminal  { get; protected set; }
+  public string title     { get; protected set; }
+  public Terminal terminal  { get; protected set; }
   public Gtk.ScrolledWindow scrolled  { get; protected set; }
 
-  private SearchToolbar     search_toolbar;
-  public  Window            window;
+  private SearchToolbar search_toolbar;
+  public Window window;
 
   public Gtk.Box box;
 
@@ -49,8 +49,9 @@ public class Terminal.TerminalTab : He.Tab {
     this.search_toolbar = new SearchToolbar (this.terminal);
     this.box.append (this.search_toolbar);
     this.box.append (this.scrolled);
+    this.box.visible = false;
     // ! This makes it display in the tab widget, but we want it below and in the main view
-    //  this.box.set_parent (this.window.tab_view);
+    // this.box.set_parent (this.window.tab_view);
 
     var click = new Gtk.GestureClick () {
       button = Gdk.BUTTON_SECONDARY,
@@ -62,12 +63,11 @@ public class Terminal.TerminalTab : He.Tab {
     this.connect_signals ();
   }
 
-
   // function to set the current tab
-  public void set_tab() {
+  public void set_tab () {
     this.window.tab_bar.current = this;
     this.window.tab_view.child = this.box;
-    //  this.box.set_parent (this.window.tab_view);
+    // this.box.set_parent (this.window.tab_view);
   }
 
   private void connect_signals () {
@@ -89,8 +89,7 @@ public class Terminal.TerminalTab : He.Tab {
         this.box.remove (this.terminal);
         this.scrolled.child = this.terminal;
         this.box.append (this.scrolled);
-      }
-      else if (!show_scrollbars && is_scrollbar_being_used) {
+      } else if (!show_scrollbars && is_scrollbar_being_used) {
         this.box.remove (this.scrolled);
         this.scrolled.child = null;
         this.box.append (this.terminal);
@@ -99,17 +98,17 @@ public class Terminal.TerminalTab : He.Tab {
     settings.notify_property ("show-scrollbars");
 
     settings.schema.bind (
-      "use-overlay-scrolling",
-      this.scrolled,
-      "overlay-scrolling",
-      SettingsBindFlags.GET
+                          "use-overlay-scrolling",
+                          this.scrolled,
+                          "overlay-scrolling",
+                          SettingsBindFlags.GET
     );
 
     settings.bind_property (
-      "use-sixel",
-      this.terminal as Object,
-      "enable-sixel",
-      BindingFlags.SYNC_CREATE
+                            "use-sixel",
+                            this.terminal as Object,
+                            "enable-sixel",
+                            BindingFlags.SYNC_CREATE
     );
   }
 
@@ -136,15 +135,66 @@ public class Terminal.TerminalTab : He.Tab {
 
     var pop = new Gtk.PopoverMenu.from_model (menu);
 
-    Gdk.Rectangle r = {0};
-    r.x = (int) (x + Settings.get_default ().get_padding ().left);
-    r.y = (int) (y + Settings.get_default ().get_padding ().top);
+    Gdk.Rectangle r = { 0 };
+    // BEGIN: scuffed position calculation ft. integer overflow
+    {
+      // move the popover to the right position
+      // !? scuffed position calculation (chess.com brilliant move icon)
+      var term_allocation = this.terminal.get_allocated_width ();
+
+      debug ("term_width: %d", term_allocation);
+      // get the tab position (but with actual human counting)
+      var tab_pos = this.window.tab_bar.get_tab_position (this) + 1;
+      debug ("tab_pos: %d", tab_pos);
+
+      // now multiply the tab position by the terminal width
+      var tab_pos_x = tab_pos * (term_allocation / 2);
+      debug ("tab_pos_x: %d", tab_pos_x);
+      debug ("x: %d", (int) x);
+      var left_padding = Settings.get_default ().get_padding ().left;
+      debug ("left_padding: %u", left_padding);
+
+      int temp_value = 0;
+      int cursor_offset = 25;
+
+      if (tab_pos > 1) {
+        temp_value = tab_pos_x - (tab_pos_x / 2) - (tab_pos_x / 8) - 25;
+        cursor_offset += 45;
+      }
+
+      debug ("temp_value: %u", temp_value);
+
+      debug ("cursor_offset: %u", cursor_offset);
+
+
+      var offset = (((int) x) - (cursor_offset + temp_value)) + left_padding;
+      debug ("offset: %u", offset);
+
+
+      // todo: actually fix this offsetting code, or find the root cause of the issue
+      // Confession: I have no idea what I'm doing. I failed basic algebra in high school. - @korewaChino
+      // I hope someone who comes across this code who actually knows math can fix this. I'm sorry.
+      // time_wasted: 30m
+      r.x = (int) offset;
+      r.y = (int) (y + 75 + Settings.get_default ().get_padding ().bottom);
+
+
+    }
+    // END: scuffed position calculation ft. integer overflow
+
+    /*
+    !? The block above is a reminder of how much I hate myself for writing this code. I don't know why it works, but it does by inducing
+     * an integer overflow. wtf?
+     * @lainsce: I'm sorry for this. I'm sorry for everything. On behalf of the entire Fyra Labs team, I'm sorry. This code is just really cursed
+     * I seriously do not know why or how it works. It just does.
+     */
 
     pop.closed.connect_after (() => {
       pop.destroy ();
     });
 
     pop.set_parent (this);
+    pop.set_has_arrow (false);
     pop.set_pointing_to (r);
     pop.set_position (Gtk.PositionType.BOTTOM);
     pop.popup ();

@@ -342,10 +342,12 @@ public class Terminal.Window : He.ApplicationWindow {
       if (old_tab != null) {
         old_tab.remove_css_class ("active");
         (old_tab as TerminalTab) ? .box.unparent ();
+        (old_tab as TerminalTab) ? .box.visible = false;
       }
 
       new_tab.add_css_class ("active");
       (new_tab as TerminalTab) ? .box.set_parent (this.tab_view);
+      (new_tab as TerminalTab) ? .box.visible = true;
       (new_tab as TerminalTab) ? .terminal.grab_focus ();
       this.active_terminal = (new_tab as TerminalTab) ? .terminal;
     });
@@ -682,6 +684,13 @@ public class Terminal.Window : He.ApplicationWindow {
   }
 
   public void focus_next_tab () {
+
+    var next_tab = this.tab_bar.tabs.next.data;
+    if (next_tab != null) {
+      this.tab_bar.current = next_tab;
+    } else {
+      this.tab_bar.current = this.tab_bar.tabs.nth_data (0);
+    }
     // if (!this.tab_bar.tabs.next) {
 
     // this.tab_bar.current = this.tab_bar.tabs.nth (0);
@@ -692,6 +701,13 @@ public class Terminal.Window : He.ApplicationWindow {
     // if (!this.tab_view.select_previous_page ()) {
     // this.tab_view.set_selected_page (this.tab_view.get_nth_page (this.tab_view.n_pages - 1));
     // }
+
+    var previous_tab = this.tab_bar.tabs.prev.data;
+    if (previous_tab != null) {
+      this.tab_bar.current = previous_tab;
+    } else {
+      this.tab_bar.current = this.tab_bar.tabs.last().data;
+    }
   }
 
   public void focus_nth_tab (int index) {
@@ -711,5 +727,12 @@ public class Terminal.Window : He.ApplicationWindow {
     // this.tab_view.set_selected_page (this.tab_view.get_nth_page (index - 1));
     // return;
     // }
+
+    var tab = this.tab_bar.tabs.nth_data (index);
+    if (tab != null) {
+      this.tab_bar.current = tab;
+    } else {
+      this.tab_bar.current = this.tab_bar.tabs.last ().data;
+    }
   }
 }
