@@ -1,0 +1,140 @@
+using Gtk 4.0;
+
+ShortcutsWindow help_overlay {
+  modal: true;
+
+  ShortcutsSection {
+    section-name: "shortcuts";
+
+    ShortcutsGroup {
+      title: C_("shortcut window", "Window");
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "New window");
+        action-name: "app.new-window";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "New tab");
+        action-name: "win.new_tab";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Close tab");
+        action-name: "win.close-tab";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Switch headbar mode");
+        action-name: "win.switch-headerbar-mode";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Toggle fullscreen");
+        action-name: "win.fullscreen";
+      }
+    }
+
+    ShortcutsGroup {
+      title: C_("shortcut window", "Terminal");
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Search");
+        action-name: "win.search";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Copy");
+        action-name: "win.copy";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Paste");
+        action-name: "win.paste";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Zoom in");
+        action-name: "win.zoom-in";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Zoom out");
+        action-name: "win.zoom-out";
+      }
+    }
+
+    ShortcutsGroup {
+      title: C_("shortcut window", "Navigation");
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Focus next tab");
+        action-name: "app.focus-next-tab";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Focus previous tab");
+        action-name: "app.focus-previous-tab";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Switch to Tab 1");
+        action-name: "win.switch-tab-1";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Switch to Tab 2");
+        action-name: "win.switch-tab-2";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Switch to Tab 3");
+        action-name: "win.switch-tab-3";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Switch to Tab 4");
+        action-name: "win.switch-tab-4";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Switch to Tab 5");
+        action-name: "win.switch-tab-5";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Switch to Tab 6");
+        action-name: "win.switch-tab-6";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Switch to Tab 7");
+        action-name: "win.switch-tab-7";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Switch to Tab 8");
+        action-name: "win.switch-tab-8";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Switch to Tab 9");
+        action-name: "win.switch-tab-9";
+      }
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Switch to last Tab");
+        action-name: "win.switch-tab-last";
+      }
+    }
+
+    ShortcutsGroup {
+      title: C_("shortcut window", "General");
+
+      ShortcutsShortcut {
+        title: C_("shortcut window", "Show Shortcuts");
+        action-name: "win.show-help-overlay";
+      }
+    }
+  }
+}

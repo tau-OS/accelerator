@@ -30,7 +30,7 @@ bool light_themes_filter_func (Gtk.FlowBoxChild child) {
 
 [GtkTemplate (ui = "/com/fyralabs/Accelerator/gtk/preferences-window.ui")]
 public class Terminal.PreferencesWindow : Adw.PreferencesWindow {
-  [GtkChild] unowned Adw.ComboRow cursor_shape_combo_row;
+  [GtkChild] unowned Gtk.ComboBoxText cursor_shape_combo_row;
   [GtkChild] unowned Adw.ComboRow cursor_blink_mode_combo_row;
   [GtkChild] unowned Adw.ComboRow scrollback_mode_combo_row;
   [GtkChild] unowned Adw.ComboRow style_preference_combo_row;
@@ -376,7 +376,7 @@ public class Terminal.PreferencesWindow : Adw.PreferencesWindow {
     settings.schema.bind (
                           "cursor-shape",
                           this.cursor_shape_combo_row,
-                          "selected",
+                          "active",
                           SettingsBindFlags.DEFAULT
     );
 

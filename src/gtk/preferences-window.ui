@@ -2,6 +2,7 @@
 <interface>
   <requires lib="gtk" version="4.0" />
   <requires lib="libadwaita" version="1.0" />
+  <requires lib="libhelium" version="1.0" />
   <template class="TerminalPreferencesWindow" parent="AdwPreferencesWindow">
     <property name="default-width">640</property>
     <property name="default-height">800</property>
@@ -275,19 +276,13 @@
         </child>
         <child>
           <object class="AdwPreferencesGroup">
-            <property name="title" translatable="yes">Terminal</property>
             <child>
-              <object class="AdwComboRow" id="cursor_shape_combo_row">
-                <property name="title" translatable="yes">Cursor Shape</property>
-                <property name="model">
-                  <object class="GtkStringList">
+              <object class="GtkComboBoxText" id="cursor_shape_combo_row">
                     <items>
                       <item translatable="yes">Block</item>
                       <item translatable="yes">IBeam</item>
                       <item translatable="yes">Underline</item>
                     </items>
-                  </object>
-                </property>
               </object>
             </child>
             <child>

@@ -1,0 +1,93 @@
+using Gtk 4.0;
+using Adw 1;
+
+template TerminalSearchToolbar : Widget {
+  Revealer revealer {
+    transition-duration: 100;
+
+    styles [
+      "toolbar",
+      "view",
+    ]
+
+    CenterBox {
+      [center]
+      Adw.Clamp {
+        SearchEntry search_entry {
+          hexpand: true;
+          placeholder-text: _("Find");
+        }
+      }
+
+      [end]
+      Box {
+        margin-start: 8;
+        hexpand: true;
+
+        Box {
+          spacing: 6;
+          hexpand: true;
+
+          Box {
+            styles [
+              "linked",
+            ]
+
+            Button previous_button {
+              icon-name: "go-up-symbolic";
+              tooltip-text: _("Previous result");
+            }
+
+            Button next_button {
+              icon-name: "go-down-symbolic";
+              tooltip-text: _("Next result");
+            }
+          }
+
+          MenuButton show_settings_button {
+            icon-name: "view-more-symbolic";
+            popover: settings_popover;
+            direction: up;
+          }
+        }
+
+        Button close_button {
+          icon-name: "window-close-symbolic";
+          halign: end;
+          clicked => on_close_button_pressed();
+
+          styles [
+            "circular",
+          ]
+        }
+      }
+    }
+  }
+}
+
+Popover settings_popover {
+  Box {
+    orientation: vertical;
+    margin-top: 6;
+
+    styles [
+      "list",
+    ]
+
+    CheckButton wrap_around_check_button {
+      label: _("Search wraps around");
+    }
+
+    CheckButton match_case_sensitive_check_button {
+      label: _("Match is case sensitive");
+    }
+
+    CheckButton match_whole_words_check_button {
+      label: _("Match entire words only");
+    }
+
+    CheckButton match_regex_check_button {
+      label: _("Match using regular expression");
+    }
+  }
+}

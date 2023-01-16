@@ -1,0 +1,11 @@
+using Gtk 4.0;
+using Adw 1;
+
+template TerminalShortcutEditor : Adw.PreferencesPage {
+  title: _("Keyboard");
+  icon-name: "input-keyboard-symbolic";
+
+  Adw.PreferencesGroup shortcuts_group {
+    title: _("Shortcuts");
+  }
+}

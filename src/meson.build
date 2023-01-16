@@ -63,11 +63,22 @@ add_project_arguments('-DPCRE2_CODE_UNIT_WIDTH=0', language: 'c')
 add_project_arguments('--disable-since-check', language: 'vala')
 
 gnome = import('gnome')
+blueprints = custom_target('blueprints',
+  input: files(
+    'gtk/help-overlay.blp',
+    'gtk/search-toolbar.blp',
+    'gtk/shortcut-editor.blp',
+  ),
+  output: '.',
+  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
+)
 
 blackbox_sources += gnome.compile_resources('blackbox-resources',
   'accelerator.gresource.xml',
+  dependencies: [blueprints],
   c_name: 'accelerator'
 )
+
 
 executable('accel', blackbox_sources, config_header,
   vala_args: '--target-glib=2.50',  dependencies: blackbox_deps,
