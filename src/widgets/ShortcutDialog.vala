@@ -19,7 +19,7 @@
  */
 
 [GtkTemplate (ui = "/com/fyralabs/Accelerator/gtk/shortcut-dialog.ui")]
-public class Terminal.ShortcutDialog : Adw.Window {
+public class Terminal.ShortcutDialog : He.Window {
 
   static Gtk.KeyvalTrigger JUST_ESCAPE = new Gtk.KeyvalTrigger (
                                                                 Gdk.Key.Escape,

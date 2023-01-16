@@ -72,7 +72,7 @@ public class Terminal.Keymap : Object, Json.Serializable {
     this.default_keymap.set (ACTION_WIN_SEARCH,                  "<Shift><Control>f");
     this.default_keymap.set (ACTION_WIN_FULLSCREEN,              "F11");
     this.default_keymap.set (ACTION_WIN_SHOW_HELP_OVERLAY,       "<Shift><Control>question");
-    this.default_keymap.set (ACTION_WIN_ZOOM_IN,                 "<Control>equals");
+    this.default_keymap.set (ACTION_WIN_ZOOM_IN,                 "<Control>equal");
     this.default_keymap.set (ACTION_WIN_ZOOM_OUT,                "<Control>minus");
     this.default_keymap.set (ACTION_WIN_ZOOM_DEFAULT,            "<Shift><Control>0");
     this.default_keymap.set (ACTION_WIN_CLOSE_TAB,               "<Shift><Control>w");

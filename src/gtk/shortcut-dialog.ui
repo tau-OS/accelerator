@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0" />
-  <requires lib="libadwaita" version="1.0" />
-  <template class="TerminalShortcutDialog" parent="AdwWindow">
+  <requires lib="libhelium" version="1.0" />
+  <template class="TerminalShortcutDialog" parent="HeWindow">
     <property name="title" translatable="yes">Edit Shortcut</property>
     <property name="modal">true</property>
     <property name="destroy-with-parent">true</property>

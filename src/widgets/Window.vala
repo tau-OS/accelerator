@@ -299,7 +299,7 @@ public class Terminal.Window : He.ApplicationWindow {
     set_css_class (this, "with-borders", settings.window_show_borders);
 
     this.tab_bar.tab_added.connect (() => {
-      this.active_terminal.grab_focus ();
+      //  this.active_terminal.grab_focus ();
     });
 
     // this.tab_view.create_window.connect (() => {
@@ -339,8 +339,11 @@ public class Terminal.Window : He.ApplicationWindow {
     this.tab_bar.tab_switched.connect ((old_tab, new_tab) => {
       // make invisible
       print ("tab switched\n");
-      old_tab.remove_css_class ("active");
-      (old_tab as TerminalTab) ? .box.unparent ();
+      if (old_tab != null) {
+        old_tab.remove_css_class ("active");
+        (old_tab as TerminalTab) ? .box.unparent ();
+      }
+
       new_tab.add_css_class ("active");
       (new_tab as TerminalTab) ? .box.set_parent (this.tab_view);
       (new_tab as TerminalTab) ? .terminal.grab_focus ();
@@ -575,7 +578,7 @@ public class Terminal.Window : He.ApplicationWindow {
     // todo: once tab is closed, remove the terminal session from the tab_view\
     // if it is switched, then make all other tabs invisible
     // CC: @lainsce @lleyton send help
-    (this.tab_view.tab as TerminalTab) ? .box.set_parent (this.tab_view);
+    //  (this.tab_view.tab as TerminalTab) ? .box.set_parent (this.tab_view);
     // tab.box.set_parent (this.tab_view.tab.child);
   }
 
