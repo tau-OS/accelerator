@@ -11,11 +11,7 @@
 </div>
 
 <div align="center">
-  <img src="https://i.imgur.com/bBk8jKc.png" alt="Preview"/><br/>
-  <small><i>
-    Black Box 0.12.0 (theme <a href="https://github.com/storm119/Tilix-Themes/blob/master/Themes/japanesque.json" target="_blank">"Japanesque"</a>, fetch <a href="https://github.com/Rosettea/bunnyfetch">bunnyfetch</a>)
-  </i></small>
-  <br/><br/>
+  <img src="build-aux/screenshot.png" alt="Preview"/><br/>
 </div>
 
 > This is work in progress. Feel free to use Black Box and report any bugs you
