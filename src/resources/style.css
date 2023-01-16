@@ -5,20 +5,20 @@ window:not(.about) headerbar:not(.background), .custom-headerbar {
   background: @headerbar_bg_color;
 }
 
-#blackbox-main-window.with-borders:not(.fullscreen):not(.maximized):not(.tiled-left):not(.tiled-right) {
+#accelerator-main-window.with-borders:not(.fullscreen):not(.maximized):not(.tiled-left):not(.tiled-right) {
   border: 1px solid @fixed-borders;
 }
 
-/* #blackbox-main-window.with-borders:not(.fullscreen):backdrop {
+/* #accelerator-main-window.with-borders:not(.fullscreen):backdrop {
   border-color: alpha(@borders, 0.5);
 } */
 
-#blackbox-main-window {
+#accelerator-main-window {
   background: transparent;
 }
 
-#blackbox-main-window.with-borders .custom-headerbar:not(.single-tab-mode) headerbar,
-#blackbox-main-window.with-borders .custom-headerbar.single-tab-mode.draw-line-in-single-tab headerbar {
+#accelerator-main-window.with-borders .custom-headerbar:not(.single-tab-mode) headerbar,
+#accelerator-main-window.with-borders .custom-headerbar.single-tab-mode.draw-line-in-single-tab headerbar {
   background-color: transparent;
   background-image: image(@fixed-borders);
   background-size: 100% 1px;
@@ -61,6 +61,10 @@ tab label {
   padding: 0 12px;
 }
 
+.transparent {
+  background: transparent;
+}
+
 tabboxchild  {
   margin: 0;          /* libadwaita 1.2 workaround */
   border-radius: 0;   /* libadwaita 1.2 workaround */
@@ -75,8 +79,8 @@ tab:selected {
   background: @window_bg_color;
 }
 
-#blackbox-main-window.with-borders tab:selected,
-#blackbox-main-window.with-borders .custom-headerbar.single-tab-mode:not(.stealth) headerbar .title-label {
+#accelerator-main-window.with-borders tab:selected,
+#accelerator-main-window.with-borders .custom-headerbar.single-tab-mode:not(.stealth) headerbar .title-label {
   border-left-color: @fixed-borders;
   border-right-color: @fixed-borders;
 }
@@ -89,8 +93,8 @@ tab:selected {
   margin-left: 6px;
 }
 
-#blackbox-main-window.with-borders .custom-headerbar:not(.single-tab-mode) windowcontrols.start.empty ~ .title-label,
-#blackbox-main-window.with-borders .custom-headerbar:not(.stealth) windowcontrols.start.empty ~ .title-label {
+#accelerator-main-window.with-borders .custom-headerbar:not(.single-tab-mode) windowcontrols.start.empty ~ .title-label,
+#accelerator-main-window.with-borders .custom-headerbar:not(.stealth) windowcontrols.start.empty ~ .title-label {
   margin-left: -8px;
 }
 

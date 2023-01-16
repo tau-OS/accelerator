@@ -24,19 +24,19 @@ public class Terminal.Application : He.Application {
     { "focus-previous-tab", on_focus_previous_tab },
     { "new-window", on_new_window },
     { "about", on_about },
-    //  { "quit", on_app_quit },
+    // { "quit", on_app_quit },
   };
 
   private He.ApplicationWindow window;
 
   public Application () {
     Object (
-      application_id: "com.fyralabs.Accelerator",
-      flags: ApplicationFlags.HANDLES_COMMAND_LINE
+            application_id: "com.fyralabs.Accelerator",
+            flags: ApplicationFlags.HANDLES_COMMAND_LINE
     );
 
 
-    //  Intl.setlocale (LocaleCategory.ALL, "");
+    // Intl.setlocale (LocaleCategory.ALL, "") ;
     Intl.textdomain (GETTEXT_PACKAGE);
     Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
     Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
@@ -48,48 +48,53 @@ public class Terminal.Application : He.Application {
   }
 
   public override void activate () {
-    new Window (this).show ();
+    active_window?.present ();
+  }
+
+  protected override void startup () {
+    Gdk.RGBA accent_color = { 0 };
+    // accent_color.parse("#888");
+    default_accent_color = He.Color.from_gdk_rgba (accent_color);
+
+    resource_base_path = "/com/fyralabs/Accelerator"; // path appid here
+    base.startup ();
+    // new Window (this).show ();
   }
 
   public override int command_line (GLib.ApplicationCommandLine cmd) {
     CommandLineOptions options;
-
     this.hold ();
+    this.startup ();
 
     if (!CommandLine.parse_command_line (cmd, out options)) {
       this.release ();
       return -1;
-    }
-    else if (options.help) {
+    } else if (options.help) {
       // For logistical reasons help is handled in `parse_command_line`.
-    }
-    else if (options.version) {
+    } else if (options.version) {
       cmd.print (
-        "%s version %s%s\n",
-        APP_NAME,
-        VERSION,
-        is_flatpak () ? " (flatpak)" : ""
+                 "%s version %s%s\n",
+                 APP_NAME,
+                 VERSION,
+                 is_flatpak () ? " (flatpak)" : ""
       );
-    }
-    else {
+    } else {
       this.window = new Window (
-        this,
-        options.command,
-        options.current_working_dir,
-        false
+                                this,
+                                options.command,
+                                options.current_working_dir,
+                                false
       );
       this.window.show ();
-
-
     }
     this.release ();
     return 0;
   }
 
-  //  private void on_app_quit () {
-  //    // This involves confirming before closing tabs/windows
-  //    warning ("App quit is not implemented yet.");
-  //  }
+  // private void on_app_quit () {
+  //// This involves confirming before closing tabs/windows
+  // warning ("App quit is not implemented yet.");
+  // }
 
   private void on_about () {
     var win = create_about_dialog (this.window);
@@ -103,10 +108,10 @@ public class Terminal.Application : He.Application {
   }
 
   private void on_focus_next_tab () {
-    (this.get_active_window () as Window)?.focus_next_tab ();
+    (this.get_active_window () as Window) ? .focus_next_tab ();
   }
 
   private void on_focus_previous_tab () {
-    (this.get_active_window () as Window)?.focus_previous_tab ();
+    (this.get_active_window () as Window) ? .focus_previous_tab ();
   }
 }
