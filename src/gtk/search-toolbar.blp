@@ -12,11 +12,9 @@ template TerminalSearchToolbar : Widget {
 
     CenterBox {
       [center]
-      Adw.Clamp {
-        SearchEntry search_entry {
-          hexpand: true;
-          placeholder-text: _("Find");
-        }
+      SearchEntry search_entry {
+        hexpand: true;
+        placeholder-text: _("Find");
       }
 
       [end]

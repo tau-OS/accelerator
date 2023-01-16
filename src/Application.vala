@@ -60,12 +60,11 @@ public class Terminal.Application : He.Application {
 
   protected override void startup () {
     Gdk.RGBA accent_color = { 0 };
-    // accent_color.parse("#888");
+    accent_color.parse("#2d2d2d");
     default_accent_color = He.Color.from_gdk_rgba (accent_color);
 
-    resource_base_path = "/com/fyralabs/Accelerator"; // path appid here
+    resource_base_path = "/com/fyralabs/Accelerator";
     base.startup ();
-    // new Window (this).show ();
   }
 
   public override int command_line (GLib.ApplicationCommandLine cmd) {
