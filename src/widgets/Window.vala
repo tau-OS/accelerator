@@ -178,6 +178,8 @@ public class Terminal.Window : He.ApplicationWindow {
       title_widget = new Gtk.Label ("") { hexpand = true },
     };
 
+    this.add_css_class ("floating-headerbar");
+
     this.floating_header_bar_revealer = new Gtk.Revealer () {
       transition_duration = Window.header_bar_revealer_duration_ms,
       transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,

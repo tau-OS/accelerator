@@ -50,6 +50,7 @@ public class Terminal.TerminalTab : He.Tab {
     this.box.append (this.search_toolbar);
     this.box.append (this.scrolled);
     this.box.visible = false;
+    this.visible = false;
     // ! This makes it display in the tab widget, but we want it below and in the main view
     // this.box.set_parent (this.window.tab_view);
 
@@ -80,6 +81,14 @@ public class Terminal.TerminalTab : He.Tab {
     this.terminal.exit.connect (() => {
       this.close_request ();
     });
+
+    // connect the expand-tabs setting to the tab hexpand
+    settings.bind_property (
+                            "fill-tabs",
+                            this,
+                            "hexpand",
+                            BindingFlags.SYNC_CREATE
+    );
 
     settings.notify["show-scrollbars"].connect (() => {
       var show_scrollbars = settings.show_scrollbars;
