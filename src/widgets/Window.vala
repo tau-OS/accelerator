@@ -205,6 +205,10 @@ public class Terminal.Window : He.ApplicationWindow {
     this.child = overlay;
 
     this.set_name ("accelerator-main-window");
+    var provider = (this.application as Application) ? .css_provider;
+
+    // add style provider from application
+    Gtk.StyleContext.add_provider_for_display (this.get_style_context ().display,  provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
   }
 
   public He.Tab blank_tab () {
