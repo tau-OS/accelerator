@@ -35,7 +35,7 @@ public class Terminal.Terminal : Vte.Terminal {
     "TERM_PROGRAM=%s".printf (APP_NAME),
     "BLACKBOX_THEMES_DIR=%s".printf (Constants.get_user_schemes_dir ()),
     "VTE_VERSION=%u".printf (
-      Vte.MAJOR_VERSION * 10000 + Vte.MINOR_VERSION * 100 + Vte.MICRO_VERSION
+                             Vte.MAJOR_VERSION * 10000 + Vte.MINOR_VERSION * 100 + Vte.MICRO_VERSION
     )
   };
 
@@ -50,27 +50,27 @@ public class Terminal.Terminal : Vte.Terminal {
   // Properties
 
   public Scheme scheme  { get; set; }
-  public Pid    pid     { get; protected set; }
+  public Pid pid     { get; protected set; }
 
   public uint user_scrollback_lines {
     get {
       var settings = Settings.get_default ();
 
       switch (settings.scrollback_mode) {
-        case ScrollbackMode.FIXED:     return settings.scrollback_lines;
-        case ScrollbackMode.UNLIMITED: return -1;
-        case ScrollbackMode.DISABLED:  return 0;
-        default:
-          error ("Invalid scrollback-mode %u", settings.scrollback_mode);
-          return 0;
+      case ScrollbackMode.FIXED:     return settings.scrollback_lines;
+      case ScrollbackMode.UNLIMITED: return -1;
+      case ScrollbackMode.DISABLED:  return 0;
+      default:
+        error ("Invalid scrollback-mode %u", settings.scrollback_mode);
+        return 0;
       }
     }
   }
 
   // Fields
 
-  public  Window  window;
-  private uint    original_scrollback_lines;
+  public Window window;
+  private uint original_scrollback_lines;
 
   Settings settings;
 
@@ -81,9 +81,9 @@ public class Terminal.Terminal : Vte.Terminal {
 
   public Terminal (Window window, string? command = null, string? cwd = null) {
     Object (
-      allow_hyperlink: true,
-      receives_default: true,
-      scroll_unit_is_pixels: true
+            allow_hyperlink: true,
+            receives_default: true,
+            scroll_unit_is_pixels: true
     );
 
     this.original_scrollback_lines = this.scrollback_lines;
@@ -99,7 +99,7 @@ public class Terminal.Terminal : Vte.Terminal {
     this.exit.connect (this.on_exit);
 
     this.settings = Settings.get_default ();
-    ThemeProvider.get_default ().notify ["current-theme"].connect (this.on_theme_changed);
+    ThemeProvider.get_default ().notify["current-theme"].connect (this.on_theme_changed);
     this.settings.notify["font"].connect (this.on_font_changed);
     this.settings.notify["terminal-padding"].connect (this.on_padding_changed);
     this.settings.notify["opacity"].connect (this.on_theme_changed);
@@ -112,10 +112,15 @@ public class Terminal.Terminal : Vte.Terminal {
     this.on_font_changed ();
     this.on_padding_changed ();
 
+    var click = new Gtk.GestureClick () {
+      button = Gdk.BUTTON_SECONDARY,
+    };
+    click.pressed.connect (this.show_menu);
+    this.add_controller (click);
+
     try {
       this.spawn (command, cwd);
-    }
-    catch (Error e) {
+    } catch (Error e) {
       warning ("%s", e.message);
     }
   }
@@ -136,12 +141,10 @@ public class Terminal.Terminal : Vte.Terminal {
     this.add_controller (target);
   }
 
-  private bool on_drag_data_received (
-    Gtk.DropTarget target,
-    Value value,
-    double x,
-    double y
-  ) {
+  private bool on_drag_data_received (Gtk.DropTarget target,
+                                      Value value,
+                                      double x,
+                                      double y) {
     var vtype = value.type ();
 
     if (vtype == typeof (Gdk.FileList)) {
@@ -153,10 +156,9 @@ public class Terminal.Terminal : Vte.Terminal {
       }
 
       return true;
-    }
-    else if (vtype == typeof (GLib.File)) {
+    } else if (vtype == typeof (GLib.File)) {
       var file = (GLib.File) value.get_object ();
-      var path = file?.get_path ();
+      var path = file ? .get_path ();
 
       if (path != null) {
         this.feed_child (Shell.quote (path).data);
@@ -164,8 +166,7 @@ public class Terminal.Terminal : Vte.Terminal {
       }
 
       return true;
-    }
-    else if (vtype == typeof (string)) {
+    } else if (vtype == typeof (string)) {
       var text = value.get_string ();
 
       if (text != null) {
@@ -183,12 +184,11 @@ public class Terminal.Terminal : Vte.Terminal {
     foreach (unowned string str in Constants.URL_REGEX_STRINGS) {
       try {
         var reg = new Vte.Regex.for_match (
-          str, -1, PCRE2.Flags.MULTILINE
+                                           str, -1, PCRE2.Flags.MULTILINE
         );
         int id = this.match_add_regex (reg, 0);
         this.match_set_cursor_name (id, "pointer");
-      }
-      catch (Error e) {
+      } catch (Error e) {
         warning (e.message);
       }
     }
@@ -196,12 +196,12 @@ public class Terminal.Terminal : Vte.Terminal {
 
   private void on_font_changed () {
     this.font_desc = Pango.FontDescription.from_string (
-      this.settings.font
+                                                        this.settings.font
     );
   }
 
-  private Gdk.RGBA get_background_color(Scheme theme) {
-    var bg_transparent = theme.background_color.copy();
+  private Gdk.RGBA get_background_color (Scheme theme) {
+    var bg_transparent = theme.background_color.copy ();
     bg_transparent.alpha = this.settings.opacity * 0.01f;
     return bg_transparent;
   }
@@ -218,9 +218,9 @@ public class Terminal.Terminal : Vte.Terminal {
 
     var bg = this.get_background_color (theme);
     this.set_colors (
-      theme.foreground_color,
-      bg,
-      theme.palette.data
+                     theme.foreground_color,
+                     bg,
+                     theme.palette.data
     );
   }
 
@@ -233,61 +233,61 @@ public class Terminal.Terminal : Vte.Terminal {
       this.padding_provider = null;
     }
 
-    this.padding_provider = Marble.get_css_provider_for_data(
-      "vte-terminal { padding: %upx %upx %upx %upx; }".printf(
-        pad.top,
-        pad.right,
-        pad.bottom,
-        pad.left
-      )
+    this.padding_provider = Marble.get_css_provider_for_data (
+                                                              "vte-terminal { padding: %upx %upx %upx %upx; }".printf (
+                                                                                                                       pad.top,
+                                                                                                                       pad.right,
+                                                                                                                       pad.bottom,
+                                                                                                                       pad.left
+                                                              )
     );
 
     this.get_style_context ().add_provider (
-      this.padding_provider,
-      Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                                            this.padding_provider,
+                                            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
     );
   }
 
   private void bind_data () {
     this.settings.schema.bind (
-      "terminal-cell-width",
-      this,
-      "cell-width-scale",
-      SettingsBindFlags.DEFAULT
+                               "terminal-cell-width",
+                               this,
+                               "cell-width-scale",
+                               SettingsBindFlags.DEFAULT
     );
 
     this.settings.schema.bind (
-      "terminal-cell-height",
-      this,
-      "cell-height-scale",
-      SettingsBindFlags.DEFAULT
+                               "terminal-cell-height",
+                               this,
+                               "cell-height-scale",
+                               SettingsBindFlags.DEFAULT
     );
 
     this.settings.bind_property (
-      "cursor-shape",
-      this,
-      "cursor-shape",
-      BindingFlags.SYNC_CREATE,
-      null,
-      null
+                                 "cursor-shape",
+                                 this,
+                                 "cursor-shape",
+                                 BindingFlags.SYNC_CREATE,
+                                 null,
+                                 null
     );
 
     this.settings.bind_property (
-      "cursor-blink-mode",
-      this,
-      "cursor-blink-mode",
-      BindingFlags.SYNC_CREATE,
-      null,
-      null
+                                 "cursor-blink-mode",
+                                 this,
+                                 "cursor-blink-mode",
+                                 BindingFlags.SYNC_CREATE,
+                                 null,
+                                 null
     );
 
     this.bind_property (
-      "user-scrollback-lines",
-      this,
-      "scrollback-lines",
-      BindingFlags.SYNC_CREATE,
-      null,
-      null
+                        "user-scrollback-lines",
+                        this,
+                        "scrollback-lines",
+                        BindingFlags.SYNC_CREATE,
+                        null,
+                        null
     );
 
     // Fallback scrolling makes it so that VTE handles scrolling on its own. We
@@ -299,12 +299,12 @@ public class Terminal.Terminal : Vte.Terminal {
     // - https://gitlab.gnome.org/raggesilver/blackbox/-/issues/179
     // - https://gitlab.gnome.org/GNOME/vte/-/issues/336
     this.settings.bind_property (
-      "show-scrollbars",
-      this,
-      "enable-fallback-scrolling",
-      BindingFlags.SYNC_CREATE | BindingFlags.INVERT_BOOLEAN,
-      null,
-      null
+                                 "show-scrollbars",
+                                 this,
+                                 "enable-fallback-scrolling",
+                                 BindingFlags.SYNC_CREATE | BindingFlags.INVERT_BOOLEAN,
+                                 null,
+                                 null
     );
   }
 
@@ -321,8 +321,8 @@ public class Terminal.Terminal : Vte.Terminal {
       var pattern = this.get_pattern_at_coords (x, y);
 
       if (
-        (event.get_modifier_state () & Gdk.ModifierType.CONTROL_MASK) == 0 ||
-        pattern == null
+          (event.get_modifier_state () & Gdk.ModifierType.CONTROL_MASK) == 0 ||
+          pattern == null
       ) {
         return;
       }
@@ -331,15 +331,15 @@ public class Terminal.Terminal : Vte.Terminal {
     });
     this.add_controller (left_click_controller);
 
-    this.settings.notify ["scrollback-lines"]
-      .connect (() => {
-        this.notify_property ("user-scrollback-lines");
-      });
+    this.settings.notify["scrollback-lines"]
+     .connect (() => {
+      this.notify_property ("user-scrollback-lines");
+    });
 
-    this.settings.notify ["scrollback-mode"]
-      .connect (() => {
-        this.notify_property ("user-scrollback-lines");
-      });
+    this.settings.notify["scrollback-mode"]
+     .connect (() => {
+      this.notify_property ("user-scrollback-lines");
+    });
   }
 
   private void spawn (string? command, string? cwd) throws Error {
@@ -348,13 +348,13 @@ public class Terminal.Terminal : Vte.Terminal {
     Vte.PtyFlags flags = Vte.PtyFlags.DEFAULT;
 
     var settings = Settings.get_default ();
-    string[]? custom_shell_commandv = null;
+    string[] ? custom_shell_commandv = null;
 
     string shell;
 
     if (
-      settings.use_custom_command &&
-      settings.custom_shell_command != ""
+        settings.use_custom_command &&
+        settings.custom_shell_command != ""
     ) {
       Shell.parse_argv (settings.custom_shell_command, out custom_shell_commandv);
     }
@@ -380,8 +380,7 @@ public class Terminal.Terminal : Vte.Terminal {
       foreach (unowned string env in envv) {
         argv += @"--env=$(env)";
       }
-    }
-    else {
+    } else {
       envv = Environ.get ();
 
       foreach (unowned string env in Terminal.accel_envv) {
@@ -399,8 +398,7 @@ public class Terminal.Terminal : Vte.Terminal {
       foreach (unowned string s in custom_shell_commandv) {
         argv += s;
       }
-    }
-    else {
+    } else {
       argv += shell;
       if (settings.command_as_login_shell && command == null) {
         argv += "--login";
@@ -412,25 +410,24 @@ public class Terminal.Terminal : Vte.Terminal {
     }
 
     this.spawn_async (
-      flags,
-      cwd,
-      argv,
-      envv,
-      0,
-      null,
-      -1,
-      null,
-      // For some reason, if I try using `err` here vala will generate the
-      // following line at the top of this lambda function:
-      //
-      // g_return_if_fail (err != NULL);
-      //
-      // Which is insane, and does not work, since we expect error to be null
-      // almost always.
-      (_, _pid /*, err */) => {
-        this.pid = _pid;
-      }
-    );
+                      flags,
+                      cwd,
+                      argv,
+                      envv,
+                      0,
+                      null,
+                      -1,
+                      null,
+                      // For some reason, if I try using `err` here vala will generate the
+                      // following line at the top of this lambda function:
+                      //
+                      // g_return_if_fail (err != NULL);
+                      //
+                      // Which is insane, and does not work, since we expect error to be null
+                      // almost always.
+                      (_, _pid /*, err */) => {
+      this.pid = _pid;
+    });
   }
 
   /**
@@ -445,7 +442,7 @@ public class Terminal.Terminal : Vte.Terminal {
    * Additionally, sourced from:
    * https://gitlab.gnome.org/GNOME/gnome-builder/-/blob/13302072a4ebae6bbe39dca9a7fb1eed75423371/src/libide/terminal/ide-terminal.c#L150
    */
-  private string? get_pattern_at_coords (double x, double y) {
+  private string ? get_pattern_at_coords (double x, double y) {
     var col = (x / this.get_char_width ());
     var row = (y / this.get_char_height ());
 
@@ -459,34 +456,70 @@ public class Terminal.Terminal : Vte.Terminal {
     this.exit ();
   }
 
-  private bool on_key_pressed (
-    uint keyval,
-    uint keycode,
-    Gdk.ModifierType state
-  ) {
+  public void show_menu (int n_pressed, double x, double y) {
+    var menu = new Menu ();
+    var edit_section = new Menu ();
+    var preferences_section = new Menu ();
+    var bottom_section = new Menu ();
+
+    menu.append (_("New Tab"), "win.new_tab");
+    menu.append (_("New Window"), "app.new-window");
+
+    edit_section.append (_("Copy"), "win.copy");
+    edit_section.append (_("Paste"), "win.paste");
+
+    menu.append_section (null, edit_section);
+
+    preferences_section.append (_("Preferences"), "win.edit_preferences");
+    menu.append_section (null, preferences_section);
+
+    bottom_section.append (_("Keyboard Shortcuts"), "win.show-help-overlay");
+    bottom_section.append (_("About"), "app.about");
+    menu.append_section (null, bottom_section);
+
+    var pop = new Gtk.PopoverMenu.from_model (menu);
+
+    Gdk.Rectangle r = { 0 };
+
+    r.x = (int) (x + Settings.get_default ().get_padding ().left);
+    r.y = (int) (y + Settings.get_default ().get_padding ().bottom);
+
+    pop.closed.connect_after (() => {
+      pop.destroy ();
+    });
+
+    pop.set_parent (this);
+    pop.set_has_arrow (false);
+    pop.set_pointing_to (r);
+    pop.popup ();
+  }
+
+  private bool on_key_pressed (uint keyval,
+                               uint keycode,
+                               Gdk.ModifierType state) {
     if ((state & Gdk.ModifierType.CONTROL_MASK) == 0) {
       return false;
     }
 
     switch (Gdk.keyval_name (keyval)) {
-      case "c": {
-        if (
+    case "c": {
+      if (
           this.get_has_selection () &&
           Settings.get_default ().easy_copy_paste
-        ) {
-          this.do_copy_clipboard ();
-          this.unselect_all ();
-          return true;
-        }
-        return false;
+      ) {
+        this.do_copy_clipboard ();
+        this.unselect_all ();
+        return true;
       }
-      case "v": {
-        if (Settings.get_default ().easy_copy_paste) {
-          this.do_paste_clipboard ();
-          return true;
-        }
-        return false;
+      return false;
+    }
+    case "v": {
+      if (Settings.get_default ().easy_copy_paste) {
+        this.do_paste_clipboard ();
+        return true;
       }
+      return false;
+    }
     }
 
     return false;
@@ -514,8 +547,7 @@ public class Terminal.Terminal : Vte.Terminal {
         if (text != null) {
           this.paste_text (text);
         }
-      }
-      catch (Error e) {
+      } catch (Error e) {
         warning ("%s", e.message);
       }
     });
@@ -524,20 +556,20 @@ public class Terminal.Terminal : Vte.Terminal {
   public void do_copy_clipboard () {
     if (this.get_has_selection ()) {
       Gdk.Display.get_default ().get_clipboard ()
-        .set_text (this.get_text_selected (Vte.Format.TEXT));
+       .set_text (this.get_text_selected (Vte.Format.TEXT));
     }
   }
 
   public async void do_paste_from_selection_clipboard () {
-    //  This function does not seem to be working in GTK 4 yet.
-    //  this.paste_primary ();
+    // This function does not seem to be working in GTK 4 yet.
+    // this.paste_primary ();
 
     var clipboard = Gdk.Display.get_default ().get_primary_clipboard ();
     try {
       var text = yield clipboard.read_text_async (null);
+
       this.paste_text (text);
-    }
-    catch (Error e) {
+    } catch (Error e) {
       warning ("%s", e.message);
     }
   }
