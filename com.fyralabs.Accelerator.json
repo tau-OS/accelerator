@@ -53,17 +53,6 @@
       ]
     },
     {
-      "name": "marble",
-      "buildsystem": "meson",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://gitlab.com/raggesilver/marble/-/archive/6dcc6fefa35f0151b0549c01bd774750fe6bdef8/marble-6dcc6fefa35f0151b0549c01bd774750fe6bdef8.tar.gz",
-          "sha256": "6fe25ab863bf9a81fac827861b3f17d07fb4a0e4d944dbb0d5b09dfafca59fb4"
-        }
-      ]
-    },
-    {
       "name": "blackbox",
       "builddir": true,
       "buildsystem": "meson",

@@ -233,14 +233,18 @@ public class Terminal.Terminal : Vte.Terminal {
       this.padding_provider = null;
     }
 
-    this.padding_provider = Marble.get_css_provider_for_data (
-                                                              "vte-terminal { padding: %upx %upx %upx %upx; }".printf (
-                                                                                                                       pad.top,
-                                                                                                                       pad.right,
-                                                                                                                       pad.bottom,
-                                                                                                                       pad.left
-                                                              )
-    );
+    var provider = new Gtk.CssProvider();
+
+    try {
+      provider.load_from_data("vte-terminal { padding: %upx %upx %upx %upx; }".printf (
+        pad.top,
+        pad.right,
+        pad.bottom,
+        pad.left
+      ).data);
+    } catch(Error e) {
+      warning(e.message);
+    }
 
     this.get_style_context ().add_provider (
                                             this.padding_provider,

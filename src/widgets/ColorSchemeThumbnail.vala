@@ -185,7 +185,13 @@ public class Terminal.ColorSchemeThumbnail : Gtk.FlowBoxChild {
     };
     lbl.add_css_class ("caption");
 
-    // Marble.set_theming_for_data (lbl, "label { color: %s; margin: 0.5em 8px; }".printf(scheme.foreground_color.to_string ()), null, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+    var provider = new Gtk.CssProvider();
+
+    provider.load_from_data("label { color: %s; margin: 0.5em 8px; }".printf(scheme.foreground_color.to_string ()).data);
+    var ctx = lbl.get_style_context();
+    if (provider != null)
+      ctx.add_provider(provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
 
     lbl.set_parent (this);
 

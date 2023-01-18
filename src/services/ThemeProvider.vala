@@ -181,9 +181,13 @@ public class Terminal.ThemeProvider : Object {
       return;
     }
 
-    this.theme_provider = Marble.get_css_provider_for_data (
-      this.generate_gtk_theme (theme)
-    );
+    var provider = new Gtk.CssProvider();
+
+    try {
+        provider.load_from_data(this.generate_gtk_theme (theme).data);
+    } catch(Error e) {
+        warning(e.message);
+    }
 
     if (this.theme_provider == null) return;
 
