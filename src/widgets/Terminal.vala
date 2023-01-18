@@ -248,7 +248,7 @@ public class Terminal.Terminal : Vte.Terminal {
 
     this.get_style_context ().add_provider (
                                             this.padding_provider,
-                                            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                                            999999999
     );
   }
 

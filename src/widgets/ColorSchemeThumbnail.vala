@@ -30,7 +30,7 @@ public class Terminal.ColorSchemeThumbnailProvider {
         uint8[] data;
 
         GLib.File.new_for_uri (
-                               "resource:///com/fyralabs/Accelerator/resources/svg/color-scheme-thumbnail.svg"
+                               "resource:///com/fyralabs/Accelerator/color-scheme-thumbnail.svg"
         ).load_contents (null, out data, null);
 
         svg_content = (string) data;
@@ -142,8 +142,6 @@ public class Terminal.ColorSchemeThumbnail : Gtk.FlowBoxChild {
 
   public ColorSchemeThumbnail (Scheme scheme) {
     Object (has_tooltip: true, scheme: scheme);
-
-    this.tooltip_text = scheme.name;
     this.add_css_class ("thumbnail");
 
     // The color scheme thumbnail
@@ -151,14 +149,13 @@ public class Terminal.ColorSchemeThumbnail : Gtk.FlowBoxChild {
       paintable = new ColorSchemePreviewPaintable (scheme),
       width_request = 110,
       height_request = 70,
-      // height_request = 90,
       css_classes = { "card" },
       cursor = new Gdk.Cursor.from_name ("pointer", null),
     };
 
     var css_provider = new Gtk.CssProvider ();
     css_provider.load_from_data ("picture { background-color: %s; }".printf (scheme.background_color.to_string ()).data);
-    img.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+    img.get_style_context ().add_provider (css_provider, 99999);
 
     // Icon will show when this.selected is true
     var checkicon = new Gtk.Image () {
@@ -186,11 +183,10 @@ public class Terminal.ColorSchemeThumbnail : Gtk.FlowBoxChild {
     lbl.add_css_class ("caption");
 
     var provider = new Gtk.CssProvider();
-
     provider.load_from_data("label { color: %s; margin: 0.5em 8px; }".printf(scheme.foreground_color.to_string ()).data);
     var ctx = lbl.get_style_context();
     if (provider != null)
-      ctx.add_provider(provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+      ctx.add_provider(provider, 9999);
 
 
     lbl.set_parent (this);
@@ -204,7 +200,7 @@ public class Terminal.ColorSchemeThumbnail : Gtk.FlowBoxChild {
       checkicon.visible = this.selected;
     });
 
-    // Emit activate signal when thumbnail is chicked.
+    // Emit activate signal when thumbnail is clicked.
     var mouse_control = new Gtk.GestureClick ();
     mouse_control.pressed.connect (() => {
       if (!this.selected) {
