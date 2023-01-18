@@ -30,10 +30,10 @@ bool light_themes_filter_func (Gtk.FlowBoxChild child) {
 
 [GtkTemplate (ui = "/com/fyralabs/Accelerator/preferences-window.ui")]
 public class Terminal.PreferencesWindow : He.SettingsWindow {
-  [GtkChild] unowned He.MiniContentBlock cursor_shape_combo_row;
-  [GtkChild] unowned He.MiniContentBlock cursor_blink_mode_combo_row;
-  [GtkChild] unowned He.MiniContentBlock scrollback_mode_combo_row;
-  [GtkChild] unowned He.MiniContentBlock style_preference_combo_row;
+  [GtkChild] unowned He.SettingsRow cursor_shape_combo_row;
+  [GtkChild] unowned He.SettingsRow cursor_blink_mode_combo_row;
+  [GtkChild] unowned He.SettingsRow scrollback_mode_combo_row;
+  [GtkChild] unowned He.SettingsRow style_preference_combo_row;
   [GtkChild] unowned Gtk.Entry custom_command_entry;
   [GtkChild] unowned Gtk.Adjustment cell_height_spacing_adjustment;
   [GtkChild] unowned Gtk.Adjustment cell_width_spacing_adjustment;
