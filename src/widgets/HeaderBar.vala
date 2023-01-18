@@ -25,13 +25,11 @@ namespace Terminal {
     if (_window_menu == null) {
       var more_menu = new GLib.Menu ();
       var section1 = new GLib.Menu ();
-      var section2 = new GLib.Menu ();
 
       section1.append (_("Fullscreen"), ACTION_WIN_FULLSCREEN);
       section1.append (_("Preferences…"), ACTION_WIN_EDIT_PREFERENCES);
-      section2.append (_("About Accelerator…"), "app.about");
+      section1.append (_("About Accelerator…"), "app.about");
       more_menu.append_section (null, section1);
-      more_menu.append_section (null, section2);
 
       _window_menu = more_menu;
     }
