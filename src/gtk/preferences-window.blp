@@ -87,16 +87,6 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             }
           }
 
-          Gtk.Label {
-            label: _("Single Tab Mode");
-            xalign: 0;
-            sensitive: bind fill_tabs_switch.active;
-
-            styles [
-              "heading",
-            ]
-          }
-
           He.SettingsList {
             He.SettingsRow {
               title: _("Hide Single Tab");
