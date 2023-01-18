@@ -21,36 +21,39 @@ template TerminalPreferencesWindow : He.SettingsWindow {
         orientation: vertical;
         spacing: 12;
 
-        He.ContentList {
+        He.SettingsList {
           title: _("Window");
 
-          He.MiniContentBlock remember_window_size_row {
+          He.SettingsRow remember_window_size_row {
             title: _("Remember Window Size");
+            activatable-widget: remember_window_size_switch;
 
             Switch remember_window_size_switch {
               valign: center;
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Show Borders");
             subtitle: _("Enable to draw a border around the window and the active tab.");
+            activatable-widget: show_window_borders_switch;
 
             Switch show_window_borders_switch {
               valign: center;
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Theme Integration");
             subtitle: _("Style window with terminal theme colors.");
+            activatable-widget: pretty_switch;
 
             Switch pretty_switch {
               valign: center;
             }
           }
 
-          He.MiniContentBlock style_preference_combo_row {
+          He.SettingsRow style_preference_combo_row {
             title: _("Style Preference");
 
             Box {
@@ -63,15 +66,20 @@ template TerminalPreferencesWindow : He.SettingsWindow {
                 label: _("Dark Theme");
                 group: style_preference_light_theme_toggle;
               }
+
+              styles [
+                "linked",
+              ]
             }
           }
         }
 
-        He.ContentList {
+        He.SettingsList {
           title: _("Tabs");
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Expand Tabs");
+            activatable-widget: fill_tabs_switch;
 
             Switch fill_tabs_switch {
               valign: center;
@@ -88,24 +96,26 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             ]
           }
 
-          Box {
+          He.SettingsList {
             spacing: 6;
             orientation: vertical;
 
-            He.MiniContentBlock {
+            He.SettingsRow {
               title: _("Hide Single Tab");
               subtitle: _("Replace tab bar with a title label when a single tab is open. Easier to drag the window.");
               sensitive: bind fill_tabs_switch.active;
+              activatable-widget: hide_single_tab_switch;
 
               Switch hide_single_tab_switch {
                 valign: center;
               }
             }
 
-            He.MiniContentBlock {
+            He.SettingsRow {
               title: _("Stealth Single Tab");
               subtitle: _("Blend single tab with header bar.");
               sensitive: bind fill_tabs_switch.active;
+              activatable-widget: stealth_single_tab_switch;
 
               Switch stealth_single_tab_switch {
                 valign: center;
@@ -114,54 +124,59 @@ template TerminalPreferencesWindow : He.SettingsWindow {
           }
         }
 
-        He.ContentList {
+        He.SettingsList {
           title: _("Header Bar");
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Show Header Bar");
+            activatable-widget: show_headerbar_switch;
 
             Switch show_headerbar_switch {
               valign: center;
             }
           }
 
-          He.MiniContentBlock show_menu_button_action_row {
+          He.SettingsRow show_menu_button_action_row {
             title: _("Show Menu Button");
+            activatable-widget: show_menu_button_switch;
 
             Switch show_menu_button_switch {
               valign: center;
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Drag Area");
             subtitle: _("Enable to reserve some space on the left side to drag the window.");
+            activatable-widget: drag_area_switch;
 
             Switch drag_area_switch {
               valign: center;
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             sensitive: bind show_window_borders_switch.active;
             title: _("Draw Line Under Header Bar");
             subtitle: _("Enable to draw a line under the header bar when a single tab is open. Requires \"Show Borders\".");
+            activatable-widget: draw_line_single_tab_switch;
 
             Switch draw_line_single_tab_switch {
               valign: center;
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Show Floating Controls");
             subtitle: _("Show floating controls when header bar is hidden.");
+            activatable-widget: floating_controls_switch;
 
             Switch floating_controls_switch {
               valign: center;
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             sensitive: bind floating_controls_switch.active;
             title: _("Floating Controls Hover Area");
             subtitle: _("Hoverable area (in pixels) at the top of the window to trigger floating controls.");
@@ -172,7 +187,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             sensitive: bind floating_controls_switch.active;
             title: _("Delay Before Show Floating Controls");
             subtitle: _("Delay time (ms) before show floating controls.");
@@ -201,12 +216,12 @@ template TerminalPreferencesWindow : He.SettingsWindow {
         orientation: vertical;
         spacing: 12;
 
-        He.ContentList {
+        He.SettingsList {
           title: _("Text");
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Font");
-            //activated => on_font_row_activated ();
+            activated => on_font_row_activated ();
 
             Label font_label {
               valign: center;
@@ -214,7 +229,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Width");
 
             SpinButton {
@@ -224,7 +239,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Height");
 
             SpinButton {
@@ -234,9 +249,10 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             }
           }
 
-          He.MiniContentBlock easy_copy_paste_action_row {
+          He.SettingsRow easy_copy_paste_action_row {
             title: _("Easy Copy & Paste");
             subtitle: _("Use ctrl+c/ctrl+v for copy/paste.");
+            activatable-widget: easy_copy_paste_switch;
 
             Switch easy_copy_paste_switch {
               valign: center;
@@ -244,10 +260,10 @@ template TerminalPreferencesWindow : He.SettingsWindow {
           }
         }
 
-        He.ContentList {
+        He.SettingsList {
           title: _("Terminal");
 
-          He.MiniContentBlock cursor_shape_combo_row {
+          He.SettingsRow cursor_shape_combo_row {
             title: _("Cursor Shape");
 
             Box {
@@ -266,15 +282,23 @@ template TerminalPreferencesWindow : He.SettingsWindow {
                 label: _("Underline");
                 group: block_toggle;
               }
+
+              styles [
+                "linked",
+              ]
             }
           }
 
-          He.MiniContentBlock cursor_blink_mode_combo_row {
+          He.SettingsRow cursor_blink_mode_combo_row {
             title: _("Cursor Blinking");
             subtitle: _("Whether or not the cursor should blink.");
 
             Box {
               spacing: 12;
+
+              styles [
+                  "linked",
+              ]
 
               ToggleButton follow_sys_cursor_toggle {
                 label: _("Follow System");
@@ -293,7 +317,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Padding");
 
             SpinButton padding_spin_button {
@@ -305,7 +329,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Opacity");
             subtitle: _("Terminal background opacity.");
 
@@ -319,31 +343,37 @@ template TerminalPreferencesWindow : He.SettingsWindow {
           }
         }
 
-        He.ContentList {
+        He.SettingsList {
           title: _("Scrolling");
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Show Scrollbars");
+            activatable-widget: show_scrollbars_switch;
 
             Switch show_scrollbars_switch {
               valign: center;
             }
           }
 
-          He.MiniContentBlock use_overlay_scrolling_action_row {
+          He.SettingsRow use_overlay_scrolling_action_row {
             title: _("Use Overlay Scrolling");
             sensitive: bind show_scrollbars_switch.active;
+            activatable-widget: use_overlay_scrolling_switch;
 
             Switch use_overlay_scrolling_switch {
               valign: center;
             }
           }
 
-          He.MiniContentBlock scrollback_mode_combo_row {
+          He.SettingsRow scrollback_mode_combo_row {
             title: _("Scrollback mode");
 
             Box {
               spacing: 12;
+
+              styles [
+                  "linked",
+              ]
 
               ToggleButton fixed_size_scroll_toggle {
                 label: _("Fixed Size");
@@ -362,7 +392,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             }
           }
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Scrollback Lines");
             visible: bind TerminalPreferencesWindow.show-custom-scrollback-row;
 
@@ -374,40 +404,37 @@ template TerminalPreferencesWindow : He.SettingsWindow {
           }
         }
 
-        He.ContentList {
+        He.SettingsList {
           title: _("Command");
 
-          Box {
-              orientation: vertical;
-              spacing: 12;
+          He.SettingsRow {
+            title: _("Run Command as Login Shell");
+            activatable-widget: run_command_as_login_switch;
 
-            He.MiniContentBlock {
-              title: _("Run Command as Login Shell");
-
-              Switch run_command_as_login_switch {
-                valign: center;
-              }
+            Switch run_command_as_login_switch {
+              valign: center;
             }
+          }
 
-            He.MiniContentBlock {
-              title: _("Use Custom Command");
+          He.SettingsRow {
+            title: _("Use Custom Command");
+            activatable-widget: use_custom_shell_command_switch;
 
-              Switch use_custom_shell_command_switch {
-                valign: center;
-              }
+            Switch use_custom_shell_command_switch {
+              valign: center;
             }
+          }
 
-            He.MiniContentBlock custom_command_entry_row {
-              title: _("Custom Command");
-              
-              Entry custom_command_entry {
+          He.SettingsRow custom_command_entry_row {
+            title: _("Custom Command");
+            
+            Entry custom_command_entry {
 
-              }
             }
           }
         }
 
-        He.ContentList theme_scheme_group {
+        He.SettingsList theme_scheme_group {
           title: _("Theme");
 
           Box {
@@ -426,7 +453,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
                 clicked => on_open_themes_folder();
 
                 styles [
-                  "bg-proton-blue"
+                  "fill-button"
                 ]
               }
 
@@ -436,7 +463,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
                 clicked => on_get_more_themes_online();
 
                 styles [
-                  "bg-proton-blue"
+                  "fill-button"
                 ]
               }
             }
@@ -523,13 +550,14 @@ template TerminalPreferencesWindow : He.SettingsWindow {
         orientation: vertical;
         spacing: 12;
 
-        He.ContentList {
+        He.SettingsList {
           title: _("Experimental");
           description: _("Features in this section are known to be unstable!");
 
-          He.MiniContentBlock use_sixel_action_row {
+          He.SettingsRow use_sixel_action_row {
             title: _("Sixel Support");
             subtitle: _("Render sixel escape sequences.");
+            activatable-widget: use_sixel_switch;
 
             Switch use_sixel_switch {
               valign: center;
@@ -537,12 +565,13 @@ template TerminalPreferencesWindow : He.SettingsWindow {
           }
         }
 
-        He.ContentList {
+        He.SettingsList {
           title: _("Danger Zone");
 
-          He.MiniContentBlock {
+          He.SettingsRow {
             title: _("Reset Preferences");
             subtitle: _("This will revert all settings back to default. Your extra themes will not be removed.");
+            activatable-widget: reset_all_button;
 
             Button reset_all_button {
               valign: center;
