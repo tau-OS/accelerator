@@ -86,30 +86,6 @@ template TerminalPreferencesWindow : He.SettingsWindow {
               valign: center;
             }
           }
-
-          He.SettingsList {
-            He.SettingsRow {
-              title: _("Hide Single Tab");
-              subtitle: _("Replace tab bar with a title label when a single tab is open. Easier to drag the window.");
-              sensitive: bind fill_tabs_switch.active;
-              activatable-widget: hide_single_tab_switch;
-
-              Switch hide_single_tab_switch {
-                valign: center;
-              }
-            }
-
-            He.SettingsRow {
-              title: _("Stealth Single Tab");
-              subtitle: _("Blend single tab with header bar.");
-              sensitive: bind fill_tabs_switch.active;
-              activatable-widget: stealth_single_tab_switch;
-
-              Switch stealth_single_tab_switch {
-                valign: center;
-              }
-            }
-          }
         }
 
         He.SettingsList {
@@ -139,17 +115,6 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             activatable-widget: drag_area_switch;
 
             Switch drag_area_switch {
-              valign: center;
-            }
-          }
-
-          He.SettingsRow {
-            sensitive: bind show_window_borders_switch.active;
-            title: _("Draw Line Under Header Bar");
-            subtitle: _("Enable to draw a line under the header bar when a single tab is open. Requires \"Show Borders\".");
-            activatable-widget: draw_line_single_tab_switch;
-
-            Switch draw_line_single_tab_switch {
               valign: center;
             }
           }

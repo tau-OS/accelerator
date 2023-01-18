@@ -205,13 +205,6 @@ public class Terminal.Window : He.ApplicationWindow {
     this.child = overlay;
 
     this.set_name ("accelerator-main-window");
-    var css_provider = new Gtk.CssProvider ();
-    css_provider.load_from_resource ("/com/fyralabs/Accelerator/resources/style.css");
-    // add style provider from application
-    //  Gtk.StyleContext.add_provider_for_display (this.get_style_context ().display,  provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
-
-    var ctx = this.get_style_context ();
-    ctx.add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
   }
 
   public He.Tab blank_tab () {
@@ -251,15 +244,7 @@ public class Terminal.Window : He.ApplicationWindow {
             maximized: sett.remember_window_size && sett.was_maximized
     );
 
-/*      Marble.add_css_provider_from_resource (
-                                           "/com/fyralabs/Accelerator/resources/style.css"
-    );  */
-
     this.theme_provider = ThemeProvider.get_default ();
-
-    // this.header_bar.new_tab_button.clicked.connect (() => {
-    // this.new_tab (null, null);
-    // });
 
     this.add_actions ();
     this.connect_signals ();
@@ -268,18 +253,10 @@ public class Terminal.Window : He.ApplicationWindow {
       this.new_tab (command, cwd);
     }
 
-    // remove the blank tab
     this.tab_view.get_first_child ().destroy ();
   }
 
   private void connect_signals () {
-    // this.settings.schema.bind (
-    // "fill-tabs",
-    // this.tab_bar,
-    // "expand-tabs",
-    // SettingsBindFlags.GET
-    // );
-
     this.settings.schema.bind (
                                "show-headerbar",
                                this.header_bar_revealer,
@@ -312,11 +289,6 @@ public class Terminal.Window : He.ApplicationWindow {
       // this.active_terminal.grab_focus ();
     });
 
-    // this.tab_view.create_window.connect (() => {
-    // var w = this.new_window (null, true);
-    // return w.tab_view;
-    // });
-
     this.tab_bar.new_tab_requested.connect (() => {
       this.new_tab (null, null);
     });
@@ -327,11 +299,7 @@ public class Terminal.Window : He.ApplicationWindow {
       this.tab_bar.remove_tab (tab);
       tab.unrealize ();
       tab.dispose ();
-      // (tab.child as TerminalTab) ? .terminal.exit ();
-      // (tab.child as TerminalTab) ? .terminal.dispose ();
       (tab as TerminalTab) ? .close_request ();
-      // (tab.child as TerminalTab) ? .box.unrealize ();
-      // (tab as TerminalTab) ? .box.dispose ();
       (tab as TerminalTab) ? .box.unparent ();
       (tab as TerminalTab) ? .box.unref ();
       tab.unparent ();
@@ -361,18 +329,6 @@ public class Terminal.Window : He.ApplicationWindow {
       (new_tab as TerminalTab) ? .terminal.grab_focus ();
       this.active_terminal = (new_tab as TerminalTab) ? .terminal;
     });
-
-    // this.tab_view.close_page.connect ((page) => {
-    // (page.child as TerminalTab) ? .destroy ();
-    // return false;
-    // });
-
-    // Close the window if all tabs were closed
-    // this.tab_view.notify["n-pages"].connect (() => {
-    // if (this.tab_view.n_pages < 1) {
-    // this.close ();
-    // }
-    // });
 
     this.tab_view.notify["selected-page"].connect (() => {
       this.on_tab_selected ();
@@ -549,19 +505,8 @@ public class Terminal.Window : He.ApplicationWindow {
   public void new_tab (string? command, string? cwd) {
     var tab = new TerminalTab (this, command, cwd);
 
-    // this.tab_view.child = tab.box;
-
-    // if (this.tab_view == null) {
-    // this.tab_view = new He.TabPage(tab);
-    // }
-
     var pos = this.tab_bar.insert_tab (tab, -1);
     this.active_terminal = tab.terminal;
-    // if (this.tab_view.name == "accelerator-blank-tab") {
-    // this.tab_view.name = "tab-view";
-    // this.tab_view.tab.child = this.active_terminal;
-    // }
-
 
     // check for children in tab_view, and turn them invisible
     if (this.tab_view.tab != null) {
@@ -576,17 +521,14 @@ public class Terminal.Window : He.ApplicationWindow {
     tab.close_request.connect (() => {
       debug ("close request");
       this.tab_bar.close_tab_requested (tab);
-      // this.tab_bar.remove_tab (tab);
-      // (this.tab_view.tab as TerminalTab) ? .dispose ();
     });
     this.tab_bar.current = tab;
     this.tab_view.tab = this.tab_bar.current as TerminalTab;
     this.tab_view.show ();
-    // this.tab_view.child = tab.box;
 
-    // todo: once tab is closed, remove the terminal session from the tab_view\
+    // TODO: once tab is closed, remove the terminal session from the tab_view
     // if it is switched, then make all other tabs invisible
-    // CC: @lainsce @lleyton send help
+
     // (this.tab_view.tab as TerminalTab) ? .box.set_parent (this.tab_view);
     // tab.box.set_parent (this.tab_view.tab.child);
   }
@@ -696,17 +638,9 @@ public class Terminal.Window : He.ApplicationWindow {
     } else {
       this.tab_bar.current = this.tab_bar.tabs.nth_data (0);
     }
-    // if (!this.tab_bar.tabs.next) {
-
-    // this.tab_bar.current = this.tab_bar.tabs.nth (0);
-    // }
   }
 
   public void focus_previous_tab () {
-    // if (!this.tab_view.select_previous_page ()) {
-    // this.tab_view.set_selected_page (this.tab_view.get_nth_page (this.tab_view.n_pages - 1));
-    // }
-
     var previous_tab = this.tab_bar.tabs.prev.data;
     if (previous_tab != null) {
       this.tab_bar.current = previous_tab;
@@ -716,23 +650,6 @@ public class Terminal.Window : He.ApplicationWindow {
   }
 
   public void focus_nth_tab (int index) {
-    // if (this.tab_view.n_pages <= 1) {
-    // return;
-    // }
-    // if (index < 0) {
-    //// Go to last tab
-    // this.tab_view.set_selected_page (
-    // this.tab_view.get_nth_page (this.tab_view.n_pages - 1)
-    // );
-    // return;
-    // }
-    // if (index > this.tab_view.n_pages) {
-    // return;
-    // } else {
-    // this.tab_view.set_selected_page (this.tab_view.get_nth_page (index - 1));
-    // return;
-    // }
-
     var tab = this.tab_bar.tabs.nth_data (index);
     if (tab != null) {
       this.tab_bar.current = tab;

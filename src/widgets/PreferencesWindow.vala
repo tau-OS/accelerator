@@ -48,7 +48,6 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
   [GtkChild] unowned Gtk.Switch easy_copy_paste_switch;
   [GtkChild] unowned Gtk.Switch fill_tabs_switch;
   [GtkChild] unowned Gtk.Switch floating_controls_switch;
-  [GtkChild] unowned Gtk.Switch hide_single_tab_switch;
   [GtkChild] unowned Gtk.Switch use_sixel_switch;
   [GtkChild] unowned Gtk.Switch pretty_switch;
   [GtkChild] unowned Gtk.SpinButton opacity_spin_button;
@@ -58,10 +57,8 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
   [GtkChild] unowned Gtk.Switch show_menu_button_switch;
   [GtkChild] unowned Gtk.Switch show_scrollbars_switch;
   [GtkChild] unowned Gtk.Switch show_window_borders_switch;
-  [GtkChild] unowned Gtk.Switch stealth_single_tab_switch;
   [GtkChild] unowned Gtk.Switch use_custom_shell_command_switch;
   [GtkChild] unowned Gtk.Switch use_overlay_scrolling_switch;
-  [GtkChild] unowned Gtk.Switch draw_line_single_tab_switch;
   [GtkChild] unowned Gtk.Switch drag_area_switch;
   [GtkChild] unowned Gtk.ToggleButton dark_theme_toggle;
   [GtkChild] unowned Gtk.ToggleButton light_theme_toggle;
@@ -240,13 +237,6 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
     );
 
     settings.schema.bind (
-                          "headerbar-draw-line-single-tab",
-                          this.draw_line_single_tab_switch,
-                          "active",
-                          SettingsBindFlags.DEFAULT
-    );
-
-    settings.schema.bind (
                           "headerbar-drag-area",
                           this.drag_area_switch,
                           "active",
@@ -256,20 +246,6 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
     settings.schema.bind (
                           "easy-copy-paste",
                           this.easy_copy_paste_switch,
-                          "active",
-                          SettingsBindFlags.DEFAULT
-    );
-
-    settings.schema.bind (
-                          "hide-single-tab",
-                          this.hide_single_tab_switch,
-                          "active",
-                          SettingsBindFlags.DEFAULT
-    );
-
-    settings.schema.bind (
-                          "stealth-single-tab",
-                          this.stealth_single_tab_switch,
                           "active",
                           SettingsBindFlags.DEFAULT
     );
@@ -500,7 +476,7 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
 
   // Callbacks
 
-  //[GtkCallback]
+  [GtkCallback]
   private void on_font_row_activated () {
     var fc = new Gtk.FontChooserDialog (_("Terminal Font"), this) {
       level = Gtk.FontChooserLevel.FAMILY | Gtk.FontChooserLevel.SIZE | Gtk.FontChooserLevel.STYLE,

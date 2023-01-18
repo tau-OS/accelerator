@@ -113,9 +113,7 @@ public class Terminal.ColorSchemePreviewPaintable : GLib.Object, Gdk.Paintable {
         height = height
       });
     } catch (Error e) {
-      // TODO: should we make this a warning? It seems a bit overkill to crash
-      // the app because we can't render a thumbnail
-      warning ("%s", e.message);
+      debug ("%s", e.message);
     }
   }
 
@@ -158,17 +156,9 @@ public class Terminal.ColorSchemeThumbnail : Gtk.FlowBoxChild {
       cursor = new Gdk.Cursor.from_name ("pointer", null),
     };
 
-    var css_provider = Marble.get_css_provider_for_data (
-                                                         // "picture { background-color: %s; padding-bottom: 2em; }".printf (
-                                                         "picture { background-color: %s; }".printf (
-                                                                                                     scheme.background_color.to_string ()
-                                                         )
-    );
-
-    img.get_style_context ().add_provider (
-                                           css_provider,
-                                           Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-    );
+    var css_provider = new Gtk.CssProvider ();
+    css_provider.load_from_data ("picture { background-color: %s; }".printf (scheme.background_color.to_string ()).data);
+    img.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
     // Icon will show when this.selected is true
     var checkicon = new Gtk.Image () {
@@ -183,19 +173,21 @@ public class Terminal.ColorSchemeThumbnail : Gtk.FlowBoxChild {
     img.set_parent (this);
     checkicon.set_parent (this);
 
-    // var lbl = new Gtk.Label (scheme.name) {
-    // ellipsize = Pango.EllipsizeMode.END,
-    // halign = Gtk.Align.CENTER,
-    // hexpand = true,
-    // justify = Gtk.Justification.CENTER,
-    // valign = Gtk.Align.END,
-    // wrap = false,
-    // xalign = 0.5f,
-    // };
+    var lbl = new Gtk.Label (scheme.name) {
+      ellipsize = Pango.EllipsizeMode.END,
+      halign = Gtk.Align.CENTER,
+      hexpand = true,
+      justify = Gtk.Justification.CENTER,
+      valign = Gtk.Align.END,
+      wrap = false,
+      xalign = 0.5f,
+      margin_bottom = 6
+    };
+    lbl.add_css_class ("caption");
 
     // Marble.set_theming_for_data (lbl, "label { color: %s; margin: 0.5em 8px; }".printf(scheme.foreground_color.to_string ()), null, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-    // lbl.set_parent (this);
+    lbl.set_parent (this);
 
     this.notify["selected"].connect (() => {
       if (this.selected) {

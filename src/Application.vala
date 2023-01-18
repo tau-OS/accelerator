@@ -37,16 +37,9 @@ public class Terminal.Application : He.Application {
             flags: ApplicationFlags.HANDLES_COMMAND_LINE
     );
 
-
-    // Intl.setlocale (LocaleCategory.ALL, "") ;
     Intl.textdomain (GETTEXT_PACKAGE);
     Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
     Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-
-
-    // load CSS provider
-    css_provider = new Gtk.CssProvider ();
-    css_provider.load_from_resource (resource_base_path + "/resources/style.css");
 
     this.add_action_entries (ACTIONS, this);
 
