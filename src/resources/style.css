@@ -10,35 +10,14 @@
   border: 1px solid @borders;
 }
 
-/* #accelerator-main-window.with-borders:not(.fullscreen):backdrop {
-  border-color: alpha(@borders, 0.5);
-} */
-
 #accelerator-main-window {
   background: transparent;
 }
 
-#accelerator-main-window.with-borders .custom-headerbar:not(.single-tab-mode) headerbar,
-#accelerator-main-window.with-borders .custom-headerbar.single-tab-mode.draw-line-in-single-tab headerbar {
-  background-color: @borders;
-  transition: background-image 0s;
-}
-
-/**
- * Our custom header bar inserts window controls inside Adw.HeaderBar which
- * doubles the padding on the sides.
- *
- * https://gitlab.gnome.org/GNOME/libadwaita/-/blob/12f891a7d04951a471e0cc65b7c4a8b3e9dfb8bf/src/stylesheet/widgets/_header-bar.scss#L15
- */
 .custom-headerbar headerbar windowhandle > box {
   padding: 0;
 }
 
-/**
- * Fix unfocused custom headerbar look. With default styling, tabs become
- * transparent and the "fake bottom tab border" becomes visible behind the
- * active tab.
- */
 .custom-headerbar:backdrop windowhandle { filter: none; }
 
 .custom-headerbar:backdrop > * { filter: opacity(0.5); }
@@ -65,47 +44,22 @@ tab:selected {
 }
 
 #accelerator-main-window.with-borders tab:selected,
-#accelerator-main-window.with-borders .custom-headerbar.single-tab-mode:not(.stealth) headerbar .title-label {
+#accelerator-main-window.with-borders .custom-headerbar headerbar .title-label {
   border-left-color: @borders;
   border-right-color: @borders;
 }
 
-#accelerator-main-window.with-borders .custom-headerbar:not(.single-tab-mode) .title-label,
-#accelerator-main-window.with-borders .custom-headerbar:not(.stealth) .title-label {
+#accelerator-main-window.with-borders .custom-headerbar .title-label,
+#accelerator-main-window.with-borders .custom-headerbar .title-label {
   margin-left: -8px;
 }
 
-.custom-headerbar.single-tab-mode.stealth headerbar,
-.custom-headerbar.single-tab-mode:not(.stealth) headerbar .title-label {
-  background: @window_bg_color;
-}
-
-.custom-headerbar.single-tab-mode:not(.stealth) headerbar .title-label {
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-}
-
-/* FIXME: all windowcontrols rules have no effect in fullscreen */
-
-/**
- * Remove space on the left when "Drag Area" is disabled.
- */
-.custom-headerbar:not(.with-dragarea):not(.single-tab-mode) tabbar {
+.custom-headerbar:not(.with-dragarea) tabbar {
   margin-left: -8px;
 }
 
-/**
- * Add space on the left when "Drag Area" is enabled.
- */
-.custom-headerbar.with-dragarea:not(.single-tab-mode) tabbar {
+.custom-headerbar.with-dragarea tabbar {
   margin-left: 34px;
-}
-
-/**
- * Make header bar darker when "Draw Line" is on and there is a single tab open.
- */
-.with-borders .custom-headerbar.single-tab-mode.stealth.draw-line-in-single-tab headerbar {
-  background-color: @headerbar_bg_color;
 }
 
 tabbox background {
@@ -175,22 +129,3 @@ window:not(.about) .floating-revealer > headerbar {
 .shortcut-row {
   padding: 12px;
 }
-
-/* :root {
-  --color-0: rgb(40,40,40);
-  --color-1: rgb(204,36,29);
-  --color-2: rgb(152,151,26);
-  --color-3: rgb(215,153,33);
-  --color-4: rgb(69,133,136);
-  --color-5: rgb(177,98,134);
-  --color-6: rgb(104,157,106);
-  --color-7: rgb(168,153,132);
-  --color-8: rgb(146,131,116);
-  --color-9: rgb(251,73,52);
-  --color-10: rgb(184,187,38);
-  --color-11: rgb(250,189,47);
-  --color-12: rgb(131,165,152);
-  --color-13: rgb(211,134,155);
-  --color-14: rgb(142,192,124);
-  --color-15: rgb(235,219,178);
-} */
