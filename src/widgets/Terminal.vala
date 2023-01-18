@@ -470,11 +470,10 @@ public class Terminal.Terminal : Vte.Terminal {
 
     menu.append_section (null, edit_section);
 
-    preferences_section.append (_("Preferences"), "win.edit_preferences");
+    preferences_section.append (_("Preferences…"), "win.edit_preferences");
     menu.append_section (null, preferences_section);
 
-    bottom_section.append (_("Keyboard Shortcuts"), "win.show-help-overlay");
-    bottom_section.append (_("About"), "app.about");
+    bottom_section.append (_("About Accelerator…"), "app.about");
     menu.append_section (null, bottom_section);
 
     var pop = new Gtk.PopoverMenu.from_model (menu);
