@@ -21,6 +21,6 @@ repo/
 .idea/
 
 # i18n
-po/*.pot
+
 
 /subprojects/blueprint-compiler
