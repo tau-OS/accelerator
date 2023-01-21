@@ -57,8 +57,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
           He.SettingsRow style_preference_combo_row {
             title: _("Style Preference");
 
-            Box {
-              spacing: 12;
+            He.SegmentedButton {
               ToggleButton style_preference_light_theme_toggle {
                 label: _("Light Theme");
                 active: true;
@@ -68,10 +67,6 @@ template TerminalPreferencesWindow : He.SettingsWindow {
                 label: _("Dark Theme");
                 group: style_preference_light_theme_toggle;
               }
-
-              styles [
-                "linked",
-              ]
             }
           }
         }
@@ -221,9 +216,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
           He.SettingsRow cursor_shape_combo_row {
             title: _("Cursor Shape");
 
-            Box {
-              spacing: 12;
-
+            He.SegmentedButton {
               ToggleButton block_toggle {
                 label: _("Block");
                 active: true;
@@ -238,10 +231,6 @@ template TerminalPreferencesWindow : He.SettingsWindow {
                 label: _("Underline");
                 group: block_toggle;
               }
-
-              styles [
-                "linked",
-              ]
             }
           }
 
@@ -249,13 +238,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             title: _("Cursor Blinking");
             subtitle: _("Whether or not the cursor should blink.");
 
-            Box {
-              spacing: 12;
-
-              styles [
-                  "linked",
-              ]
-
+            He.SegmentedButton {
               ToggleButton follow_sys_cursor_toggle {
                 label: _("Follow System");
                 active: true;
@@ -324,13 +307,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
           He.SettingsRow scrollback_mode_combo_row {
             title: _("Scrollback mode");
 
-            Box {
-              spacing: 12;
-
-              styles [
-                  "linked",
-              ]
-
+            He.SegmentedButton {
               ToggleButton fixed_size_scroll_toggle {
                 label: _("Fixed Size");
                 active: true;
