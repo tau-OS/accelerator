@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
 "PO-Revision-Date: 2023-01-23 01:48+0000\n"
-"Last-Translator: windowsboy111 <windowsboy111@fyralabs.com>\n"
+"Last-Translator: Lains <lains@fyralabs.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.fyralabs.com/projects/"
 "tauOS/accelerator/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -348,9 +348,8 @@ msgstr ""
 msgid "Theme Integration"
 msgstr "主题集成"
 
-#, fuzzy
 msgid "Style window with terminal theme colors."
-msgstr "是否将终端主题的配色集成到应用窗口"
+msgstr "是否将终端主题的配色集成到应用窗口."
 
 #, fuzzy
 msgid "Style Preference"
@@ -385,9 +384,8 @@ msgstr "在只有一个标签页时将标签页替换成标题栏文本，以更
 msgid "Stealth Single Tab"
 msgstr "隐藏单个标签页"
 
-#, fuzzy
 msgid "Blend single tab with header bar."
-msgstr "将单个标签页的颜色与标题栏混合"
+msgstr "将单个标签页的颜色与标题栏混合."
 
 #, fuzzy
 msgid "Header Bar"
@@ -420,9 +418,8 @@ msgstr "浮动控件"
 msgid "Show Floating Controls"
 msgstr "显示浮动控件"
 
-#, fuzzy
 msgid "Show floating controls when header bar is hidden."
-msgstr "在隐藏标题栏时显示浮动控件"
+msgstr "在隐藏标题栏时显示浮动控件."
 
 msgid "Floating Controls Hover Area"
 msgstr "触发区域"
@@ -475,9 +472,8 @@ msgstr "Underline"
 msgid "Cursor Blinking"
 msgstr ""
 
-#, fuzzy
 msgid "Whether or not the cursor should blink."
-msgstr "是否显示滚动条"
+msgstr "是否显示滚动条."
 
 msgid "On"
 msgstr ""
