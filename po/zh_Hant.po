@@ -8,22 +8,25 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-01-22 08:37+0000\n"
+"Last-Translator: windowsboy111 <windowsboy111@fyralabs.com>\n"
+"Language-Team: Chinese (Traditional) <https://weblate.fyralabs.com/projects/"
+"tauOS/accelerator/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.15.1\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
-msgstr ""
+msgstr "Accelerator"
 
 #: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
 #: src/gtk/preferences-window.ui:278
 msgid "Terminal"
-msgstr ""
+msgstr "終端"
 
 #: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
@@ -31,165 +34,165 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
-msgstr ""
+msgstr "視窗寬度"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:10
 msgid "Window height"
-msgstr ""
+msgstr "視窗高度"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:14
 msgid "Whether or not to display borders around the window and tabs"
-msgstr ""
+msgstr "顯示視窗及標籤之框"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
-msgstr ""
+msgstr "記住視窗大小"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
-msgstr ""
+msgstr "字體及大小"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
-msgstr ""
+msgstr "視窗應否繼承終端顏色"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
-msgstr ""
+msgstr "終端透明度"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
-msgstr ""
+msgstr "標籤應否填滿標籤欄"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
-msgstr ""
+msgstr "顯示標題欄"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
-msgstr ""
+msgstr "於標題欄顯示選單鍵"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
-msgstr ""
+msgstr "單一標籤下於欄下顯示幼線"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:56
 msgid "Whether or not to reserve an area for dragging the header bar"
-msgstr ""
+msgstr "保留拖放標題欄之位置"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
-msgstr ""
+msgstr "顯示捲動軸"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
-msgstr ""
+msgstr "啟用上蓋捲動"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
-msgstr ""
+msgstr "以捲動畫素取代捲動行列"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:72
 msgid "If enabled, terminals will render sixel escape sequences"
-msgstr ""
+msgstr "顯示 sixel 跳脫序列"
 
 #. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
 #: data/com.fyralabs.Accelerator.gschema.xml:77
 #: src/gtk/preferences-window.ui:373
 msgid "Scrollback mode"
-msgstr ""
+msgstr "回捲模式"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
-msgstr ""
+msgstr "回捲行數"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
-msgstr ""
+msgstr "以無標題模式顯示浮動控制"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
-msgstr ""
+msgstr "於視窗頂部引發浮動控制之畫素面積"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:93
 msgid "Delay time before showing floating controls"
-msgstr ""
+msgstr "顯示浮動控制之延遲"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:97
 msgid "The light color scheme for the terminal"
-msgstr ""
+msgstr "終端淺色主題"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:101
 msgid "The dark color scheme for the terminal"
-msgstr ""
+msgstr "終端深色主題"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
 #: data/com.fyralabs.Accelerator.gschema.xml:106
 msgid "Style preference"
-msgstr ""
+msgstr "風格設定"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:110
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
-msgstr ""
+msgstr "圍繞終端小工具之空間（上、右、下、左）"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:114
 msgid "Terminal cell width"
-msgstr ""
+msgstr "終端寬度"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:118
 msgid "Terminal cell height"
-msgstr ""
+msgstr "終端高度"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:122
 msgid "Cursor shape"
-msgstr ""
+msgstr "游標形狀"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:126
 msgid "Whether or not the cursor should blink"
-msgstr ""
+msgstr "使游標閃動"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
-msgstr ""
+msgstr "ctrl+c ctrl+v 為複製、貼上"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:134
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
-msgstr ""
+msgstr "單一標籤下以標籤取代標題欄"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:138
 msgid "If enabled, a single open tab will blend with the headerbar color"
-msgstr ""
+msgstr "單一標籤下融入標題色"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:142
 msgid "Whether to spawn shell in login mode"
-msgstr ""
+msgstr "生成 shell 於登入模式"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:146
 msgid "Whether to use a custom command instead of the user's shell"
-msgstr ""
+msgstr "以自定指令取代用戶 shell"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:150
 msgid "Custom command to use instead of the user's shell"
-msgstr ""
+msgstr "取代用戶 shell 之自定指令"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:157
 msgid ""
 "Whether clicking next on the last search result should return to the first"
-msgstr ""
+msgstr "最後搜尋結果的下一個為第一個"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:161
 msgid "Whether search should be case sensitive"
-msgstr ""
+msgstr "大小寫敏感搜尋"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:165
 msgid "Whether search should only match entire words"
-msgstr ""
+msgstr "整個字詞搜尋"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:169
 msgid "Whether search should be performed using regular expressions"
@@ -197,23 +200,23 @@ msgstr ""
 
 #: src/gtk/search-toolbar.ui:20
 msgid "Find"
-msgstr ""
+msgstr "搜尋"
 
 #: src/gtk/search-toolbar.ui:42
 msgid "Previous result"
-msgstr ""
+msgstr "上一個結果"
 
 #: src/gtk/search-toolbar.ui:48
 msgid "Next result"
-msgstr ""
+msgstr "下一個結果"
 
 #: src/gtk/search-toolbar.ui:91
 msgid "Search wraps around"
-msgstr ""
+msgstr "回轉搜尋"
 
 #: src/gtk/search-toolbar.ui:96
 msgid "Match is case sensitive"
-msgstr ""
+msgstr "大小寫敏感結果"
 
 #: src/gtk/search-toolbar.ui:101
 msgid "Match entire words only"
