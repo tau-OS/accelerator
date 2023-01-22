@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-01-22 12:21+0000\n"
+"Last-Translator: windowsboy111 <windowsboy111@fyralabs.com>\n"
+"Language-Team: Yue <https://weblate.fyralabs.com/projects/tauOS/accelerator/"
+"yue/>\n"
 "Language: yue\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.15.1\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
@@ -47,7 +50,7 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
-msgstr ""
+msgstr "字體同大細"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
@@ -73,7 +76,7 @@ msgstr ""
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
-msgstr ""
+msgstr "單分頁嗰陣畫條 1px 線喺標題欄下面"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:56
 msgid "Whether or not to reserve an area for dragging the header bar"
@@ -574,11 +577,11 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:301
 msgid "On"
-msgstr ""
+msgstr "開"
 
 #: src/gtk/preferences-window.ui:302
 msgid "Off"
-msgstr ""
+msgstr "閂"
 
 #: src/gtk/preferences-window.ui:310
 msgid "Padding"
@@ -618,7 +621,7 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:379 src/widgets/ShortcutEditor.vala:131
 msgid "Disabled"
-msgstr ""
+msgstr "閂咗"
 
 #: src/gtk/preferences-window.ui:388
 msgid "Scrollback Lines"
@@ -673,7 +676,7 @@ msgid ""
 "To ensure readability, \"Theme Integration\" will be disabled if you select "
 "a light color scheme while using the dark app style or a dark color scheme "
 "while using the light app style."
-msgstr ""
+msgstr "為咗確保可讀性，如果風格同主題深淺不一，「主題融入」就會閂咗。"
 
 #: src/gtk/preferences-window.ui:539
 msgid "Advanced"
@@ -689,6 +692,8 @@ msgid ""
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">report "
 "bugs</a>."
 msgstr ""
+"呢度嘅功能較為參差。幫下手測試同報告<a href=\"https://gitlab.gnome.org/"
+"raggesilver/blackbox/-/issues\">問題</a>吖。"
 
 #: src/gtk/preferences-window.ui:548
 msgid "Sixel Support"
@@ -710,7 +715,7 @@ msgstr ""
 msgid ""
 "This will revert all settings back to default. Your extra themes will not be "
 "removed."
-msgstr ""
+msgstr "全部設定都會通通重設。您追加嘅主題係唔會被擦嘅。"
 
 #: src/gtk/preferences-window.ui:570
 msgid "Reset preferences"
@@ -726,7 +731,8 @@ msgid ""
 "%s uses an early Gtk 4 port of VTE as a terminal widget. While a lot of "
 "progress has been made on this port, copying has yet to be implemented. This "
 "means there's currently no way to copy text in %s."
-msgstr ""
+msgstr "%s 呢個終端工具仔用個 VTE 嘅早期 Gtk 4 port。進度係多，但係喺 %s "
+"度複製文字都仲係未得。"
 
 #: src/widgets/HeaderBar.vala:30 src/widgets/ShortcutEditor.vala:168
 #: src/widgets/Window.vala:153
