@@ -8,22 +8,25 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-01-22 11:47+0000\n"
+"Last-Translator: rmnscnce <rmnscnce@ya.ru>\n"
+"Language-Team: Indonesian <https://weblate.fyralabs.com/projects/tauOS/"
+"accelerator/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.15.1\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
-msgstr ""
+msgstr "Accelerator"
 
 #: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
 #: src/gtk/preferences-window.ui:278
 msgid "Terminal"
-msgstr ""
+msgstr "Terminal"
 
 #: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
@@ -31,57 +34,60 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
-msgstr ""
+msgstr "Lebar jendela"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:10
 msgid "Window height"
-msgstr ""
+msgstr "Tinggi jendela"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:14
 msgid "Whether or not to display borders around the window and tabs"
 msgstr ""
+"Menentukan apakah akan menampilkan batas-batas di sekeliling jendela dan tab"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
-msgstr ""
+msgstr "Menentukan apakah ukuran jendela akan diingat"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
-msgstr ""
+msgstr "Rangkaian dan ukuran font"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
-msgstr ""
+msgstr "Menentukan apakah warna tema terminal akan digunakan oleh jendela"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
-msgstr ""
+msgstr "Keburaman latar jendela terminal"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
-msgstr ""
+msgstr "Menentukan apakah tab mengisi penuh bilah tab"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
-msgstr ""
+msgstr "Menentukan apakah akan menampilkan bilah tajuk"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
-msgstr ""
+msgstr "Menentukan apakah akan menampilkan sebuah tombol menu pada bilah tajuk"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
 msgstr ""
+"Menentukan apakah se-piksel garis akan dibuat di bawah bilah tajuk apabila "
+"terdapat satu tab yang terbuka"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:56
 msgid "Whether or not to reserve an area for dragging the header bar"
-msgstr ""
+msgstr "Menentukan apakah akan menyediakan tempat untuk menarik bilah tajuk"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
-msgstr ""
+msgstr "Menentukan apakah bilah gulir akan ditampilkan"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
