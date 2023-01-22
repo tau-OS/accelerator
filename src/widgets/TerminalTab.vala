@@ -38,6 +38,7 @@ public class Terminal.TerminalTab : He.Tab {
     this.terminal = new Terminal (this.window, command, cwd);
     this.terminal.hexpand = true;
     this.terminal.vexpand = true;
+    this.terminal.enable_sixel = true;
     this.focusable = false;
     this.terminal.focusable = true;
     this.focus_on_click = false;
@@ -53,13 +54,6 @@ public class Terminal.TerminalTab : He.Tab {
     this.visible = false;
 
     this.connect_signals ();
-  }
-
-  // function to set the current tab
-  public void set_tab () {
-    this.window.tab_bar.current = this;
-    this.window.tab_view.child = this.box;
-    // this.box.set_parent (this.window.tab_view);
   }
 
   private void connect_signals () {

@@ -83,7 +83,8 @@ public class Terminal.Terminal : Vte.Terminal {
     Object (
             allow_hyperlink: true,
             receives_default: true,
-            scroll_unit_is_pixels: true
+            scroll_unit_is_pixels: true,
+            enable_sixel: true
     );
 
     this.original_scrollback_lines = this.scrollback_lines;
@@ -94,6 +95,7 @@ public class Terminal.Terminal : Vte.Terminal {
     this.vexpand = true;
     this.halign = Gtk.Align.FILL;
     this.valign = Gtk.Align.FILL;
+    this.enable_sixel = true;
 
     this.child_exited.connect (this.on_child_exited);
     this.exit.connect (this.on_exit);
@@ -233,17 +235,17 @@ public class Terminal.Terminal : Vte.Terminal {
       this.padding_provider = null;
     }
 
-    var provider = new Gtk.CssProvider();
+    var provider = new Gtk.CssProvider ();
 
     try {
-      provider.load_from_data("vte-terminal { padding: %upx %upx %upx %upx; }".printf (
-        pad.top,
-        pad.right,
-        pad.bottom,
-        pad.left
+      provider.load_from_data ("vte-terminal { padding: %upx %upx %upx %upx; }".printf (
+                                                                                        pad.top,
+                                                                                        pad.right,
+                                                                                        pad.bottom,
+                                                                                        pad.left
       ).data);
-    } catch(Error e) {
-      warning(e.message);
+    } catch (Error e) {
+      warning (e.message);
     }
 
     this.get_style_context ().add_provider (
@@ -253,6 +255,13 @@ public class Terminal.Terminal : Vte.Terminal {
   }
 
   private void bind_data () {
+    // let's bind the enable-sixel property to the settings
+    //  this.settings.schema.bind (
+    //                             "use-sixel",
+    //                             this,
+    //                             "enable-sixel",
+    //                             SettingsBindFlags.DEFAULT
+    //  );
     this.settings.schema.bind (
                                "terminal-cell-width",
                                this,
@@ -293,6 +302,25 @@ public class Terminal.Terminal : Vte.Terminal {
                         null,
                         null
     );
+
+    //  this.settings.bind_property (
+    //                               "use-sixel",
+    //                               this,
+    //                               "enable-sixel",
+    //                               BindingFlags.SYNC_CREATE,
+    //                               null,
+    //                               null
+    //  );
+
+    //  this.bind_property (
+    //                               "use-sixel",
+    //                               this,
+    //                               "enable-sixel",
+    //                               BindingFlags.SYNC_CREATE,
+    //                               null,
+    //                               null
+    //  );
+
 
     // Fallback scrolling makes it so that VTE handles scrolling on its own. We
     // want VTE to let GtkScrolledWindow take care of scrolling if the user
