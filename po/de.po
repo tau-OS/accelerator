@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-01-22 03:08+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: German <https://weblate.fyralabs.com/projects/accelerator/"
+"PO-Revision-Date: 2023-01-22 11:47+0000\n"
+"Last-Translator: Matteo <matteo@raffl.net>\n"
+"Language-Team: German <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Weblate 4.15.1\n"
 
 msgid "Accelerator"
-msgstr ""
+msgstr "Accelerator"
 
 msgid "Terminal"
 msgstr "Terminal"
@@ -47,7 +47,7 @@ msgid "Whether the window should inherit terminal theme's colors"
 msgstr "Ob das Fenster die Farben des Terminal-Themas übernimmt oder nicht"
 
 msgid "Terminal window background opacity"
-msgstr ""
+msgstr "Konsolenfenster Hintergrundtransparenz"
 
 msgid "Whether or not tabs should expand to fill tab bar"
 msgstr "Ob Tabs die Tableiste ausfüllen oder nicht"
@@ -125,9 +125,8 @@ msgstr "Terminal Buchstabenhöhe"
 msgid "Cursor shape"
 msgstr "Cursorform"
 
-#, fuzzy
 msgid "Whether or not the cursor should blink"
-msgstr "Ob die Bildlaufleiste angezeigt wird oder nicht"
+msgstr "Ob der Cursor blinken soll oder nicht"
 
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr ""
@@ -173,27 +172,25 @@ msgid "Whether search should be performed using regular expressions"
 msgstr "Ob die Suche nur regular Expressions nutzen sollte"
 
 msgid "Find"
-msgstr ""
+msgstr "Suchen"
 
 msgid "Previous result"
-msgstr ""
+msgstr "Letztes Ergebnis"
 
 msgid "Next result"
-msgstr ""
+msgstr "Nächstes Ergebnis"
 
 msgid "Search wraps around"
 msgstr ""
 
-#, fuzzy
 msgid "Match is case sensitive"
-msgstr "Ob die Suche Groß-/Kleinschreibung beachtet"
+msgstr "Groß-/Kleinschreibung beachten"
 
 msgid "Match entire words only"
-msgstr ""
+msgstr "Nur ganze Wörter suchen"
 
-#, fuzzy
 msgid "Match using regular expression"
-msgstr "Ob die Suche nur regular Expressions nutzen sollte"
+msgstr "Mit Regex suchen"
 
 msgctxt "shortcut window"
 msgid "Window"
@@ -221,7 +218,7 @@ msgstr "Vollbildmodus umschalten"
 
 msgctxt "shortcut window"
 msgid "Terminal"
-msgstr "Terminal"
+msgstr "Konsole"
 
 msgctxt "shortcut window"
 msgid "Search"
@@ -355,7 +352,7 @@ msgid "Theme Integration"
 msgstr "Themenintegration"
 
 msgid "Style window with terminal theme colors."
-msgstr "Nutze die Themenfarbe auch für das Fenster"
+msgstr "Nutze die Themenfarbe auch für das Fenster."
 
 msgid "Style Preference"
 msgstr "Stil"
@@ -391,9 +388,8 @@ msgstr ""
 msgid "Stealth Single Tab"
 msgstr "Einzelnen Tab verstecken"
 
-#, fuzzy
 msgid "Blend single tab with header bar."
-msgstr "Einzelnen Tab farblich anpassen"
+msgstr "Einzelnen Tab farblich anpassen."
 
 #, fuzzy
 msgid "Header Bar"
@@ -426,9 +422,8 @@ msgstr "Schwebesteuerung für das Fenster"
 msgid "Show Floating Controls"
 msgstr "Zeige Schwebesteuerung für das Fenster"
 
-#, fuzzy
 msgid "Show floating controls when header bar is hidden."
-msgstr "Zeige Schwebesteuerung für das Fenster im fensterleistenlosen Modus"
+msgstr "Zeige Steuerungen für das Fenster im fensterleistenlosen Modus."
 
 msgid "Floating Controls Hover Area"
 msgstr "Schwebesteuerung für das Fenster Reaktionsgebiet"
@@ -465,7 +460,7 @@ msgid "Easy Copy &amp; Paste"
 msgstr "Einfaches Kopieren &amp; Einfügen"
 
 msgid "Use ctrl+c/ctrl+v for copy/paste."
-msgstr "Sie werden mit STRG+C/STRG+V Kopieren/Einzufügen können"
+msgstr "Nutze Strg+C/Ctrl+V fürs kopieren/einfügen."
 
 #, fuzzy
 msgid "Cursor Shape"
@@ -483,9 +478,8 @@ msgstr "Unterstrichen"
 msgid "Cursor Blinking"
 msgstr ""
 
-#, fuzzy
 msgid "Whether or not the cursor should blink."
-msgstr "Ob die Bildlaufleiste angezeigt wird oder nicht"
+msgstr "Ob der Zeiger blinken soll oder nicht."
 
 msgid "On"
 msgstr ""
@@ -548,7 +542,7 @@ msgid "Get more themes online"
 msgstr "Lade mehr Themen online herunter"
 
 msgid "Set your preferred theme for light and dark styles."
-msgstr "Wähle dein bevorzugtes Thema für den dunklen und hellen Stil"
+msgstr "Wähle dein bevorzugtes Thema für den dunklen und hellen Stil."
 
 msgid "Light Theme"
 msgstr "Helles Thema"
@@ -680,15 +674,15 @@ msgid "Zoom Out"
 msgstr "Verkleinern"
 
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Zoom zurücksetzen"
 
 #, fuzzy
 msgid "Close Tab"
 msgstr "Tab schließen"
 
-#, fuzzy, c-format
+#, c-format
 msgid "Switch to Tab %u"
-msgstr "Zu Tab wechseln"
+msgstr "Zu Tab %u wechseln"
 
 #, fuzzy
 msgid "Switch to Last Tab"
@@ -698,26 +692,26 @@ msgid "Show headerbar"
 msgstr "Zeige Fensterleiste"
 
 msgid "No tabs open"
-msgstr ""
+msgstr "Keine Tabs geöffnet"
 
 msgid "Terminal Font"
-msgstr "Terminalschrift"
+msgstr "Konsolenschriftart"
 
 msgid "Show app version"
 msgstr "Zeige App Version"
 
 msgid "Set current working directory"
-msgstr "Setze das aktuelle Arbeitsverzeichnis fest"
+msgstr "Legt das aktuelle Arbeitsverzeichnis fest"
 
 msgid "Execute command in a terminal"
-msgstr "Führe Kommando im Terminal aus"
+msgstr "Führe Befehl in der Konsole aus"
 
 msgid "Show help"
-msgstr "Zeige Hilfe"
+msgstr "Hilfe"
 
 #, c-format
 msgid "Run %s --help to get help\n"
-msgstr "Führe %s --help um Hilfe zu bekommen\n"
+msgstr "Führe %s --help aus um Hilfe zu bekommen\n"
 
 #~ msgid "Black Box"
 #~ msgstr "Black Box"
