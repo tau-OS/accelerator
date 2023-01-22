@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-01-22 12:21+0000\n"
+"PO-Revision-Date: 2023-01-23 01:48+0000\n"
 "Last-Translator: pastelite <kana.bhong@gmail.com>\n"
 "Language-Team: Thai <https://weblate.fyralabs.com/projects/tauOS/accelerator/"
 "th/>\n"
@@ -44,30 +44,30 @@ msgid "Font family and size"
 msgstr "ขุดฟอนต์และขนาด"
 
 msgid "Whether the window should inherit terminal theme's colors"
-msgstr "ตั้งสีหน้าต่างให้ตรงกับสีเทอร์มินัล"
+msgstr "ควรตั้งสีหน้าต่างให้ตรงกับสีเทอร์มินัลหรือไม่"
 
 msgid "Terminal window background opacity"
 msgstr "ความทึบของพื้นหลังหน้าต่าง"
 
 msgid "Whether or not tabs should expand to fill tab bar"
-msgstr "แท็บควรขยายจนเต็มแท็บบาร์หรือใหม่"
+msgstr "ควรขยายแท็บจนเต็มแท็บบาร์หรือไม่"
 
 msgid "Whether the headerbar should be shown or not"
-msgstr ""
+msgstr "ควรแสดงแถบส่วนหัวหรือไม่"
 
 msgid "Whether or not to display a menu button in the headerbar"
-msgstr ""
+msgstr "ควรแสดงปุ่มเมนูในแถบส่วนหัวหรือไม่"
 
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
-msgstr ""
+msgstr "ควรแสดงเส้นความหนา 1px ใต้แถบส่วนหัวหรือไม่เมื่อเปิดแค่แท็บเดียว"
 
 msgid "Whether or not to reserve an area for dragging the header bar"
-msgstr ""
+msgstr "ควรเผื่อพื้นที่สำหรับลากแถบส่วนหัวหรือไม่"
 
 msgid "Whether or not to show scrollbars"
-msgstr ""
+msgstr "ควรแสดงแถบเลื่อนหรือไม่"
 
 msgid "Whether overlay scrolling should be enabled"
 msgstr ""
