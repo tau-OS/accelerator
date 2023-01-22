@@ -307,7 +307,7 @@ msgid "Edit Shortcut"
 msgstr "Definir Atalhos"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 msgid "Apply"
 msgstr ""
