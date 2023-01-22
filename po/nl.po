@@ -7,117 +7,92 @@ msgstr ""
 "Project-Id-Version: blackbox\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2022-07-03 14:21+0200\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"PO-Revision-Date: 2023-01-22 03:08+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Dutch <https://weblate.fyralabs.com/projects/accelerator/"
+"accelerator/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15.1\n"
 
-#: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
-#: src/gtk/preferences-window.ui:278
 msgid "Terminal"
 msgstr "Terminalvenster"
 
-#: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
-msgstr ""
-"Terminal;terminal;shell;prompt;opdracht;commando;opdrachtregel;cmd;box;"
+msgstr "Terminal;terminal;shell;prompt;opdracht;commando;opdrachtregel;cmd;box;"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
 msgstr "Vensterbreedte"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:10
 msgid "Window height"
 msgstr "Vensterhoogte"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:14
 #, fuzzy
 msgid "Whether or not to display borders around the window and tabs"
 msgstr "Of er een menuknop op de kopbalk dient te worden getoond"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
 msgstr "Of de vensterafmetingen onthouden dienen te worden"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
 msgstr "Lettertype en tekstgrootte"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
 msgstr "Of het venster de themakleuren van de terminal dient te gebruiken"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
 msgstr ""
 "Of tabbladen over de gehele breedte van de tabbladbalk dienen te worden "
 "getoond"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
 msgstr "Of de kopbalk dient te worden getoond"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
 msgstr "Of er een menuknop op de kopbalk dient te worden getoond"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:56
 #, fuzzy
 msgid "Whether or not to reserve an area for dragging the header bar"
 msgstr "Of er een menuknop op de kopbalk dient te worden getoond"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
 msgstr "Of er schuifbalken dienen te worden getoond"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
 msgstr "Of er zwevende schuifbalken dienen te worden getoond"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
 msgstr "Schakel in om pixel voor pixel te scrollen in plaats van per rij"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:72
 #, fuzzy
 msgid "If enabled, terminals will render sixel escape sequences"
 msgstr "Schakel in om pixel voor pixel te scrollen in plaats van per rij"
 
 #. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
-#: data/com.fyralabs.Accelerator.gschema.xml:77
-#: src/gtk/preferences-window.ui:373
 #, fuzzy
 msgid "Scrollback mode"
 msgstr "Schuifbalken"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
 msgstr "Schakel in om zwevende bediening te tonen in de kopbalkloze modus"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
@@ -125,54 +100,43 @@ msgstr ""
 "Het aanwijsgebied (in pixels) bovenaan het vensters waarmee de zwevende "
 "bediening kan worden opgeroepen"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:93
 msgid "Delay time before showing floating controls"
 msgstr "Wachttijd alvorens zwevende bediening te tonen"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:97
 #, fuzzy
 msgid "The light color scheme for the terminal"
 msgstr "Het kleurenschema van het terminalvenster"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:101
 #, fuzzy
 msgid "The dark color scheme for the terminal"
 msgstr "Het kleurenschema van het terminalvenster"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
-#: data/com.fyralabs.Accelerator.gschema.xml:106
 #, fuzzy
 msgid "Style preference"
 msgstr "Standaardwaarden herstellen"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:110
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr ""
 "De hoeveelheid opvulling van terminalelementen (bovenaan, rechts, onderaan, "
 "links)"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:114
 msgid "Terminal cell width"
 msgstr "Celbreedte"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:118
 msgid "Terminal cell height"
 msgstr "Celhoogte"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:122
 msgid "Cursor shape"
 msgstr "Cursorvorm"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:126
 #, fuzzy
 msgid "Whether or not the cursor should blink"
 msgstr "Of er schuifbalken dienen te worden getoond"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr "Schakel in om Ctrl+C en Ctrl+V te gebruiken om te kopiëren/plakken"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:134
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
@@ -180,310 +144,245 @@ msgstr ""
 "Schakel in om de tabbladbalk bij slechts één geopend tabblad te vervangen "
 "door een naamlabel"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:138
 #, fuzzy
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr "Schakel in om zwevende bediening te tonen in de kopbalkloze modus"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:142
 msgid "Whether to spawn shell in login mode"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:146
 msgid "Whether to use a custom command instead of the user's shell"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:150
 msgid "Custom command to use instead of the user's shell"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:157
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:161
 #, fuzzy
 msgid "Whether search should be case sensitive"
 msgstr "Of de kopbalk dient te worden getoond"
 
-#: data/com.fyralabs.Accelerator.gschema.xml:165
 msgid "Whether search should only match entire words"
 msgstr ""
 
-#: data/com.fyralabs.Accelerator.gschema.xml:169
 msgid "Whether search should be performed using regular expressions"
 msgstr ""
 
-#: src/gtk/search-toolbar.ui:20
 msgid "Find"
 msgstr ""
 
-#: src/gtk/search-toolbar.ui:42
 msgid "Previous result"
 msgstr ""
 
-#: src/gtk/search-toolbar.ui:48
 msgid "Next result"
 msgstr ""
 
-#: src/gtk/search-toolbar.ui:91
 msgid "Search wraps around"
 msgstr ""
 
-#: src/gtk/search-toolbar.ui:96
 #, fuzzy
 msgid "Match is case sensitive"
 msgstr "Of de kopbalk dient te worden getoond"
 
-#: src/gtk/search-toolbar.ui:101
 msgid "Match entire words only"
 msgstr ""
 
-#: src/gtk/search-toolbar.ui:106
 msgid "Match using regular expression"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:10
 msgctxt "shortcut window"
 msgid "Window"
 msgstr "Venster"
 
-#: src/gtk/help-overlay.ui:13
 msgctxt "shortcut window"
 msgid "New window"
 msgstr "Nieuw venster"
 
-#: src/gtk/help-overlay.ui:19
 msgctxt "shortcut window"
 msgid "New tab"
 msgstr "Nieuw tabblad"
 
-#: src/gtk/help-overlay.ui:25
 msgctxt "shortcut window"
 msgid "Close tab"
 msgstr "Tabblad sluiten"
 
-#: src/gtk/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Switch headbar mode"
 msgstr "Overschakelen naar kopbalkmodus"
 
-#: src/gtk/help-overlay.ui:37
 msgctxt "shortcut window"
 msgid "Toggle fullscreen"
 msgstr "Schermvullende weergave aan/uit"
 
-#: src/gtk/help-overlay.ui:45
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Terminal"
 msgstr "Terminalvenster"
 
-#: src/gtk/help-overlay.ui:48
 msgctxt "shortcut window"
 msgid "Search"
 msgstr ""
 
-#: src/gtk/help-overlay.ui:54
 msgctxt "shortcut window"
 msgid "Copy"
 msgstr "Kopiëren"
 
-#: src/gtk/help-overlay.ui:60
 msgctxt "shortcut window"
 msgid "Paste"
 msgstr "Plakken"
 
-#: src/gtk/help-overlay.ui:66
 msgctxt "shortcut window"
 msgid "Zoom in"
 msgstr "Inzoomen"
 
-#: src/gtk/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Zoom out"
 msgstr "Uitzoomen"
 
-#: src/gtk/help-overlay.ui:80
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Navigatie"
 
-#: src/gtk/help-overlay.ui:83
 msgctxt "shortcut window"
 msgid "Focus next tab"
 msgstr "Volgend tabblad focussen"
 
-#: src/gtk/help-overlay.ui:89
 msgctxt "shortcut window"
 msgid "Focus previous tab"
 msgstr "Vorig tabblad focussen"
 
-#: src/gtk/help-overlay.ui:95
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 1"
 msgstr "Overschakelen naar tabblad"
 
-#: src/gtk/help-overlay.ui:101
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 2"
 msgstr "Overschakelen naar tabblad"
 
-#: src/gtk/help-overlay.ui:107
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 3"
 msgstr "Overschakelen naar tabblad"
 
-#: src/gtk/help-overlay.ui:113
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 4"
 msgstr "Overschakelen naar tabblad"
 
-#: src/gtk/help-overlay.ui:119
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 5"
 msgstr "Overschakelen naar tabblad"
 
-#: src/gtk/help-overlay.ui:125
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 6"
 msgstr "Overschakelen naar tabblad"
 
-#: src/gtk/help-overlay.ui:131
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 7"
 msgstr "Overschakelen naar tabblad"
 
-#: src/gtk/help-overlay.ui:137
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 8"
 msgstr "Overschakelen naar tabblad"
 
-#: src/gtk/help-overlay.ui:143
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 9"
 msgstr "Overschakelen naar tabblad"
 
-#: src/gtk/help-overlay.ui:149
 msgctxt "shortcut window"
 msgid "Switch to last Tab"
 msgstr "Overschakelen naar laatste tabblad"
 
-#: src/gtk/help-overlay.ui:157
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Algemeen"
 
-#: src/gtk/help-overlay.ui:160
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
 msgstr "Sneltoetsen tonen"
 
-#: src/gtk/shortcut-dialog.ui:6
 #, fuzzy
 msgid "Edit Shortcut"
 msgstr "Sneltoetsen tonen"
 
-#: src/gtk/shortcut-dialog.ui:21
 msgid "Cancel"
 msgstr ""
 
-#: src/gtk/shortcut-dialog.ui:28
 msgid "Apply"
 msgstr ""
 
-#: src/gtk/shortcut-dialog.ui:68
 msgid "This shortcut is already in use"
 msgstr ""
 
-#: src/gtk/shortcut-dialog.ui:81
 msgid "Press Escape to cancel or Backspace to disable shortcut"
 msgstr ""
 
-#: src/gtk/shortcut-editor.ui:6
 msgid "Keyboard"
 msgstr ""
 
-#: src/gtk/shortcut-editor.ui:10
 #, fuzzy
 msgid "Shortcuts"
 msgstr "Sneltoetsen tonen"
 
-#: src/gtk/preferences-window.ui:11
 msgid "General"
 msgstr "Algemeen"
 
-#: src/gtk/preferences-window.ui:15
 msgid "Window"
 msgstr "Venster"
 
-#: src/gtk/preferences-window.ui:19
 msgid "Remember Window Size"
 msgstr "Vensterafmetingen onthouden"
 
-#: src/gtk/preferences-window.ui:30
 #, fuzzy
 msgid "Show Borders"
 msgstr "Kopbalk tonen"
 
-#: src/gtk/preferences-window.ui:31
 msgid "Enable to draw a border around the window and the active tab."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:42
 msgid "Theme Integration"
 msgstr "Thema-integratie"
 
-#: src/gtk/preferences-window.ui:43
 #, fuzzy
 msgid "Style window with terminal theme colors."
 msgstr "Of het venster de themakleuren van de terminal dient te gebruiken"
 
-#: src/gtk/preferences-window.ui:53
 #, fuzzy
 msgid "Style Preference"
 msgstr "Voorkeuren"
 
-#: src/gtk/preferences-window.ui:57 src/gtk/preferences-window.ui:300
 msgid "Follow System"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:58
 msgid "Light Style"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:59
 msgid "Dark Style"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:69
 msgid "Tabs"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:73
 msgid "Expand Tabs"
 msgstr "Tabbladen over gehele breedte tonen"
 
-#: src/gtk/preferences-window.ui:83
 #, fuzzy
 msgid "Single Tab Mode"
 msgstr "Verbergen bij slechts één geopend tabblad"
 
-#: src/gtk/preferences-window.ui:88
 msgid "Hide Single Tab"
 msgstr "Verbergen bij slechts één geopend tabblad"
 
-#: src/gtk/preferences-window.ui:89
 #, fuzzy
 msgid ""
 "Replace tab bar with a title label when a single tab is open. Easier to drag "
@@ -491,65 +390,51 @@ msgid ""
 msgstr ""
 "Vervang de tabbladbalk bij slechts één geopend tabblad door een naamlabel."
 
-#: src/gtk/preferences-window.ui:101
 #, fuzzy
 msgid "Stealth Single Tab"
 msgstr "Verbergen bij slechts één geopend tabblad"
 
-#: src/gtk/preferences-window.ui:102
 msgid "Blend single tab with header bar."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:117
 #, fuzzy
 msgid "Header Bar"
 msgstr "Kopbalk tonen"
 
-#: src/gtk/preferences-window.ui:121
 #, fuzzy
 msgid "Show Header Bar"
 msgstr "Kopbalk tonen"
 
-#: src/gtk/preferences-window.ui:132
 msgid "Show Menu Button"
 msgstr "Menuknop tonen"
 
-#: src/gtk/preferences-window.ui:143
 msgid "Drag Area"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:144
 msgid "Enable to reserve some space on the left side to drag the window."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:156
 msgid "Draw Line Under Header Bar"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:157
 msgid ""
 "Enable to draw a line under the header bar when a single tab is open. "
 "Requires \"Show Borders\"."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:167
 msgid "Floating Controls"
 msgstr "Zwevende bediening"
 
-#: src/gtk/preferences-window.ui:170
 msgid "Show Floating Controls"
 msgstr "Zwevende bediening tonen"
 
-#: src/gtk/preferences-window.ui:171
 #, fuzzy
 msgid "Show floating controls when header bar is hidden."
 msgstr "Toon de zwevende bediening in de kopbalkloze modus."
 
-#: src/gtk/preferences-window.ui:183
 msgid "Floating Controls Hover Area"
 msgstr "Aanwijsgebied van zwevende bediening"
 
-#: src/gtk/preferences-window.ui:184
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls."
@@ -557,185 +442,142 @@ msgstr ""
 "Het aanwijsgebied (in pixels) bovenaan het vensters waarmee de zwevende "
 "bediening kan worden opgeroepen."
 
-#: src/gtk/preferences-window.ui:196
 msgid "Delay Before Show Floating Controls"
 msgstr "Wachttijd alvorens zwevende bediening te tonen"
 
-#: src/gtk/preferences-window.ui:197
 msgid "Delay time (ms) before show floating controls."
 msgstr "De wachttijd (in ms) alvorens de zwevende bediening te tonen."
 
-#: src/gtk/preferences-window.ui:219
 msgid "Text"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:223
 msgid "Font"
 msgstr "Lettertype"
 
-#: src/gtk/preferences-window.ui:235
 msgid "Cell Spacing"
 msgstr "Celafstand"
 
-#: src/gtk/preferences-window.ui:238
 msgid "Width"
 msgstr "Breedte"
 
-#: src/gtk/preferences-window.ui:250
 msgid "Height"
 msgstr "Hoogte"
 
-#: src/gtk/preferences-window.ui:265
 msgid "Easy Copy &amp; Paste"
 msgstr "Eenvoudig kopiëren en plakken"
 
-#: src/gtk/preferences-window.ui:266
 msgid "Use ctrl+c/ctrl+v for copy/paste."
 msgstr "Gebruik Ctrl+C en Ctrl+V om te kopiëren en plakken."
 
-#: src/gtk/preferences-window.ui:281
 #, fuzzy
 msgid "Cursor Shape"
 msgstr "Cursorvorm"
 
-#: src/gtk/preferences-window.ui:285
 msgid "Block"
 msgstr "Blok"
 
-#: src/gtk/preferences-window.ui:286
 msgid "IBeam"
 msgstr "I-streepje"
 
-#: src/gtk/preferences-window.ui:287
 msgid "Underline"
 msgstr "Onderstrepen"
 
-#: src/gtk/preferences-window.ui:295
 msgid "Cursor Blinking"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:296
 #, fuzzy
 msgid "Whether or not the cursor should blink."
 msgstr "Of er schuifbalken dienen te worden getoond"
 
-#: src/gtk/preferences-window.ui:301
 msgid "On"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:302
 msgid "Off"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:310
 msgid "Padding"
 msgstr "Opvulling"
 
-#: src/gtk/preferences-window.ui:324
 msgid "Opacity"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:325
 msgid "Terminal background opacity."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:341
 #, fuzzy
 msgid "Scrolling"
 msgstr "Pixel voor pixel scrollen"
 
-#: src/gtk/preferences-window.ui:344
 msgid "Scrollbars"
 msgstr "Schuifbalken"
 
-#: src/gtk/preferences-window.ui:347
 msgid "Show Scrollbars"
 msgstr "Schuifbalken tonen"
 
-#: src/gtk/preferences-window.ui:358
 msgid "Use Overlay Scrolling"
 msgstr "Zwevende schuifbalken tonen"
 
-#: src/gtk/preferences-window.ui:377
 msgid "Fixed Size"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:378
 msgid "Unlimited"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:379 src/widgets/ShortcutEditor.vala:131
 msgid "Disabled"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:388
 #, fuzzy
 msgid "Scrollback Lines"
 msgstr "Schuifbalken"
 
-#: src/gtk/preferences-window.ui:405
 msgid "Command"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:409
 msgid "Run Command as Login Shell"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:420
 msgid "Use Custom Command"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:430
 msgid "Custom Command"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:437
 msgid "Theme"
 msgstr "Thema"
 
-#: src/gtk/preferences-window.ui:448
 msgid "Open folder"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:456
 msgid "Get more themes online"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:470
 msgid "Set your preferred theme for light and dark styles."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:485
 #, fuzzy
 msgid "Light Theme"
 msgstr "Thema"
 
-#: src/gtk/preferences-window.ui:491
 #, fuzzy
 msgid "Dark Theme"
 msgstr "Thema"
 
-#: src/gtk/preferences-window.ui:499
 msgid "Only display themes for the current style"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:507
 msgid ""
 "To ensure readability, \"Theme Integration\" will be disabled if you select "
 "a light color scheme while using the dark app style or a dark color scheme "
 "while using the light app style."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:539
 msgid "Advanced"
 msgstr "Geavanceerd"
 
-#: src/gtk/preferences-window.ui:543
 #, fuzzy
 msgid "Experimental"
 msgstr "Experimenteel 🧪"
 
-#: src/gtk/preferences-window.ui:544
 msgid ""
 "Features in this section are known to be wonky. Please feel free to test and "
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">report "
@@ -745,23 +587,18 @@ msgstr ""
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">bugs "
 "melden</a>."
 
-#: src/gtk/preferences-window.ui:548
 msgid "Sixel Support"
 msgstr ""
 
-#: src/gtk/preferences-window.ui:549
 msgid "Render sixel escape sequences."
 msgstr ""
 
-#: src/gtk/preferences-window.ui:561
 msgid "Danger Zone"
 msgstr "Gevarenzone"
 
-#: src/gtk/preferences-window.ui:564
 msgid "Reset Preferences"
 msgstr "Standaardwaarden herstellen"
 
-#: src/gtk/preferences-window.ui:565
 msgid ""
 "This will revert all settings back to default. Your extra themes will not be "
 "removed."
@@ -769,16 +606,13 @@ msgstr ""
 "Let op: hierdoor worden alle voorkeuren teruggezet op de standaardwaarden. "
 "Uw thema's worden echter niet verwijderd."
 
-#: src/gtk/preferences-window.ui:570
 #, fuzzy
 msgid "Reset preferences"
 msgstr "Standaardwaarden herstellen"
 
-#: src/utils/Constants.vala:34
 msgid "You can still access the menu by right-clicking any terminal."
 msgstr "U kunt het menu oproepen door met de rechtermuisknop te klikken."
 
-#: src/utils/Constants.vala:36
 #, c-format
 msgid ""
 "%s uses an early Gtk 4 port of VTE as a terminal widget. While a lot of "
@@ -789,136 +623,100 @@ msgstr ""
 "is al veel werk verricht, maar het kopiëren van tekst ontbreekt nog. Dit "
 "betekent dat er momenteel geen manier is om tekst te kopiëren in %s."
 
-#: src/widgets/HeaderBar.vala:30 src/widgets/ShortcutEditor.vala:168
-#: src/widgets/Window.vala:153
 msgid "Fullscreen"
 msgstr "Schermvullende weergave"
 
-#: src/widgets/HeaderBar.vala:31 src/widgets/ShortcutEditor.vala:164
-#: src/widgets/TerminalTab.vala:129
 msgid "Preferences"
 msgstr "Voorkeuren"
 
-#: src/widgets/HeaderBar.vala:32 src/widgets/ShortcutEditor.vala:169
-#: src/widgets/TerminalTab.vala:132
 #, fuzzy
 msgid "Keyboard Shortcuts"
 msgstr "Sneltoetsen tonen"
 
-#: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:133
 msgid "About"
 msgstr "Over"
 
-#: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:173
 msgid "Menu"
 msgstr "Menu"
 
-#: src/widgets/ShortcutDialog.vala:46
 msgid "Enter new shortcut"
 msgstr ""
 
-#: src/widgets/ShortcutDialog.vala:47
 #, c-format
 msgid "Enter new shortcut for \"%s\""
 msgstr ""
 
-#: src/widgets/ShortcutEditor.vala:159
 #, fuzzy
 msgid "Focus Next Tab"
 msgstr "Volgend tabblad focussen"
 
-#: src/widgets/ShortcutEditor.vala:160
 #, fuzzy
 msgid "Focus Previous Tab"
 msgstr "Vorig tabblad focussen"
 
-#: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:122
 msgid "New Window"
 msgstr "Nieuw venster"
 
-#: src/widgets/ShortcutEditor.vala:162
 #, fuzzy
 msgid "Toggle Header Bar"
 msgstr "Kopbalk tonen"
 
-#: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
 msgid "New Tab"
 msgstr "Nieuw tabblad"
 
-#: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:124
 msgid "Copy"
 msgstr "Kopiëren"
 
-#: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:125
 msgid "Paste"
 msgstr "Plakken"
 
-#: src/widgets/ShortcutEditor.vala:167
 msgid "Search"
 msgstr ""
 
-#: src/widgets/ShortcutEditor.vala:170
 #, fuzzy
 msgid "Zoom In"
 msgstr "Inzoomen"
 
-#: src/widgets/ShortcutEditor.vala:171
 #, fuzzy
 msgid "Zoom Out"
 msgstr "Uitzoomen"
 
-#: src/widgets/ShortcutEditor.vala:172
 msgid "Reset Zoom"
 msgstr ""
 
-#: src/widgets/ShortcutEditor.vala:173
 #, fuzzy
 msgid "Close Tab"
 msgstr "Tabblad sluiten"
 
-#: src/widgets/ShortcutEditor.vala:175 src/widgets/ShortcutEditor.vala:176
-#: src/widgets/ShortcutEditor.vala:177 src/widgets/ShortcutEditor.vala:178
-#: src/widgets/ShortcutEditor.vala:179 src/widgets/ShortcutEditor.vala:180
-#: src/widgets/ShortcutEditor.vala:181 src/widgets/ShortcutEditor.vala:182
-#: src/widgets/ShortcutEditor.vala:183
 #, fuzzy, c-format
 msgid "Switch to Tab %u"
 msgstr "Overschakelen naar tabblad"
 
-#: src/widgets/ShortcutEditor.vala:184
 #, fuzzy
 msgid "Switch to Last Tab"
 msgstr "Overschakelen naar laatste tabblad"
 
-#: src/widgets/Window.vala:156
 msgid "Show headerbar"
 msgstr "Kopbalk tonen"
 
-#: src/widgets/Window.vala:211
 msgid "No tabs open"
 msgstr ""
 
-#: src/widgets/PreferencesWindow.vala:504
 msgid "Terminal Font"
 msgstr "Terminallettertype"
 
-#: src/CommandLine.vala:47
 msgid "Show app version"
 msgstr "Toepassingsversie tonen"
 
-#: src/CommandLine.vala:56
 msgid "Set current working directory"
 msgstr "Huidige werkmap instellen"
 
-#: src/CommandLine.vala:65
 msgid "Execute command in a terminal"
 msgstr "Opdracht uitvoeren in een terminalvenster"
 
-#: src/CommandLine.vala:74
 msgid "Show help"
 msgstr "Hulp tonen"
 
-#: src/CommandLine.vala:121
 #, c-format
 msgid "Run %s --help to get help\n"
 msgstr "Voer %s --help uit om hulp te krijgen\n"
@@ -947,8 +745,8 @@ msgstr "Voer %s --help uit om hulp te krijgen\n"
 
 #, c-format
 #~ msgid ""
-#~ "Open <a href=\"file://%s\">themes folder</a>. Get more themes <a "
-#~ "href=\"%s\">online</a>."
+#~ "Open <a href=\"file://%s\">themes folder</a>. Get more themes <a href=\"%s"
+#~ "\">online</a>."
 #~ msgstr ""
 #~ "Open de <a href=\"file://%s\">themamap</a>. <a href=\"%s\">Download meer "
 #~ "thema's</a>."
