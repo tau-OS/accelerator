@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-01-22 11:47+0000\n"
+"PO-Revision-Date: 2023-01-23 01:48+0000\n"
 "Last-Translator: windowsboy111 <windowsboy111@fyralabs.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.fyralabs.com/projects/"
 "tauOS/accelerator/zh_Hant/>\n"
@@ -31,6 +31,8 @@ msgstr "終端"
 #: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr ""
+"Terminal;terminal;shell;prompt;command;commandline;cmd;box;終端;命令;命令行;"
+"命令列;cli;殼層;"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
@@ -423,7 +425,7 @@ msgstr "風格設定"
 
 #: src/gtk/preferences-window.ui:57 src/gtk/preferences-window.ui:300
 msgid "Follow System"
-msgstr ""
+msgstr "跟從系統"
 
 #: src/gtk/preferences-window.ui:58
 msgid "Light Style"
@@ -457,7 +459,7 @@ msgstr "單一分頁下以標題取代分頁欄。較易拖動視窗。"
 
 #: src/gtk/preferences-window.ui:101
 msgid "Stealth Single Tab"
-msgstr ""
+msgstr "隱藏單一分頁"
 
 #: src/gtk/preferences-window.ui:102
 msgid "Blend single tab with header bar."
@@ -561,7 +563,7 @@ msgstr "方塊"
 
 #: src/gtk/preferences-window.ui:286
 msgid "IBeam"
-msgstr "IBeam"
+msgstr "豎線"
 
 #: src/gtk/preferences-window.ui:287
 msgid "Underline"
@@ -715,11 +717,11 @@ msgstr "重設設定"
 msgid ""
 "This will revert all settings back to default. Your extra themes will not be "
 "removed."
-msgstr "所有設定將被還原至預設。您的追加主題不會被移除。"
+msgstr "還原所有設定。您追加的主題不會被移除。"
 
 #: src/gtk/preferences-window.ui:570
 msgid "Reset preferences"
-msgstr "重設設定"
+msgstr "重置設定"
 
 #: src/utils/Constants.vala:34
 msgid "You can still access the menu by right-clicking any terminal."
