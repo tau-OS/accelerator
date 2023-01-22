@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-01-22 03:27+0000\n"
+"PO-Revision-Date: 2023-01-22 03:35+0000\n"
 "Last-Translator: Lains <lains@fyralabs.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.fyralabs.com/projects/"
 "accelerator/accelerator/pt_BR/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Generator: Weblate 4.15.1\n"
 
 msgid "Accelerator"
-msgstr ""
+msgstr "Accelerator"
 
 msgid "Terminal"
 msgstr "Terminal"
@@ -37,7 +37,6 @@ msgstr "Largura da janela"
 msgid "Window height"
 msgstr "Altura da janela"
 
-#, fuzzy
 msgid "Whether or not to display borders around the window and tabs"
 msgstr "Exibir ou não bordas ao redor da janela e de abas"
 
@@ -85,7 +84,6 @@ msgid "If enabled, terminals will render sixel escape sequences"
 msgstr "Se ativado, os terminais rolarão por píxeis ao invés de linhas"
 
 #. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
-#, fuzzy
 msgid "Scrollback mode"
 msgstr "Linhas de Rolagem"
 
@@ -184,14 +182,12 @@ msgstr "Resultado posterior"
 msgid "Search wraps around"
 msgstr "A busca é cíclica"
 
-#, fuzzy
 msgid "Match is case sensitive"
 msgstr "Se a pesquisa deve diferenciar maiúsculas de minúsculas"
 
 msgid "Match entire words only"
 msgstr "Mostrar apenas palavras inteiras"
 
-#, fuzzy
 msgid "Match using regular expression"
 msgstr "Se a pesquisa deve ser realizada usando expressões regulares"
 
@@ -310,18 +306,17 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
 msgid "This shortcut is already in use"
-msgstr ""
+msgstr "Este atalho já está em uso"
 
 msgid "Press Escape to cancel or Backspace to disable shortcut"
-msgstr ""
+msgstr "Aperte Esc para cancelar ou Backspace para desabilitar o atalho"
 
 msgid "Keyboard"
-msgstr ""
+msgstr "Teclado"
 
-#, fuzzy
 msgid "Shortcuts"
 msgstr "Mostrar Atalhos"
 
@@ -334,7 +329,6 @@ msgstr "Janela"
 msgid "Remember Window Size"
 msgstr "Lembrar do Tamanho da Janela"
 
-#, fuzzy
 msgid "Show Borders"
 msgstr "Mostrar Bordas"
 
@@ -381,17 +375,14 @@ msgstr ""
 msgid "Stealth Single Tab"
 msgstr "Aba Única Invisível"
 
-#, fuzzy
 msgid "Blend single tab with header bar."
-msgstr "Mesclar aba única com a barra de cabeçalho."
+msgstr "Mesclar aba única com a barra superior."
 
-#, fuzzy
 msgid "Header Bar"
-msgstr "Barra de Cabeçalho"
+msgstr "Barra Superior"
 
-#, fuzzy
 msgid "Show Header Bar"
-msgstr "Mostrar Barra de Cabeçalho"
+msgstr "Mostrar Barra Superior"
 
 msgid "Show Menu Button"
 msgstr "Botão Mostrar Menu"
@@ -419,10 +410,8 @@ msgstr "Controles Flutuantes"
 msgid "Show Floating Controls"
 msgstr "Mostrar Controles Flutuantes"
 
-#, fuzzy
 msgid "Show floating controls when header bar is hidden."
-msgstr ""
-"Mostrar controles flutuantes quando a barra de cabeçalho estiver oculta."
+msgstr "Mostrar controles flutuantes quando a barra superior estiver oculta."
 
 msgid "Floating Controls Hover Area"
 msgstr "Área de Controles Flutuantes"
@@ -461,7 +450,6 @@ msgstr "Copiar e Colar Simples"
 msgid "Use ctrl+c/ctrl+v for copy/paste."
 msgstr "Use Ctrl+C/Ctrl+V para copiar/colar."
 
-#, fuzzy
 msgid "Cursor Shape"
 msgstr "Formato do cursor"
 
@@ -469,32 +457,31 @@ msgid "Block"
 msgstr "Bloco"
 
 msgid "IBeam"
-msgstr "IBeam"
+msgstr "I-Beam"
 
 msgid "Underline"
 msgstr "Sublinhado"
 
 msgid "Cursor Blinking"
-msgstr ""
+msgstr "Pisque do Cursor"
 
-#, fuzzy
 msgid "Whether or not the cursor should blink."
-msgstr "Mostrar ou não barras de rolagem"
+msgstr "Se o cursor deve piscar ou não."
 
 msgid "On"
-msgstr ""
+msgstr "Ligado"
 
 msgid "Off"
-msgstr ""
+msgstr "Desligado"
 
 msgid "Padding"
 msgstr "Preenchimento"
 
 msgid "Opacity"
-msgstr ""
+msgstr "Opacidade"
 
 msgid "Terminal background opacity."
-msgstr ""
+msgstr "Opacidade de fundo do terminal."
 
 msgid "Scrolling"
 msgstr "Rolagem"
@@ -509,13 +496,13 @@ msgid "Use Overlay Scrolling"
 msgstr "Usar Rolagem Sobreposta"
 
 msgid "Fixed Size"
-msgstr ""
+msgstr "Tamanho Fixo"
 
 msgid "Unlimited"
-msgstr ""
+msgstr "Ilimitado"
 
 msgid "Disabled"
-msgstr ""
+msgstr "Desativado"
 
 msgid "Scrollback Lines"
 msgstr "Linhas de Rolagem"
@@ -561,13 +548,13 @@ msgstr ""
 "Para garantir a legibilidade, \"Integração do tema\" será desativado se você "
 "selecionar um esquema de cores claras ao usar o estilo escuro do aplicativo "
 "ou um esquema de cores escuras enquanto estiver usando o estilo claro do "
-"aplicativo. "
+"aplicativo."
 
 msgid "Advanced"
 msgstr "Avançado"
 
 msgid "Experimental"
-msgstr "Experimental"
+msgstr "Experimentos"
 
 msgid ""
 "Features in this section are known to be wonky. Please feel free to test and "
@@ -579,10 +566,10 @@ msgstr ""
 "blackbox/-/issues\">reportar erros</a>."
 
 msgid "Sixel Support"
-msgstr ""
+msgstr "Suporte a Sixel"
 
 msgid "Render sixel escape sequences."
-msgstr ""
+msgstr "Renderizar escapes de Sixel."
 
 msgid "Danger Zone"
 msgstr "Zona de Perigo"
@@ -621,7 +608,6 @@ msgstr "Tela Cheia"
 msgid "Preferences"
 msgstr "Preferências"
 
-#, fuzzy
 msgid "Keyboard Shortcuts"
 msgstr "Mostrar Atalhos"
 
@@ -632,26 +618,23 @@ msgid "Menu"
 msgstr "Menu"
 
 msgid "Enter new shortcut"
-msgstr ""
+msgstr "Insira novo atalho"
 
 #, c-format
 msgid "Enter new shortcut for \"%s\""
-msgstr ""
+msgstr "Insira novo atalho para \"%s\""
 
-#, fuzzy
 msgid "Focus Next Tab"
 msgstr "Foco na próxima aba"
 
-#, fuzzy
 msgid "Focus Previous Tab"
 msgstr "Foco na aba anterior"
 
 msgid "New Window"
 msgstr "Nova Janela"
 
-#, fuzzy
 msgid "Toggle Header Bar"
-msgstr "Mostrar Barra de Cabeçalho"
+msgstr "Mostrar Barra Superior"
 
 msgid "New Tab"
 msgstr "Nova Aba"
@@ -662,30 +645,25 @@ msgstr "Copiar"
 msgid "Paste"
 msgstr "Colar"
 
-#, fuzzy
 msgid "Search"
 msgstr "Pesquisar"
 
-#, fuzzy
 msgid "Zoom In"
 msgstr "Ampliar"
 
-#, fuzzy
 msgid "Zoom Out"
 msgstr "Reduzir"
 
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Planificar"
 
-#, fuzzy
 msgid "Close Tab"
 msgstr "Fechar aba"
 
-#, fuzzy, c-format
+#, c-format
 msgid "Switch to Tab %u"
-msgstr "Mudar para Aba"
+msgstr "Mudar para Aba %u"
 
-#, fuzzy
 msgid "Switch to Last Tab"
 msgstr "Mudar para a última aba"
 
@@ -693,7 +671,7 @@ msgid "Show headerbar"
 msgstr "Mostrar barra de cabeçalho"
 
 msgid "No tabs open"
-msgstr ""
+msgstr "Sem abas abertas"
 
 msgid "Terminal Font"
 msgstr "Fonte do Terminal"
