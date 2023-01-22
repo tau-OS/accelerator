@@ -8,88 +8,94 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-01-22 07:19+0000\n"
+"Last-Translator: Niilas Oikarainen <niilasoika@gmail.com>\n"
+"Language-Team: Finnish <https://weblate.fyralabs.com/projects/tauOS/"
+"accelerator/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15.1\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
-msgstr ""
+msgstr "Kiihdytin"
 
 #: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
 #: src/gtk/preferences-window.ui:278
 msgid "Terminal"
-msgstr ""
+msgstr "Pääte"
 
 #: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
-msgstr ""
+msgstr "Pääte;pääte;komentorivi;kehote;komento;komentorivi;komento;laatikko;"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
-msgstr ""
+msgstr "Ikkunan leveys"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:10
 msgid "Window height"
-msgstr ""
+msgstr "Ikkunan korkeus"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:14
 msgid "Whether or not to display borders around the window and tabs"
-msgstr ""
+msgstr "Näytetäänkö reunat ikkunan ja välilehtien ympärillä"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
-msgstr ""
+msgstr "Muistetaanko ikkunan koko"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
-msgstr ""
+msgstr "Fonttiperhe ja -koko"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
-msgstr ""
+msgstr "Tuleeko ikkunan käyttää päätteen teemavärejä"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
-msgstr ""
+msgstr "Pääteikkunan taustan läpikuultavuus"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
-msgstr ""
+msgstr "Levitetäänkö välilehdet täyttämään välilehtipalkki"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
-msgstr ""
+msgstr "Näytetäänkö otsakepalkki"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
-msgstr ""
+msgstr "Näytetäänkö valikkopainike otsikkopalkissa"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
 msgstr ""
+"Piirretäänkö otsikkorivin alle 1 kuvapisteen viiva, kun yksi välilehti on "
+"auki"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:56
 msgid "Whether or not to reserve an area for dragging the header bar"
-msgstr ""
+msgstr "Varataanko alue otsikkopalkin raahaamista varten"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
-msgstr ""
+msgstr "Näytetäänkö selauspalkit"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:64
+#, fuzzy
 msgid "Whether overlay scrolling should be enabled"
-msgstr ""
+msgstr "Pitääkö peittokuvan vieritys olla käytössä"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
-msgstr ""
+msgstr "Jos käytössä, päätteet vierivät pikselien mukaan rivien sijaan"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:72
 msgid "If enabled, terminals will render sixel escape sequences"
@@ -107,7 +113,7 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
-msgstr ""
+msgstr "Jos käytössä, kelluvat säätimet näytetään otsikottomassa tilassa"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
