@@ -55,18 +55,11 @@ template TerminalPreferencesWindow : He.SettingsWindow {
           }
 
           He.SettingsRow style_preference_combo_row {
-            title: _("Style Preference");
+            title: _("Dark Mode");
+            activatable-widget: style_preference_switch;
 
-            He.SegmentedButton {
-              ToggleButton style_preference_light_theme_toggle {
-                label: _("Light Theme");
-                active: true;
-              }
-
-              ToggleButton style_preference_dark_theme_toggle {
-                label: _("Dark Theme");
-                group: style_preference_light_theme_toggle;
-              }
+            Switch style_preference_switch {
+              valign: center;
             }
           }
         }

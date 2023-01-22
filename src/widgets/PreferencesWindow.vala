@@ -34,6 +34,7 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
   [GtkChild] unowned He.SettingsRow cursor_blink_mode_combo_row;
   [GtkChild] unowned He.SettingsRow scrollback_mode_combo_row;
   [GtkChild] unowned He.SettingsRow style_preference_combo_row;
+  [GtkChild] unowned Gtk.Switch style_preference_switch;
   [GtkChild] unowned Gtk.Entry custom_command_entry;
   [GtkChild] unowned Gtk.Adjustment cell_height_spacing_adjustment;
   [GtkChild] unowned Gtk.Adjustment cell_width_spacing_adjustment;
@@ -366,12 +367,31 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
     );
 
     // 0 = Follow System, 1 = Light Style, 2 = Dark Style
-    settings.schema.bind (
-                          "style-preference",
-                          this.style_preference_combo_row,
-                          "selected",
-                          SettingsBindFlags.DEFAULT
-    );
+    int x = settings.schema.get_enum ("style-preference");
+    if (x == 0) {
+        style_preference_switch.set_active (false);
+    } else if (x == 1) {
+        style_preference_switch.set_active (false);
+    } else if (x == 2) {
+        style_preference_switch.set_active (true);
+    }
+    settings.schema.notify["style-preference"].connect (() => {
+        if (x == 0) {
+            style_preference_switch.set_active (false);
+        } else if (x == 1) {
+            style_preference_switch.set_active (false);
+        } else if (x == 2) {
+            style_preference_switch.set_active (true);
+        }
+    });
+    style_preference_switch.notify["active"].connect (() => {
+      if (style_preference_switch.active) {
+          settings.schema.set_enum ("style-preference", 2);
+      } else {
+          settings.schema.set_enum ("style-preference", 1);
+      }
+    });
+    //
 
     settings.schema.bind (
                           "floating-controls",
