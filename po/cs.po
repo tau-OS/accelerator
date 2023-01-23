@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-01-22 03:08+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Czech <https://weblate.fyralabs.com/projects/accelerator/"
+"PO-Revision-Date: 2023-01-24 21:26+0000\n"
+"Last-Translator: Písek Pískovec <pisekpiskovec@gmail.com>\n"
+"Language-Team: Czech <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Weblate 4.15.1\n"
 
 msgid "Accelerator"
-msgstr ""
+msgstr "Urychlovač"
 
 msgid "Terminal"
 msgstr "Terminál"
@@ -26,7 +26,7 @@ msgstr "Terminál"
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr ""
 "Terminal;terminal;shell;prompt;command;commandline;cmd;box;příkazový "
-"řádek;terminál;"
+"řádek;terminál;prikazovy radek;"
 
 msgid "Window width"
 msgstr "Šířka okna"
@@ -35,19 +35,19 @@ msgid "Window height"
 msgstr "Výška okna"
 
 msgid "Whether or not to display borders around the window and tabs"
-msgstr "Zobrazovat okraje okolo oken a karet"
+msgstr "Zobrazovat okraje okolo okna a karet"
 
 msgid "Whether or not to remember window size"
 msgstr "Pamatovat si velikost okna"
 
 msgid "Font family and size"
-msgstr "Rodina písem a velikost"
+msgstr "Styl a velikost písma"
 
 msgid "Whether the window should inherit terminal theme's colors"
 msgstr "Má okno použít motiv stejný jako terminál"
 
 msgid "Terminal window background opacity"
-msgstr ""
+msgstr "Průhlednost pozadí okna terminálu"
 
 msgid "Whether or not tabs should expand to fill tab bar"
 msgstr "Mají karty vyplnit celou šířku záhlaví"
@@ -61,7 +61,7 @@ msgstr "Zobrazovat tlačítko menu v záhlaví"
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
-msgstr "Zobrazovat 1px linku pod záhlavím když je otevřena pouze jedna karta"
+msgstr "Zobrazovat 1px čáru pod záhlavím když je otevřena pouze jedna karta"
 
 msgid "Whether or not to reserve an area for dragging the header bar"
 msgstr "Rezervovat místo pro přetahování okna"
@@ -75,36 +75,34 @@ msgstr "Použít posuvníky co překrývají obsah"
 msgid "If enabled, terminals will scroll by pixels instead of rows"
 msgstr "Pokud povoleno terminál bude skrolovat na základě pixelů místo řádků"
 
-#, fuzzy
 msgid "If enabled, terminals will render sixel escape sequences"
-msgstr "Pokud povoleno terminál bude skrolovat na základě pixelů místo řádků"
+msgstr "Pokud povoleno terminál bude zobrazovat únikové sekvence sixel"
 
 #. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
-#, fuzzy
 msgid "Scrollback mode"
-msgstr "Skrolovací čáry"
+msgstr "Režim Scrollback"
 
 msgid "Number of lines stored in scrollback"
-msgstr "Počet linek uložených ke skrolování"
+msgstr "Počet řádků uložených ke skrolování"
 
 msgid "If enabled, floating controls will be shown in headerless mode"
-msgstr "Pokud zapnuto, plovoucí ovládací panel bude zobrazen v bezešvém režimu"
+msgstr "Pokud zapnuto, plovoucí ovládání bude zobrazeno v režimu bez záhlaví"
 
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
 msgstr ""
-"Oblast (v pixelech) na vršku okna na kterou když najedete tak se zobrazí "
-"panel"
+"Vznášející se oblast (v pixelech) v horní části okna spouští plovoucí "
+"ovládání"
 
 msgid "Delay time before showing floating controls"
 msgstr "Prodleva než se zobrazí plovoucí panel"
 
 msgid "The light color scheme for the terminal"
-msgstr "Světlý motiv terminálu"
+msgstr "Světlé barevné schéma terminálu"
 
 msgid "The dark color scheme for the terminal"
-msgstr "Tmavý motiv terminálu"
+msgstr "Tmavé barevné schéma terminálu"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
 msgid "Style preference"
@@ -122,70 +120,68 @@ msgstr "Výška buňky terminálu"
 msgid "Cursor shape"
 msgstr "Tvar kurzoru"
 
-#, fuzzy
 msgid "Whether or not the cursor should blink"
-msgstr "Zobrazovat posuvníky"
+msgstr "Zda má kurzor blikat, či nikoliv"
 
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
 msgstr ""
-"Pokud zapnuto, ctrl+c a ctrl+v bude možno použít pro kopírování/vkládání"
+"Pokud zapnuto, Ctrl+C a Ctrl+V bude možno použít pro kopírování/vkládání"
 
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
 msgstr ""
-"Pokud povoleno, lišta karet bude nahrazena titulkem, pokud je otevřená jedna "
-"karta"
+"Pokud povoleno, lišta karet bude nahrazena titulkem okna, pokud je otevřená "
+"jedna karta"
 
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr ""
-"Pokud zapnuto a je otevřená pouze jedna karta tak splyne s barvou záhlaví"
+"Pokud zapnuto, bude jedna otevřená karta splývat s barvou panelu záhlaví"
 
 msgid "Whether to spawn shell in login mode"
-msgstr "Spouštět shell v přihlašovacím režimu"
+msgstr "Zda se má shell spouštět v přihlašovacím režimu"
 
 msgid "Whether to use a custom command instead of the user's shell"
-msgstr "Použít vlastní příkaz místo uživatelova shellu"
+msgstr "Zda použít vlastní příkaz místo shellu uživatele"
 
 msgid "Custom command to use instead of the user's shell"
-msgstr "Vlastní příkaz který bude použit místo uživatelského shellu"
+msgstr "Vlastní příkaz který bude použit místo shellu uživatele"
 
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
-"Zda se má kliknutím na další na poslední výsledek vyhledávání vrátit na první"
+"Zda se má kliknutím na tlačítko další u posledního výsledku hledání vrátit "
+"na první výsledek"
 
 msgid "Whether search should be case sensitive"
-msgstr "Má být hledání citlivé na velikost písmen (case sensitive)"
+msgstr "Zda má být hledání citlivé na velikost písmen"
 
 msgid "Whether search should only match entire words"
-msgstr "Má hledání odpovídat pouze celým slovům"
+msgstr "Zda má hledání odpovídat pouze celým slovům"
 
 msgid "Whether search should be performed using regular expressions"
-msgstr "Má hledání být prováděno regulárními výrazy"
+msgstr "Zda se má vyhledávání provádět pomocí regulárních výrazů"
 
 msgid "Find"
-msgstr ""
+msgstr "Najít"
 
 msgid "Previous result"
-msgstr ""
+msgstr "Předchozí výsledek"
 
 msgid "Next result"
-msgstr ""
+msgstr "Další výsledek"
 
 msgid "Search wraps around"
-msgstr ""
+msgstr "Obtáčet vyhledávání"
 
-#, fuzzy
 msgid "Match is case sensitive"
-msgstr "Má být hledání citlivé na velikost písmen (case sensitive)"
+msgstr "Shoda rozlišuje velká a malá písmena"
 
 msgid "Match entire words only"
-msgstr ""
+msgstr "Shoda pouze celých slov"
 
-#, fuzzy
 msgid "Match using regular expression"
-msgstr "Má hledání být prováděno regulárními výrazy"
+msgstr "Shoda pomocí regulárních výrazů"
 
 msgctxt "shortcut window"
 msgid "Window"
@@ -241,56 +237,47 @@ msgstr "Navigace"
 
 msgctxt "shortcut window"
 msgid "Focus next tab"
-msgstr "Zaměřit se na další Kartu"
+msgstr "Zaměřit další kartu"
 
 msgctxt "shortcut window"
 msgid "Focus previous tab"
-msgstr "Zaměřit se na předchozí Kartu"
+msgstr "Zaměřit předchozí kartu"
 
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 1"
-msgstr "Přepnout na Kartu"
+msgstr "Přepnout na Kartu 1"
 
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 2"
-msgstr "Přepnout na Kartu"
+msgstr "Přepnout na Kartu 2"
 
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 3"
-msgstr "Přepnout na Kartu"
+msgstr "Přepnout na Kartu 3"
 
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 4"
-msgstr "Přepnout na Kartu"
+msgstr "Přepnout na Kartu 4"
 
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 5"
-msgstr "Přepnout na Kartu"
+msgstr "Přepnout na Kartu 5"
 
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 6"
-msgstr "Přepnout na Kartu"
+msgstr "Přepnout na Kartu 6"
 
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 7"
-msgstr "Přepnout na Kartu"
+msgstr "Přepnout na Kartu 7"
 
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 8"
-msgstr "Přepnout na Kartu"
+msgstr "Přepnout na Kartu 8"
 
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 9"
-msgstr "Přepnout na Kartu"
+msgstr "Přepnout na Kartu 9"
 
 msgctxt "shortcut window"
 msgid "Switch to last Tab"
@@ -302,30 +289,28 @@ msgstr "Obecné"
 
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Zobrazit Zkratky"
+msgstr "Zobrazit Klávesové zkratky"
 
-#, fuzzy
 msgid "Edit Shortcut"
-msgstr "Zobrazit Zkratky"
+msgstr "Upravit Zkratku"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 msgid "Apply"
-msgstr ""
+msgstr "Použít"
 
 msgid "This shortcut is already in use"
-msgstr ""
+msgstr "Tato zkratka se již používá"
 
 msgid "Press Escape to cancel or Backspace to disable shortcut"
-msgstr ""
+msgstr "Zmáčkněte Esc pro zrušení nebo Mezerník zpět pro vypnutí zkratky"
 
 msgid "Keyboard"
-msgstr ""
+msgstr "Klávesnice"
 
-#, fuzzy
 msgid "Shortcuts"
-msgstr "Zobrazit Zkratky"
+msgstr "Zkratky"
 
 msgid "General"
 msgstr "Obecné"
@@ -340,7 +325,7 @@ msgid "Show Borders"
 msgstr "Zobrazit okraje"
 
 msgid "Enable to draw a border around the window and the active tab."
-msgstr "Zvýraznit okraj kolem okna a aktivní karty."
+msgstr "Povolte pro vykreslování rámečku okolo okna a aktivní karty."
 
 msgid "Theme Integration"
 msgstr "Integrace Motivu"
@@ -355,54 +340,56 @@ msgid "Follow System"
 msgstr "Podle systému"
 
 msgid "Light Style"
-msgstr "Světlý motiv"
+msgstr "Světlý styl"
 
 msgid "Dark Style"
-msgstr "Tmavý motiv"
+msgstr "Tmavý styl"
 
 msgid "Tabs"
 msgstr "Karty"
 
 msgid "Expand Tabs"
-msgstr "Rozšířit karty"
+msgstr "Roztáhnout karty"
 
 msgid "Single Tab Mode"
-msgstr "Režim jedné karty"
+msgstr "Režim Jedné Karty"
 
 msgid "Hide Single Tab"
-msgstr "Skrýt jednu kartu"
+msgstr "Skrýt Jednu Kartu"
 
 msgid ""
 "Replace tab bar with a title label when a single tab is open. Easier to drag "
 "the window."
 msgstr ""
-"Nahradit panel karet titulkem pokud je otevřená jedna karta. Jednoduší "
-"přesouvání okna."
+"Nahrazení pásu karet štítkem s názvem, pokud je otevřena jediná karta. "
+"Snadnější pro přetahování okna."
 
 msgid "Stealth Single Tab"
-msgstr "Skrytá Jedna Karta"
+msgstr "Tichá Jedna Karta"
 
 msgid "Blend single tab with header bar."
-msgstr "Pokud je otevřená jediná karta splynout ji se záhlavím."
+msgstr "Sloučit jednu kartu se záhlavím."
 
 msgid "Header Bar"
-msgstr "Záhlaví"
+msgstr "Panel Záhlaví"
 
 msgid "Show Header Bar"
-msgstr "Zobrazit záhlaví"
+msgstr "Zobrazit Panel Záhlaví"
 
 msgid "Show Menu Button"
-msgstr "Zobrazit tlačítko Menu"
+msgstr "Zobrazit Tlačítko Menu"
 
 msgid "Drag Area"
-msgstr "Oblast přetahování"
+msgstr "Oblast Přetahování"
 
+#, fuzzy
 msgid "Enable to reserve some space on the left side to drag the window."
 msgstr "Rezervovat místo na levé straně kvůli přetahování okna."
 
 msgid "Draw Line Under Header Bar"
-msgstr "Zobrazit linku pod záhlavím"
+msgstr "Zobrazit čáru pod Panelem Záhlavím"
 
+#, fuzzy
 msgid ""
 "Enable to draw a line under the header bar when a single tab is open. "
 "Requires \"Show Borders\"."
@@ -411,17 +398,20 @@ msgstr ""
 "\"Zobrazit okraje\"."
 
 msgid "Floating Controls"
-msgstr "Plovoucí ovládání"
+msgstr "Plovoucí Ovládání"
 
 msgid "Show Floating Controls"
-msgstr "Zobrazit plovoucí ovládání"
+msgstr "Zobrazit Plovoucí Ovládání"
 
+#, fuzzy
 msgid "Show floating controls when header bar is hidden."
 msgstr "Zobrazit plovoucí ovládací panel když záhlaví je skryté."
 
+#, fuzzy
 msgid "Floating Controls Hover Area"
 msgstr "Oblast pro zobrazení plovoucího ovládání"
 
+#, fuzzy
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls."
@@ -429,9 +419,11 @@ msgstr ""
 "Oblast (v pixelech) na vršku okna na kterou když najedete tak se zobrazí "
 "panel."
 
+#, fuzzy
 msgid "Delay Before Show Floating Controls"
 msgstr "Prodleva před zobrazením plovoucího panelu"
 
+#, fuzzy
 msgid "Delay time (ms) before show floating controls."
 msgstr "Prodleva (v ms) před zobrazením plovoucího ovládání."
 
@@ -439,10 +431,10 @@ msgid "Text"
 msgstr "Text"
 
 msgid "Font"
-msgstr "Font"
+msgstr "Písmo"
 
 msgid "Cell Spacing"
-msgstr "Rozestup buněk"
+msgstr "Rozestup Buněk"
 
 msgid "Width"
 msgstr "Šířka"
@@ -451,8 +443,9 @@ msgid "Height"
 msgstr "Výška"
 
 msgid "Easy Copy &amp; Paste"
-msgstr "Jednoduché Kopírování &amp; Vložení"
+msgstr "Jednoduché Kopírování &amp; Vkládání"
 
+#, fuzzy
 msgid "Use ctrl+c/ctrl+v for copy/paste."
 msgstr "Použít ctrl+c/ctrl+v pro kopírování/vložení."
 
@@ -461,35 +454,34 @@ msgid "Cursor Shape"
 msgstr "Tvar kurzoru"
 
 msgid "Block"
-msgstr "Blok"
+msgstr "Block"
 
 msgid "IBeam"
 msgstr "IBeam"
 
 msgid "Underline"
-msgstr "Podtržení"
+msgstr "Underline"
 
 msgid "Cursor Blinking"
-msgstr ""
+msgstr "Blikání Kurzoru"
 
-#, fuzzy
 msgid "Whether or not the cursor should blink."
-msgstr "Zobrazovat posuvníky"
+msgstr ""
 
 msgid "On"
-msgstr ""
+msgstr "Zapnuto"
 
 msgid "Off"
-msgstr ""
+msgstr "Vypnuto"
 
 msgid "Padding"
-msgstr "Okraj"
+msgstr "Odsazení"
 
 msgid "Opacity"
-msgstr ""
+msgstr "Průhlednost"
 
 msgid "Terminal background opacity."
-msgstr ""
+msgstr "Průhlednost pozadí terminálu."
 
 msgid "Scrolling"
 msgstr "Skrolování"
@@ -501,31 +493,33 @@ msgid "Show Scrollbars"
 msgstr "Zobrazit Posuvníky"
 
 msgid "Use Overlay Scrolling"
-msgstr "Použít překrývající Posuvníky"
+msgstr "Použít Překrývající Posuvníky"
 
 msgid "Fixed Size"
-msgstr ""
+msgstr "Pevná Velikost"
 
 msgid "Unlimited"
-msgstr ""
+msgstr "Neomezené"
 
 msgid "Disabled"
-msgstr ""
+msgstr "Zakázaná"
 
+#, fuzzy
 msgid "Scrollback Lines"
 msgstr "Skrolovací čáry"
 
 msgid "Command"
 msgstr "Příkaz"
 
+#, fuzzy
 msgid "Run Command as Login Shell"
 msgstr "Spustit příkaz jako přihlašovací shell"
 
 msgid "Use Custom Command"
-msgstr "Použít vlastní příkaz"
+msgstr "Použít Vlastní Příkaz"
 
 msgid "Custom Command"
-msgstr "Vlastní příkaz"
+msgstr "Vlastní Příkaz"
 
 msgid "Theme"
 msgstr "Motiv"
@@ -536,6 +530,7 @@ msgstr "Otevřít složku"
 msgid "Get more themes online"
 msgstr "Získat více motivů online"
 
+#, fuzzy
 msgid "Set your preferred theme for light and dark styles."
 msgstr "Zvolte svůj světlý a tmavý motiv."
 
@@ -545,9 +540,11 @@ msgstr "Světlý Motiv"
 msgid "Dark Theme"
 msgstr "Tmavý Motiv"
 
+#, fuzzy
 msgid "Only display themes for the current style"
 msgstr "Zobrazovat motivy pouze pro současný styl"
 
+#, fuzzy
 msgid ""
 "To ensure readability, \"Theme Integration\" will be disabled if you select "
 "a light color scheme while using the dark app style or a dark color scheme "
@@ -563,6 +560,7 @@ msgstr "Pokročilé"
 msgid "Experimental"
 msgstr "Experimentální"
 
+#, fuzzy
 msgid ""
 "Features in this section are known to be wonky. Please feel free to test and "
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">report "
@@ -579,21 +577,22 @@ msgid "Render sixel escape sequences."
 msgstr ""
 
 msgid "Danger Zone"
-msgstr "Nebezpečná zóna"
+msgstr "Nebezpečná Zóna"
 
 msgid "Reset Preferences"
-msgstr "Resetovat nastavení"
+msgstr "Resetovat Nastavení"
 
 msgid ""
 "This will revert all settings back to default. Your extra themes will not be "
 "removed."
 msgstr ""
-"Toto vrátí všechna nastavení do výchozích hodnot. Vaše motivy nebudou "
-"odstraněny."
+"Toto vrátí veškeré nastavení na výchozí hodnoty. Vaše extra motivy nebudou "
+"vymazány."
 
 msgid "Reset preferences"
 msgstr "Resetovat nastavení"
 
+#, fuzzy
 msgid "You can still access the menu by right-clicking any terminal."
 msgstr "Menu můžete pořád otevřít pomocí kliknutí pravým tlačítkem v terminálu."
 
@@ -621,26 +620,23 @@ msgid "Menu"
 msgstr "Menu"
 
 msgid "Enter new shortcut"
-msgstr ""
+msgstr "Vložit novou zkratku"
 
 #, c-format
 msgid "Enter new shortcut for \"%s\""
-msgstr ""
+msgstr "Vložit novou zkratku pro \"%s\""
 
-#, fuzzy
 msgid "Focus Next Tab"
-msgstr "Zaměřit se na další Kartu"
+msgstr "Zaměřit Další Kartu"
 
-#, fuzzy
 msgid "Focus Previous Tab"
-msgstr "Zaměřit se na předchozí Kartu"
+msgstr "Zaměřit Předchozí Kartu"
 
 msgid "New Window"
 msgstr "Nové Okno"
 
-#, fuzzy
 msgid "Toggle Header Bar"
-msgstr "Zobrazit záhlaví"
+msgstr "Povolit Panel Záhlaví"
 
 msgid "New Tab"
 msgstr "Nová Karta"
@@ -651,47 +647,42 @@ msgstr "Kopírovat"
 msgid "Paste"
 msgstr "Vložit"
 
-#, fuzzy
 msgid "Search"
 msgstr "Hledat"
 
-#, fuzzy
 msgid "Zoom In"
 msgstr "Přiblížit"
 
-#, fuzzy
 msgid "Zoom Out"
 msgstr "Oddálit"
 
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Resetovat přiblížení"
 
-#, fuzzy
 msgid "Close Tab"
-msgstr "Zavřít kartu"
+msgstr "Zavřít Kartu"
 
-#, fuzzy, c-format
+#, c-format
 msgid "Switch to Tab %u"
-msgstr "Přepnout na Kartu"
+msgstr "Přepnout na Kartu %u"
 
-#, fuzzy
 msgid "Switch to Last Tab"
-msgstr "Přepnout na poslední Kartu"
+msgstr "Přepnout na Poslední Kartu"
 
 msgid "Show headerbar"
 msgstr "Zobrazit záhlaví"
 
 msgid "No tabs open"
-msgstr ""
+msgstr "Žádné otevřené karty"
 
 msgid "Terminal Font"
-msgstr "Font Terminálu"
+msgstr "Písmo Terminálu"
 
 msgid "Show app version"
 msgstr "Zobrazit verzi aplikace"
 
 msgid "Set current working directory"
-msgstr "Nastavit současnou pracovní složku"
+msgstr "Nastavit současný pracovní adresář"
 
 msgid "Execute command in a terminal"
 msgstr "Spustit příkaz v terminálu"
@@ -701,7 +692,7 @@ msgstr "Zobrazit nápovědu"
 
 #, c-format
 msgid "Run %s --help to get help\n"
-msgstr "Spusť %s --pro získání nápovědy\n"
+msgstr "Spusťte %s --help pro získání nápovědy\n"
 
 #~ msgid "Black Box"
 #~ msgstr "Black Box"
