@@ -2,8 +2,8 @@
     "app-id" : "com.fyralabs.Accelerator",
     "runtime" : "co.tauos.Platform",
     "runtime-version" : "stable",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "accel-link-system-fonts",
+    "sdk" : "co.tauos.Sdk",
+    "command" : "blackbox-link-system-fonts",
     "finish-args" : [
         "--filesystem=home:ro",
         "--share=ipc",
