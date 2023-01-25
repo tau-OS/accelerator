@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-01-24 21:26+0000\n"
-"Last-Translator: Lains <lains@fyralabs.com>\n"
+"PO-Revision-Date: 2023-01-26 16:11+0000\n"
+"Last-Translator: Písek Pískovec <pisekpiskovec@gmail.com>\n"
 "Language-Team: Czech <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/cs/>\n"
 "Language: cs\n"
@@ -445,13 +445,11 @@ msgstr "Výška"
 msgid "Easy Copy &amp; Paste"
 msgstr "Jednoduché Kopírování &amp; Vkládání"
 
-#, fuzzy
 msgid "Use ctrl+c/ctrl+v for copy/paste."
-msgstr "Použít ctrl+c/ctrl+v pro kopírování/vložení."
+msgstr "Použít Ctrl+C/Ctrl+V pro kopírování/vkládání."
 
-#, fuzzy
 msgid "Cursor Shape"
-msgstr "Tvar kurzoru"
+msgstr "Tvar Kurzoru"
 
 msgid "Block"
 msgstr "Block"
@@ -466,7 +464,7 @@ msgid "Cursor Blinking"
 msgstr "Blikání Kurzoru"
 
 msgid "Whether or not the cursor should blink."
-msgstr ""
+msgstr "Zda má kurzor blikat, či nikoliv."
 
 msgid "On"
 msgstr "Zapnuto"
@@ -504,16 +502,14 @@ msgstr "Neomezené"
 msgid "Disabled"
 msgstr "Zakázaná"
 
-#, fuzzy
 msgid "Scrollback Lines"
-msgstr "Skrolovací čáry"
+msgstr "Řádky Zpětného skrolování"
 
 msgid "Command"
 msgstr "Příkaz"
 
-#, fuzzy
 msgid "Run Command as Login Shell"
-msgstr "Spustit příkaz jako přihlašovací shell"
+msgstr "Spustit Příkaz jako Přihlašovací Shell"
 
 msgid "Use Custom Command"
 msgstr "Použít Vlastní Příkaz"
@@ -530,9 +526,8 @@ msgstr "Otevřít složku"
 msgid "Get more themes online"
 msgstr "Získat více motivů online"
 
-#, fuzzy
 msgid "Set your preferred theme for light and dark styles."
-msgstr "Zvolte svůj světlý a tmavý motiv."
+msgstr "Zvolte svůj preferovaný světlý a tmavý motiv."
 
 msgid "Light Theme"
 msgstr "Světlý Motiv"
@@ -540,17 +535,15 @@ msgstr "Světlý Motiv"
 msgid "Dark Theme"
 msgstr "Tmavý Motiv"
 
-#, fuzzy
 msgid "Only display themes for the current style"
 msgstr "Zobrazovat motivy pouze pro současný styl"
 
-#, fuzzy
 msgid ""
 "To ensure readability, \"Theme Integration\" will be disabled if you select "
 "a light color scheme while using the dark app style or a dark color scheme "
 "while using the light app style."
 msgstr ""
-"Aby byla zajištěna čitelnost, bude „Integrace Motivu“ deaktivována pokud "
+"Aby byla zajištěna čitelnost, bude „Integrace Motivů“ deaktivována pokud "
 "vyberete světlé barevné schéma při použití tmavého stylu aplikace nebo tmavé "
 "barevné schéma při použití světlého stylu aplikace."
 
@@ -560,21 +553,20 @@ msgstr "Pokročilé"
 msgid "Experimental"
 msgstr "Experimentální"
 
-#, fuzzy
 msgid ""
 "Features in this section are known to be wonky. Please feel free to test and "
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">report "
 "bugs</a>."
 msgstr ""
-"Funkce v této sekci jsou nestabilní. Prosím otestujte a nalezené chyby <a "
-"href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">nahlaste "
-"zde</a>."
+"Funkce v této sekci jsou známé svými chybami. Neváhejte prosím testovat a <a "
+"href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">hlásit "
+"chyby</a>."
 
 msgid "Sixel Support"
-msgstr ""
+msgstr "Podpora Sixel"
 
 msgid "Render sixel escape sequences."
-msgstr ""
+msgstr "Vykreslovat sixelové únikové sekvence."
 
 msgid "Danger Zone"
 msgstr "Nebezpečná Zóna"
@@ -592,9 +584,10 @@ msgstr ""
 msgid "Reset preferences"
 msgstr "Resetovat nastavení"
 
-#, fuzzy
 msgid "You can still access the menu by right-clicking any terminal."
-msgstr "Menu můžete pořád otevřít pomocí kliknutí pravým tlačítkem v terminálu."
+msgstr ""
+"Menu můžete pořád otevřít pomocí kliknutí pravým tlačítkem na kterýkoliv "
+"terminál."
 
 #, c-format
 msgid ""
@@ -602,6 +595,10 @@ msgid ""
 "progress has been made on this port, copying has yet to be implemented. This "
 "means there's currently no way to copy text in %s."
 msgstr ""
+"%s používá časný GTK 4 port VTE jako widget terminálu. Zatím co bylo v "
+"oblasti tohoto portu dosaženo značného pokroku, kopírování ještě nebylo "
+"implementováno. To znamená, že v současné době není žádáná cest jak "
+"zkopírovat text v %s."
 
 msgid "Fullscreen"
 msgstr "Celá obrazovka"
@@ -609,9 +606,8 @@ msgstr "Celá obrazovka"
 msgid "Preferences"
 msgstr "Nastavení"
 
-#, fuzzy
 msgid "Keyboard Shortcuts"
-msgstr "Zobrazit Zkratky"
+msgstr "Klávesové Zkratky"
 
 msgid "About"
 msgstr "O Aplikaci"
