@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-01-26 16:11+0000\n"
+"PO-Revision-Date: 2023-01-27 21:11+0000\n"
 "Last-Translator: Písek Pískovec <pisekpiskovec@gmail.com>\n"
 "Language-Team: Czech <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/cs/>\n"
@@ -382,14 +382,12 @@ msgstr "Zobrazit Tlačítko Menu"
 msgid "Drag Area"
 msgstr "Oblast Přetahování"
 
-#, fuzzy
 msgid "Enable to reserve some space on the left side to drag the window."
-msgstr "Rezervovat místo na levé straně kvůli přetahování okna."
+msgstr "Zapněte pro rezervování místa na levé straně kvůli přetahování okna."
 
 msgid "Draw Line Under Header Bar"
 msgstr "Zobrazit čáru pod Panelem Záhlavím"
 
-#, fuzzy
 msgid ""
 "Enable to draw a line under the header bar when a single tab is open. "
 "Requires \"Show Borders\"."
@@ -403,15 +401,12 @@ msgstr "Plovoucí Ovládání"
 msgid "Show Floating Controls"
 msgstr "Zobrazit Plovoucí Ovládání"
 
-#, fuzzy
 msgid "Show floating controls when header bar is hidden."
 msgstr "Zobrazit plovoucí ovládací panel když záhlaví je skryté."
 
-#, fuzzy
 msgid "Floating Controls Hover Area"
 msgstr "Oblast pro zobrazení plovoucího ovládání"
 
-#, fuzzy
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls."
@@ -419,11 +414,9 @@ msgstr ""
 "Oblast (v pixelech) na vršku okna na kterou když najedete tak se zobrazí "
 "panel."
 
-#, fuzzy
 msgid "Delay Before Show Floating Controls"
-msgstr "Prodleva před zobrazením plovoucího panelu"
+msgstr "Prodleva před zobrazením plovoucího ovládání"
 
-#, fuzzy
 msgid "Delay time (ms) before show floating controls."
 msgstr "Prodleva (v ms) před zobrazením plovoucího ovládání."
 
