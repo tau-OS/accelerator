@@ -4,6 +4,28 @@
 
 .disclosure-button button {
   border-radius: 999px;
+  background: none;
+}
+.disclosure-button button:hover {
+  background: alpha(@accent_color, 0.08);
+}
+.disclosure-button button:checked {
+  background: @accent_bg_color;
+  color: @accent_fg_color;
+}
+.disclosure-button button:active {
+  background: @accent_bg_color;
+  color: @accent_fg_color;
+}
+.disclosure-button {
+  background: alpha(@accent_color, 0.05);
+}
+.disclosure-button:hover {
+  background: alpha(@accent_color, 0.08);
+}
+.disclosure-button:active {
+  background: @accent_bg_color;
+  color: @accent_fg_color;
 }
 
 .accelerator-main-window.with-borders:not(.fullscreen):not(.maximized):not(.tiled-left):not(.tiled-right) {
