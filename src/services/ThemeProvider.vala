@@ -88,6 +88,11 @@ public class Terminal.ThemeProvider : Object {
     desktop.notify ["prefers-color-scheme"].connect (() => {
       this.is_dark_style_active = He.Desktop.ColorScheme.DARK == desktop.prefers_color_scheme ? true : false;
     });
+    if (this.settings.schema.get_boolean ("style-preference") == true) {
+      desktop.prefers_color_scheme = He.Desktop.ColorScheme.DARK;
+    } else {
+      desktop.prefers_color_scheme = He.Desktop.ColorScheme.NO_PREFERENCE;
+    }
     this.settings.notify ["style-preference"].connect (() => {
       this.is_dark_style_active = this.settings.schema.get_boolean ("style-preference") == true ? true : false;
       if (this.settings.schema.get_boolean ("style-preference") == true) {
