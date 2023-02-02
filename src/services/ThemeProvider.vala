@@ -243,19 +243,18 @@ public class Terminal.ThemeProvider : Object {
 
   private string generate_gtk_theme (Scheme scheme) {
     string theme = """
-      @define-color window_bg_color         %1$s;
-      @define-color window_fg_color         %2$s;
+      @define-color headerbar_bg_color      %1$s;
 
-      @define-color card_fg_color           @window_fg_color;
-      @define-color headerbar_fg_color      @window_fg_color;
-      @define-color headerbar_border_color  @window_fg_color;
-      @define-color popover_fg_color        @window_fg_color;
-      @define-color dialog_fg_color         @window_fg_color;
+      @define-color headerbar_fg_color      %2$s;
+      @define-color card_fg_color           @headerbar_fg_color;
+      @define-color headerbar_border_color  @headerbar_fg_color;
+      @define-color popover_fg_color        @headerbar_fg_color;
+      @define-color dialog_fg_color         @headerbar_fg_color;
       @define-color dark_fill_bg_color      @headerbar_bg_color;
-      @define-color view_bg_color           @card_bg_color;
-      @define-color view_fg_color           @window_fg_color;
+      @define-color view_bg_color           @headerbar_bg_color;
+      @define-color view_fg_color           @headerbar_fg_color;
 
-      /* @define-color borders                 mix(@window_fg_color, @window_bg_color, 0.8); */
+      @define-color borders                 mix(@headerbar_fg_color, @headerbar_bg_color, 0.8);
     """.printf (
       scheme.background_color.to_string (),
       scheme.foreground_color.to_string ()
@@ -267,11 +266,11 @@ public class Terminal.ThemeProvider : Object {
 
     if (this.is_dark_style_active) {
       theme += """
-        @define-color headerbar_bg_color    darker(@window_bg_color);
-        @define-color popover_bg_color      mix(@window_bg_color, white, 0.07);
-        @define-color dialog_bg_color       mix(@window_bg_color, white, 0.07);
+        @define-color headerbar_bg_color    darker(@headerbar_bg_color);
+        @define-color popover_bg_color      mix(@headerbar_bg_color, white, 0.07);
+        @define-color dialog_bg_color       mix(@headerbar_bg_color, white, 0.07);
         @define-color card_bg_color         alpha(white, .08);
-        @define-color view_bg_color         darker(@window_bg_color);
+        @define-color view_bg_color         darker(@headerbar_bg_color);
 
         @define-color accent_color            %3$s;
         @define-color accent_bg_color         %3$s;
@@ -292,8 +291,8 @@ public class Terminal.ThemeProvider : Object {
     }
     else {
       theme += """
-        @define-color headerbar_bg_color    mix(@window_bg_color, @window_fg_color, .1);
-        @define-color popover_bg_color      mix(@window_bg_color, white, .1);
+        @define-color headerbar_bg_color    mix(@headerbar_bg_color, @headerbar_fg_color, .1);
+        @define-color popover_bg_color      mix(@headerbar_bg_color, white, .1);
         @define-color dialog_bg_color       @window_bg_color;
         @define-color card_bg_color         alpha(white, .6);
 

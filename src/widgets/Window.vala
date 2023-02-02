@@ -204,7 +204,7 @@ public class Terminal.Window : He.ApplicationWindow {
 
     this.child = overlay;
 
-    this.set_name ("accelerator-main-window");
+    this.add_css_class ("accelerator-main-window");
   }
 
   public He.Tab blank_tab () {
@@ -223,7 +223,7 @@ public class Terminal.Window : He.ApplicationWindow {
     };
     box.append (label);
     var tab = new He.Tab ("Blank Tab", box);
-    tab.set_name ("accelerator-blank-tab");
+    tab.add_css_class ("accelerator-blank-tab");
     tab.set_id ("placeholder-tab");
     return tab;
   }

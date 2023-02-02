@@ -6,15 +6,15 @@
   border-radius: 999px;
 }
 
-#accelerator-main-window.with-borders:not(.fullscreen):not(.maximized):not(.tiled-left):not(.tiled-right) {
+.accelerator-main-window.with-borders:not(.fullscreen):not(.maximized):not(.tiled-left):not(.tiled-right) {
   border: 1px solid @borders;
 }
 
-#accelerator-main-window {
+.accelerator-main-window {
   background: transparent;
 }
 
-.custom-headerbar headerbar windowhandle > box {
+.custom-headerbar windowhandle > box {
   padding: 0;
 }
 
@@ -25,16 +25,21 @@
 tab {
   border-radius: 0;
   border: none;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
   margin-top: 0;
+  margin-bottom: -1px;
+  min-width: 200px;
+}
+
+tab label {
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .transparent {
   background: transparent;
 }
 
-tabboxchild  {
+.tab-child  {
   margin: 0;
   border-radius: 0;
 }
@@ -43,31 +48,31 @@ tab:selected {
   background: @card_bg_color;
 }
 
-#accelerator-main-window.with-borders tab:selected,
-#accelerator-main-window.with-borders .custom-headerbar headerbar .title-label {
+.accelerator-main-window.with-borders tab:selected,
+.accelerator-main-window.with-borders .custom-headerbar .title-label {
   border-left-color: @borders;
   border-right-color: @borders;
 }
 
-#accelerator-main-window.with-borders .custom-headerbar .title-label,
-#accelerator-main-window.with-borders .custom-headerbar .title-label {
+.accelerator-main-window.with-borders .custom-headerbar .title-label,
+.accelerator-main-window.with-borders .custom-headerbar .title-label {
   margin-left: -8px;
 }
 
-.custom-headerbar:not(.with-dragarea) tabbar {
-  margin-left: -8px;
+.custom-headerbar:not(.with-dragarea) notebook {
+  margin-left: -12px;
 }
 
-.custom-headerbar.with-dragarea tabbar {
-  margin-left: 34px;
+.custom-headerbar.with-dragarea notebook {
+  margin-left: 42px;
 }
 
-tabbox background {
+notebook {
   background: transparent;
 }
 
 .toolbar {
-  background-color: @window_bg_color;
+  background-color: @headerbar_bg_color;
 }
 
 .toolbar > * {
@@ -107,13 +112,13 @@ window:not(.about) .floating-revealer > headerbar {
 .floating-revealer menubutton button,
 .floating-btn-box,
 .floating-revealer windowcontrols image {
-  background: @window_bg_color;
+  background: @headerbar_bg_color;
 }
 
 .floating-revealer menubutton button:hover,
 .floating-btn-box button:hover,
 .floating-revealer windowcontrols image:hover {
-  background: lighter(@window_bg_color);
+  background: lighter(@headerbar_bg_color);
 }
 
 .floating-btn-box button {

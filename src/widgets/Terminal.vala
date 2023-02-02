@@ -250,7 +250,7 @@ public class Terminal.Terminal : Vte.Terminal {
 
     this.get_style_context ().add_provider (
                                             this.padding_provider,
-                                            999999999
+                                            1
     );
   }
 
