@@ -124,6 +124,7 @@ public class Terminal.HeaderBar : BaseHeaderBar {
 
     hb.set_title_widget (layout);
     this.append (hb);
+    hb.add_css_class ("flat");
     this.add_css_class ("custom-headerbar");
 
     this.connect_signals ();

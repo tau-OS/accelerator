@@ -2,7 +2,7 @@
   "name": "Helium Dark",
   "comment": "Dark Tilix scheme from Helium",
   "use-theme-colors": false,
-  "foreground-color": "#f0f0f2",
+  "foreground-color": "#f0f0f0",
   "background-color": "#111111",
 
   "palette": [

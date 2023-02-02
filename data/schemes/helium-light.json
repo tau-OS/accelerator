@@ -3,7 +3,7 @@
   "comment": "Light Tilix scheme from Helium",
   "use-theme-colors": false,
   "foreground-color": "#2d2d2d",
-  "background-color": "#fafafa",
+  "background-color": "#f0f0f0",
   "palette": [
     "#2d2d2d",
     "#DB2860",
