@@ -31,9 +31,10 @@ bool light_themes_filter_func (Gtk.FlowBoxChild child) {
 [GtkTemplate (ui = "/com/fyralabs/Accelerator/preferences-window.ui")]
 public class Terminal.PreferencesWindow : He.SettingsWindow {
   [GtkChild] unowned He.SettingsRow cursor_shape_combo_row;
-  [GtkChild] unowned He.SettingsRow cursor_blink_mode_combo_row;
+  [GtkChild] unowned Gtk.ToggleButton follow_sys_cursor_toggle;
+  [GtkChild] unowned Gtk.ToggleButton on_cursor_toggle;
+  [GtkChild] unowned Gtk.ToggleButton off_cursor_toggle;
   [GtkChild] unowned He.SettingsRow scrollback_mode_combo_row;
-  [GtkChild] unowned He.SettingsRow style_preference_combo_row;
   [GtkChild] unowned Gtk.Switch style_preference_switch;
   [GtkChild] unowned Gtk.Entry custom_command_entry;
   [GtkChild] unowned Gtk.Adjustment cell_height_spacing_adjustment;
@@ -43,7 +44,7 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
   [GtkChild] unowned Gtk.Adjustment floating_controls_hover_area_adjustment;
   [GtkChild] unowned Gtk.CheckButton filter_themes_check_button;
   [GtkChild] unowned Gtk.FlowBox preview_flow_box;
-  [GtkChild] unowned Gtk.Label font_label;
+  [GtkChild] unowned He.TextButton font_label;
   [GtkChild] unowned Gtk.SpinButton custom_scrollback_spin_button;
   [GtkChild] unowned Gtk.SpinButton padding_spin_button;
   [GtkChild] unowned Gtk.Switch easy_copy_paste_switch;
@@ -103,9 +104,11 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
 
     this.custom_scrollback_adjustment.upper = uint.MAX;
 
+    cursor_blink_refresh ();
+
     this.build_ui ();
     this.bind_data ();
-    this.set_size_request (550,720);
+    this.set_size_request (360,600);
   }
 
   // Build UI
@@ -302,31 +305,32 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
     );
 
     settings.schema.bind_with_mapping (
-                                       "terminal-padding",
-                                       this.padding_spin_button,
-                                       "value",
-                                       SettingsBindFlags.DEFAULT,
-                                       // From settings to spin button
-                                       (to_val, settings_vari) => {
-      var pad = Padding.from_variant (settings_vari);
+                                      "terminal-padding",
+                                      this.padding_spin_button,
+                                      "value",
+                                      SettingsBindFlags.DEFAULT,
+                                      // From settings to spin button
+                                      (to_val, settings_vari) => {
+                                          var pad = Padding.from_variant (settings_vari);
 
-      to_val = pad.top;
-      return true;
-    },
-                                       // From spin button to settings
-                                       (spin_val, _) => {
-      var pad = (uint) spin_val.get_double ();
-      var _pad = Padding () {
-        top = pad,
-        right = pad,
-        bottom = pad,
-        left = pad
-      };
+                                          to_val = pad.top;
+                                          return true;
+                                      },
+    
+                                      // From spin button to settings
+                                      (spin_val, _) => {
+                                        var pad = (uint) spin_val.get_double ();
+                                        var _pad = Padding () {
+                                          top = pad,
+                                          right = pad,
+                                          bottom = pad,
+                                          left = pad
+                                        };
 
-      return _pad.to_variant ();
-    },
-                                       null,
-                                       null
+                                        return _pad.to_variant ();
+                                      },
+                                      null,
+                                      null
     );
 
     settings.bind_property (
@@ -359,39 +363,17 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
     );
 
     // 0 = Follow System, 1 = On, 2 = Off
-    settings.schema.bind (
-                          "cursor-blink-mode",
-                          this.cursor_blink_mode_combo_row,
-                          "selected",
-                          SettingsBindFlags.DEFAULT
-    );
+    follow_sys_cursor_toggle.toggled.connect (() => {
+      set_cursor_blink (0);
+    });
+    on_cursor_toggle.toggled.connect (() => {
+      set_cursor_blink (1);
+    });
+    off_cursor_toggle.toggled.connect (() => {
+      set_cursor_blink (2);
+    });
 
-    // 0 = Follow System, 1 = Light Style, 2 = Dark Style
-    int x = settings.schema.get_enum ("style-preference");
-    if (x == 0) {
-        style_preference_switch.set_active (false);
-    } else if (x == 1) {
-        style_preference_switch.set_active (false);
-    } else if (x == 2) {
-        style_preference_switch.set_active (true);
-    }
-    settings.schema.notify["style-preference"].connect (() => {
-        if (x == 0) {
-            style_preference_switch.set_active (false);
-        } else if (x == 1) {
-            style_preference_switch.set_active (false);
-        } else if (x == 2) {
-            style_preference_switch.set_active (true);
-        }
-    });
-    style_preference_switch.notify["active"].connect (() => {
-      if (style_preference_switch.active) {
-          settings.schema.set_enum ("style-preference", 2);
-      } else {
-          settings.schema.set_enum ("style-preference", 1);
-      }
-    });
-    //
+    settings.schema.bind ("style-preference", style_preference_switch, "active", SettingsBindFlags.DEFAULT);
 
     settings.schema.bind (
                           "floating-controls",
@@ -474,6 +456,29 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
   }
 
   // Methods
+
+  private void set_cursor_blink (int b) {
+    var settings = Settings.get_default ();
+    settings.schema.set_enum ("cursor-blink-mode", b);
+  }
+  private void cursor_blink_refresh () {
+      var settings = Settings.get_default ();
+      int value = settings.schema.get_enum ("cursor-blink-mode");
+
+      if (value == 0) {
+        follow_sys_cursor_toggle.set_active (true);
+        on_cursor_toggle.set_active (false);
+        off_cursor_toggle.set_active (false);
+      } else if (value == 1) {
+        follow_sys_cursor_toggle.set_active (false);
+        on_cursor_toggle.set_active (true);
+        off_cursor_toggle.set_active (false);
+      } else if (value == 2) {
+        follow_sys_cursor_toggle.set_active (false);
+        on_cursor_toggle.set_active (false);
+        off_cursor_toggle.set_active (true);
+      }
+  }
 
   private void set_themes_filter_func () {
     if (!this.filter_themes_check_button.active) {

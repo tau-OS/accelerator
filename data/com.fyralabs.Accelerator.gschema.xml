@@ -100,9 +100,9 @@
       <default>'Helium Dark'</default>
       <summary>The dark color scheme for the terminal</summary>
     </key>
-    <key name="style-preference" type="u">
-      <default>0</default>
-      <!-- 0 = Follow system, 1 = Light Style, 2 = Dark Style -->
+    <key name="style-preference" type="b">
+      <default>false</default>
+      <!-- false = Light Style, true = Dark Style -->
       <summary>Style preference</summary>
     </key>
     <key name="terminal-padding" type="(uuuu)">

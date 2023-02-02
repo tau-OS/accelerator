@@ -1,5 +1,5 @@
 .custom-headerbar {
-  background: @window_bg_color;
+  background: @headerbar_bg_color;
 }
 
 .disclosure-button button {

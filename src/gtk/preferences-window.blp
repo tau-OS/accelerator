@@ -164,11 +164,11 @@ template TerminalPreferencesWindow : He.SettingsWindow {
 
           He.SettingsRow {
             title: _("Font");
-            activated => on_font_row_activated ();
 
-            Label font_label {
+            He.TextButton font_label {
               valign: center;
               label: "Monospace 10";
+              clicked => on_font_row_activated ();
             }
           }
 

@@ -49,7 +49,7 @@ public class Terminal.Settings : SettingsService {
   public uint opacity                              { get; set; }
   public uint scrollback_lines                     { get; set; }
   public uint scrollback_mode                      { get; set; }
-  public uint style_preference                     { get; set; }
+  public bool style_preference                     { get; set; }
   public uint window_height                        { get; set; }
   public uint window_width                         { get; set; }
   public Variant terminal_padding                     { get; set; }

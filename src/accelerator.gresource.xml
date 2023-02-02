@@ -7,6 +7,7 @@
     <file alias="shortcut-dialog.ui">gtk/shortcut-dialog.ui</file>
     <file alias="shortcut-editor.ui">gtk/shortcut-editor.ui</file>
     <file alias="style.css">resources/style.css</file>
+    <file alias="style-dark.css">resources/style-dark.css</file>
     <file alias="color-scheme-thumbnail.svg">resources/svg/color-scheme-thumbnail.svg</file>
   </gresource>
 </gresources>
