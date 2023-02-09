@@ -1,8 +1,8 @@
 {
     "app-id" : "com.fyralabs.Accelerator",
-    "runtime" : "co.tauos.Platform",
+    "runtime" : "com.fyralabs.Platform",
     "runtime-version" : "stable",
-    "sdk" : "co.tauos.Sdk",
+    "sdk" : "com.fyralabs.Sdk",
     "command" : "blackbox-link-system-fonts",
     "finish-args" : [
         "--filesystem=home:ro",
