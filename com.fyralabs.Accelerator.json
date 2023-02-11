@@ -62,7 +62,8 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://github.com/tau-OS/accelerator"
+                    "url" : "https://github.com/tau-OS/accelerator",
+                    "branch": "main"
                 }
             ]
         }
