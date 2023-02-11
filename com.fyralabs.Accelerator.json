@@ -62,7 +62,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://github.com/tau-OS/blackbox"
+                    "url" : "https://github.com/tau-OS/accelerator"
                 }
             ]
         }
