@@ -1,6 +1,6 @@
 {
     "app-id" : "com.fyralabs.Accelerator",
-    "runtime" : "com.fyralabs.Platform",
+    "runtime" : "co.tauos.Platform",
     "runtime-version" : "stable",
     "sdk" : "com.fyralabs.Sdk",
     "command" : "blackbox-link-system-fonts",
@@ -63,13 +63,13 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/tau-OS/accelerator",
-                    "branch": "main"
+                    "branch" : "main"
                 },
                 {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
-                    "branch": "main",
-                    "dest": "./subprojects/blueprint-compiler"
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
+                    "branch" : "main",
+                    "dest" : "./subprojects/blueprint-compiler"
                 }
             ]
         }
@@ -78,5 +78,3 @@
         "env" : {        }
     }
 }
-
-

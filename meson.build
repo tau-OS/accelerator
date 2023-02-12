@@ -11,10 +11,6 @@ add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), la
 
 # Blueprint
 subproject('blueprint-compiler')
-add_project_arguments(
-    '--gresourcesdir', meson.current_build_dir() / 'src',
-    language: ['vala']
-)
 #
 
 subdir('data')
@@ -22,3 +18,4 @@ subdir('src')
 subdir('po')
 
 meson.add_install_script('build-aux/meson/postinstall.py')
+

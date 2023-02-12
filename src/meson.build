@@ -1,8 +1,28 @@
-accelerator_sources = files(
+gnome = import('gnome')
+
+subdir('gtk')
+
+gresources = gnome.compile_resources(
+  'asresources',
+  'accelerator.gresource.xml',
+  source_dir: meson.current_build_dir(),
+  dependencies: blueprints,
+  c_name: 'as',
+  install_dir: get_option('datadir') / meson.project_name(),
+)
+
+add_project_arguments(
+    '--gresourcesdir', meson.current_build_dir(),
+    '--gresourcesdir', meson.current_build_dir() / 'gtk',
+    language: ['vala']
+)
+
+accelerator_sources = [
+  gresources,
   'Application.vala',
   'CommandLine.vala',
   'main.vala',
-)
+]
 
 subdir('widgets')
 subdir('services')
@@ -44,20 +64,6 @@ add_project_arguments('-DPCRE2_CODE_UNIT_WIDTH=0', language: 'c')
 # This is required until VTE 0.70 is out
 add_project_arguments('--disable-since-check', language: 'vala')
 
-gnome = import('gnome')
-
-subdir('gtk')
-
-accelerator_sources += gnome.compile_resources(
-  'asresources',
-  'accelerator.gresource.xml',
-  source_dir: meson.current_build_dir(),
-  dependencies: blueprints,
-  c_name: 'as',
-  install_dir: get_option('datadir') / meson.project_name(),
-)
-
-
 executable('accel', accelerator_sources, config_header,
   vala_args: '--target-glib=2.50',  dependencies: accelerator_deps,
   install: true,
@@ -73,3 +79,4 @@ if get_option('devel')
                  install: true,
                  install_dir: 'bin')
 endif
+
