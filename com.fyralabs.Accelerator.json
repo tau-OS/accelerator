@@ -59,6 +59,9 @@
             "config-opts" : [
                 "-Ddevel=true"
             ],
+            "make-args": [
+                "-j", "1"
+            ],
             "sources" : [
                 {
                     "type" : "git",
