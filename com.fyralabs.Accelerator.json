@@ -3,7 +3,7 @@
   "runtime": "co.tauos.Platform",
   "runtime-version": "stable",
   "sdk": "com.fyralabs.Sdk",
-  "command": "blackbox-link-system-fonts",
+  "command": "accel-link-system-fonts",
   "finish-args": [
     "--filesystem=home:ro",
     "--share=ipc",
@@ -53,6 +53,7 @@
       "builddir": true,
       "buildsystem": "meson",
       "make-args": ["-j", "1"],
+      "config-opts": ["-Ddevel=true"],
       "sources": [
         {
           "type": "git",

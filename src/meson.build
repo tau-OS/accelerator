@@ -72,11 +72,6 @@ executable('accel', accelerator_sources, config_header,
 
 # symlink as accelerator
 if get_option('devel')
-  custom_target ('flatpak-exe',
-                 input: 'blackbox-link-system-fonts',
-                 output: ['accel-link-system-fonts'],
-                 command: ['cp', '@INPUT@', '@OUTPUT@'],
-                 install: true,
-                 install_dir: 'bin')
+install_data ('accel-link-system-fonts', install_dir: 'bin')
 endif
 
