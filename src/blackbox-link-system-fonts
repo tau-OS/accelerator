@@ -12,4 +12,4 @@ if [ -e /.flatpak-info ] && [ -z $INSIDE_GNOME_BUILDER ]; then
   /usr/bin/ln -s /run/host/usr/share/fonts /run/host/fonts
 fi
 
-blackbox "$@"
+accel "$@"

@@ -1,83 +1,74 @@
 {
-    "app-id" : "com.fyralabs.Accelerator",
-    "runtime" : "co.tauos.Platform",
-    "runtime-version" : "stable",
-    "sdk" : "com.fyralabs.Sdk",
-    "command" : "blackbox-link-system-fonts",
-    "finish-args" : [
-        "--filesystem=home:ro",
-        "--share=ipc",
-        "--socket=fallback-x11",
-        "--socket=wayland",
-        "--device=dri",
-        "--talk-name=org.freedesktop.Flatpak"
-    ],
-    "cleanup" : [
-        "/include",
-        "/lib/pkgconfig",
-        "/man",
-        "/share/doc",
-        "/share/gtk-doc",
-        "/share/man",
-        "/share/pkgconfig",
-        "/share/vala",
-        "*.la",
-        "*.a"
-    ],
-    "modules" : [
+  "app-id": "com.fyralabs.Accelerator",
+  "runtime": "co.tauos.Platform",
+  "runtime-version": "stable",
+  "sdk": "com.fyralabs.Sdk",
+  "command": "blackbox-link-system-fonts",
+  "finish-args": [
+    "--filesystem=home:ro",
+    "--share=ipc",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--device=dri",
+    "--talk-name=org.freedesktop.Flatpak"
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/pkgconfig",
+    "/man",
+    "/share/doc",
+    "/share/gtk-doc",
+    "/share/man",
+    "/share/pkgconfig",
+    "/share/vala",
+    "*.la",
+    "*.a"
+  ],
+  "modules": [
+    {
+      "name": "vte",
+      "buildsystem": "meson",
+      "config-opts": ["-Dgtk4=true", "-Dgtk3=false", "-Dsixel=true"],
+      "sources": [
         {
-            "name" : "vte",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Dgtk4=true",
-                "-Dgtk3=false",
-                "-Dsixel=true"
-            ],
-            "sources" : [
-                {
-                    "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/vte/-/archive/015ca4d2fdc57b625add7b23b0afa7193adc45a9/vte-015ca4d2fdc57b625add7b23b0afa7193adc45a9.tar.gz",
-                    "sha256" : "ba918109936692fe555f1b28f428680ed4940a350709bcf908bdbf9a93498c08"
-                }
-            ]
-        },
-        {
-            "name" : "json-glib",
-            "buildsystem" : "meson",
-            "sources" : [
-                {
-                    "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/json-glib/-/archive/23ae2f59bea7405d95218e82edb7f3c4c7c80a87/json-glib-23ae2f59bea7405d95218e82edb7f3c4c7c80a87.tar.gz",
-                    "sha256" : "9fa88f1b8fc926bfd7c4115354a06f79b7b30fa367450a3e7a36932e3b7022ba"
-                }
-            ]
-        },
-        {
-            "name" : "accel",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Ddevel=true"
-            ],
-            "make-args": [
-                "-j", "1"
-            ],
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://github.com/tau-OS/accelerator",
-                    "branch" : "main"
-                },
-                {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
-                    "branch" : "main",
-                    "dest" : "./subprojects/blueprint-compiler"
-                }
-            ]
+          "type": "archive",
+          "url": "https://gitlab.gnome.org/GNOME/vte/-/archive/015ca4d2fdc57b625add7b23b0afa7193adc45a9/vte-015ca4d2fdc57b625add7b23b0afa7193adc45a9.tar.gz",
+          "sha256": "ba918109936692fe555f1b28f428680ed4940a350709bcf908bdbf9a93498c08"
         }
-    ],
-    "build-options" : {
-        "env" : {        }
+      ]
+    },
+    {
+      "name": "json-glib",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://gitlab.gnome.org/GNOME/json-glib/-/archive/23ae2f59bea7405d95218e82edb7f3c4c7c80a87/json-glib-23ae2f59bea7405d95218e82edb7f3c4c7c80a87.tar.gz",
+          "sha256": "9fa88f1b8fc926bfd7c4115354a06f79b7b30fa367450a3e7a36932e3b7022ba"
+        }
+      ]
+    },
+    {
+      "name": "accel",
+      "builddir": true,
+      "buildsystem": "meson",
+      "make-args": ["-j", "1"],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/tau-OS/accelerator",
+          "branch": "main"
+        },
+        {
+          "type": "git",
+          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
+          "branch": "main",
+          "dest": "./subprojects/blueprint-compiler"
+        }
+      ]
     }
+  ],
+  "build-options": {
+    "env": {}
+  }
 }
