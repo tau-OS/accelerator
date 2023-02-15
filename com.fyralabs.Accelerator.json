@@ -52,6 +52,7 @@
       "name": "accel",
       "builddir": true,
       "buildsystem": "meson",
+      "config-opts": ["-Dflatpak=true"],
       "make-args": ["-j", "1"],
       "sources": [
         {

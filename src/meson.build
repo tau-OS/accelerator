@@ -71,7 +71,7 @@ executable('accel', accelerator_sources, config_header,
 )
 
 # symlink as accelerator
-if get_option('devel')
+if get_option('devel') or get_option('flatpak')
 install_data ('accel-link-system-fonts', install_dir: 'bin')
 endif
 
