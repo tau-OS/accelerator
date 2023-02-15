@@ -53,7 +53,6 @@
       "builddir": true,
       "buildsystem": "meson",
       "make-args": ["-j", "1"],
-      "config-opts": ["-Ddevel=true"],
       "sources": [
         {
           "type": "git",
