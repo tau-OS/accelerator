@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-03-14 22:21+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-04-03 02:38+0000\n"
+"Last-Translator: Jaiden Riordan <jade@fyralabs.com>\n"
 "Language-Team: English <https://weblate.fyralabs.com/projects/tauOS/"
-"accelerator/en_OWO/>\n"
+"accelerator/en_owo/>\n"
 "Language: en_owo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,634 +44,647 @@ msgstr "Window height"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:14
 msgid "Whether or not to display borders around the window and tabs"
-msgstr ""
+msgstr "Whether or nyot to dispway bowders awound the window and tabs"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
-msgstr ""
+msgstr "Whether or nyot to wemember window size"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
-msgstr ""
+msgstr "Font famiwy and size"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
-msgstr ""
+msgstr "Whether the window shouwd inhewit tewminal theme's cowours"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
-msgstr ""
+msgstr "Make window cwear"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
-msgstr ""
+msgstr "Whether or nyot tabs shouwd expand to fiww tab baw"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
-msgstr ""
+msgstr "Whether the headerbaw shouwd be shown or nyot"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
-msgstr ""
+msgstr "Whether or nyot to dispway a menu button in the headerbaw"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
 msgstr ""
+"Whether or nyot to dwaw a 1px wine under the headerbaw when thewe's a single "
+"tab open"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:56
 msgid "Whether or not to reserve an area for dragging the header bar"
-msgstr ""
+msgstr "Whether or nyot to weserve an awea for dwagging the headerbaw"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
-msgstr ""
+msgstr "Whether or nyot to show scwollbaws"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
-msgstr ""
+msgstr "Whether overway scwolling shouwd be enabwed"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
-msgstr ""
+msgstr "If enabwed, tewminals will scwoll by pixels instead of wows"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:72
 msgid "If enabled, terminals will render sixel escape sequences"
-msgstr ""
+msgstr "If enabwed, tewminals will wender sixel escape sequences"
 
 #. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
 #: data/com.fyralabs.Accelerator.gschema.xml:77
 #: src/gtk/preferences-window.ui:373
 msgid "Scrollback mode"
-msgstr ""
+msgstr "Scwollback mode"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
-msgstr ""
+msgstr "Number of wines stowed in scwollback"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
-msgstr ""
+msgstr "If enabwed, fwoating contwols will be shown in headerwess mode"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
 msgstr ""
+"Hovewable awea (in pixels) at the top of the window to twigger fwoating "
+"contwols"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:93
 msgid "Delay time before showing floating controls"
-msgstr ""
+msgstr "Deway time befowe showing fwoating contwols"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:97
 msgid "The light color scheme for the terminal"
-msgstr ""
+msgstr "The wight cowour scheme for the tewminal"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:101
 msgid "The dark color scheme for the terminal"
-msgstr ""
+msgstr "The dawk cowour scheme for the tewminal"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
 #: data/com.fyralabs.Accelerator.gschema.xml:106
 msgid "Style preference"
-msgstr ""
+msgstr "Lookies"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:110
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
-msgstr ""
+msgstr "Amount of padding awound tewminal widgets (top, right, bottom, weft)"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:114
 msgid "Terminal cell width"
-msgstr ""
+msgstr "Tewminal ceww width"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:118
 msgid "Terminal cell height"
-msgstr ""
+msgstr "Tewminal ceww height"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:122
 msgid "Cursor shape"
-msgstr ""
+msgstr "Cuwsor shape"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:126
 msgid "Whether or not the cursor should blink"
-msgstr ""
+msgstr "Whether or nyot the cuwsor shouwd bwink"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
-msgstr ""
+msgstr "If enabwed, ctrl+c and ctrl+c wiww work for copy/paste"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:134
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
 msgstr ""
+"If enabwed, the tab bar wiww be wepwaced with a titwe wabel when thewe's a "
+"single open tab"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:138
 msgid "If enabled, a single open tab will blend with the headerbar color"
-msgstr ""
+msgstr "If enabwed, a single open tab wiww bwend with the headerbaw cowour"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:142
 msgid "Whether to spawn shell in login mode"
-msgstr ""
+msgstr "Whether to spawn sheww in wogin mode"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:146
 msgid "Whether to use a custom command instead of the user's shell"
-msgstr ""
+msgstr "Whether to use a custom command instead of the cat's sheww"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:150
 msgid "Custom command to use instead of the user's shell"
-msgstr ""
+msgstr "Custom command to use instead of the cat's shell"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:157
 msgid ""
 "Whether clicking next on the last search result should return to the first"
 msgstr ""
+"Whether cwicking next on the wast seawch wesult shouwd weturn to the fiwst"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:161
 msgid "Whether search should be case sensitive"
-msgstr ""
+msgstr "Whether seawch shouwd be case sensitive"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:165
 msgid "Whether search should only match entire words"
-msgstr ""
+msgstr "Whether seawch shouwd onwy match entiwe wowds"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:169
 msgid "Whether search should be performed using regular expressions"
-msgstr ""
+msgstr "Whether seawch shouwd be pewfowmed using weguwar expressions"
 
 #: src/gtk/search-toolbar.ui:20
 msgid "Find"
-msgstr ""
+msgstr "Find"
 
 #: src/gtk/search-toolbar.ui:42
 msgid "Previous result"
-msgstr ""
+msgstr "Pwevious wesult"
 
 #: src/gtk/search-toolbar.ui:48
 msgid "Next result"
-msgstr ""
+msgstr "New wesult"
 
 #: src/gtk/search-toolbar.ui:91
 msgid "Search wraps around"
-msgstr ""
+msgstr "Seawch wraps awound"
 
 #: src/gtk/search-toolbar.ui:96
 msgid "Match is case sensitive"
-msgstr ""
+msgstr "Match is case sensitive"
 
 #: src/gtk/search-toolbar.ui:101
 msgid "Match entire words only"
-msgstr ""
+msgstr "Match entiwe wowds onwy"
 
 #: src/gtk/search-toolbar.ui:106
 msgid "Match using regular expression"
-msgstr ""
+msgstr "Match using weguwar expwession"
 
 #: src/gtk/help-overlay.ui:10
 msgctxt "shortcut window"
 msgid "Window"
-msgstr ""
+msgstr "Window"
 
 #: src/gtk/help-overlay.ui:13
 msgctxt "shortcut window"
 msgid "New window"
-msgstr ""
+msgstr "New window"
 
 #: src/gtk/help-overlay.ui:19
 msgctxt "shortcut window"
 msgid "New tab"
-msgstr ""
+msgstr "New tab"
 
 #: src/gtk/help-overlay.ui:25
 msgctxt "shortcut window"
 msgid "Close tab"
-msgstr ""
+msgstr "Cwose tab"
 
 #: src/gtk/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Switch headbar mode"
-msgstr ""
+msgstr "Switch headerbaw mode"
 
 #: src/gtk/help-overlay.ui:37
 msgctxt "shortcut window"
 msgid "Toggle fullscreen"
-msgstr ""
+msgstr "Toggle fullscween"
 
 #: src/gtk/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Terminal"
-msgstr ""
+msgstr "Tewminal"
 
 #: src/gtk/help-overlay.ui:48
 msgctxt "shortcut window"
 msgid "Search"
-msgstr ""
+msgstr "Seawch"
 
 #: src/gtk/help-overlay.ui:54
 msgctxt "shortcut window"
 msgid "Copy"
-msgstr ""
+msgstr "Copy"
 
 #: src/gtk/help-overlay.ui:60
 msgctxt "shortcut window"
 msgid "Paste"
-msgstr ""
+msgstr "Paste"
 
 #: src/gtk/help-overlay.ui:66
 msgctxt "shortcut window"
 msgid "Zoom in"
-msgstr ""
+msgstr "Make big"
 
 #: src/gtk/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Zoom out"
-msgstr ""
+msgstr "Make small"
 
 #: src/gtk/help-overlay.ui:80
 msgctxt "shortcut window"
 msgid "Navigation"
-msgstr ""
+msgstr "Nyavigation"
 
 #: src/gtk/help-overlay.ui:83
 msgctxt "shortcut window"
 msgid "Focus next tab"
-msgstr ""
+msgstr "Focus next tab"
 
 #: src/gtk/help-overlay.ui:89
 msgctxt "shortcut window"
 msgid "Focus previous tab"
-msgstr ""
+msgstr "Focus pwevious tab"
 
 #: src/gtk/help-overlay.ui:95
 msgctxt "shortcut window"
 msgid "Switch to Tab 1"
-msgstr ""
+msgstr "Switch to Tab 1"
 
 #: src/gtk/help-overlay.ui:101
 msgctxt "shortcut window"
 msgid "Switch to Tab 2"
-msgstr ""
+msgstr "Switch to Tab 2"
 
 #: src/gtk/help-overlay.ui:107
 msgctxt "shortcut window"
 msgid "Switch to Tab 3"
-msgstr ""
+msgstr "Switch to Tab 3"
 
 #: src/gtk/help-overlay.ui:113
 msgctxt "shortcut window"
 msgid "Switch to Tab 4"
-msgstr ""
+msgstr "Switch to Tab 4"
 
 #: src/gtk/help-overlay.ui:119
 msgctxt "shortcut window"
 msgid "Switch to Tab 5"
-msgstr ""
+msgstr "Switch to Tab 5"
 
 #: src/gtk/help-overlay.ui:125
 msgctxt "shortcut window"
 msgid "Switch to Tab 6"
-msgstr ""
+msgstr "Switch to Tab 6"
 
 #: src/gtk/help-overlay.ui:131
 msgctxt "shortcut window"
 msgid "Switch to Tab 7"
-msgstr ""
+msgstr "Switch to Tab 7"
 
 #: src/gtk/help-overlay.ui:137
 msgctxt "shortcut window"
 msgid "Switch to Tab 8"
-msgstr ""
+msgstr "Switch to Tab 8"
 
 #: src/gtk/help-overlay.ui:143
 msgctxt "shortcut window"
 msgid "Switch to Tab 9"
-msgstr ""
+msgstr "Switch to Tab 9"
 
 #: src/gtk/help-overlay.ui:149
 msgctxt "shortcut window"
 msgid "Switch to last Tab"
-msgstr ""
+msgstr "Switch to wast tab"
 
 #: src/gtk/help-overlay.ui:157
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Genewal"
 
 #: src/gtk/help-overlay.ui:160
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Show Shortcuts"
 
 #: src/gtk/shortcut-dialog.ui:6
 msgid "Edit Shortcut"
-msgstr ""
+msgstr "Edit Shortcut"
 
 #: src/gtk/shortcut-dialog.ui:21
 msgid "Cancel"
-msgstr ""
+msgstr "Cancew"
 
 #: src/gtk/shortcut-dialog.ui:28
 msgid "Apply"
-msgstr ""
+msgstr "Appwy"
 
 #: src/gtk/shortcut-dialog.ui:68
 msgid "This shortcut is already in use"
-msgstr ""
+msgstr "This shortcut is alweady in use"
 
 #: src/gtk/shortcut-dialog.ui:81
 msgid "Press Escape to cancel or Backspace to disable shortcut"
-msgstr ""
+msgstr "Pwess Escape to cancel or Backspace to disabwe shortcut"
 
 #: src/gtk/shortcut-editor.ui:6
 msgid "Keyboard"
-msgstr ""
+msgstr "Pawboard"
 
 #: src/gtk/shortcut-editor.ui:10
 msgid "Shortcuts"
-msgstr ""
+msgstr "Shortcuts"
 
 #: src/gtk/preferences-window.ui:11
 msgid "General"
-msgstr ""
+msgstr "Genewal"
 
 #: src/gtk/preferences-window.ui:15
 msgid "Window"
-msgstr ""
+msgstr "Window"
 
 #: src/gtk/preferences-window.ui:19
 msgid "Remember Window Size"
-msgstr ""
+msgstr "Wemember Window Size"
 
 #: src/gtk/preferences-window.ui:30
 msgid "Show Borders"
-msgstr ""
+msgstr "Show Bowders"
 
 #: src/gtk/preferences-window.ui:31
 msgid "Enable to draw a border around the window and the active tab."
-msgstr ""
+msgstr "Enabwe to dwaw a bowder awound the window and the active tab."
 
 #: src/gtk/preferences-window.ui:42
 msgid "Theme Integration"
-msgstr ""
+msgstr "Theme Integwation"
 
 #: src/gtk/preferences-window.ui:43
 msgid "Style window with terminal theme colors."
-msgstr ""
+msgstr "Window Lookie with tewminal cowours."
 
 #: src/gtk/preferences-window.ui:53
 msgid "Style Preference"
-msgstr ""
+msgstr "Lookie Pwefewence"
 
 #: src/gtk/preferences-window.ui:57 src/gtk/preferences-window.ui:300
 msgid "Follow System"
-msgstr ""
+msgstr "Fowwow System"
 
 #: src/gtk/preferences-window.ui:58
 msgid "Light Style"
-msgstr ""
+msgstr "Wight Lookie"
 
 #: src/gtk/preferences-window.ui:59
 msgid "Dark Style"
-msgstr ""
+msgstr "Dawk Lookie"
 
 #: src/gtk/preferences-window.ui:69
 msgid "Tabs"
-msgstr ""
+msgstr "Tabs"
 
 #: src/gtk/preferences-window.ui:73
 msgid "Expand Tabs"
-msgstr ""
+msgstr "Expand Tabs"
 
 #: src/gtk/preferences-window.ui:83
 msgid "Single Tab Mode"
-msgstr ""
+msgstr "Single Tab Mode"
 
 #: src/gtk/preferences-window.ui:88
 msgid "Hide Single Tab"
-msgstr ""
+msgstr "Hide Single Tab"
 
 #: src/gtk/preferences-window.ui:89
 msgid ""
 "Replace tab bar with a title label when a single tab is open. Easier to drag "
 "the window."
 msgstr ""
+"Weplace tab bar with a title wabel when a single tab is open. Easier to dwag "
+"the window."
 
 #: src/gtk/preferences-window.ui:101
 msgid "Stealth Single Tab"
-msgstr ""
+msgstr "Stealth Single Tab"
 
 #: src/gtk/preferences-window.ui:102
 msgid "Blend single tab with header bar."
-msgstr ""
+msgstr "Bwend single tab with headerbaw."
 
 #: src/gtk/preferences-window.ui:117
 msgid "Header Bar"
-msgstr ""
+msgstr "Headerbaw"
 
 #: src/gtk/preferences-window.ui:121
 msgid "Show Header Bar"
-msgstr ""
+msgstr "Show Headerbaw"
 
 #: src/gtk/preferences-window.ui:132
 msgid "Show Menu Button"
-msgstr ""
+msgstr "Show Menu Button"
 
 #: src/gtk/preferences-window.ui:143
 msgid "Drag Area"
-msgstr ""
+msgstr "Dwag Awea"
 
 #: src/gtk/preferences-window.ui:144
 msgid "Enable to reserve some space on the left side to drag the window."
-msgstr ""
+msgstr "Enabwe to weserve some space on the weft side to dwag the window."
 
 #: src/gtk/preferences-window.ui:156
 msgid "Draw Line Under Header Bar"
-msgstr ""
+msgstr "Dwaw Wine Under Headerbaw"
 
 #: src/gtk/preferences-window.ui:157
 msgid ""
 "Enable to draw a line under the header bar when a single tab is open. "
 "Requires \"Show Borders\"."
 msgstr ""
+"Enabwe to dwaw a wine under the headerbaw when a single tab is open. "
+"Wequiwes \"Show Bowders\"."
 
 #: src/gtk/preferences-window.ui:167
 msgid "Floating Controls"
-msgstr ""
+msgstr "Fwoating Contwols"
 
 #: src/gtk/preferences-window.ui:170
 msgid "Show Floating Controls"
-msgstr ""
+msgstr "Show Fwoating Contwols"
 
 #: src/gtk/preferences-window.ui:171
 msgid "Show floating controls when header bar is hidden."
-msgstr ""
+msgstr "Show fwoating contwols when headerbaw is hidden."
 
 #: src/gtk/preferences-window.ui:183
 msgid "Floating Controls Hover Area"
-msgstr ""
+msgstr "Fwoating Contwols Hover Awea"
 
 #: src/gtk/preferences-window.ui:184
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls."
 msgstr ""
+"Hoverable awea (in pixels) at the top of the window to twigger fwoating "
+"contwols."
 
 #: src/gtk/preferences-window.ui:196
 msgid "Delay Before Show Floating Controls"
-msgstr ""
+msgstr "Deway Before Showing Fwoating Contwols"
 
 #: src/gtk/preferences-window.ui:197
 msgid "Delay time (ms) before show floating controls."
-msgstr ""
+msgstr "Deway time (ms) befowe showing fwoating contwols."
 
 #: src/gtk/preferences-window.ui:219
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: src/gtk/preferences-window.ui:223
 msgid "Font"
-msgstr ""
+msgstr "Font"
 
 #: src/gtk/preferences-window.ui:235
 msgid "Cell Spacing"
-msgstr ""
+msgstr "Ceww Spacing"
 
 #: src/gtk/preferences-window.ui:238
 msgid "Width"
-msgstr ""
+msgstr "Width"
 
 #: src/gtk/preferences-window.ui:250
 msgid "Height"
-msgstr ""
+msgstr "Height"
 
 #: src/gtk/preferences-window.ui:265
 msgid "Easy Copy &amp; Paste"
-msgstr ""
+msgstr "Easy Copy &amp; Paste"
 
 #: src/gtk/preferences-window.ui:266
 msgid "Use ctrl+c/ctrl+v for copy/paste."
-msgstr ""
+msgstr "Use ctrl+c/ctrl+v for copy/paste."
 
 #: src/gtk/preferences-window.ui:281
 msgid "Cursor Shape"
-msgstr ""
+msgstr "Cuwsor Shape"
 
 #: src/gtk/preferences-window.ui:285
 msgid "Block"
-msgstr ""
+msgstr "Bwock"
 
 #: src/gtk/preferences-window.ui:286
 msgid "IBeam"
-msgstr ""
+msgstr "IBeam"
 
 #: src/gtk/preferences-window.ui:287
 msgid "Underline"
-msgstr ""
+msgstr "Underwine"
 
 #: src/gtk/preferences-window.ui:295
 msgid "Cursor Blinking"
-msgstr ""
+msgstr "Cuwsor Bwinking"
 
 #: src/gtk/preferences-window.ui:296
 msgid "Whether or not the cursor should blink."
-msgstr ""
+msgstr "Whether or nyot the cuwsor shouwd bwink."
 
 #: src/gtk/preferences-window.ui:301
 msgid "On"
-msgstr ""
+msgstr "On"
 
 #: src/gtk/preferences-window.ui:302
 msgid "Off"
-msgstr ""
+msgstr "Off"
 
 #: src/gtk/preferences-window.ui:310
 msgid "Padding"
-msgstr ""
+msgstr "Padding"
 
 #: src/gtk/preferences-window.ui:324
 msgid "Opacity"
-msgstr ""
+msgstr "Opacity"
 
 #: src/gtk/preferences-window.ui:325
 msgid "Terminal background opacity."
-msgstr ""
+msgstr "Tewminal backgwound opacity."
 
 #: src/gtk/preferences-window.ui:341
 msgid "Scrolling"
-msgstr ""
+msgstr "Scwolling"
 
 #: src/gtk/preferences-window.ui:344
 msgid "Scrollbars"
-msgstr ""
+msgstr "Scwollbaws"
 
 #: src/gtk/preferences-window.ui:347
 msgid "Show Scrollbars"
-msgstr ""
+msgstr "Show Scwollbaws"
 
 #: src/gtk/preferences-window.ui:358
 msgid "Use Overlay Scrolling"
-msgstr ""
+msgstr "Use Overway Scwolling"
 
 #: src/gtk/preferences-window.ui:377
 msgid "Fixed Size"
-msgstr ""
+msgstr "Fixed Size"
 
 #: src/gtk/preferences-window.ui:378
 msgid "Unlimited"
-msgstr ""
+msgstr "Unwimited"
 
 #: src/gtk/preferences-window.ui:379 src/widgets/ShortcutEditor.vala:131
 msgid "Disabled"
-msgstr ""
+msgstr "Disabwed"
 
 #: src/gtk/preferences-window.ui:388
 msgid "Scrollback Lines"
-msgstr ""
+msgstr "Scwollback Wines"
 
 #: src/gtk/preferences-window.ui:405
 msgid "Command"
-msgstr ""
+msgstr "Command"
 
 #: src/gtk/preferences-window.ui:409
 msgid "Run Command as Login Shell"
-msgstr ""
+msgstr "Wun Command Wogin Sheww"
 
 #: src/gtk/preferences-window.ui:420
 msgid "Use Custom Command"
-msgstr ""
+msgstr "Use Custom Command"
 
 #: src/gtk/preferences-window.ui:430
 msgid "Custom Command"
-msgstr ""
+msgstr "Custom Command"
 
 #: src/gtk/preferences-window.ui:437
 msgid "Theme"
-msgstr ""
+msgstr "Theme"
 
 #: src/gtk/preferences-window.ui:448
 msgid "Open folder"
-msgstr ""
+msgstr "Open fowder"
 
 #: src/gtk/preferences-window.ui:456
 msgid "Get more themes online"
-msgstr ""
+msgstr "Get more themes onwine"
 
 #: src/gtk/preferences-window.ui:470
 msgid "Set your preferred theme for light and dark styles."
-msgstr ""
+msgstr "Set your pwefewwed theme for wight and dawk lookies."
 
 #: src/gtk/preferences-window.ui:485
 msgid "Light Theme"
-msgstr ""
+msgstr "Wight Theme"
 
 #: src/gtk/preferences-window.ui:491
 msgid "Dark Theme"
-msgstr ""
+msgstr "Dawk Theme"
 
 #: src/gtk/preferences-window.ui:499
 msgid "Only display themes for the current style"
-msgstr ""
+msgstr "Onwy dispway themes for the cuwwent lookie"
 
 #: src/gtk/preferences-window.ui:507
 msgid ""
@@ -679,14 +692,17 @@ msgid ""
 "a light color scheme while using the dark app style or a dark color scheme "
 "while using the light app style."
 msgstr ""
+"To ensure weadability, \"Theme Integwation\" will be disabwed if you sewect "
+"a wight cowour scheme while using the dawk nyapp lookie or a dawk cowour "
+"scheme while using the wight nyapp lookie."
 
 #: src/gtk/preferences-window.ui:539
 msgid "Advanced"
-msgstr ""
+msgstr "Advanced"
 
 #: src/gtk/preferences-window.ui:543
 msgid "Experimental"
-msgstr ""
+msgstr "Expewimental"
 
 #: src/gtk/preferences-window.ui:544
 msgid ""
@@ -694,36 +710,41 @@ msgid ""
 "<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">report "
 "bugs</a>."
 msgstr ""
+"Featuwes in this section are known to be wonky. Please feel fwee to test and "
+"<a href=\"https://gitlab.gnome.org/raggesilver/blackbox/-/issues\">weport "
+"bugs</a>."
 
 #: src/gtk/preferences-window.ui:548
 msgid "Sixel Support"
-msgstr ""
+msgstr "Sixel Support"
 
 #: src/gtk/preferences-window.ui:549
 msgid "Render sixel escape sequences."
-msgstr ""
+msgstr "Wender sixel escape sequences."
 
 #: src/gtk/preferences-window.ui:561
 msgid "Danger Zone"
-msgstr ""
+msgstr "NAUGHTY PWACE"
 
 #: src/gtk/preferences-window.ui:564
 msgid "Reset Preferences"
-msgstr ""
+msgstr "Weset Pwefewences"
 
 #: src/gtk/preferences-window.ui:565
 msgid ""
 "This will revert all settings back to default. Your extra themes will not be "
 "removed."
 msgstr ""
+"This wiww wevert aww settings back to defauwt. Nyur extwa themes wiww nyot "
+"be wemoved."
 
 #: src/gtk/preferences-window.ui:570
 msgid "Reset preferences"
-msgstr ""
+msgstr "Weset pwefewences"
 
 #: src/utils/Constants.vala:34
 msgid "You can still access the menu by right-clicking any terminal."
-msgstr ""
+msgstr "Nyu can stiww access the menu by right-cwicking any tewminal."
 
 #: src/utils/Constants.vala:36
 #, c-format
@@ -732,86 +753,89 @@ msgid ""
 "progress has been made on this port, copying has yet to be implemented. This "
 "means there's currently no way to copy text in %s."
 msgstr ""
+"%s uses an earwy GTK4 port of VTE as a tewminal widget. While a wot of "
+"pwogwess has been made on this powt, copying has yet to be impwemented. This "
+"means there's cuwwently no way to copy text in %s."
 
 #: src/widgets/HeaderBar.vala:30 src/widgets/ShortcutEditor.vala:168
 #: src/widgets/Window.vala:153
 msgid "Fullscreen"
-msgstr ""
+msgstr "Fuwwscween"
 
 #: src/widgets/HeaderBar.vala:31 src/widgets/ShortcutEditor.vala:164
 #: src/widgets/TerminalTab.vala:129
 msgid "Preferences"
-msgstr ""
+msgstr "Pwefewences"
 
 #: src/widgets/HeaderBar.vala:32 src/widgets/ShortcutEditor.vala:169
 #: src/widgets/TerminalTab.vala:132
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Pawboard Shortcuts"
 
 #: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:133
 msgid "About"
-msgstr ""
+msgstr "About"
 
 #: src/widgets/HeaderBar.vala:57 src/widgets/Window.vala:173
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: src/widgets/ShortcutDialog.vala:46
 msgid "Enter new shortcut"
-msgstr ""
+msgstr "Enter new shortcut"
 
 #: src/widgets/ShortcutDialog.vala:47
 #, c-format
 msgid "Enter new shortcut for \"%s\""
-msgstr ""
+msgstr "Enter new shortcut for \"%s\""
 
 #: src/widgets/ShortcutEditor.vala:159
 msgid "Focus Next Tab"
-msgstr ""
+msgstr "Focus Next Tab"
 
 #: src/widgets/ShortcutEditor.vala:160
 msgid "Focus Previous Tab"
-msgstr ""
+msgstr "Focus Pwevious Tab"
 
 #: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:122
 msgid "New Window"
-msgstr ""
+msgstr "New Window"
 
 #: src/widgets/ShortcutEditor.vala:162
 msgid "Toggle Header Bar"
-msgstr ""
+msgstr "Toggwe Headerbaw"
 
 #: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
 msgid "New Tab"
-msgstr ""
+msgstr "New Tab"
 
 #: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:124
 msgid "Copy"
-msgstr ""
+msgstr "Copy"
 
 #: src/widgets/ShortcutEditor.vala:166 src/widgets/TerminalTab.vala:125
 msgid "Paste"
-msgstr ""
+msgstr "Paste"
 
 #: src/widgets/ShortcutEditor.vala:167
 msgid "Search"
-msgstr ""
+msgstr "Seawch"
 
 #: src/widgets/ShortcutEditor.vala:170
 msgid "Zoom In"
-msgstr ""
+msgstr "Make Big"
 
 #: src/widgets/ShortcutEditor.vala:171
 msgid "Zoom Out"
-msgstr ""
+msgstr "Make Smol"
 
 #: src/widgets/ShortcutEditor.vala:172
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Weset Zoom"
 
 #: src/widgets/ShortcutEditor.vala:173
 msgid "Close Tab"
-msgstr ""
+msgstr "Cwose Tab"
 
 #: src/widgets/ShortcutEditor.vala:175 src/widgets/ShortcutEditor.vala:176
 #: src/widgets/ShortcutEditor.vala:177 src/widgets/ShortcutEditor.vala:178
@@ -820,41 +844,41 @@ msgstr ""
 #: src/widgets/ShortcutEditor.vala:183
 #, c-format
 msgid "Switch to Tab %u"
-msgstr ""
+msgstr "Switch to Tab %u"
 
 #: src/widgets/ShortcutEditor.vala:184
 msgid "Switch to Last Tab"
-msgstr ""
+msgstr "Switch to Wast Tab"
 
 #: src/widgets/Window.vala:156
 msgid "Show headerbar"
-msgstr ""
+msgstr "Show headerbaw"
 
 #: src/widgets/Window.vala:211
 msgid "No tabs open"
-msgstr ""
+msgstr "No tabs open"
 
 #: src/widgets/PreferencesWindow.vala:504
 msgid "Terminal Font"
-msgstr ""
+msgstr "Tewminal Font"
 
 #: src/CommandLine.vala:47
 msgid "Show app version"
-msgstr ""
+msgstr "Show nyapp vewsion"
 
 #: src/CommandLine.vala:56
 msgid "Set current working directory"
-msgstr ""
+msgstr "Set cuwwent wowking diwectowy"
 
 #: src/CommandLine.vala:65
 msgid "Execute command in a terminal"
-msgstr ""
+msgstr "Execute command in a tewminal"
 
 #: src/CommandLine.vala:74
 msgid "Show help"
-msgstr ""
+msgstr "Show hewp"
 
 #: src/CommandLine.vala:121
 #, c-format
 msgid "Run %s --help to get help\n"
-msgstr ""
+msgstr "Wun %s --hewp to get hewp\n"
