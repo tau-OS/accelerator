@@ -34,9 +34,7 @@ It is meant to be a successor to Fermion.
 
 ## Install
 
-**Flathub**
 
-<a href='https://flathub.org/apps/details/com.fyralabs.Accelerator'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
 
 ```bash
 flatpak install flathub com.fyralabs.Accelerator
