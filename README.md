@@ -33,7 +33,8 @@ It is meant to be a successor to Fermion.
 - Files drag-n-drop support
 
 ## Install
-
+1. [Grab the Flatpakref](https://repo.tauos.co/catalogue/appstream/com.fyralabs.Accelerator.flatpakref)
+2. Open it in GNOME Software, Sideload, or your app store of choice **OR** run `flatpak install com.fyralabs.Accelerator.flatpakref`
 
 ## Compile
 
