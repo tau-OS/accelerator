@@ -35,22 +35,6 @@ It is meant to be a successor to Fermion.
 ## Install
 
 
-
-```bash
-flatpak install flathub com.fyralabs.Accelerator
-```
-
-**Download**
-
-- [Flatpak](https://gitlab.gnome.org/raggesilver/blackbox/-/jobs/artifacts/main/raw/blackbox.flatpak?job=flatpak)
-- [Zip](https://gitlab.gnome.org/raggesilver/blackbox/-/jobs/artifacts/main/download?job=flatpak)
-
-*Note: these two links will not work if the latest pipeline failed/was skipped/is still running*
-
-**Looking for an older release?**
-
-Check out the [releases page](https://gitlab.gnome.org/raggesilver/blackbox/-/releases).
-
 ## Compile
 
 **Flatpak**
