@@ -733,7 +733,8 @@ msgid ""
 "%s uses an early Gtk 4 port of VTE as a terminal widget. While a lot of "
 "progress has been made on this port, copying has yet to be implemented. This "
 "means there's currently no way to copy text in %s."
-msgstr "作為一個終端小工具，%s 運用 VTE 的早期 Gtk 4 移植。雖然有不少進展，但在 %s "
+msgstr ""
+"作為一個終端小工具，%s 運用 VTE 的早期 Gtk 4 移植。雖然有不少進展，但在 %s "
 "裏，複製文字暫時是不可行的。"
 
 #: src/widgets/HeaderBar.vala:30 src/widgets/ShortcutEditor.vala:168

@@ -31,8 +31,8 @@ msgstr "Tewminal"
 #: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr ""
-"Terminal;terminal;shell;prompt;command;commandline;cmd;box;tewminal;commandwi"
-"ne;pwompt;sheww;"
+"Terminal;terminal;shell;prompt;command;commandline;cmd;box;tewminal;"
+"commandwine;pwompt;sheww;"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
