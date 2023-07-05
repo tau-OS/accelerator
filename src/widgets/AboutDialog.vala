@@ -36,7 +36,7 @@ namespace Terminal {
                                      translators,
                                      developers,
                                      2023,
-                                     He.AboutWindow.Licenses.GPLv3, He.Colors.NONE);
+                                     He.AboutWindow.Licenses.GPLV3, He.Colors.NONE);
 
     window.set_modal (true);
     window.set_transient_for (parent);
