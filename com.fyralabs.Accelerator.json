@@ -1,6 +1,6 @@
 {
   "app-id": "com.fyralabs.Accelerator",
-  "runtime": "co.tauos.Platform",
+  "runtime": "com.fyralabs.Platform",
   "runtime-version": "stable",
   "sdk": "com.fyralabs.Sdk",
   "command": "accel-link-system-fonts",
