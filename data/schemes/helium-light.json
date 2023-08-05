@@ -2,8 +2,8 @@
   "name": "Helium Light",
   "comment": "Light Tilix scheme from Helium",
   "use-theme-colors": false,
-  "foreground-color": "#2d2d2d",
-  "background-color": "#f0f0f0",
+  "foreground-color": "#333333",
+  "background-color": "#f8f8f8",
   "palette": [
     "#2d2d2d",
     "#DB2860",
