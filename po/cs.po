@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-05-27 07:05+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-10-17 15:25+0000\n"
+"Last-Translator: Písek Pískovec <pisekpiskovec@gmail.com>\n"
 "Language-Team: Czech <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/cs/>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 5.0\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
@@ -575,11 +575,11 @@ msgstr "Block"
 
 #: src/gtk/preferences-window.ui:286
 msgid "IBeam"
-msgstr "IBeam"
+msgstr "Svislá čára"
 
 #: src/gtk/preferences-window.ui:287
 msgid "Underline"
-msgstr "Underline"
+msgstr "Podtrhávací čára"
 
 #: src/gtk/preferences-window.ui:295
 msgid "Cursor Blinking"
