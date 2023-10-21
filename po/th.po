@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-05-27 07:08+0000\n"
-"Last-Translator: pastelite <kana.bhong@gmail.com>\n"
+"PO-Revision-Date: 2023-10-21 11:26+0000\n"
+"Last-Translator: Amy/Atius <www.dappertransformer@proton.me>\n"
 "Language-Team: Thai <https://weblate.fyralabs.com/projects/tauOS/accelerator/"
 "th/>\n"
 "Language: th\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 5.0\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
@@ -89,11 +89,11 @@ msgstr "ควรแสดงแถบเลื่อนหรือไม่"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
-msgstr ""
+msgstr "ควรเปิดใช้งานแถบเลื่อนลอยทับหรือไม่"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
-msgstr ""
+msgstr "ถ้าเปิด เทอร์มินัลจะเลื่อนตามพิกเซลแทนแถว"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:72
 msgid "If enabled, terminals will render sixel escape sequences"
@@ -111,7 +111,7 @@ msgstr "จำนวนบรรทัดที่บันทึกย้อน
 
 #: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
-msgstr ""
+msgstr "ถ้าเปิด การควบคุมแบบลอยตัวจะแสดงในโหมดไม่มีส่วนหัว"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
