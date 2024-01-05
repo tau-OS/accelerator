@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-05-27 07:06+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-01-06 12:15+0000\n"
+"Last-Translator: Jules CHEVALLET <invertime.off@gmail.com>\n"
 "Language-Team: French <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/fr/>\n"
 "Language: fr\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 5.0\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: po\n"
 "X-Poedit-SearchPath-1: .\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
-msgstr ""
+msgstr "Accélérateur"
 
 #: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
 #: src/gtk/preferences-window.ui:278
@@ -32,8 +32,8 @@ msgstr "Terminal"
 #: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr ""
-"Terminal;terminal;shell;prompt;command;commandline;cmd;box;ligne de commande;"
-"boîte;"
+"Terminal ; terminal ; shell ; prompt ; commande ; ligne de commande ; cmd ; "
+"boîte ;"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
@@ -61,7 +61,7 @@ msgstr "Si la fenêtre devrait hériter des couleurs du thème du terminal"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
-msgstr ""
+msgstr "Opacité de l'arrière-plan de la fenêtre du terminal"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
