@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2024-01-06 12:15+0000\n"
+"PO-Revision-Date: 2024-01-08 14:15+0000\n"
 "Last-Translator: Jules CHEVALLET <invertime.off@gmail.com>\n"
 "Language-Team: French <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/fr/>\n"
@@ -102,18 +102,16 @@ msgstr ""
 "rangées"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:72
-#, fuzzy
 msgid "If enabled, terminals will render sixel escape sequences"
 msgstr ""
-"Si cette option est activée, les terminaux défileront par pixels et non par "
-"rangées"
+"Si cette option est activée, les terminaux rendront les séquences "
+"d'échappement sixel"
 
 #. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
 #: data/com.fyralabs.Accelerator.gschema.xml:77
 #: src/gtk/preferences-window.ui:373
-#, fuzzy
 msgid "Scrollback mode"
-msgstr "Lignes de défilement"
+msgstr "Mode de défilement"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
@@ -167,9 +165,8 @@ msgid "Cursor shape"
 msgstr "Forme du curseur"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:126
-#, fuzzy
 msgid "Whether or not the cursor should blink"
-msgstr "Afficher ou non les barres de défilement"
+msgstr "Faut-il que le curseur clignote"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
@@ -224,34 +221,31 @@ msgstr ""
 
 #: src/gtk/search-toolbar.ui:20
 msgid "Find"
-msgstr ""
+msgstr "Trouver"
 
 #: src/gtk/search-toolbar.ui:42
 msgid "Previous result"
-msgstr ""
+msgstr "Résultats précédents"
 
 #: src/gtk/search-toolbar.ui:48
 msgid "Next result"
-msgstr ""
+msgstr "Prochain résultat"
 
 #: src/gtk/search-toolbar.ui:91
 msgid "Search wraps around"
-msgstr ""
+msgstr "La recherche s'effectue autour de"
 
 #: src/gtk/search-toolbar.ui:96
-#, fuzzy
 msgid "Match is case sensitive"
-msgstr "Si la recherche doit être sensible à la casse"
+msgstr "La correspondance est sensible à la casse"
 
 #: src/gtk/search-toolbar.ui:101
 msgid "Match entire words only"
-msgstr ""
+msgstr "Faire correspondre avec un/des mot(s) complet(s) seulement"
 
 #: src/gtk/search-toolbar.ui:106
-#, fuzzy
 msgid "Match using regular expression"
-msgstr ""
-"Si la recherche doit être effectuée en utilisant des expressions régulières"
+msgstr "Correspondance à l'aide d'une expression régulière"
 
 #: src/gtk/help-overlay.ui:10
 msgctxt "shortcut window"
@@ -329,58 +323,49 @@ msgid "Focus previous tab"
 msgstr "Focus sur l’onglet précédent"
 
 #: src/gtk/help-overlay.ui:95
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 1"
-msgstr "Basculer vers un onglet"
+msgstr "Basculer vers l'onglet 1"
 
 #: src/gtk/help-overlay.ui:101
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 2"
-msgstr "Basculer vers un onglet"
+msgstr "Basculer vers l'onglet 2"
 
 #: src/gtk/help-overlay.ui:107
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 3"
-msgstr "Basculer vers un onglet"
+msgstr "Basculer vers l'onglet 3"
 
 #: src/gtk/help-overlay.ui:113
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 4"
-msgstr "Basculer vers un onglet"
+msgstr "Basculer vers l'onglet 4"
 
 #: src/gtk/help-overlay.ui:119
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 5"
-msgstr "Basculer vers un onglet"
+msgstr "Basculer vers l'onglet 5"
 
 #: src/gtk/help-overlay.ui:125
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 6"
-msgstr "Basculer vers un onglet"
+msgstr "Basculer vers l'onglet 6"
 
 #: src/gtk/help-overlay.ui:131
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 7"
-msgstr "Basculer vers un onglet"
+msgstr "Basculer vers l'onglet 7"
 
 #: src/gtk/help-overlay.ui:137
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 8"
-msgstr "Basculer vers un onglet"
+msgstr "Basculer vers l'onglet 8"
 
 #: src/gtk/help-overlay.ui:143
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 9"
-msgstr "Basculer vers un onglet"
+msgstr "Basculer vers l'onglet 9"
 
 #: src/gtk/help-overlay.ui:149
 msgctxt "shortcut window"
@@ -398,34 +383,34 @@ msgid "Show Shortcuts"
 msgstr "Afficher les raccourcis"
 
 #: src/gtk/shortcut-dialog.ui:6
-#, fuzzy
 msgid "Edit Shortcut"
-msgstr "Afficher les raccourcis"
+msgstr "Éditer les raccourcis"
 
 #: src/gtk/shortcut-dialog.ui:21
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: src/gtk/shortcut-dialog.ui:28
 msgid "Apply"
-msgstr ""
+msgstr "Appliquer"
 
 #: src/gtk/shortcut-dialog.ui:68
 msgid "This shortcut is already in use"
-msgstr ""
+msgstr "Ce raccourci est déjà utilisé"
 
 #: src/gtk/shortcut-dialog.ui:81
 msgid "Press Escape to cancel or Backspace to disable shortcut"
 msgstr ""
+"Appuyez sur la touche \"Échape\" pour annuler ou \"Retour arrière\" pour "
+"désactiver ce raccourci"
 
 #: src/gtk/shortcut-editor.ui:6
 msgid "Keyboard"
-msgstr ""
+msgstr "Clavier"
 
 #: src/gtk/shortcut-editor.ui:10
-#, fuzzy
 msgid "Shortcuts"
-msgstr "Afficher les raccourcis"
+msgstr "Raccourcis"
 
 #: src/gtk/preferences-window.ui:11
 msgid "General"
@@ -598,7 +583,6 @@ msgid "Use ctrl+c/ctrl+v for copy/paste."
 msgstr "Utiliser Ctrl+C et Ctrl+V pour copier / coller."
 
 #: src/gtk/preferences-window.ui:281
-#, fuzzy
 msgid "Cursor Shape"
 msgstr "Forme du curseur"
 
@@ -616,20 +600,19 @@ msgstr "Soulignage"
 
 #: src/gtk/preferences-window.ui:295
 msgid "Cursor Blinking"
-msgstr ""
+msgstr "Clignotement du curseur"
 
 #: src/gtk/preferences-window.ui:296
-#, fuzzy
 msgid "Whether or not the cursor should blink."
-msgstr "Afficher ou non les barres de défilement"
+msgstr "Faut-il que le curseur clignote."
 
 #: src/gtk/preferences-window.ui:301
 msgid "On"
-msgstr ""
+msgstr "Activé"
 
 #: src/gtk/preferences-window.ui:302
 msgid "Off"
-msgstr ""
+msgstr "Désactivé"
 
 #: src/gtk/preferences-window.ui:310
 msgid "Padding"
@@ -637,11 +620,11 @@ msgstr "Padding"
 
 #: src/gtk/preferences-window.ui:324
 msgid "Opacity"
-msgstr ""
+msgstr "Opacité"
 
 #: src/gtk/preferences-window.ui:325
 msgid "Terminal background opacity."
-msgstr ""
+msgstr "Opacité de l'arrière plan du terminal."
 
 #: src/gtk/preferences-window.ui:341
 msgid "Scrolling"
@@ -661,15 +644,15 @@ msgstr "Utiliser le défilement en superposition"
 
 #: src/gtk/preferences-window.ui:377
 msgid "Fixed Size"
-msgstr ""
+msgstr "Taille fixée"
 
 #: src/gtk/preferences-window.ui:378
 msgid "Unlimited"
-msgstr ""
+msgstr "Illimité(e)"
 
 #: src/gtk/preferences-window.ui:379 src/widgets/ShortcutEditor.vala:131
 msgid "Disabled"
-msgstr ""
+msgstr "Désactivé"
 
 #: src/gtk/preferences-window.ui:388
 msgid "Scrollback Lines"
@@ -750,11 +733,11 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:548
 msgid "Sixel Support"
-msgstr ""
+msgstr "Support Sixel"
 
 #: src/gtk/preferences-window.ui:549
 msgid "Render sixel escape sequences."
-msgstr ""
+msgstr "Afficher les séquences d'échappement des sixels."
 
 #: src/gtk/preferences-window.ui:561
 msgid "Danger Zone"
@@ -806,9 +789,8 @@ msgstr "Préférences"
 
 #: src/widgets/HeaderBar.vala:32 src/widgets/ShortcutEditor.vala:169
 #: src/widgets/TerminalTab.vala:132
-#, fuzzy
 msgid "Keyboard Shortcuts"
-msgstr "Afficher les raccourcis"
+msgstr "Raccourcis clavier"
 
 #: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:133
 msgid "About"
@@ -820,20 +802,18 @@ msgstr "Menu"
 
 #: src/widgets/ShortcutDialog.vala:46
 msgid "Enter new shortcut"
-msgstr ""
+msgstr "Entrer un nouveau raccourci"
 
 #: src/widgets/ShortcutDialog.vala:47
 #, c-format
 msgid "Enter new shortcut for \"%s\""
-msgstr ""
+msgstr "Entrer un nouveau raccourci pour \"%s\""
 
 #: src/widgets/ShortcutEditor.vala:159
-#, fuzzy
 msgid "Focus Next Tab"
 msgstr "Focus sur l’onglet suivant"
 
 #: src/widgets/ShortcutEditor.vala:160
-#, fuzzy
 msgid "Focus Previous Tab"
 msgstr "Focus sur l’onglet précédent"
 
@@ -842,9 +822,8 @@ msgid "New Window"
 msgstr "Nouvelle fenêtre"
 
 #: src/widgets/ShortcutEditor.vala:162
-#, fuzzy
 msgid "Toggle Header Bar"
-msgstr "Afficher la barre d’en-tête"
+msgstr "Basculer la barre d’en-tête"
 
 #: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
 msgid "New Tab"
@@ -859,26 +838,22 @@ msgid "Paste"
 msgstr "Coller"
 
 #: src/widgets/ShortcutEditor.vala:167
-#, fuzzy
 msgid "Search"
 msgstr "Rechercher"
 
 #: src/widgets/ShortcutEditor.vala:170
-#, fuzzy
 msgid "Zoom In"
 msgstr "Zoom avant"
 
 #: src/widgets/ShortcutEditor.vala:171
-#, fuzzy
 msgid "Zoom Out"
 msgstr "Zoom arrière"
 
 #: src/widgets/ShortcutEditor.vala:172
 msgid "Reset Zoom"
-msgstr ""
+msgstr "Réinitialiser les zoom"
 
 #: src/widgets/ShortcutEditor.vala:173
-#, fuzzy
 msgid "Close Tab"
 msgstr "Fermer l’onglet"
 
@@ -887,12 +862,11 @@ msgstr "Fermer l’onglet"
 #: src/widgets/ShortcutEditor.vala:179 src/widgets/ShortcutEditor.vala:180
 #: src/widgets/ShortcutEditor.vala:181 src/widgets/ShortcutEditor.vala:182
 #: src/widgets/ShortcutEditor.vala:183
-#, fuzzy, c-format
+#, c-format
 msgid "Switch to Tab %u"
-msgstr "Basculer vers un onglet"
+msgstr "Basculer vers l'onglet %u"
 
 #: src/widgets/ShortcutEditor.vala:184
-#, fuzzy
 msgid "Switch to Last Tab"
 msgstr "Basculer vers le dernier onglet"
 
@@ -902,7 +876,7 @@ msgstr "Afficher la barre d’en-tête"
 
 #: src/widgets/Window.vala:211
 msgid "No tabs open"
-msgstr ""
+msgstr "Aucun onglet ouvert"
 
 #: src/widgets/PreferencesWindow.vala:504
 msgid "Terminal Font"
