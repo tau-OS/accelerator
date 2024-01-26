@@ -1,5 +1,7 @@
+vte-terminal { padding: 6px 6px 6px 6px; }
+
 .custom-headerbar {
-  background: @headerbar_bg_color;
+  background: @surface_bg_color;
   box-shadow: none;
 }
 
@@ -20,6 +22,7 @@
 }
 .disclosure-button {
   background: alpha(@accent_color, 0.05);
+  padding: 0;
 }
 .disclosure-button:hover {
   background: alpha(@accent_color, 0.08);
@@ -28,9 +31,13 @@
   background: @accent_bg_color;
   color: @accent_fg_color;
 }
+.disclosure-button .toggle,
+.disclosure-button.image-button {
+  padding: 6px;
+}
 
 .accelerator-main-window.with-borders:not(.fullscreen):not(.maximized):not(.tiled-left):not(.tiled-right) {
-  border: 1px solid @borders;
+  border: inset 1px solid @border_color;
 }
 
 .accelerator-main-window {
@@ -51,11 +58,12 @@ tab {
   margin-top: 0;
   margin-bottom: -2px;
   min-width: 200px;
+  min-height: 45px;
 }
 
 tab label {
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .transparent {
@@ -63,18 +71,23 @@ tab label {
 }
 
 .tab-child  {
-  margin: 0;
-  border-radius: 0;
+  margin: 4px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
-tab:selected {
-  background: @card_bg_color;
+.tab-child.active {
+  background: @surface_container_bg_color;
+}
+
+.tab-child label {
+  padding: 0;
+  margin: 0;
 }
 
 .accelerator-main-window.with-borders tab:selected,
 .accelerator-main-window.with-borders .custom-headerbar .title-label {
-  border-left-color: @borders;
-  border-right-color: @borders;
+  border-left-color: @border_color;
+  border-right-color: @border_color;
 }
 
 .accelerator-main-window.with-borders .custom-headerbar .title-label,
@@ -83,7 +96,7 @@ tab:selected {
 }
 
 .custom-headerbar:not(.with-dragarea) notebook {
-  margin-left: -12px;
+  margin-left: 12px;
 }
 
 .custom-headerbar.with-dragarea notebook {
@@ -95,7 +108,7 @@ notebook {
 }
 
 .toolbar {
-  background-color: @headerbar_bg_color;
+  background-color: @surface_bg_color;
 }
 
 .toolbar > * {
@@ -112,7 +125,7 @@ notebook {
 
 .thumbnail image {
   background-color: @accent_bg_color;
-  border-radius: 9999px;
+  border-radius: 12px;
   padding: 2px;
   color: white;
   margin: 8px;
@@ -135,13 +148,13 @@ window:not(.about) .floating-revealer > headerbar {
 .floating-revealer menubutton button,
 .floating-btn-box,
 .floating-revealer windowcontrols image {
-  background: @headerbar_bg_color;
+  background: @surface_bg_color;
 }
 
 .floating-revealer menubutton button:hover,
 .floating-btn-box button:hover,
 .floating-revealer windowcontrols image:hover {
-  background: lighter(@headerbar_bg_color);
+  background: lighter(@surface_bg_color);
 }
 
 .floating-btn-box button {

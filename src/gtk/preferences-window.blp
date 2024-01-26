@@ -34,26 +34,6 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             }
           }
 
-          He.SettingsRow {
-            title: _("Show Borders");
-            subtitle: _("Enable to draw a border around the window and the active tab.");
-            activatable-widget: show_window_borders_switch;
-
-            Switch show_window_borders_switch {
-              valign: center;
-            }
-          }
-
-          He.SettingsRow {
-            title: _("Theme Integration");
-            subtitle: _("Style window with terminal theme colors.");
-            activatable-widget: pretty_switch;
-
-            Switch pretty_switch {
-              valign: center;
-            }
-          }
-
           He.SettingsRow style_preference_combo_row {
             title: _("Dark Mode");
             activatable-widget: style_preference_switch;
@@ -78,10 +58,10 @@ template TerminalPreferencesWindow : He.SettingsWindow {
         }
 
         He.SettingsList {
-          title: _("Header Bar");
+          title: _("App Bar");
 
           He.SettingsRow {
-            title: _("Show Header Bar");
+            title: _("Show App Bar");
             activatable-widget: show_headerbar_switch;
 
             Switch show_headerbar_switch {
@@ -110,7 +90,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
 
           He.SettingsRow {
             title: _("Show Floating Controls");
-            subtitle: _("Show floating controls when header bar is hidden.");
+            subtitle: _("Show floating controls when app bar is hidden.");
             activatable-widget: floating_controls_switch;
 
             Switch floating_controls_switch {
@@ -171,36 +151,6 @@ template TerminalPreferencesWindow : He.SettingsWindow {
               clicked => on_font_row_activated ();
             }
           }
-
-          He.SettingsRow {
-            title: _("Width");
-
-            SpinButton {
-              valign: center;
-              digits: 2;
-              adjustment: cell_width_spacing_adjustment;
-            }
-          }
-
-          He.SettingsRow {
-            title: _("Height");
-
-            SpinButton {
-              valign: center;
-              digits: 2;
-              adjustment: cell_height_spacing_adjustment;
-            }
-          }
-
-          He.SettingsRow easy_copy_paste_action_row {
-            title: _("Easy Copy & Paste");
-            subtitle: _("Use ctrl+c/ctrl+v for copy/paste.");
-            activatable-widget: easy_copy_paste_switch;
-
-            Switch easy_copy_paste_switch {
-              valign: center;
-            }
-          }
         }
 
         He.SettingsList {
@@ -210,19 +160,19 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             title: _("Cursor Shape");
 
             He.SegmentedButton {
-              ToggleButton block_toggle {
+              ToggleButton block_cursor_toggle {
                 label: _("Block");
                 active: true;
               }
 
               ToggleButton ibeam_toggle {
                 label: _("IBeam");
-                group: block_toggle;
+                group: block_cursor_toggle;
               }
 
               ToggleButton underline_toggle {
                 label: _("Underline");
-                group: block_toggle;
+                group: block_cursor_toggle;
               }
             }
           }
@@ -250,18 +200,6 @@ template TerminalPreferencesWindow : He.SettingsWindow {
           }
 
           He.SettingsRow {
-            title: _("Padding");
-
-            SpinButton padding_spin_button {
-              adjustment: padding_spin_button_adjustment;
-              climb-rate: 1;
-              numeric: true;
-              snap-to-ticks: true;
-              valign: center;
-            }
-          }
-
-          He.SettingsRow {
             title: _("Opacity");
             subtitle: _("Terminal background opacity.");
 
@@ -271,61 +209,6 @@ template TerminalPreferencesWindow : He.SettingsWindow {
               numeric: true;
               snap-to-ticks: false;
               valign: center;
-            }
-          }
-        }
-
-        He.SettingsList {
-          title: _("Scrolling");
-
-          He.SettingsRow {
-            title: _("Show Scrollbars");
-            activatable-widget: show_scrollbars_switch;
-
-            Switch show_scrollbars_switch {
-              valign: center;
-            }
-          }
-
-          He.SettingsRow use_overlay_scrolling_action_row {
-            title: _("Use Overlay Scrolling");
-            sensitive: bind show_scrollbars_switch.active;
-            activatable-widget: use_overlay_scrolling_switch;
-
-            Switch use_overlay_scrolling_switch {
-              valign: center;
-            }
-          }
-
-          He.SettingsRow scrollback_mode_combo_row {
-            title: _("Scrollback mode");
-
-            He.SegmentedButton {
-              ToggleButton fixed_size_scroll_toggle {
-                label: _("Fixed Size");
-                active: true;
-              }
-
-              ToggleButton unlimited_scroll_toggle {
-                label: _("Unlimited");
-                group: fixed_size_scroll_toggle;
-              }
-
-              ToggleButton disabled_scroll_toggle {
-                label: _("Disabled");
-                group: fixed_size_scroll_toggle;
-              }
-            }
-          }
-
-          He.SettingsRow {
-            title: _("Scrollback Lines");
-            visible: bind TerminalPreferencesWindow.show-custom-scrollback-row;
-
-            SpinButton custom_scrollback_spin_button {
-              valign: center;
-              width-chars: 6;
-              adjustment: custom_scrollback_adjustment;
             }
           }
         }
@@ -476,21 +359,6 @@ template TerminalPreferencesWindow : He.SettingsWindow {
       Box {
         orientation: vertical;
         spacing: 12;
-
-        He.SettingsList {
-          title: _("Experimental");
-          description: _("Features in this section are known to be unstable!");
-
-          He.SettingsRow use_sixel_action_row {
-            title: _("Sixel Support");
-            subtitle: _("Render sixel escape sequences.");
-            activatable-widget: use_sixel_switch;
-
-            Switch use_sixel_switch {
-              valign: center;
-            }
-          }
-        }
 
         He.SettingsList {
           title: _("Danger Zone");

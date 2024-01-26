@@ -30,37 +30,27 @@ bool light_themes_filter_func (Gtk.FlowBoxChild child) {
 
 [GtkTemplate (ui = "/com/fyralabs/Accelerator/preferences-window.ui")]
 public class Terminal.PreferencesWindow : He.SettingsWindow {
-  [GtkChild] unowned He.SettingsRow cursor_shape_combo_row;
+  [GtkChild] unowned Gtk.ToggleButton block_cursor_toggle;
+  [GtkChild] unowned Gtk.ToggleButton ibeam_toggle;
+  [GtkChild] unowned Gtk.ToggleButton underline_toggle;
   [GtkChild] unowned Gtk.ToggleButton follow_sys_cursor_toggle;
   [GtkChild] unowned Gtk.ToggleButton on_cursor_toggle;
   [GtkChild] unowned Gtk.ToggleButton off_cursor_toggle;
-  [GtkChild] unowned He.SettingsRow scrollback_mode_combo_row;
   [GtkChild] unowned Gtk.Switch style_preference_switch;
   [GtkChild] unowned Gtk.Entry custom_command_entry;
-  [GtkChild] unowned Gtk.Adjustment cell_height_spacing_adjustment;
-  [GtkChild] unowned Gtk.Adjustment cell_width_spacing_adjustment;
-  [GtkChild] unowned Gtk.Adjustment custom_scrollback_adjustment;
   [GtkChild] unowned Gtk.Adjustment floating_controls_delay_adjustment;
   [GtkChild] unowned Gtk.Adjustment floating_controls_hover_area_adjustment;
   [GtkChild] unowned Gtk.CheckButton filter_themes_check_button;
   [GtkChild] unowned Gtk.FlowBox preview_flow_box;
   [GtkChild] unowned He.TextButton font_label;
-  [GtkChild] unowned Gtk.SpinButton custom_scrollback_spin_button;
-  [GtkChild] unowned Gtk.SpinButton padding_spin_button;
-  [GtkChild] unowned Gtk.Switch easy_copy_paste_switch;
   [GtkChild] unowned Gtk.Switch fill_tabs_switch;
   [GtkChild] unowned Gtk.Switch floating_controls_switch;
-  [GtkChild] unowned Gtk.Switch use_sixel_switch;
-  [GtkChild] unowned Gtk.Switch pretty_switch;
   [GtkChild] unowned Gtk.SpinButton opacity_spin_button;
   [GtkChild] unowned Gtk.Switch remember_window_size_switch;
   [GtkChild] unowned Gtk.Switch run_command_as_login_switch;
   [GtkChild] unowned Gtk.Switch show_headerbar_switch;
   [GtkChild] unowned Gtk.Switch show_menu_button_switch;
-  [GtkChild] unowned Gtk.Switch show_scrollbars_switch;
-  [GtkChild] unowned Gtk.Switch show_window_borders_switch;
   [GtkChild] unowned Gtk.Switch use_custom_shell_command_switch;
-  [GtkChild] unowned Gtk.Switch use_overlay_scrolling_switch;
   [GtkChild] unowned Gtk.Switch drag_area_switch;
   [GtkChild] unowned Gtk.ToggleButton dark_theme_toggle;
   [GtkChild] unowned Gtk.ToggleButton light_theme_toggle;
@@ -102,9 +92,8 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
 
     this.window = window;
 
-    this.custom_scrollback_adjustment.upper = uint.MAX;
-
     cursor_blink_refresh ();
+    cursor_shape_refresh ();
 
     this.build_ui ();
     this.bind_data ();
@@ -187,13 +176,6 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
                           SettingsBindFlags.DEFAULT
     );
 
-    settings.schema.bind (
-                          "pretty",
-                          this.pretty_switch,
-                          "active",
-                          SettingsBindFlags.DEFAULT
-    );
-
     settings.schema.bind_with_mapping (
                                        "opacity",
                                        this.opacity_spin_button,
@@ -210,13 +192,6 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
     },
                                        null,
                                        null
-    );
-
-    settings.schema.bind (
-                          "window-show-borders",
-                          this.show_window_borders_switch,
-                          "active",
-                          SettingsBindFlags.DEFAULT
     );
 
     settings.schema.bind (
@@ -248,119 +223,22 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
     );
 
     settings.schema.bind (
-                          "easy-copy-paste",
-                          this.easy_copy_paste_switch,
-                          "active",
-                          SettingsBindFlags.DEFAULT
-    );
-
-    settings.schema.bind (
-                          "show-scrollbars",
-                          this.show_scrollbars_switch,
-                          "active",
-                          SettingsBindFlags.DEFAULT
-    );
-
-    settings.schema.bind (
-                          "use-overlay-scrolling",
-                          this.use_overlay_scrolling_switch,
-                          "active",
-                          SettingsBindFlags.DEFAULT
-    );
-
-    settings.schema.bind (
-                          "scrollback-lines",
-                          this.custom_scrollback_spin_button,
-                          "value",
-                          SettingsBindFlags.DEFAULT
-    );
-
-    settings.schema.bind_with_mapping (
-                                       "scrollback-lines",
-                                       this.custom_scrollback_spin_button,
-                                       "value",
-                                       GLib.SettingsBindFlags.DEFAULT,
-                                       (to_value, settings_vari) => {
-      to_value = (double) settings_vari.get_uint32 ();
-      return true;
-    },
-                                       (value) => {;
-                                                   return new Variant.uint32 ((uint32) value.get_double ()); },
-                                       null,
-                                       null
-    );
-
-    settings.schema.bind (
-                          "use-sixel",
-                          this.use_sixel_switch,
-                          "active",
-                          SettingsBindFlags.DEFAULT
-    );
-
-    settings.schema.bind (
                           "remember-window-size",
                           this.remember_window_size_switch,
                           "active",
                           SettingsBindFlags.DEFAULT
     );
 
-    settings.schema.bind_with_mapping (
-                                      "terminal-padding",
-                                      this.padding_spin_button,
-                                      "value",
-                                      SettingsBindFlags.DEFAULT,
-                                      // From settings to spin button
-                                      (to_val, settings_vari) => {
-                                          var pad = Padding.from_variant (settings_vari);
-
-                                          to_val = pad.top;
-                                          return true;
-                                      },
-    
-                                      // From spin button to settings
-                                      (spin_val, _) => {
-                                        var pad = (uint) spin_val.get_double ();
-                                        var _pad = Padding () {
-                                          top = pad,
-                                          right = pad,
-                                          bottom = pad,
-                                          left = pad
-                                        };
-
-                                        return _pad.to_variant ();
-                                      },
-                                      null,
-                                      null
-    );
-
-    settings.bind_property (
-                            "scrollback-mode",
-                            this,
-                            "show-custom-scrollback-row",
-                            BindingFlags.SYNC_CREATE,
-                            // scrollback-mode -> show-custom-scrollback-row
-                            (_, from_value, ref to_value) => {
-      to_value = from_value.get_uint () == 0;
-      return true;
-    },
-                            null
-    );
-
-    // 0 = Fixed, 1 = Unlimited, 2 = Disabled
-    settings.schema.bind (
-                          "scrollback-mode",
-                          this.scrollback_mode_combo_row,
-                          "selected",
-                          SettingsBindFlags.DEFAULT
-    );
-
     // 0 = Block, 1 = IBeam, 2 = Underline
-    settings.schema.bind (
-                          "cursor-shape",
-                          this.cursor_shape_combo_row,
-                          "active",
-                          SettingsBindFlags.DEFAULT
-    );
+    block_cursor_toggle.toggled.connect (() => {
+      set_cursor_shape (0);
+    });
+    ibeam_toggle.toggled.connect (() => {
+      set_cursor_shape (1);
+    });
+    underline_toggle.toggled.connect (() => {
+      set_cursor_shape (2);
+    });
 
     // 0 = Follow System, 1 = On, 2 = Off
     follow_sys_cursor_toggle.toggled.connect (() => {
@@ -392,20 +270,6 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
     settings.schema.bind (
                           "delay-before-showing-floating-controls",
                           this.floating_controls_delay_adjustment,
-                          "value",
-                          SettingsBindFlags.DEFAULT
-    );
-
-    settings.schema.bind (
-                          "terminal-cell-width",
-                          this.cell_width_spacing_adjustment,
-                          "value",
-                          SettingsBindFlags.DEFAULT
-    );
-
-    settings.schema.bind (
-                          "terminal-cell-height",
-                          this.cell_height_spacing_adjustment,
                           "value",
                           SettingsBindFlags.DEFAULT
     );
@@ -456,6 +320,29 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
   }
 
   // Methods
+
+  private void set_cursor_shape (int b) {
+    var settings = Settings.get_default ();
+    settings.schema.set_enum ("cursor-shape", b);
+  }
+  private void cursor_shape_refresh () {
+    var settings = Settings.get_default ();
+    int value = settings.schema.get_enum ("cursor-shape");
+
+    if (value == 0) {
+      block_cursor_toggle.set_active (true);
+      ibeam_toggle.set_active (false);
+      underline_toggle.set_active (false);
+    } else if (value == 1) {
+      block_cursor_toggle.set_active (false);
+      ibeam_toggle.set_active (true);
+      underline_toggle.set_active (false);
+    } else if (value == 2) {
+      block_cursor_toggle.set_active (false);
+      ibeam_toggle.set_active (false);
+      underline_toggle.set_active (true);
+    }
+}
 
   private void set_cursor_blink (int b) {
     var settings = Settings.get_default ();

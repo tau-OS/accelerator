@@ -172,7 +172,7 @@ public class Terminal.ColorSchemeThumbnail : Gtk.FlowBoxChild {
 
     var lbl = new Gtk.Label (scheme.name) {
       ellipsize = Pango.EllipsizeMode.END,
-      halign = Gtk.Align.CENTER,
+      halign = Gtk.Align.START,
       hexpand = true,
       justify = Gtk.Justification.CENTER,
       valign = Gtk.Align.END,

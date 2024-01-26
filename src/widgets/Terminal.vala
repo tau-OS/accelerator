@@ -235,10 +235,8 @@ public class Terminal.Terminal : Vte.Terminal {
       this.padding_provider = null;
     }
 
-    var provider = new Gtk.CssProvider ();
-
     try {
-      provider.load_from_data ("vte-terminal { padding: %upx %upx %upx %upx; }".printf (
+      padding_provider.load_from_data ("vte-terminal { padding: %upx %upx %upx %upx; }".printf (
                                                                                         pad.top,
                                                                                         pad.right,
                                                                                         pad.bottom,
@@ -248,34 +246,10 @@ public class Terminal.Terminal : Vte.Terminal {
       warning (e.message);
     }
 
-    this.get_style_context ().add_provider (
-                                            this.padding_provider,
-                                            1
-    );
+    this.get_style_context ().add_provider (this.padding_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 999);
   }
 
   private void bind_data () {
-    // let's bind the enable-sixel property to the settings
-    //  this.settings.schema.bind (
-    //                             "use-sixel",
-    //                             this,
-    //                             "enable-sixel",
-    //                             SettingsBindFlags.DEFAULT
-    //  );
-    this.settings.schema.bind (
-                               "terminal-cell-width",
-                               this,
-                               "cell-width-scale",
-                               SettingsBindFlags.DEFAULT
-    );
-
-    this.settings.schema.bind (
-                               "terminal-cell-height",
-                               this,
-                               "cell-height-scale",
-                               SettingsBindFlags.DEFAULT
-    );
-
     this.settings.bind_property (
                                  "cursor-shape",
                                  this,
@@ -290,51 +264,6 @@ public class Terminal.Terminal : Vte.Terminal {
                                  this,
                                  "cursor-blink-mode",
                                  BindingFlags.SYNC_CREATE,
-                                 null,
-                                 null
-    );
-
-    this.bind_property (
-                        "user-scrollback-lines",
-                        this,
-                        "scrollback-lines",
-                        BindingFlags.SYNC_CREATE,
-                        null,
-                        null
-    );
-
-    //  this.settings.bind_property (
-    //                               "use-sixel",
-    //                               this,
-    //                               "enable-sixel",
-    //                               BindingFlags.SYNC_CREATE,
-    //                               null,
-    //                               null
-    //  );
-
-    //  this.bind_property (
-    //                               "use-sixel",
-    //                               this,
-    //                               "enable-sixel",
-    //                               BindingFlags.SYNC_CREATE,
-    //                               null,
-    //                               null
-    //  );
-
-
-    // Fallback scrolling makes it so that VTE handles scrolling on its own. We
-    // want VTE to let GtkScrolledWindow take care of scrolling if the user
-    // enabled "show scrollbars". Thus we set
-    // `enable-fallback-scrolling = !show-scrollbars`
-    //
-    // See:
-    // - https://gitlab.gnome.org/raggesilver/blackbox/-/issues/179
-    // - https://gitlab.gnome.org/GNOME/vte/-/issues/336
-    this.settings.bind_property (
-                                 "show-scrollbars",
-                                 this,
-                                 "enable-fallback-scrolling",
-                                 BindingFlags.SYNC_CREATE | BindingFlags.INVERT_BOOLEAN,
                                  null,
                                  null
     );
@@ -362,16 +291,6 @@ public class Terminal.Terminal : Vte.Terminal {
       Gtk.show_uri (this.window, pattern, event.get_time ());
     });
     this.add_controller (left_click_controller);
-
-    this.settings.notify["scrollback-lines"]
-     .connect (() => {
-      this.notify_property ("user-scrollback-lines");
-    });
-
-    this.settings.notify["scrollback-mode"]
-     .connect (() => {
-      this.notify_property ("user-scrollback-lines");
-    });
   }
 
   private void spawn (string? command, string? cwd) throws Error {
