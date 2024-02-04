@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-05-27 07:09+0000\n"
+"PO-Revision-Date: 2024-02-05 14:02+0000\n"
 "Last-Translator: windowsboy111 <windowsboy111@fyralabs.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.fyralabs.com/projects/"
 "tauOS/accelerator/zh_Hant/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 5.3.1\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
@@ -64,7 +64,7 @@ msgstr "終端透明度"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
-msgstr "分頁應否填滿標籤欄"
+msgstr "分頁應否填滿分頁欄"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
@@ -82,7 +82,7 @@ msgstr "單一分頁下於欄下顯示幼線"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:56
 msgid "Whether or not to reserve an area for dragging the header bar"
-msgstr "保留拖放標題欄之位置"
+msgstr "為拖放標題欄保留位置"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
@@ -787,7 +787,7 @@ msgstr "顯示標題欄"
 
 #: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
 msgid "New Tab"
-msgstr "新分頁"
+msgstr "新頁"
 
 #: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:124
 msgid "Copy"
