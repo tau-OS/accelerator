@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-05-27 07:10+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-02-05 14:02+0000\n"
+"Last-Translator: windowsboy111 <windowsboy111@fyralabs.com>\n"
 "Language-Team: Japanese <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/ja/>\n"
 "Language: ja\n"
@@ -17,20 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 5.3.1\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
-msgstr ""
+msgstr "Accelerator"
 
 #: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
 #: src/gtk/preferences-window.ui:278
 msgid "Terminal"
-msgstr ""
+msgstr "ターミナル"
 
 #: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 msgstr ""
+"Terminal;terminal;shell;prompt;command;commandline;cmd;box;ターミナル;コマン"
+"ド;端末;"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
@@ -42,332 +44,332 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:14
 msgid "Whether or not to display borders around the window and tabs"
-msgstr ""
+msgstr "ウィンドウボーダーを表示"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
-msgstr ""
+msgstr "ウィンドウサイズを保存"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
-msgstr ""
+msgstr "フォントとサイズ"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
-msgstr ""
+msgstr "ウィンドウはターミナルのテーマ色を従う"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
-msgstr ""
+msgstr "ターミナル透明度"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
-msgstr ""
+msgstr "タブはタブバーを満たす"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
-msgstr ""
+msgstr "ヘッダーバーを表示"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
-msgstr ""
+msgstr "ヘッドバーにメニューボタンを表示"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
-msgstr ""
+msgstr "タブが1つだけならヘッドバーの下に 1px の線を引く"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:56
 msgid "Whether or not to reserve an area for dragging the header bar"
-msgstr ""
+msgstr "ヘッドバーを引きずる為のエリアを保つ"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
-msgstr ""
+msgstr "スクロールバーを表示"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
-msgstr ""
+msgstr "オーバレイスクロールを有効に"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
-msgstr ""
+msgstr "行の代わりにピクセルを1つずつスクロール"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:72
 msgid "If enabled, terminals will render sixel escape sequences"
-msgstr ""
+msgstr "sixel エスケープシーケンスを表示"
 
 #. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
 #: data/com.fyralabs.Accelerator.gschema.xml:77
 #: src/gtk/preferences-window.ui:373
 msgid "Scrollback mode"
-msgstr ""
+msgstr "スクロールバックモード"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
-msgstr ""
+msgstr "スクロールバック行数"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
-msgstr ""
+msgstr "ヘッダーなしモードで浮動制御を表示"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
 "Hoverable area (in pixels) at the top of the window to trigger floating "
 "controls"
-msgstr ""
+msgstr "ウィンドウの上に浮動制御の触発するホバリングエリア（ピクセル）"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:93
 msgid "Delay time before showing floating controls"
-msgstr ""
+msgstr "浮動制御の表示遅延"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:97
 msgid "The light color scheme for the terminal"
-msgstr ""
+msgstr "ターミナルのライトカラースキーム"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:101
 msgid "The dark color scheme for the terminal"
-msgstr ""
+msgstr "ターミナルのダークカラースキーム"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
 #: data/com.fyralabs.Accelerator.gschema.xml:106
 msgid "Style preference"
-msgstr ""
+msgstr "スタイル設定"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:110
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
-msgstr ""
+msgstr "ターミナルウィジェットの周りにパッド（上、右、下、左）"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:114
 msgid "Terminal cell width"
-msgstr ""
+msgstr "ターミナルの横幅"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:118
 msgid "Terminal cell height"
-msgstr ""
+msgstr "ターミナルの高度"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:122
 msgid "Cursor shape"
-msgstr ""
+msgstr "カーソルの形"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:126
 msgid "Whether or not the cursor should blink"
-msgstr ""
+msgstr "カーソルを点滅"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
-msgstr ""
+msgstr "Ctrl+C と Ctrl+V をコピペにする"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:134
 msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
-msgstr ""
+msgstr "タブ1つだけの場合はタブバーをタイトルラベルに代える"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:138
 msgid "If enabled, a single open tab will blend with the headerbar color"
-msgstr ""
+msgstr "タブが1つだけならヘッダーバーのカラーと混ぜる"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:142
 msgid "Whether to spawn shell in login mode"
-msgstr ""
+msgstr "ログインモードでシェルをスポーン"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:146
 msgid "Whether to use a custom command instead of the user's shell"
-msgstr ""
+msgstr "ユーザーのシェルの代わりにカスタムコマンドを使用"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:150
 msgid "Custom command to use instead of the user's shell"
-msgstr ""
+msgstr "カスタムコマンド"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:157
 msgid ""
 "Whether clicking next on the last search result should return to the first"
-msgstr ""
+msgstr "サーチ結果の最後の次は一番の結果に戻る"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:161
 msgid "Whether search should be case sensitive"
-msgstr ""
+msgstr "サーチがケースセンシティブ"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:165
 msgid "Whether search should only match entire words"
-msgstr ""
+msgstr "キャラ一つずつ代わりにワードを捜索"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:169
 msgid "Whether search should be performed using regular expressions"
-msgstr ""
+msgstr "正規表現（regex）で捜索"
 
 #: src/gtk/search-toolbar.ui:20
 msgid "Find"
-msgstr ""
+msgstr "捜索"
 
 #: src/gtk/search-toolbar.ui:42
 msgid "Previous result"
-msgstr ""
+msgstr "前の結果"
 
 #: src/gtk/search-toolbar.ui:48
 msgid "Next result"
-msgstr ""
+msgstr "次の結果"
 
 #: src/gtk/search-toolbar.ui:91
 msgid "Search wraps around"
-msgstr ""
+msgstr "回転寿司🍣のように回転捜索"
 
 #: src/gtk/search-toolbar.ui:96
 msgid "Match is case sensitive"
-msgstr ""
+msgstr "捜索はケースセンシティブ"
 
 #: src/gtk/search-toolbar.ui:101
 msgid "Match entire words only"
-msgstr ""
+msgstr "ワードを1つずつ捜索"
 
 #: src/gtk/search-toolbar.ui:106
 msgid "Match using regular expression"
-msgstr ""
+msgstr "正規表現（regex）で捜索"
 
 #: src/gtk/help-overlay.ui:10
 msgctxt "shortcut window"
 msgid "Window"
-msgstr ""
+msgstr "ウィンドウ"
 
 #: src/gtk/help-overlay.ui:13
 msgctxt "shortcut window"
 msgid "New window"
-msgstr ""
+msgstr "新しいウィンドウ"
 
 #: src/gtk/help-overlay.ui:19
 msgctxt "shortcut window"
 msgid "New tab"
-msgstr ""
+msgstr "新しいタブ"
 
 #: src/gtk/help-overlay.ui:25
 msgctxt "shortcut window"
 msgid "Close tab"
-msgstr ""
+msgstr "タブを閉じる"
 
 #: src/gtk/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Switch headbar mode"
-msgstr ""
+msgstr "ヘッドバーモードを変換"
 
 #: src/gtk/help-overlay.ui:37
 msgctxt "shortcut window"
 msgid "Toggle fullscreen"
-msgstr ""
+msgstr "フルスクリーン"
 
 #: src/gtk/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Terminal"
-msgstr ""
+msgstr "ターミナル"
 
 #: src/gtk/help-overlay.ui:48
 msgctxt "shortcut window"
 msgid "Search"
-msgstr ""
+msgstr "捜索"
 
 #: src/gtk/help-overlay.ui:54
 msgctxt "shortcut window"
 msgid "Copy"
-msgstr ""
+msgstr "コピー"
 
 #: src/gtk/help-overlay.ui:60
 msgctxt "shortcut window"
 msgid "Paste"
-msgstr ""
+msgstr "貼り付け"
 
 #: src/gtk/help-overlay.ui:66
 msgctxt "shortcut window"
 msgid "Zoom in"
-msgstr ""
+msgstr "拡大"
 
 #: src/gtk/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Zoom out"
-msgstr ""
+msgstr "縮小"
 
 #: src/gtk/help-overlay.ui:80
 msgctxt "shortcut window"
 msgid "Navigation"
-msgstr ""
+msgstr "ナビゲーション"
 
 #: src/gtk/help-overlay.ui:83
 msgctxt "shortcut window"
 msgid "Focus next tab"
-msgstr ""
+msgstr "次のタブを有効に"
 
 #: src/gtk/help-overlay.ui:89
 msgctxt "shortcut window"
 msgid "Focus previous tab"
-msgstr ""
+msgstr "前のタブを有効に"
 
 #: src/gtk/help-overlay.ui:95
 msgctxt "shortcut window"
 msgid "Switch to Tab 1"
-msgstr ""
+msgstr "タブ1にスイッチ"
 
 #: src/gtk/help-overlay.ui:101
 msgctxt "shortcut window"
 msgid "Switch to Tab 2"
-msgstr ""
+msgstr "タブ2にスイッチ"
 
 #: src/gtk/help-overlay.ui:107
 msgctxt "shortcut window"
 msgid "Switch to Tab 3"
-msgstr ""
+msgstr "タブ3にスイッチ"
 
 #: src/gtk/help-overlay.ui:113
 msgctxt "shortcut window"
 msgid "Switch to Tab 4"
-msgstr ""
+msgstr "タブ4にスイッチ"
 
 #: src/gtk/help-overlay.ui:119
 msgctxt "shortcut window"
 msgid "Switch to Tab 5"
-msgstr ""
+msgstr "タブ5にスイッチ"
 
 #: src/gtk/help-overlay.ui:125
 msgctxt "shortcut window"
 msgid "Switch to Tab 6"
-msgstr ""
+msgstr "タブ6にスイッチ"
 
 #: src/gtk/help-overlay.ui:131
 msgctxt "shortcut window"
 msgid "Switch to Tab 7"
-msgstr ""
+msgstr "タブ7にスイッチ"
 
 #: src/gtk/help-overlay.ui:137
 msgctxt "shortcut window"
 msgid "Switch to Tab 8"
-msgstr ""
+msgstr "タブ8にスイッチ"
 
 #: src/gtk/help-overlay.ui:143
 msgctxt "shortcut window"
 msgid "Switch to Tab 9"
-msgstr ""
+msgstr "タブ9にスイッチ"
 
 #: src/gtk/help-overlay.ui:149
 msgctxt "shortcut window"
 msgid "Switch to last Tab"
-msgstr ""
+msgstr "最後のタブにスイッチ"
 
 #: src/gtk/help-overlay.ui:157
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #: src/gtk/help-overlay.ui:160
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "ショートカットを表示"
 
 #: src/gtk/shortcut-dialog.ui:6
 msgid "Edit Shortcut"
-msgstr ""
+msgstr "ショートカットを変換"
 
 #: src/gtk/shortcut-dialog.ui:21
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: src/gtk/shortcut-dialog.ui:28
 msgid "Apply"
@@ -781,7 +783,7 @@ msgstr ""
 
 #: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
 msgid "New Tab"
-msgstr ""
+msgstr "新しいタブ"
 
 #: src/widgets/ShortcutEditor.vala:165 src/widgets/TerminalTab.vala:124
 msgid "Copy"
