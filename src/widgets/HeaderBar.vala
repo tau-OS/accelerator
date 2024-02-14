@@ -56,6 +56,7 @@ public abstract class Terminal.BaseHeaderBar : Gtk.Box {
       halign = Gtk.Align.END,
     };
     menu_button.add_css_class ("disclosure-button");
+    menu_button.get_popover ().has_arrow = false;
 
     Settings.get_default ().schema.bind (
                                          "show-menu-button",
@@ -85,8 +86,7 @@ public class Terminal.HeaderBar : BaseHeaderBar {
   public HeaderBar (Window window) {
     base (window);
 
-    var hb = new Gtk.HeaderBar ();
-    hb.show_title_buttons = false;
+    var hb = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
     hb.halign = Gtk.Align.FILL;
     hb.hexpand = true;
 
@@ -102,7 +102,9 @@ public class Terminal.HeaderBar : BaseHeaderBar {
     this.unfullscreen_button.add_css_class ("disclosure-button");
 
     this.left_controls = new Gtk.WindowControls (Gtk.PackType.START);
+    left_controls.valign = Gtk.Align.START;
     this.right_controls = new Gtk.WindowControls (Gtk.PackType.END);
+    right_controls.valign = Gtk.Align.START;
 
     this.left_controls.bind_property ("empty", this.left_controls, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN, null, null);
     this.right_controls.bind_property ("empty", this.right_controls, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN, null, null);
@@ -122,9 +124,13 @@ public class Terminal.HeaderBar : BaseHeaderBar {
     layout.append (button_box);
     layout.append (this.right_controls);
 
-    hb.set_title_widget (layout);
-    this.append (hb);
-    hb.add_css_class ("flat");
+    hb.append (layout);
+
+    var wc = new Gtk.WindowHandle ();
+    wc.hexpand = true;
+    wc.set_child (hb);
+
+    this.append (wc);
     this.add_css_class ("custom-headerbar");
 
     this.connect_signals ();

@@ -1,13 +1,14 @@
-vte-terminal { padding: 6px 6px 6px 6px; }
+vte-terminal { padding: 4px 4px 4px 4px; }
 
 .custom-headerbar {
   background: @surface_bg_color;
-  box-shadow: none;
+  box-shadow: inset 0 2px 0 1px alpha(white, .5);
 }
 
 .disclosure-button button {
   border-radius: 999px;
   background: none;
+  margin: 0;
 }
 .disclosure-button button:hover {
   background: alpha(@accent_color, 0.08);
@@ -25,7 +26,8 @@ vte-terminal { padding: 6px 6px 6px 6px; }
   padding: 0;
 }
 .disclosure-button:hover {
-  background: alpha(@accent_color, 0.08);
+  background: @accent_bg_color;
+  color: @accent_fg_color;
 }
 .disclosure-button:active {
   background: @accent_bg_color;
@@ -33,7 +35,16 @@ vte-terminal { padding: 6px 6px 6px 6px; }
 }
 .disclosure-button .toggle,
 .disclosure-button.image-button {
-  padding: 6px;
+  padding: 4px;
+}
+.disclosure-button .toggle {
+  box-shadow: none;
+}
+.disclosure-button:hover .toggle {
+  background: none;
+}
+.disclosure-button:active .toggle {
+  background: none;
 }
 
 .accelerator-main-window.with-borders:not(.fullscreen):not(.maximized):not(.tiled-left):not(.tiled-right) {
@@ -50,20 +61,15 @@ vte-terminal { padding: 6px 6px 6px 6px; }
 
 .custom-headerbar:backdrop windowhandle { filter: none; }
 
-.custom-headerbar:backdrop > * { filter: opacity(0.5); }
+.custom-headerbar:backdrop * { filter: opacity(0.95); }
 
 tab {
   border-radius: 0;
   border: none;
-  margin-top: 0;
-  margin-bottom: -2px;
+  margin-top: 2px;
+  margin-bottom: -4px;
   min-width: 200px;
-  min-height: 45px;
-}
-
-tab label {
-  margin-left: 16px;
-  margin-right: 16px;
+  min-height: 32px;
 }
 
 .transparent {
@@ -71,8 +77,8 @@ tab label {
 }
 
 .tab-child  {
-  margin: 4px 0 0;
-  border-radius: 12px 12px 0 0;
+  margin: 0;
+  border-radius: 4px 4px 0 0;
 }
 
 .tab-child.active {
@@ -80,8 +86,13 @@ tab label {
 }
 
 .tab-child label {
-  padding: 0;
-  margin: 0;
+  padding: 0 6px;
+  margin: -4px 0;
+}
+
+.tab-child button {
+  margin: -4px 6px 0 0;
+  border-radius: 999px;
 }
 
 .accelerator-main-window.with-borders tab:selected,
