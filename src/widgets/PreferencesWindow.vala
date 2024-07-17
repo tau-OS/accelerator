@@ -36,22 +36,22 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
   [GtkChild] unowned Gtk.ToggleButton follow_sys_cursor_toggle;
   [GtkChild] unowned Gtk.ToggleButton on_cursor_toggle;
   [GtkChild] unowned Gtk.ToggleButton off_cursor_toggle;
-  [GtkChild] unowned Gtk.Switch style_preference_switch;
+  [GtkChild] unowned He.Switch style_preference_switch;
   [GtkChild] unowned Gtk.Entry custom_command_entry;
   [GtkChild] unowned Gtk.Adjustment floating_controls_delay_adjustment;
   [GtkChild] unowned Gtk.Adjustment floating_controls_hover_area_adjustment;
   [GtkChild] unowned Gtk.CheckButton filter_themes_check_button;
   [GtkChild] unowned Gtk.FlowBox preview_flow_box;
   [GtkChild] unowned He.TextButton font_label;
-  [GtkChild] unowned Gtk.Switch fill_tabs_switch;
-  [GtkChild] unowned Gtk.Switch floating_controls_switch;
+  [GtkChild] unowned He.Switch fill_tabs_switch;
+  [GtkChild] unowned He.Switch floating_controls_switch;
   [GtkChild] unowned Gtk.SpinButton opacity_spin_button;
-  [GtkChild] unowned Gtk.Switch remember_window_size_switch;
-  [GtkChild] unowned Gtk.Switch run_command_as_login_switch;
-  [GtkChild] unowned Gtk.Switch show_headerbar_switch;
-  [GtkChild] unowned Gtk.Switch show_menu_button_switch;
-  [GtkChild] unowned Gtk.Switch use_custom_shell_command_switch;
-  [GtkChild] unowned Gtk.Switch drag_area_switch;
+  [GtkChild] unowned He.Switch remember_window_size_switch;
+  [GtkChild] unowned He.Switch run_command_as_login_switch;
+  [GtkChild] unowned He.Switch show_headerbar_switch;
+  [GtkChild] unowned He.Switch show_menu_button_switch;
+  [GtkChild] unowned He.Switch use_custom_shell_command_switch;
+  [GtkChild] unowned He.Switch drag_area_switch;
   [GtkChild] unowned Gtk.ToggleButton dark_theme_toggle;
   [GtkChild] unowned Gtk.ToggleButton light_theme_toggle;
 
@@ -150,7 +150,7 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
 
     settings.schema.bind (
                           "command-as-login-shell",
-                          this.run_command_as_login_switch,
+                          this.run_command_as_login_switch.iswitch,
                           "active",
                           SettingsBindFlags.DEFAULT
     );
@@ -171,7 +171,7 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
 
     settings.schema.bind (
                           "use-custom-command",
-                          this.use_custom_shell_command_switch,
+                          this.use_custom_shell_command_switch.iswitch,
                           "active",
                           SettingsBindFlags.DEFAULT
     );
@@ -196,35 +196,35 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
 
     settings.schema.bind (
                           "fill-tabs",
-                          this.fill_tabs_switch,
+                          this.fill_tabs_switch.iswitch,
                           "active",
                           SettingsBindFlags.DEFAULT
     );
 
     settings.schema.bind (
                           "show-menu-button",
-                          this.show_menu_button_switch,
+                          this.show_menu_button_switch.iswitch,
                           "active",
                           SettingsBindFlags.DEFAULT
     );
 
     settings.schema.bind (
                           "show-headerbar",
-                          this.show_headerbar_switch,
+                          this.show_headerbar_switch.iswitch,
                           "active",
                           SettingsBindFlags.DEFAULT
     );
 
     settings.schema.bind (
                           "headerbar-drag-area",
-                          this.drag_area_switch,
+                          this.drag_area_switch.iswitch,
                           "active",
                           SettingsBindFlags.DEFAULT
     );
 
     settings.schema.bind (
                           "remember-window-size",
-                          this.remember_window_size_switch,
+                          this.remember_window_size_switch.iswitch,
                           "active",
                           SettingsBindFlags.DEFAULT
     );
@@ -251,11 +251,11 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
       set_cursor_blink (2);
     });
 
-    settings.schema.bind ("style-preference", style_preference_switch, "active", SettingsBindFlags.DEFAULT);
+    settings.schema.bind ("style-preference", style_preference_switch.iswitch, "active", SettingsBindFlags.DEFAULT);
 
     settings.schema.bind (
                           "floating-controls",
-                          this.floating_controls_switch,
+                          this.floating_controls_switch.iswitch,
                           "active",
                           SettingsBindFlags.DEFAULT
     );

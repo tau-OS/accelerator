@@ -5,8 +5,9 @@ template TerminalPreferencesWindow : He.SettingsWindow {
   default-width: 550;
   default-height: 720;
   resizable: false;
-  modal: false;
+  modal: true;
 
+  [page]
   He.SettingsPage {
     title: _("General");
     vexpand: true;
@@ -29,7 +30,8 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             title: _("Remember Window Size");
             activatable-widget: remember_window_size_switch;
 
-            Switch remember_window_size_switch {
+            [child]
+            He.Switch remember_window_size_switch {
               valign: center;
             }
           }
@@ -38,7 +40,8 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             title: _("Dark Mode");
             activatable-widget: style_preference_switch;
 
-            Switch style_preference_switch {
+            [child]
+            He.Switch style_preference_switch {
               valign: center;
             }
           }
@@ -51,7 +54,8 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             title: _("Expand Tabs");
             activatable-widget: fill_tabs_switch;
 
-            Switch fill_tabs_switch {
+            [child]
+            He.Switch fill_tabs_switch {
               valign: center;
             }
           }
@@ -64,7 +68,8 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             title: _("Show App Bar");
             activatable-widget: show_headerbar_switch;
 
-            Switch show_headerbar_switch {
+            [child]
+            He.Switch show_headerbar_switch {
               valign: center;
             }
           }
@@ -73,7 +78,8 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             title: _("Show Menu Button");
             activatable-widget: show_menu_button_switch;
 
-            Switch show_menu_button_switch {
+            [child]
+            He.Switch show_menu_button_switch {
               valign: center;
             }
           }
@@ -83,7 +89,8 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             subtitle: _("Enable to reserve some space on the left side to drag the window.");
             activatable-widget: drag_area_switch;
 
-            Switch drag_area_switch {
+            [child]
+            He.Switch drag_area_switch {
               valign: center;
             }
           }
@@ -93,7 +100,8 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             subtitle: _("Show floating controls when app bar is hidden.");
             activatable-widget: floating_controls_switch;
 
-            Switch floating_controls_switch {
+            [child]
+            He.Switch floating_controls_switch {
               valign: center;
             }
           }
@@ -124,6 +132,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
     }
   }
 
+  [page]
   He.SettingsPage {
     title: _("Terminal");
     vexpand: true;
@@ -220,7 +229,8 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             title: _("Run Command as Login Shell");
             activatable-widget: run_command_as_login_switch;
 
-            Switch run_command_as_login_switch {
+            [child]
+            He.Switch run_command_as_login_switch {
               valign: center;
             }
           }
@@ -229,7 +239,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
             title: _("Use Custom Command");
             activatable-widget: use_custom_shell_command_switch;
 
-            Switch use_custom_shell_command_switch {
+            He.Switch use_custom_shell_command_switch {
               valign: center;
             }
           }
@@ -341,10 +351,7 @@ template TerminalPreferencesWindow : He.SettingsWindow {
     }
   }
 
-  .TerminalShortcutEditor {
-    app: bind TerminalPreferencesWindow.application no-sync-create;
-  }
-
+  [page]
   He.SettingsPage {
     title: _("Advanced");
     vexpand: true;
