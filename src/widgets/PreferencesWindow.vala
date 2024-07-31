@@ -42,7 +42,7 @@ public class Terminal.PreferencesWindow : He.SettingsWindow {
   [GtkChild] unowned Gtk.Adjustment floating_controls_hover_area_adjustment;
   [GtkChild] unowned Gtk.CheckButton filter_themes_check_button;
   [GtkChild] unowned Gtk.FlowBox preview_flow_box;
-  [GtkChild] unowned He.TextButton font_label;
+  [GtkChild] unowned He.Button font_label;
   [GtkChild] unowned He.Switch fill_tabs_switch;
   [GtkChild] unowned He.Switch floating_controls_switch;
   [GtkChild] unowned Gtk.SpinButton opacity_spin_button;

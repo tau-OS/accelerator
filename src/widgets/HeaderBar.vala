@@ -55,7 +55,7 @@ public abstract class Terminal.BaseHeaderBar : Gtk.Box {
       hexpand = false,
       halign = Gtk.Align.END,
     };
-    menu_button.add_css_class ("disclosure-button");
+    menu_button.add_css_class ("tab-button");
     menu_button.get_popover ().has_arrow = false;
 
     Settings.get_default ().schema.bind (
@@ -99,7 +99,7 @@ public class Terminal.HeaderBar : BaseHeaderBar {
       halign = Gtk.Align.END,
       valign = Gtk.Align.CENTER,
     };
-    this.unfullscreen_button.add_css_class ("disclosure-button");
+    this.unfullscreen_button.add_css_class ("tab-button");
 
     this.left_controls = new Gtk.WindowControls (Gtk.PackType.START);
     left_controls.valign = Gtk.Align.START;
@@ -110,6 +110,7 @@ public class Terminal.HeaderBar : BaseHeaderBar {
     this.right_controls.bind_property ("empty", this.right_controls, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN, null, null);
 
     var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
+      margin_start = 6,
       margin_end = 6
     };
     button_box.append (this.unfullscreen_button);
