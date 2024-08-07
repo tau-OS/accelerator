@@ -54,7 +54,7 @@ public class Terminal.Application : He.Application {
   protected override void startup () {
     Gdk.RGBA accent_color = { 0 };
     accent_color.parse("#2d2d2d");
-    default_accent_color = He.Color.from_gdk_rgba (accent_color);
+    default_accent_color = He.from_gdk_rgba (accent_color);
 
     resource_base_path = "/com/fyralabs/Accelerator";
     base.startup ();
