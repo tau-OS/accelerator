@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-05-27 07:09+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://weblate.fyralabs.com/projects/"
-"tauOS/accelerator/zh_Hans/>\n"
+"PO-Revision-Date: 2025-02-06 16:45+0000\n"
+"Last-Translator: CZPminecraft <yuiop369673@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://weblate.fyralabs.com/"
+"projects/tauOS/accelerator/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 5.9.2\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
@@ -44,9 +44,8 @@ msgid "Window height"
 msgstr "窗口高度"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:14
-#, fuzzy
 msgid "Whether or not to display borders around the window and tabs"
-msgstr "在否在标题栏上显示菜单按钮"
+msgstr "是否在标题栏上显示菜单按钮"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
@@ -74,7 +73,7 @@ msgstr "是否显示标题栏"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
-msgstr "在否在标题栏上显示菜单按钮"
+msgstr "是否在标题栏上显示菜单按钮"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
@@ -83,9 +82,8 @@ msgid ""
 msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:56
-#, fuzzy
 msgid "Whether or not to reserve an area for dragging the header bar"
-msgstr "在否在标题栏上显示菜单按钮"
+msgstr "是否在标题栏上显示菜单按钮"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
@@ -130,14 +128,12 @@ msgid "Delay time before showing floating controls"
 msgstr "显示浮动控件之前的延迟时间"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:97
-#, fuzzy
 msgid "The light color scheme for the terminal"
-msgstr "终端配色方案"
+msgstr "终端配色方案（明亮）"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:101
-#, fuzzy
 msgid "The dark color scheme for the terminal"
-msgstr "终端配色方案"
+msgstr "终端配色方案（黑暗）"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
 #: data/com.fyralabs.Accelerator.gschema.xml:106
@@ -233,11 +229,11 @@ msgstr "是否显示标题栏"
 
 #: src/gtk/search-toolbar.ui:101
 msgid "Match entire words only"
-msgstr ""
+msgstr "只匹配整段文本"
 
 #: src/gtk/search-toolbar.ui:106
 msgid "Match using regular expression"
-msgstr ""
+msgstr "使用正则表达式匹配"
 
 #: src/gtk/help-overlay.ui:10
 msgctxt "shortcut window"
@@ -278,7 +274,7 @@ msgstr "终端"
 #: src/gtk/help-overlay.ui:48
 msgctxt "shortcut window"
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: src/gtk/help-overlay.ui:54
 msgctxt "shortcut window"
@@ -316,58 +312,49 @@ msgid "Focus previous tab"
 msgstr "将焦点切换到上一个标签页"
 
 #: src/gtk/help-overlay.ui:95
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 1"
-msgstr "切换到标签页"
+msgstr "切换到标签页 1"
 
 #: src/gtk/help-overlay.ui:101
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 2"
-msgstr "切换到标签页"
+msgstr "切换到标签页 2"
 
 #: src/gtk/help-overlay.ui:107
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 3"
-msgstr "切换到标签页"
+msgstr "切换到标签页 3"
 
 #: src/gtk/help-overlay.ui:113
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 4"
-msgstr "切换到标签页"
+msgstr "切换到标签页 4"
 
 #: src/gtk/help-overlay.ui:119
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 5"
-msgstr "切换到标签页"
+msgstr "切换到标签页 5"
 
 #: src/gtk/help-overlay.ui:125
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 6"
-msgstr "切换到标签页"
+msgstr "切换到标签页 6"
 
 #: src/gtk/help-overlay.ui:131
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 7"
-msgstr "切换到标签页"
+msgstr "切换到标签页 7"
 
 #: src/gtk/help-overlay.ui:137
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 8"
-msgstr "切换到标签页"
+msgstr "切换到标签页 8"
 
 #: src/gtk/help-overlay.ui:143
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Switch to Tab 9"
-msgstr "切换到标签页"
+msgstr "切换到标签页 9"
 
 #: src/gtk/help-overlay.ui:149
 msgctxt "shortcut window"
@@ -395,15 +382,15 @@ msgstr ""
 
 #: src/gtk/shortcut-dialog.ui:28
 msgid "Apply"
-msgstr ""
+msgstr "应用"
 
 #: src/gtk/shortcut-dialog.ui:68
 msgid "This shortcut is already in use"
-msgstr ""
+msgstr "该快捷键已被使用"
 
 #: src/gtk/shortcut-dialog.ui:81
 msgid "Press Escape to cancel or Backspace to disable shortcut"
-msgstr ""
+msgstr "按下 Escape 以取消快捷键或 Backspace 以禁用快捷键"
 
 #: src/gtk/shortcut-editor.ui:6
 msgid "Keyboard"
