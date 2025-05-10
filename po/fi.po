@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2025-05-10 11:46+0000\n"
+"PO-Revision-Date: 2025-05-11 22:46+0000\n"
 "Last-Translator: sudoasd <asdwasd@meiliboxi.fi>\n"
 "Language-Team: Finnish <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/fi/>\n"
@@ -108,7 +108,7 @@ msgstr "Selaus tila"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
-msgstr "Määrä viivoja tallennettu selauksessa"
+msgstr "Selattavien rivien enimmäismäärä"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
