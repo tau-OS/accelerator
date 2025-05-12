@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: blackbox\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2025-05-10 11:46+0000\n"
+"PO-Revision-Date: 2025-05-13 11:46+0000\n"
 "Last-Translator: Feike Donia <feikedonia@proton.me>\n"
 "Language-Team: Dutch <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/nl/>\n"
@@ -42,11 +42,11 @@ msgstr "Vensterhoogte"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:14
 msgid "Whether or not to display borders around the window and tabs"
-msgstr "Wel of geen randen rond het venster en de tabbladen weergeven"
+msgstr "Al dan geen randen rond het venster en de tabbladen weergeven"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
-msgstr "Venstergrootte al dan niet onthouden"
+msgstr "De venstergrootte al dan niet onthouden"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
@@ -54,7 +54,7 @@ msgstr "Lettertype en tekstgrootte"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
-msgstr "Of het venster het kleurthema van de terminal moet gebruiken"
+msgstr "Of het venster de kleuren van het terminalthema moet overnemen"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
@@ -62,9 +62,7 @@ msgstr "Dekking achtergrond terminalvenster"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
-msgstr ""
-"Of tabbladen wel of niet uitgevouwen moeten worden om de tabbladbalk te "
-"vullen"
+msgstr "Tabbladen al dan niet uitvouwen om de tabbladbalk te vullen"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
@@ -72,51 +70,54 @@ msgstr "Al dan geen headerbar weergeven"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
-msgstr "Al dan geen menuknop in de kopbalk tonen"
+msgstr "Al dan geen menuknop in de headerbar weergeven"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
 msgstr ""
-"Al dan geen lijn van 1px onder de kopbalk weergeven als er een enkel tablad "
-"geopend is"
+"Al dan geen lijn van 1px onder de headerbar weergeven als er een enkel "
+"tabblad geopend is"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:56
-#, fuzzy
 msgid "Whether or not to reserve an area for dragging the header bar"
-msgstr "Of er een menuknop op de kopbalk dient te worden getoond"
+msgstr ""
+"Al dan niet een stukje van de headerbar gereserveerd houden om het venster "
+"te slepen"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
-msgstr "Of er schuifbalken dienen te worden getoond"
+msgstr "Al dan geen scrollbar weergeven"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
-msgstr "Of er zwevende schuifbalken dienen te worden getoond"
+msgstr "Scrollen van de overlay al dan niet inschakelen"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:68
 msgid "If enabled, terminals will scroll by pixels instead of rows"
 msgstr "Schakel in om pixel voor pixel te scrollen in plaats van per rij"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:72
-#, fuzzy
 msgid "If enabled, terminals will render sixel escape sequences"
-msgstr "Schakel in om pixel voor pixel te scrollen in plaats van per rij"
+msgstr ""
+"Indien ingeschakeld, geven terminals escape-reeksen van zes letters weer"
 
 #. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
 #: data/com.fyralabs.Accelerator.gschema.xml:77
 #: src/gtk/preferences-window.ui:373
 msgid "Scrollback mode"
-msgstr "Schuifbalk modus"
+msgstr "Modus scroll-geschiedenis"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
-msgstr "Aantal regels opgeslagen in scrollback"
+msgstr "Aantal regels opgeslagen in scroll-geschiedenis"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:85
 msgid "If enabled, floating controls will be shown in headerless mode"
-msgstr "Schakel in om zwevende bediening te tonen in de kopbalkloze modus"
+msgstr ""
+"Al dan geen wevende besturingselementen weergeven als de headerbar is "
+"uitgeschakeld"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:89
 msgid ""
@@ -163,7 +164,7 @@ msgstr "Cursorvorm"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:126
 msgid "Whether or not the cursor should blink"
-msgstr "Of de cursor wel of niet moet knipperen"
+msgstr "Al dan geen blinkende cursor"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
@@ -174,14 +175,14 @@ msgid ""
 "If enabled, the tab bar will be replaced with a title label when there's a "
 "single open tab"
 msgstr ""
-"Schakel in om de tabbladbalk bij slechts één geopend tabblad te vervangen "
-"door een naamlabel"
+"Als deze optie is ingeschakeld, wordt de tabbladbalk vervangen door een "
+"naamlabel als er slechts één tabblad geopend is"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:138
 msgid "If enabled, a single open tab will blend with the headerbar color"
 msgstr ""
-"Als deze optie is ingeschakeld, wordt een enkel geopend tabblad gemengd met "
-"de kleur van de kopbalk"
+"De kleur van vensters met een enkel tabblad al dan niet mengen met de "
+"headerbar-kleur"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:142
 msgid "Whether to spawn shell in login mode"
