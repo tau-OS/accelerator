@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: blackbox\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2025-05-17 07:46+0000\n"
+"PO-Revision-Date: 2025-05-18 12:46+0000\n"
 "Last-Translator: Feike Donia <feikedonia@proton.me>\n"
 "Language-Team: Dutch <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/nl/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
-msgstr "Versneller"
+msgstr "Accelerator"
 
 #: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
 #: src/gtk/preferences-window.ui:278
@@ -29,7 +29,7 @@ msgstr "Terminal"
 
 #: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
-msgstr "Terminal;terminal;shell;prompt;commando;terminal;cmd;box;"
+msgstr "Terminal;terminal;shell;prompt;command;terminal;cmd;box;"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
