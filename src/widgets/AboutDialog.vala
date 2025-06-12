@@ -19,7 +19,7 @@
  */
 
 namespace Terminal {
-  public He.AboutWindow create_about_dialog (Gtk.Window parent) {
+  public He.AboutWindow create_about_dialog (Window parent) {
     string[] developers = {
       "Cappy Ishihara"
     };
@@ -37,16 +37,11 @@ namespace Terminal {
                                      developers,
                                      2023,
                                      He.AboutWindow.Licenses.GPLV3, He.Colors.NONE);
-
-    window.set_modal (true);
-    window.set_transient_for (parent);
     if (DEVEL) {
       window.add_css_class ("devel");
     }
 
-    // window.add_link (_("Donate"), "https://www.patreon.com/raggesilver");
-    // window.add_link (_("Full Changelog"), "https://gitlab.gnome.org/raggesilver/blackbox/-/blob/main/CHANGELOG.md");
-
+    parent.main_overlay.add_overlay (window);
     return window;
   }
 

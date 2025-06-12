@@ -106,7 +106,6 @@ public class Terminal.TerminalTab : He.Tab {
     );
   }
 
-
   public void search () {
     this.search_toolbar.open ();
   }

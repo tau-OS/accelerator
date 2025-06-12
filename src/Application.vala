@@ -29,7 +29,7 @@ public class Terminal.Application : He.Application {
 
   public Gtk.CssProvider css_provider { get; private set; }
 
-  private He.ApplicationWindow window;
+  private Window window;
 
   public Application () {
     Object (
@@ -53,7 +53,7 @@ public class Terminal.Application : He.Application {
 
   protected override void startup () {
     Gdk.RGBA accent_color = { 0 };
-    accent_color.parse("#2d2d2d");
+    accent_color.parse ("#2d2d2d");
     default_accent_color = He.from_gdk_rgba (accent_color);
 
     resource_base_path = "/com/fyralabs/Accelerator";
@@ -97,9 +97,7 @@ public class Terminal.Application : He.Application {
 
   private void on_about () {
     var win = create_about_dialog (this.window);
-    win.set_modal (true);
-    win.set_transient_for (this.get_active_window ());
-    win.show ();
+    win.present ();
   }
 
   private void on_new_window () {

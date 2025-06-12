@@ -85,6 +85,7 @@ public class Terminal.Window : He.ApplicationWindow {
 
   BaseHeaderBar header_bar;
   Gtk.Revealer header_bar_revealer;
+  public Gtk.Overlay main_overlay;
 
   Gtk.HeaderBar floating_bar;
   Gtk.Box floating_btns;
@@ -197,7 +198,11 @@ public class Terminal.Window : He.ApplicationWindow {
     overlay.set_name ("accelerator-overlay");
     overlay.add_overlay (this.floating_header_bar_revealer);
 
-    this.child = overlay;
+    main_overlay = new Gtk.Overlay ();
+    main_overlay.child = overlay;
+    main_overlay.add_overlay (this.floating_header_bar_revealer);
+
+    this.child = main_overlay;
 
     this.add_css_class ("accelerator-main-window");
   }
@@ -232,7 +237,7 @@ public class Terminal.Window : He.ApplicationWindow {
     var wheight = (int) (sett.remember_window_size ? sett.window_height : 450);
 
     Object (
-            application: app,
+            application : app,
             default_width: wwidth,
             default_height: wheight,
             fullscreened: sett.remember_window_size && sett.was_fullscreened,
@@ -482,7 +487,7 @@ public class Terminal.Window : He.ApplicationWindow {
   }
 
   public void zoom_in () {
-     this.active_terminal.zoom_in ();
+    this.active_terminal.zoom_in ();
   }
 
   public void zoom_out () {
