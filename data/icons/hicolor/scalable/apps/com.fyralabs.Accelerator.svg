@@ -1,39 +1,19 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_ii_314_86)">
-<rect x="12" y="12" width="104" height="104" rx="24" fill="url(#paint0_linear_314_86)"/>
-</g>
-<g filter="url(#filter1_d_314_86)">
-<path d="M59.0883 85.1277C57.523 86.7092 54.9678 86.7092 53.4025 85.1277L50.8375 82.5362C49.2742 80.9568 49.298 78.406 50.8904 76.856L61.1534 66.8663C62.7667 65.296 62.7667 62.704 61.1534 61.1337L50.8904 51.144C49.298 49.594 49.2742 47.0432 50.8375 45.4638L53.4025 42.8723C54.9678 41.2908 57.523 41.2908 59.0883 42.8723L77.2149 61.1861C78.7577 62.7449 78.7577 65.2552 77.2149 66.8139L59.0883 85.1277Z" fill="#FAFAFA"/>
-</g>
-<defs>
-<filter id="filter0_ii_314_86" x="12" y="12" width="104" height="105" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="-4"/>
-<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="shape" result="effect1_innerShadow_314_86"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect2_innerShadow_314_86"/>
-<feOffset dy="2"/>
-<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="effect1_innerShadow_314_86" result="effect2_innerShadow_314_86"/>
-</filter>
-<filter id="filter1_d_314_86" x="48.6804" y="40.6862" width="34.6915" height="50.6277" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="2" dy="2"/>
-<feGaussianBlur stdDeviation="1.5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.14 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_314_86"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_314_86" result="shape"/>
-</filter>
-<linearGradient id="paint0_linear_314_86" x1="33.125" y1="12" x2="94.0625" y2="116" gradientUnits="userSpaceOnUse">
-<stop stop-color="#2D2D2D"/>
-<stop offset="1"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(45 0.5 0.5)">
+      <stop offset="0%" style="stop-color:#2f2f31;stop-opacity:1.000"/>
+      <stop offset="100%" style="stop-color:#5f5f63;stop-opacity:1.000"/>
+    </linearGradient>
+  </defs>
+  <rect id="background" x="9.5" y="9.5" width="109" height="109" rx="24" fill="url(#bg-gradient)" fill-opacity="1.000"/>
+  <g id="icon" transform="translate(9.5,9.5)">
+    <g id="group-0">
+      <rect id="element-g0-e0" x="50" y="28" width="12" height="36" fill="#d9f1ff" fill-opacity="1.000" stroke="#dbf5df" stroke-opacity="1.000" stroke-width="0" rx="6" ry="6" transform="rotate(135 56 46)"/>
+      <rect id="element-g0-e1" x="50" y="46" width="12" height="36" fill="#d9f1ff" fill-opacity="1.000" stroke="#dbf5df" stroke-opacity="1.000" stroke-width="0" rx="5" ry="5" transform="rotate(45 56 64)"/>
+    </g>
+  </g>
+    <g id="overlay-effects" transform="translate(9.5,9.5)">
+        <svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="109" height="109" viewBox="0 0 109 109" fill="none" version="1.1" id="svg2" sodipodi:docname="effects.svg" inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"><defs id="defs2"/><sodipodi:namedview id="namedview2" pagecolor="#ffffff" bordercolor="#111111" borderopacity="1" inkscape:showpageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="1" inkscape:deskcolor="#d1d1d1" inkscape:zoom="4.0000001" inkscape:cx="32.124999" inkscape:cy="51.624999" inkscape:window-width="2560" inkscape:window-height="1298" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:current-layer="svg2"/><path id="rect1" style="fill:#ffffff;stroke-linecap:square;fill-opacity:0.39659169" d="M 24 0 C 10.704 0 1.4854784e-16 10.704 0 24 L 0 28 C 1.4854784e-16 14.704 10.704 4 24 4 L 85 4 C 98.296 4 109 14.704 109 28 L 109 24 C 109 10.704 98.296 1.4854784e-16 85 0 L 24 0 z "/><path id="rect1-5" style="fill:#000000;stroke-linecap:square;fill-opacity:0.19670402" d="M 24,109 C 10.704,109 0,98.296 0,85 v -4 c 0,13.296 10.704,24 24,24 h 61 c 13.296,0 24,-10.704 24,-24 v 4 c 0,13.296 -10.704,24 -24,24 z"/></svg>
+    </g>
 </svg>
