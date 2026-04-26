@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2026-04-26 08:49+0000\n"
+"PO-Revision-Date: 2026-04-27 02:57+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/ka/>\n"
@@ -48,7 +48,7 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
-msgstr ""
+msgstr "მოხდება, თუ არა ფანჯრის ზომის დამახსოვრება"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
@@ -60,7 +60,7 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
-msgstr ""
+msgstr "ტერმინალის ფანჯრის ფონის გაუმჭვირვალობა"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
@@ -86,7 +86,7 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:60
 msgid "Whether or not to show scrollbars"
-msgstr ""
+msgstr "ნაჩვენები იქნება, თუ არა ჩოციები"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:64
 msgid "Whether overlay scrolling should be enabled"
@@ -126,16 +126,16 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:97
 msgid "The light color scheme for the terminal"
-msgstr ""
+msgstr "ღია ფერთა სქემა ტერმინალისთვის"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:101
 msgid "The dark color scheme for the terminal"
-msgstr ""
+msgstr "მუქი ფერთა სქემა ტერმინალისთვის"
 
 #. 0 = Follow system, 1 = Light Style, 2 = Dark Style
 #: data/com.fyralabs.Accelerator.gschema.xml:106
 msgid "Style preference"
-msgstr ""
+msgstr "სტილის პრიორიტეტი"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:110
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
@@ -143,11 +143,11 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:114
 msgid "Terminal cell width"
-msgstr ""
+msgstr "ტერმინალის უჯრედის სიგანე"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:118
 msgid "Terminal cell height"
-msgstr ""
+msgstr "ტერმინალის უჯრედის სიმაღლე"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:122
 msgid "Cursor shape"
@@ -155,7 +155,7 @@ msgstr "კურსორის ფორმა"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:126
 msgid "Whether or not the cursor should blink"
-msgstr ""
+msgstr "უნდა იციმციმოს კურსორმა, თუ არა"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
@@ -190,7 +190,7 @@ msgstr ""
 
 #: data/com.fyralabs.Accelerator.gschema.xml:161
 msgid "Whether search should be case sensitive"
-msgstr ""
+msgstr "იქნება, თუ არა ძებნაში დიდი და პატარა ასოები განსხვავებული"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:165
 msgid "Whether search should only match entire words"
@@ -214,19 +214,19 @@ msgstr "შემდეგი შედეგი"
 
 #: src/gtk/search-toolbar.ui:91
 msgid "Search wraps around"
-msgstr ""
+msgstr "გადატანილებში ძებნა"
 
 #: src/gtk/search-toolbar.ui:96
 msgid "Match is case sensitive"
-msgstr ""
+msgstr "დამთხვევა ითვალისწინებს დიდ/პატარა ასოებს"
 
 #: src/gtk/search-toolbar.ui:101
 msgid "Match entire words only"
-msgstr ""
+msgstr "მხოლოდ, მთლიანი სიტყვის დამთხვევა"
 
 #: src/gtk/search-toolbar.ui:106
 msgid "Match using regular expression"
-msgstr ""
+msgstr "რეგულარული გამოსახულებით დამთხვევა"
 
 #: src/gtk/help-overlay.ui:10
 msgctxt "shortcut window"
@@ -251,7 +251,7 @@ msgstr "ჩანართის დახურვა"
 #: src/gtk/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Switch headbar mode"
-msgstr ""
+msgstr "ზედა პანელის რეჟიმის გადართვა"
 
 #: src/gtk/help-overlay.ui:37
 msgctxt "shortcut window"
@@ -296,12 +296,12 @@ msgstr "ნავიგაცია"
 #: src/gtk/help-overlay.ui:83
 msgctxt "shortcut window"
 msgid "Focus next tab"
-msgstr ""
+msgstr "ფოკუსი შემდეგ ჩანართზე"
 
 #: src/gtk/help-overlay.ui:89
 msgctxt "shortcut window"
 msgid "Focus previous tab"
-msgstr ""
+msgstr "ფოკუსი წინა ჩანართზე"
 
 #: src/gtk/help-overlay.ui:95
 msgctxt "shortcut window"
@@ -351,7 +351,7 @@ msgstr "გადართვა ჩანართზე 9"
 #: src/gtk/help-overlay.ui:149
 msgctxt "shortcut window"
 msgid "Switch to last Tab"
-msgstr ""
+msgstr "ბოლო ჩანართზე გადართვა"
 
 #: src/gtk/help-overlay.ui:157
 msgctxt "shortcut window"
@@ -377,7 +377,7 @@ msgstr "გადატარება"
 
 #: src/gtk/shortcut-dialog.ui:68
 msgid "This shortcut is already in use"
-msgstr ""
+msgstr "მალსახმობი უკვე გამოიყენება"
 
 #: src/gtk/shortcut-dialog.ui:81
 msgid "Press Escape to cancel or Backspace to disable shortcut"
@@ -401,11 +401,11 @@ msgstr "ფანჯარა"
 
 #: src/gtk/preferences-window.ui:19
 msgid "Remember Window Size"
-msgstr ""
+msgstr "ფანჯრის ზომის დამახსოვრება"
 
 #: src/gtk/preferences-window.ui:30
 msgid "Show Borders"
-msgstr ""
+msgstr "საზღვრების ჩვენება"
 
 #: src/gtk/preferences-window.ui:31
 msgid "Enable to draw a border around the window and the active tab."
@@ -413,7 +413,7 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:42
 msgid "Theme Integration"
-msgstr ""
+msgstr "თემის ინტეგრაცია"
 
 #: src/gtk/preferences-window.ui:43
 msgid "Style window with terminal theme colors."
@@ -421,7 +421,7 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:53
 msgid "Style Preference"
-msgstr ""
+msgstr "სტილის პრიორიტეტი"
 
 #: src/gtk/preferences-window.ui:57 src/gtk/preferences-window.ui:300
 msgid "Follow System"
@@ -459,7 +459,7 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:101
 msgid "Stealth Single Tab"
-msgstr ""
+msgstr "ერთი ჩანართის დამალვა"
 
 #: src/gtk/preferences-window.ui:102
 msgid "Blend single tab with header bar."
@@ -487,7 +487,7 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:156
 msgid "Draw Line Under Header Bar"
-msgstr ""
+msgstr "ხაზის დახატვა სათაურის ზოლის ქვეშ"
 
 #: src/gtk/preferences-window.ui:157
 msgid ""
@@ -497,11 +497,11 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:167
 msgid "Floating Controls"
-msgstr ""
+msgstr "მცურავი კონტროლის ელემენტები"
 
 #: src/gtk/preferences-window.ui:170
 msgid "Show Floating Controls"
-msgstr ""
+msgstr "მცურავი კონტროლის ელემენტების ჩვენება"
 
 #: src/gtk/preferences-window.ui:171
 msgid "Show floating controls when header bar is hidden."
@@ -509,7 +509,7 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:183
 msgid "Floating Controls Hover Area"
-msgstr ""
+msgstr "მცურავი კონტროლის ელემენტებზე თაგუნას გაჩერების არე"
 
 #: src/gtk/preferences-window.ui:184
 msgid ""
@@ -535,7 +535,7 @@ msgstr "ფონტი"
 
 #: src/gtk/preferences-window.ui:235
 msgid "Cell Spacing"
-msgstr ""
+msgstr "უჯრედების დაშორება"
 
 #: src/gtk/preferences-window.ui:238
 msgid "Width"
@@ -547,11 +547,11 @@ msgstr "სიმაღლე"
 
 #: src/gtk/preferences-window.ui:265
 msgid "Easy Copy &amp; Paste"
-msgstr ""
+msgstr "იოლი კოპირება &amp; ჩასმა"
 
 #: src/gtk/preferences-window.ui:266
 msgid "Use ctrl+c/ctrl+v for copy/paste."
-msgstr ""
+msgstr "ctrl+c/ctrl+v-ის გამოყენება დასაკოპირებლად ჩასასმელად."
 
 #: src/gtk/preferences-window.ui:281
 msgid "Cursor Shape"
@@ -575,7 +575,7 @@ msgstr "კურსორის ციმციმი"
 
 #: src/gtk/preferences-window.ui:296
 msgid "Whether or not the cursor should blink."
-msgstr ""
+msgstr "უნდა იციმციმოს კურსორმა, თუ არა."
 
 #: src/gtk/preferences-window.ui:301
 msgid "On"
@@ -595,7 +595,7 @@ msgstr "გაუმჭირვალობა"
 
 #: src/gtk/preferences-window.ui:325
 msgid "Terminal background opacity."
-msgstr ""
+msgstr "ტერმინალის ფონის გაუმჭვირვალობა."
 
 #: src/gtk/preferences-window.ui:341
 msgid "Scrolling"
@@ -611,7 +611,7 @@ msgstr "ჩოჩიების ჩვენება"
 
 #: src/gtk/preferences-window.ui:358
 msgid "Use Overlay Scrolling"
-msgstr ""
+msgstr "განლაგების გადახვევა"
 
 #: src/gtk/preferences-window.ui:377
 msgid "Fixed Size"
@@ -627,7 +627,7 @@ msgstr "გამორთულია"
 
 #: src/gtk/preferences-window.ui:388
 msgid "Scrollback Lines"
-msgstr ""
+msgstr "ჩოჩიის ხაზები"
 
 #: src/gtk/preferences-window.ui:405
 msgid "Command"
@@ -635,11 +635,11 @@ msgstr "ბრძანება"
 
 #: src/gtk/preferences-window.ui:409
 msgid "Run Command as Login Shell"
-msgstr ""
+msgstr "ბრძანების გაშვება შესვლის გარსად"
 
 #: src/gtk/preferences-window.ui:420
 msgid "Use Custom Command"
-msgstr ""
+msgstr "მორგებული ბრძანების გამოყენება"
 
 #: src/gtk/preferences-window.ui:430
 msgid "Custom Command"
@@ -655,7 +655,7 @@ msgstr "საქაღალდის გახსნა"
 
 #: src/gtk/preferences-window.ui:456
 msgid "Get more themes online"
-msgstr ""
+msgstr "მეტი თემის გადმოწერა ინტერნეტიდან"
 
 #: src/gtk/preferences-window.ui:470
 msgid "Set your preferred theme for light and dark styles."
@@ -705,7 +705,7 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:561
 msgid "Danger Zone"
-msgstr ""
+msgstr "საშიში ზონა"
 
 #: src/gtk/preferences-window.ui:564
 msgid "Reset Preferences"
@@ -719,7 +719,7 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:570
 msgid "Reset preferences"
-msgstr ""
+msgstr "პარამეტრების ჩამოყრა"
 
 #: src/utils/Constants.vala:34
 msgid "You can still access the menu by right-clicking any terminal."
@@ -758,20 +758,20 @@ msgstr "მენიუ"
 
 #: src/widgets/ShortcutDialog.vala:46
 msgid "Enter new shortcut"
-msgstr ""
+msgstr "შეიყვანეთ ახალი მალსახმობი"
 
 #: src/widgets/ShortcutDialog.vala:47
 #, c-format
 msgid "Enter new shortcut for \"%s\""
-msgstr ""
+msgstr "შეიყვანეთ ახალი მალსახმობი \"%s\"-ისთვის"
 
 #: src/widgets/ShortcutEditor.vala:159
 msgid "Focus Next Tab"
-msgstr ""
+msgstr "ფოკუსი შემდეგ ჩანართზე"
 
 #: src/widgets/ShortcutEditor.vala:160
 msgid "Focus Previous Tab"
-msgstr ""
+msgstr "ფოკუსი წინა ჩანართზე"
 
 #: src/widgets/ShortcutEditor.vala:161 src/widgets/TerminalTab.vala:122
 msgid "New Window"
@@ -779,7 +779,7 @@ msgstr "ახალი ფანჯარა"
 
 #: src/widgets/ShortcutEditor.vala:162
 msgid "Toggle Header Bar"
-msgstr ""
+msgstr "თავსართის გადართვა"
 
 #: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
 msgid "New Tab"
@@ -828,11 +828,11 @@ msgstr "ბოლო ჩანართზე გადართვა"
 
 #: src/widgets/Window.vala:156
 msgid "Show headerbar"
-msgstr ""
+msgstr "სათაურის ზოლის ჩვენება"
 
 #: src/widgets/Window.vala:211
 msgid "No tabs open"
-msgstr ""
+msgstr "ღია ჩანართების გარეშე"
 
 #: src/widgets/PreferencesWindow.vala:504
 msgid "Terminal Font"
@@ -840,15 +840,15 @@ msgstr "ტერმინალის ფონტი"
 
 #: src/CommandLine.vala:47
 msgid "Show app version"
-msgstr ""
+msgstr "აპის ვერსიის ჩვენება"
 
 #: src/CommandLine.vala:56
 msgid "Set current working directory"
-msgstr ""
+msgstr "მიმდინარე სამუშაო საქაღალდის დაყენება"
 
 #: src/CommandLine.vala:65
 msgid "Execute command in a terminal"
-msgstr ""
+msgstr "ბრძანების შესრულება ტერმინალში"
 
 #: src/CommandLine.vala:74
 msgid "Show help"
@@ -857,4 +857,4 @@ msgstr "დახმარების ჩვენება"
 #: src/CommandLine.vala:121
 #, c-format
 msgid "Run %s --help to get help\n"
-msgstr ""
+msgstr "დახმარების მისაღებად გაუშვით %s --help\n"
