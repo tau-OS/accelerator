@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2026-04-26 06:50+0000\n"
+"PO-Revision-Date: 2026-04-26 08:49+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/ka/>\n"
@@ -104,7 +104,7 @@ msgstr ""
 #: data/com.fyralabs.Accelerator.gschema.xml:77
 #: src/gtk/preferences-window.ui:373
 msgid "Scrollback mode"
-msgstr ""
+msgstr "გადახვევის რეჟიმი"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
