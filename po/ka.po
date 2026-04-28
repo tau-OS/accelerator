@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2026-04-27 02:57+0000\n"
+"PO-Revision-Date: 2026-04-28 08:42+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.fyralabs.com/projects/tauOS/"
 "accelerator/ka/>\n"
@@ -44,7 +44,7 @@ msgstr "ფანჯრის სიმაღლე"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:14
 msgid "Whether or not to display borders around the window and tabs"
-msgstr ""
+msgstr "იქნება, თუ არა ნაჩვენები საზღვრები ფანჯრებისა და ჩანართების გარშემო"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:18
 msgid "Whether or not to remember window size"
@@ -56,7 +56,7 @@ msgstr "ფონტის ოჯახი და ზომა"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
-msgstr ""
+msgstr "მიიღებს, თუ არა ფანჯარა მემკვიდრეობით ტერმინალის თემის ფერებს"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:36
 msgid "Terminal window background opacity"
@@ -64,21 +64,23 @@ msgstr "ტერმინალის ფანჯრის ფონის გ
 
 #: data/com.fyralabs.Accelerator.gschema.xml:40
 msgid "Whether or not tabs should expand to fill tab bar"
-msgstr ""
+msgstr "მოხდება, თუ არა ჩანართების გაფართოება ჩანართების პანელის შესავსებად"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:44
 msgid "Whether the headerbar should be shown or not"
-msgstr ""
+msgstr "იქნება, თუ არა ნაჩვენები სათაურის პანელი"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:48
 msgid "Whether or not to display a menu button in the headerbar"
-msgstr ""
+msgstr "იქნება, თუ არა ნაჩვენები მენიუს ღილაკი სათაურის პანელზე"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:52
 msgid ""
 "Whether or not to draw a 1px line under the header bar when there's a single "
 "tab open"
 msgstr ""
+"იქნება, თუ არა დახატული 1-პიქსელიანი ხაზი სათაურის პანელის ქვეშ, როცა ღიაა, "
+"მხოლოდ, ერთი ჩანართი"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:56
 msgid "Whether or not to reserve an area for dragging the header bar"
