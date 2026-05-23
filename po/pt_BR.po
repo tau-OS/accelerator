@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: accelerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 10:37+0700\n"
-"PO-Revision-Date: 2023-05-27 07:07+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-12-17 22:54+0000\n"
+"Last-Translator: John Peter Sa <johnppetersa@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.fyralabs.com/projects/"
 "tauOS/accelerator/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 5.8.1\n"
 
 #: data/com.fyralabs.Accelerator.desktop.in:3
 msgid "Accelerator"
-msgstr "Accelerator"
+msgstr "Acelerador"
 
 #: data/com.fyralabs.Accelerator.desktop.in:9 src/gtk/preferences-window.ui:214
 #: src/gtk/preferences-window.ui:278
@@ -31,9 +31,7 @@ msgstr "Terminal"
 
 #: data/com.fyralabs.Accelerator.desktop.in:10
 msgid "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
-msgstr ""
-"Terminal;terminal;shell;prompt;command;commandline;cmd;box;comando;linha;"
-"console;"
+msgstr "Terminal;terminal;shell;prompt;command;commandline;cmd;box;"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:6
 msgid "Window width"
@@ -53,7 +51,7 @@ msgstr "Lembrar ou não o tamanho da janela"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:28
 msgid "Font family and size"
-msgstr "Família de fontes e tamanhos"
+msgstr "Família e tamanho da fonte"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:32
 msgid "Whether the window should inherit terminal theme's colors"
@@ -101,13 +99,13 @@ msgstr "Se ativado, os terminais rolarão por pixels ao invés de linhas"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:72
 msgid "If enabled, terminals will render sixel escape sequences"
-msgstr "Se ativado, os terminais rolarão por píxeis ao invés de linhas"
+msgstr "Se ativado, os terminais renderizarão sequências de escape sixel"
 
 #. 0 = Fixed size, 1 = Unlimited, 2 = Disabled
 #: data/com.fyralabs.Accelerator.gschema.xml:77
 #: src/gtk/preferences-window.ui:373
 msgid "Scrollback mode"
-msgstr "Linhas de Rolagem"
+msgstr "Modo de rolagem"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:81
 msgid "Number of lines stored in scrollback"
@@ -146,7 +144,7 @@ msgstr "Preferência de estilo"
 #: data/com.fyralabs.Accelerator.gschema.xml:110
 msgid "Amount of padding around terminal widgets (top, right, bottom, left)"
 msgstr ""
-"Quantidade de preenchimento em torno dos widgets do terminal (superior, "
+"Quantidade de preenchimento ao redor dos widgets do terminal (superior, "
 "direito, inferior, esquerdo)"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:114
@@ -167,7 +165,7 @@ msgstr "Se deve ou não piscar o cursor"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:130
 msgid "If enabled, ctrl+c and ctrl+v will work for copy/paste"
-msgstr "Se ativado, Ctrl+C e Ctrl+V funcionarão para copiar/colar"
+msgstr "Se ativado, ctrl+c e ctrl+v funcionarão para copiar/colar"
 
 #: data/com.fyralabs.Accelerator.gschema.xml:134
 msgid ""
@@ -216,7 +214,7 @@ msgstr "Se a pesquisa deve ser realizada usando expressões regulares"
 
 #: src/gtk/search-toolbar.ui:20
 msgid "Find"
-msgstr "Pesquisar"
+msgstr "Encontrar"
 
 #: src/gtk/search-toolbar.ui:42
 msgid "Previous result"
@@ -232,15 +230,15 @@ msgstr "A busca é cíclica"
 
 #: src/gtk/search-toolbar.ui:96
 msgid "Match is case sensitive"
-msgstr "Se a pesquisa deve diferenciar maiúsculas de minúsculas"
+msgstr "Pesquisar diferenciando maiúsculas e minúsculas"
 
 #: src/gtk/search-toolbar.ui:101
 msgid "Match entire words only"
-msgstr "Mostrar apenas palavras inteiras"
+msgstr "Pesquisar apenas palavras inteiras"
 
 #: src/gtk/search-toolbar.ui:106
 msgid "Match using regular expression"
-msgstr "Se a pesquisa deve ser realizada usando expressões regulares"
+msgstr "Pesquisar usando expressões regulares"
 
 #: src/gtk/help-overlay.ui:10
 msgctxt "shortcut window"
@@ -265,7 +263,7 @@ msgstr "Fechar aba"
 #: src/gtk/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Switch headbar mode"
-msgstr "Alternar para modo com barra de cabeçalho"
+msgstr "Alternar modo da barra de cabeçalho"
 
 #: src/gtk/help-overlay.ui:37
 msgctxt "shortcut window"
@@ -280,7 +278,7 @@ msgstr "Terminal"
 #: src/gtk/help-overlay.ui:48
 msgctxt "shortcut window"
 msgid "Search"
-msgstr "Pesquisar"
+msgstr "Buscar"
 
 #: src/gtk/help-overlay.ui:54
 msgctxt "shortcut window"
@@ -379,7 +377,7 @@ msgstr "Mostrar Atalhos"
 
 #: src/gtk/shortcut-dialog.ui:6
 msgid "Edit Shortcut"
-msgstr "Definir Atalhos"
+msgstr "Editar Atalho"
 
 #: src/gtk/shortcut-dialog.ui:21
 msgid "Cancel"
@@ -395,7 +393,7 @@ msgstr "Este atalho já está em uso"
 
 #: src/gtk/shortcut-dialog.ui:81
 msgid "Press Escape to cancel or Backspace to disable shortcut"
-msgstr "Aperte Esc para cancelar ou Backspace para desabilitar o atalho"
+msgstr "Aperte Escape para cancelar ou Backspace para desabilitar o atalho"
 
 #: src/gtk/shortcut-editor.ui:6
 msgid "Keyboard"
@@ -403,7 +401,7 @@ msgstr "Teclado"
 
 #: src/gtk/shortcut-editor.ui:10
 msgid "Shortcuts"
-msgstr "Mostrar Atalhos"
+msgstr "Atalhos"
 
 #: src/gtk/preferences-window.ui:11
 msgid "General"
@@ -431,7 +429,7 @@ msgstr "Integração do tema"
 
 #: src/gtk/preferences-window.ui:43
 msgid "Style window with terminal theme colors."
-msgstr "Janela com estilo de cores do tema do terminal."
+msgstr "Estilizar janela com as cores do tema do terminal."
 
 #: src/gtk/preferences-window.ui:53
 msgid "Style Preference"
@@ -479,15 +477,15 @@ msgstr "Aba Única Invisível"
 
 #: src/gtk/preferences-window.ui:102
 msgid "Blend single tab with header bar."
-msgstr "Mesclar aba única com a barra superior."
+msgstr "Mesclar aba única com a barra de cabeçalho."
 
 #: src/gtk/preferences-window.ui:117
 msgid "Header Bar"
-msgstr "Barra Superior"
+msgstr "Barra de Cabeçalho"
 
 #: src/gtk/preferences-window.ui:121
 msgid "Show Header Bar"
-msgstr "Mostrar Barra Superior"
+msgstr "Mostrar Barra de Cabeçalho"
 
 #: src/gtk/preferences-window.ui:132
 msgid "Show Menu Button"
@@ -495,7 +493,7 @@ msgstr "Botão Mostrar Menu"
 
 #: src/gtk/preferences-window.ui:143
 msgid "Drag Area"
-msgstr "Área de Arrasto"
+msgstr "Área de Arrastar"
 
 #: src/gtk/preferences-window.ui:144
 msgid "Enable to reserve some space on the left side to drag the window."
@@ -504,7 +502,7 @@ msgstr ""
 
 #: src/gtk/preferences-window.ui:156
 msgid "Draw Line Under Header Bar"
-msgstr "Desenhar Linha Abaixo da Barra do Cabeçalho"
+msgstr "Desenhar Linha Abaixo da Barra de Cabeçalho"
 
 #: src/gtk/preferences-window.ui:157
 msgid ""
@@ -524,11 +522,12 @@ msgstr "Mostrar Controles Flutuantes"
 
 #: src/gtk/preferences-window.ui:171
 msgid "Show floating controls when header bar is hidden."
-msgstr "Mostrar controles flutuantes quando a barra superior estiver oculta."
+msgstr ""
+"Mostrar controles flutuantes quando a barra de cabeçalho estiver oculta."
 
 #: src/gtk/preferences-window.ui:183
 msgid "Floating Controls Hover Area"
-msgstr "Área de Controles Flutuantes"
+msgstr "Área de Foco dos Controles Flutuantes"
 
 #: src/gtk/preferences-window.ui:184
 msgid ""
@@ -568,15 +567,15 @@ msgstr "Altura"
 
 #: src/gtk/preferences-window.ui:265
 msgid "Easy Copy &amp; Paste"
-msgstr "Copiar e Colar Simples"
+msgstr "Copiar &amp; Colar Fácil"
 
 #: src/gtk/preferences-window.ui:266
 msgid "Use ctrl+c/ctrl+v for copy/paste."
-msgstr "Use Ctrl+C/Ctrl+V para copiar/colar."
+msgstr "Use ctrl+c/ctrl+v para copiar/colar."
 
 #: src/gtk/preferences-window.ui:281
 msgid "Cursor Shape"
-msgstr "Formato do cursor"
+msgstr "Formato do Cursor"
 
 #: src/gtk/preferences-window.ui:285
 msgid "Block"
@@ -592,7 +591,7 @@ msgstr "Sublinhado"
 
 #: src/gtk/preferences-window.ui:295
 msgid "Cursor Blinking"
-msgstr "Pisque do Cursor"
+msgstr "Piscar do Cursor"
 
 #: src/gtk/preferences-window.ui:296
 msgid "Whether or not the cursor should blink."
@@ -656,7 +655,7 @@ msgstr "Comando"
 
 #: src/gtk/preferences-window.ui:409
 msgid "Run Command as Login Shell"
-msgstr "Executar comando como shell de login"
+msgstr "Executar Comando como Shell de Login"
 
 #: src/gtk/preferences-window.ui:420
 msgid "Use Custom Command"
@@ -711,7 +710,7 @@ msgstr "Avançado"
 
 #: src/gtk/preferences-window.ui:543
 msgid "Experimental"
-msgstr "Experimentos"
+msgstr "Experimental"
 
 #: src/gtk/preferences-window.ui:544
 msgid ""
@@ -729,7 +728,7 @@ msgstr "Suporte a Sixel"
 
 #: src/gtk/preferences-window.ui:549
 msgid "Render sixel escape sequences."
-msgstr "Renderizar escapes de Sixel."
+msgstr "Renderizar sequências de escape Sixel."
 
 #: src/gtk/preferences-window.ui:561
 msgid "Danger Zone"
@@ -737,7 +736,7 @@ msgstr "Zona de Perigo"
 
 #: src/gtk/preferences-window.ui:564
 msgid "Reset Preferences"
-msgstr "Redefinir preferências"
+msgstr "Redefinir Preferências"
 
 #: src/gtk/preferences-window.ui:565
 msgid ""
@@ -765,7 +764,7 @@ msgid ""
 "means there's currently no way to copy text in %s."
 msgstr ""
 "%s usa um port inicial de Gtk 4 do VTE como widget de terminal. Embora muito "
-"progresso tenha sido feito neste port, a cópia ainda não foi implementada."
+"progresso tenha sido feito neste port, a cópia ainda não foi implementada. "
 "Isso significa que atualmente não há como copiar texto em %s."
 
 #: src/widgets/HeaderBar.vala:30 src/widgets/ShortcutEditor.vala:168
@@ -781,7 +780,7 @@ msgstr "Preferências"
 #: src/widgets/HeaderBar.vala:32 src/widgets/ShortcutEditor.vala:169
 #: src/widgets/TerminalTab.vala:132
 msgid "Keyboard Shortcuts"
-msgstr "Mostrar Atalhos"
+msgstr "Atalhos do Teclado"
 
 #: src/widgets/HeaderBar.vala:33 src/widgets/TerminalTab.vala:133
 msgid "About"
@@ -814,7 +813,7 @@ msgstr "Nova Janela"
 
 #: src/widgets/ShortcutEditor.vala:162
 msgid "Toggle Header Bar"
-msgstr "Mostrar Barra Superior"
+msgstr "Exibir ou Ocultar a Barra de Cabeçalho"
 
 #: src/widgets/ShortcutEditor.vala:163 src/widgets/TerminalTab.vala:121
 msgid "New Tab"
@@ -830,19 +829,19 @@ msgstr "Colar"
 
 #: src/widgets/ShortcutEditor.vala:167
 msgid "Search"
-msgstr "Pesquisar"
+msgstr "Buscar"
 
 #: src/widgets/ShortcutEditor.vala:170
 msgid "Zoom In"
-msgstr "Ampliar"
+msgstr "Ampliar Zoom"
 
 #: src/widgets/ShortcutEditor.vala:171
 msgid "Zoom Out"
-msgstr "Reduzir"
+msgstr "Reduzir Zoom"
 
 #: src/widgets/ShortcutEditor.vala:172
 msgid "Reset Zoom"
-msgstr "Planificar"
+msgstr "Redefinir Zoom"
 
 #: src/widgets/ShortcutEditor.vala:173
 msgid "Close Tab"
@@ -875,7 +874,7 @@ msgstr "Fonte do Terminal"
 
 #: src/CommandLine.vala:47
 msgid "Show app version"
-msgstr "Mostrar versão do app"
+msgstr "Mostrar versão do aplicativo"
 
 #: src/CommandLine.vala:56
 msgid "Set current working directory"
